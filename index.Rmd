@@ -1,9 +1,43 @@
 --- 
-title: "YOUR TITLE HERE"
-author: "YOUR NAME HERE"
+title: 'Course Companion for MBA 8370 and MBA 8380'
+author: "Scott Dressler"
 date: "`r Sys.Date()`"
+output:
+  html_document:
+    df_print: paged
 site: bookdown::bookdown_site
+documentclass: book
+link-citations: yes
+description: Course companion
 ---
 
-# Down the rabbit-hole
+#  {.unlisted .unnumbered}
+
+```{r, echo = FALSE, fig.align='center'}
+library(jpeg)
+library(knitr)
+include_graphics("images/VU17BLUE3.jpg")
+```
+
+# Preface {-}
+
+> "In ancient times they had no statistics so they had to fall back on lies."
+>
+> --- Stephen Leacock
+
+## About this book... {-}
+
+This course companion is a collection of lecture notes I have compiled over my years of teaching *Analyzing and Leveraging Data* (MBA 8350). MBA 8350 was once a 3 credit hour, complete introduction to inferential statistics that covered univariate (*one variable*) and multivariate (*more that one variable*) analyses. In Fall 2022, this course was split into two halves. The first course (MBA 8370: Essential Business Statistics) now focuses on univariate analyses (with a small introduction to regression analysis at the end), while the second (MBA 8380: Analyzing and Leveraging Data) focuses on multivariate. 
+
+You will notice that this course companion covers both MBA 8370 and MBA 8380. Since students of MBA 8380 may want to refer back to the material covered they covered in MBA 8370, I thought it best to keep all material in one self-contained course companion. If you are currently in MBA 8370, feel free to look ahead to what the second course has in store for you.
+
+I have custom made this course companion to provide a **free** resource to all students that covers all relevant topics of both courses. We **DO NOT** need an additional textbook.
+
+## Acknowledgements {-}
+
+This course companion would not be possible without the many students I have had the pleasure of teaching statistics to at VSB. Their questions, comments, and corrections to previous editions of these notes have made a significant contribution to what this product is. I am not going to call this a *final* product, because I hope my current and future students will continue to help me make improvements.
+
+The original writing of this course companion was supported by a Villanova School of Business 2021 Teaching Innovation Grant.
+
+
 
