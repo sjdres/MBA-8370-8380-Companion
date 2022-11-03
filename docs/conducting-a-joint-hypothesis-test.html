@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>12.2 Conducting a Joint Hypothesis Test | Course Companion for MBA 8370 and MBA 8380</title>
+  <meta name="description" content="Course companion" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="12.2 Conducting a Joint Hypothesis Test | Course Companion for MBA 8370 and MBA 8380" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Course companion" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="12.2 Conducting a Joint Hypothesis Test | Course Companion for MBA 8370 and MBA 8380" />
+  
+  <meta name="twitter:description" content="Course companion" />
+  
+
+<meta name="author" content="Scott Dressler" />
+
+
+<meta name="date" content="2022-11-03" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="simple-versus-joint-hypothesis-tests.html"/>
+<link rel="next" href="applications.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">MBA 8370/8380 Course Companion</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html"><i class="fa fa-check"></i>Preface</a>
+<ul>
+<li class="chapter" data-level="" data-path="about-this-book.html"><a href="about-this-book.html"><i class="fa fa-check"></i>About this book…</a></li>
+<li class="chapter" data-level="" data-path="acknowledgements.html"><a href="acknowledgements.html"><i class="fa fa-check"></i>Acknowledgements</a></li>
+</ul></li>
+<li class="part"><span><b>MBA 8370</b></span></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="the-big-picture-of-statistics.html"><a href="the-big-picture-of-statistics.html"><i class="fa fa-check"></i><b>1.1</b> The “Big Picture” of Statistics</a></li>
+<li class="chapter" data-level="1.2" data-path="the-vocabulary-of-statistics.html"><a href="the-vocabulary-of-statistics.html"><i class="fa fa-check"></i><b>1.2</b> The Vocabulary of Statistics</a></li>
+<li class="chapter" data-level="1.3" data-path="descriptive-measures.html"><a href="descriptive-measures.html"><i class="fa fa-check"></i><b>1.3</b> Descriptive Measures</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="descriptive-measures.html"><a href="descriptive-measures.html#central-tendency"><i class="fa fa-check"></i><b>1.3.1</b> Central Tendency</a></li>
+<li class="chapter" data-level="1.3.2" data-path="descriptive-measures.html"><a href="descriptive-measures.html#variation"><i class="fa fa-check"></i><b>1.3.2</b> Variation</a></li>
+<li class="chapter" data-level="1.3.3" data-path="descriptive-measures.html"><a href="descriptive-measures.html#measures-of-shape"><i class="fa fa-check"></i><b>1.3.3</b> Measures of shape</a></li>
+<li class="chapter" data-level="1.3.4" data-path="descriptive-measures.html"><a href="descriptive-measures.html#covariance-and-correlation"><i class="fa fa-check"></i><b>1.3.4</b> Covariance and Correlation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="Data.html"><a href="Data.html"><i class="fa fa-check"></i><b>2</b> Data Collection and Sampling</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="sampling-distributions.html"><a href="sampling-distributions.html"><i class="fa fa-check"></i><b>2.1</b> Sampling Distributions</a></li>
+<li class="chapter" data-level="2.2" data-path="sampling-bias---two-examples.html"><a href="sampling-bias---two-examples.html"><i class="fa fa-check"></i><b>2.2</b> Sampling Bias - two examples</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="sampling-bias---two-examples.html"><a href="sampling-bias---two-examples.html#dewey-defeats-truman"><i class="fa fa-check"></i><b>2.2.1</b> Dewey Defeats Truman?</a></li>
+<li class="chapter" data-level="2.2.2" data-path="sampling-bias---two-examples.html"><a href="sampling-bias---two-examples.html#section-1"><i class="fa fa-check"></i><b>2.2.2</b> 98.6?</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="sampling-methods.html"><a href="sampling-methods.html"><i class="fa fa-check"></i><b>2.3</b> Sampling Methods</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="sampling-methods.html"><a href="sampling-methods.html#simple-random-sampling"><i class="fa fa-check"></i><b>2.3.1</b> Simple random sampling</a></li>
+<li class="chapter" data-level="2.3.2" data-path="sampling-methods.html"><a href="sampling-methods.html#systematic-sampling"><i class="fa fa-check"></i><b>2.3.2</b> Systematic Sampling</a></li>
+<li class="chapter" data-level="2.3.3" data-path="sampling-methods.html"><a href="sampling-methods.html#stratified-sampling"><i class="fa fa-check"></i><b>2.3.3</b> Stratified Sampling</a></li>
+<li class="chapter" data-level="2.3.4" data-path="sampling-methods.html"><a href="sampling-methods.html#cluster-sampling"><i class="fa fa-check"></i><b>2.3.4</b> Cluster Sampling</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="sampling-in-practice.html"><a href="sampling-in-practice.html"><i class="fa fa-check"></i><b>2.4</b> Sampling in Practice</a></li>
+<li class="chapter" data-level="2.5" data-path="sampling-and-sampling-distributions.html"><a href="sampling-and-sampling-distributions.html"><i class="fa fa-check"></i><b>2.5</b> Sampling and Sampling Distributions</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="sampling-and-sampling-distributions.html"><a href="sampling-and-sampling-distributions.html#an-application"><i class="fa fa-check"></i><b>2.5.1</b> An Application</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="R.html"><a href="R.html"><i class="fa fa-check"></i><b>3</b> Getting Started with R</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="the-r-project-for-statistical-computing.html"><a href="the-r-project-for-statistical-computing.html"><i class="fa fa-check"></i><b>3.1</b> The R Project for Statistical Computing</a></li>
+<li class="chapter" data-level="3.2" data-path="before-you-install-rstudio-cloud.html"><a href="before-you-install-rstudio-cloud.html"><i class="fa fa-check"></i><b>3.2</b> Before you Install… RStudio Cloud?</a></li>
+<li class="chapter" data-level="3.3" data-path="downloading-and-installing-r.html"><a href="downloading-and-installing-r.html"><i class="fa fa-check"></i><b>3.3</b> Downloading and installing R</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="downloading-and-installing-r.html"><a href="downloading-and-installing-r.html#choosing-a-mirror"><i class="fa fa-check"></i><b>3.3.1</b> Choosing a <em>Mirror</em></a></li>
+<li class="chapter" data-level="3.3.2" data-path="downloading-and-installing-r.html"><a href="downloading-and-installing-r.html#download-and-install-the-correct-version"><i class="fa fa-check"></i><b>3.3.2</b> Download and install the correct version</a></li>
+<li class="chapter" data-level="3.3.3" data-path="downloading-and-installing-r.html"><a href="downloading-and-installing-r.html#downloading-and-installing-rstudio"><i class="fa fa-check"></i><b>3.3.3</b> Downloading and installing RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="taking-stock.html"><a href="taking-stock.html"><i class="fa fa-check"></i><b>3.4</b> Taking Stock</a></li>
+<li class="chapter" data-level="3.5" data-path="coding-basics.html"><a href="coding-basics.html"><i class="fa fa-check"></i><b>3.5</b> Coding Basics</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="coding-basics.html"><a href="coding-basics.html#installing-packages"><i class="fa fa-check"></i><b>3.5.1</b> Installing <em>Packages</em></a></li>
+<li class="chapter" data-level="3.5.2" data-path="coding-basics.html"><a href="coding-basics.html#assigning-objects"><i class="fa fa-check"></i><b>3.5.2</b> Assigning Objects</a></li>
+<li class="chapter" data-level="3.5.3" data-path="coding-basics.html"><a href="coding-basics.html#listing-adding-and-removing"><i class="fa fa-check"></i><b>3.5.3</b> Listing, Adding, and Removing</a></li>
+<li class="chapter" data-level="3.5.4" data-path="coding-basics.html"><a href="coding-basics.html#loading-data"><i class="fa fa-check"></i><b>3.5.4</b> Loading Data</a></li>
+<li class="chapter" data-level="3.5.5" data-path="coding-basics.html"><a href="coding-basics.html#manipulating-data"><i class="fa fa-check"></i><b>3.5.5</b> Manipulating Data</a></li>
+<li class="chapter" data-level="3.5.6" data-path="coding-basics.html"><a href="coding-basics.html#subsetting-data"><i class="fa fa-check"></i><b>3.5.6</b> Subsetting Data</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="data-visualization.html"><a href="data-visualization.html"><i class="fa fa-check"></i><b>3.6</b> Data Visualization</a>
+<ul>
+<li class="chapter" data-level="3.6.1" data-path="data-visualization.html"><a href="data-visualization.html#histograms"><i class="fa fa-check"></i><b>3.6.1</b> Histograms</a></li>
+<li class="chapter" data-level="3.6.2" data-path="data-visualization.html"><a href="data-visualization.html#line-bar-and-scatter-plots"><i class="fa fa-check"></i><b>3.6.2</b> Line, bar, and Scatter Plots</a></li>
+<li class="chapter" data-level="3.6.3" data-path="data-visualization.html"><a href="data-visualization.html#boxplots"><i class="fa fa-check"></i><b>3.6.3</b> Boxplots</a></li>
+<li class="chapter" data-level="3.6.4" data-path="data-visualization.html"><a href="data-visualization.html#much-more-out-there"><i class="fa fa-check"></i><b>3.6.4</b> Much more out there</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="CLT.html"><a href="CLT.html"><i class="fa fa-check"></i><b>4</b> The Central Limit Theorem</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="the-clt-formally.html"><a href="the-clt-formally.html"><i class="fa fa-check"></i><b>4.1</b> The CLT (Formally)</a></li>
+<li class="chapter" data-level="4.2" data-path="application-1-a-sampling-distribution-with-a-known-population.html"><a href="application-1-a-sampling-distribution-with-a-known-population.html"><i class="fa fa-check"></i><b>4.2</b> Application 1: A Sampling Distribution with a Known Population</a></li>
+<li class="chapter" data-level="4.3" data-path="application-2-a-sampling-distribution-with-an-unknown-population.html"><a href="application-2-a-sampling-distribution-with-an-unknown-population.html"><i class="fa fa-check"></i><b>4.3</b> Application 2: A Sampling Distribution with an Unknown Population</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="application-2-a-sampling-distribution-with-an-unknown-population.html"><a href="application-2-a-sampling-distribution-with-an-unknown-population.html#the-sample"><i class="fa fa-check"></i><b>4.3.1</b> The Sample</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="the-punchline-1.html"><a href="the-punchline-1.html"><i class="fa fa-check"></i><b>4.4</b> The Punchline</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="CI.html"><a href="CI.html"><i class="fa fa-check"></i><b>5</b> Confidence Intervals</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="a-refresher-on-probability.html"><a href="a-refresher-on-probability.html"><i class="fa fa-check"></i><b>5.1</b> A Refresher on Probability</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="a-refresher-on-probability.html"><a href="a-refresher-on-probability.html#application-1"><i class="fa fa-check"></i><b>5.1.1</b> Application 1</a></li>
+<li class="chapter" data-level="5.1.2" data-path="a-refresher-on-probability.html"><a href="a-refresher-on-probability.html#application-2"><i class="fa fa-check"></i><b>5.1.2</b> Application 2</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="deriving-a-confidence-interval.html"><a href="deriving-a-confidence-interval.html"><i class="fa fa-check"></i><b>5.2</b> Deriving a Confidence Interval</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="deriving-a-confidence-interval.html"><a href="deriving-a-confidence-interval.html#application-3"><i class="fa fa-check"></i><b>5.2.1</b> Application 3</a></li>
+<li class="chapter" data-level="5.2.2" data-path="deriving-a-confidence-interval.html"><a href="deriving-a-confidence-interval.html#what-if-we-want-to-change-confidence"><i class="fa fa-check"></i><b>5.2.2</b> What if we want to change confidence?</a></li>
+<li class="chapter" data-level="5.2.3" data-path="deriving-a-confidence-interval.html"><a href="deriving-a-confidence-interval.html#what-happens-to-the-size-of-the-confidence-interval-when-we-increase-our-confidence"><i class="fa fa-check"></i><b>5.2.3</b> What happens to the size of the confidence interval when we increase our <em>confidence</em>?</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="what-to-do-when-we-do-not-know-sigma.html"><a href="what-to-do-when-we-do-not-know-sigma.html"><i class="fa fa-check"></i><b>5.3</b> What to do when we do not know <span class="math inline">\(\sigma\)</span></a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="what-to-do-when-we-do-not-know-sigma.html"><a href="what-to-do-when-we-do-not-know-sigma.html#students-t-distribution-versus-z-distribution"><i class="fa fa-check"></i><b>5.3.1</b> Student’s t distribution versus Z distribution…</a></li>
+<li class="chapter" data-level="5.3.2" data-path="what-to-do-when-we-do-not-know-sigma.html"><a href="what-to-do-when-we-do-not-know-sigma.html#application-4"><i class="fa fa-check"></i><b>5.3.2</b> Application 4</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="determining-sample-size.html"><a href="determining-sample-size.html"><i class="fa fa-check"></i><b>5.4</b> Determining Sample Size</a></li>
+<li class="chapter" data-level="5.5" data-path="concluding-applications.html"><a href="concluding-applications.html"><i class="fa fa-check"></i><b>5.5</b> Concluding Applications</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="concluding-applications.html"><a href="concluding-applications.html#light-bulbs-last-time"><i class="fa fa-check"></i><b>5.5.1</b> Light Bulbs (Last Time)</a></li>
+<li class="chapter" data-level="5.5.2" data-path="concluding-applications.html"><a href="concluding-applications.html#returning-to-the-philadelphia-school-policy-application"><i class="fa fa-check"></i><b>5.5.2</b> Returning to the Philadelphia School Policy Application</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="HT.html"><a href="HT.html"><i class="fa fa-check"></i><b>6</b> Hypothesis Tests</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="anatomy-of-a-hypothesis-test.html"><a href="anatomy-of-a-hypothesis-test.html"><i class="fa fa-check"></i><b>6.1</b> Anatomy of a Hypothesis Test</a></li>
+<li class="chapter" data-level="6.2" data-path="steps-to-a-hypothesis-test.html"><a href="steps-to-a-hypothesis-test.html"><i class="fa fa-check"></i><b>6.2</b> Steps to a hypothesis test</a></li>
+<li class="chapter" data-level="6.3" data-path="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html"><i class="fa fa-check"></i><b>6.3</b> Two methods for conducting a hypothesis test (when <span class="math inline">\(\sigma\)</span> is known)</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#rejection-region-method"><i class="fa fa-check"></i><b>6.3.1</b> Rejection Region Method</a></li>
+<li class="chapter" data-level="6.3.2" data-path="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#p-value-approach"><i class="fa fa-check"></i><b>6.3.2</b> P-value Approach</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="two-sided-vs-one-sided-test.html"><a href="two-sided-vs-one-sided-test.html"><i class="fa fa-check"></i><b>6.4</b> Two-sided vs One-sided Test</a></li>
+<li class="chapter" data-level="6.5" data-path="conducting-a-hypothesis-test-when-sigma-is-unknown.html"><a href="conducting-a-hypothesis-test-when-sigma-is-unknown.html"><i class="fa fa-check"></i><b>6.5</b> Conducting a hypothesis test (when <span class="math inline">\(\sigma\)</span> is unknown)</a></li>
+<li class="chapter" data-level="6.6" data-path="appendix-a-note-on-calculating-p-values.html"><a href="appendix-a-note-on-calculating-p-values.html"><i class="fa fa-check"></i><b>6.6</b> Appendix: A note on calculating P-values</a>
+<ul>
+<li class="chapter" data-level="6.6.1" data-path="appendix-a-note-on-calculating-p-values.html"><a href="appendix-a-note-on-calculating-p-values.html#the-problem"><i class="fa fa-check"></i><b>6.6.1</b> The Problem</a></li>
+<li class="chapter" data-level="6.6.2" data-path="appendix-a-note-on-calculating-p-values.html"><a href="appendix-a-note-on-calculating-p-values.html#how-to-calculate-p-values"><i class="fa fa-check"></i><b>6.6.2</b> How to calculate p-values</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>MBA 8380</b></span></li>
+<li class="chapter" data-level="7" data-path="SLR.html"><a href="SLR.html"><i class="fa fa-check"></i><b>7</b> Simple Linear Regression</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="a-simple-linear-regression-model.html"><a href="a-simple-linear-regression-model.html"><i class="fa fa-check"></i><b>7.1</b> A Simple Linear Regression Model</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="a-simple-linear-regression-model.html"><a href="a-simple-linear-regression-model.html#what-does-a-regression-model-imply"><i class="fa fa-check"></i><b>7.1.1</b> What does a regression model imply?</a></li>
+<li class="chapter" data-level="7.1.2" data-path="a-simple-linear-regression-model.html"><a href="a-simple-linear-regression-model.html#the-real-simple-linear-regression-model"><i class="fa fa-check"></i><b>7.1.2</b> The <em>REAL</em> Simple Linear Regression Model</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="application-predicting-house-price-based-on-house-size.html"><a href="application-predicting-house-price-based-on-house-size.html"><i class="fa fa-check"></i><b>7.2</b> Application: Predicting House Price Based on House Size</a></li>
+<li class="chapter" data-level="7.3" data-path="ordinary-least-squares-ols.html"><a href="ordinary-least-squares-ols.html"><i class="fa fa-check"></i><b>7.3</b> Ordinary Least Squares (OLS)</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="ordinary-least-squares-ols.html"><a href="ordinary-least-squares-ols.html#b.l.u.e."><i class="fa fa-check"></i><b>7.3.1</b> B.L.U.E.</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="decomposition-of-variance.html"><a href="decomposition-of-variance.html"><i class="fa fa-check"></i><b>7.4</b> Decomposition of Variance</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="decomposition-of-variance.html"><a href="decomposition-of-variance.html#the-r2"><i class="fa fa-check"></i><b>7.4.1</b> The <span class="math inline">\(R^2\)</span></a></li>
+<li class="chapter" data-level="7.4.2" data-path="decomposition-of-variance.html"><a href="decomposition-of-variance.html#what-is-a-good-r2"><i class="fa fa-check"></i><b>7.4.2</b> What is a <em>good</em> <span class="math inline">\(R^2\)</span>?</a></li>
+<li class="chapter" data-level="7.4.3" data-path="decomposition-of-variance.html"><a href="decomposition-of-variance.html#standard-error-of-the-estimate"><i class="fa fa-check"></i><b>7.4.3</b> Standard Error of the Estimate</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="assumptions-of-the-linear-regression-model.html"><a href="assumptions-of-the-linear-regression-model.html"><i class="fa fa-check"></i><b>7.5</b> Assumptions of the Linear Regression Model</a>
+<ul>
+<li class="chapter" data-level="7.5.1" data-path="assumptions-of-the-linear-regression-model.html"><a href="assumptions-of-the-linear-regression-model.html#linearity"><i class="fa fa-check"></i><b>7.5.1</b> Linearity</a></li>
+<li class="chapter" data-level="7.5.2" data-path="assumptions-of-the-linear-regression-model.html"><a href="assumptions-of-the-linear-regression-model.html#independence-of-errors"><i class="fa fa-check"></i><b>7.5.2</b> Independence of Errors</a></li>
+<li class="chapter" data-level="7.5.3" data-path="assumptions-of-the-linear-regression-model.html"><a href="assumptions-of-the-linear-regression-model.html#equal-variance"><i class="fa fa-check"></i><b>7.5.3</b> Equal Variance</a></li>
+<li class="chapter" data-level="7.5.4" data-path="assumptions-of-the-linear-regression-model.html"><a href="assumptions-of-the-linear-regression-model.html#normality-of-errors"><i class="fa fa-check"></i><b>7.5.4</b> Normality of Errors</a></li>
+</ul></li>
+<li class="chapter" data-level="7.6" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html"><i class="fa fa-check"></i><b>7.6</b> Appendix: Statistical Inference</a>
+<ul>
+<li class="chapter" data-level="7.6.1" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-population-parameters"><i class="fa fa-check"></i><b>7.6.1</b> Confidence Intervals (around population parameters)</a></li>
+<li class="chapter" data-level="7.6.2" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#hypothesis-tests"><i class="fa fa-check"></i><b>7.6.2</b> Hypothesis Tests</a></li>
+<li class="chapter" data-level="7.6.3" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-forecasts"><i class="fa fa-check"></i><b>7.6.3</b> Confidence Intervals (around forecasts)</a></li>
+</ul></li>
+<li class="chapter" data-level="7.7" data-path="up-next.html"><a href="up-next.html"><i class="fa fa-check"></i><b>7.7</b> Up Next…</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="MLR.html"><a href="MLR.html"><i class="fa fa-check"></i><b>8</b> Multiple Linear Regression</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="application-explaining-house-price-in-a-multiple-regression.html"><a href="application-explaining-house-price-in-a-multiple-regression.html"><i class="fa fa-check"></i><b>8.1</b> Application: Explaining house price in a multiple regression</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="application-explaining-house-price-in-a-multiple-regression.html"><a href="application-explaining-house-price-in-a-multiple-regression.html#the-importance-of-controls"><i class="fa fa-check"></i><b>8.1.1</b> The Importance of “Controls”</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="adjusted-r2.html"><a href="adjusted-r2.html"><i class="fa fa-check"></i><b>8.2</b> Adjusted <span class="math inline">\(R^2\)</span></a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="adjusted-r2.html"><a href="adjusted-r2.html#abusing-an-r2"><i class="fa fa-check"></i><b>8.2.1</b> Abusing an <span class="math inline">\(R^2\)</span></a></li>
+<li class="chapter" data-level="8.2.2" data-path="adjusted-r2.html"><a href="adjusted-r2.html#an-adjusted-r2"><i class="fa fa-check"></i><b>8.2.2</b> An <em>Adjusted</em> <span class="math inline">\(R^2\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="statistical-inference.html"><a href="statistical-inference.html"><i class="fa fa-check"></i><b>8.3</b> Statistical Inference</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="statistical-inference.html"><a href="statistical-inference.html#recalling-the-concept-of-statistical-inference"><i class="fa fa-check"></i><b>8.3.1</b> Recalling the Concept of Statistical Inference</a></li>
+<li class="chapter" data-level="8.3.2" data-path="statistical-inference.html"><a href="statistical-inference.html#confidence-intervals-around-population-parameters-1"><i class="fa fa-check"></i><b>8.3.2</b> Confidence Intervals (around population parameters)</a></li>
+<li class="chapter" data-level="8.3.3" data-path="statistical-inference.html"><a href="statistical-inference.html#hypothesis-tests-1"><i class="fa fa-check"></i><b>8.3.3</b> Hypothesis Tests</a></li>
+<li class="chapter" data-level="8.3.4" data-path="statistical-inference.html"><a href="statistical-inference.html#confidence-intervals-around-forecasts-1"><i class="fa fa-check"></i><b>8.3.4</b> Confidence Intervals (around forecasts)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="COL.html"><a href="COL.html"><i class="fa fa-check"></i><b>9</b> Collinearity</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="an-application-1.html"><a href="an-application-1.html"><i class="fa fa-check"></i><b>9.1</b> An Application</a></li>
+<li class="chapter" data-level="9.2" data-path="what-does-collinearity-do-to-our-regression.html"><a href="what-does-collinearity-do-to-our-regression.html"><i class="fa fa-check"></i><b>9.2</b> What does Collinearity do to our regression?</a></li>
+<li class="chapter" data-level="9.3" data-path="how-to-test-for-collinearity.html"><a href="how-to-test-for-collinearity.html"><i class="fa fa-check"></i><b>9.3</b> How to test for Collinearity?</a>
+<ul>
+<li class="chapter" data-level="" data-path="how-to-test-for-collinearity.html"><a href="how-to-test-for-collinearity.html#correlation-coefficients"><i class="fa fa-check"></i>Correlation Coefficients</a></li>
+<li class="chapter" data-level="" data-path="how-to-test-for-collinearity.html"><a href="how-to-test-for-collinearity.html#variance-inflation-factors-vifs"><i class="fa fa-check"></i>Variance Inflation Factors (VIFs)</a></li>
+<li class="chapter" data-level="9.3.1" data-path="how-to-test-for-collinearity.html"><a href="how-to-test-for-collinearity.html#an-application-2"><i class="fa fa-check"></i><b>9.3.1</b> An Application:</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="how-do-we-remove-collinearity.html"><a href="how-do-we-remove-collinearity.html"><i class="fa fa-check"></i><b>9.4</b> How do we remove Collinearity?</a>
+<ul>
+<li class="chapter" data-level="" data-path="how-do-we-remove-collinearity.html"><a href="how-do-we-remove-collinearity.html#sometimes-removing-collinearity-might-involve-multiple-rounds"><i class="fa fa-check"></i>Sometimes removing collinearity might involve multiple rounds</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="DVS.html"><a href="DVS.html"><i class="fa fa-check"></i><b>10</b> Qualitative (Dummy) Variables</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="intercept-dummy-variable.html"><a href="intercept-dummy-variable.html"><i class="fa fa-check"></i><b>10.1</b> Intercept dummy variable</a></li>
+<li class="chapter" data-level="10.2" data-path="slope-dummy-variable.html"><a href="slope-dummy-variable.html"><i class="fa fa-check"></i><b>10.2</b> Slope dummy variable</a></li>
+<li class="chapter" data-level="10.3" data-path="what-if-there-are-more-than-two-categories.html"><a href="what-if-there-are-more-than-two-categories.html"><i class="fa fa-check"></i><b>10.3</b> What if there are more than two categories?</a></li>
+<li class="chapter" data-level="10.4" data-path="a-final-application.html"><a href="a-final-application.html"><i class="fa fa-check"></i><b>10.4</b> A Final Application</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#make-a-nominal-series-a-real-series"><i class="fa fa-check"></i>Make a <em>Nominal</em> Series a <em>Real</em> Series</a></li>
+<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#remove-a-trend"><i class="fa fa-check"></i>Remove a Trend</a></li>
+<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#remove-seasonality"><i class="fa fa-check"></i>Remove Seasonality</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="FF.html"><a href="FF.html"><i class="fa fa-check"></i><b>11</b> Functional Forms</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="derivatives.html"><a href="derivatives.html"><i class="fa fa-check"></i><b>11.1</b> Derivatives</a></li>
+<li class="chapter" data-level="11.2" data-path="why-consider-non-linear-relationships.html"><a href="why-consider-non-linear-relationships.html"><i class="fa fa-check"></i><b>11.2</b> Why consider non-linear relationships?</a></li>
+<li class="chapter" data-level="11.3" data-path="the-log-transformation.html"><a href="the-log-transformation.html"><i class="fa fa-check"></i><b>11.3</b> The Log transformation</a>
+<ul>
+<li class="chapter" data-level="" data-path="the-log-transformation.html"><a href="the-log-transformation.html#the-derivative-of-the-log-function"><i class="fa fa-check"></i>The derivative of the log function</a></li>
+<li class="chapter" data-level="" data-path="the-log-transformation.html"><a href="the-log-transformation.html#log-log-and-semi-log-models"><i class="fa fa-check"></i>Log-log and Semi-log models</a></li>
+<li class="chapter" data-level="" data-path="the-log-transformation.html"><a href="the-log-transformation.html#application"><i class="fa fa-check"></i>Application</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="the-quadratic-transformation.html"><a href="the-quadratic-transformation.html"><i class="fa fa-check"></i><b>11.4</b> The Quadratic transformation</a>
+<ul>
+<li class="chapter" data-level="" data-path="the-quadratic-transformation.html"><a href="the-quadratic-transformation.html#application-5"><i class="fa fa-check"></i>Application</a></li>
+</ul></li>
+<li class="chapter" data-level="11.5" data-path="the-reciprocal-transformation.html"><a href="the-reciprocal-transformation.html"><i class="fa fa-check"></i><b>11.5</b> The Reciprocal transformation</a>
+<ul>
+<li class="chapter" data-level="" data-path="the-reciprocal-transformation.html"><a href="the-reciprocal-transformation.html#application-6"><i class="fa fa-check"></i>Application</a></li>
+</ul></li>
+<li class="chapter" data-level="11.6" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>11.6</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="JHT.html"><a href="JHT.html"><i class="fa fa-check"></i><b>12</b> Joint Hypothesis Tests</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="simple-versus-joint-hypothesis-tests.html"><a href="simple-versus-joint-hypothesis-tests.html"><i class="fa fa-check"></i><b>12.1</b> Simple versus Joint Hypothesis Tests</a>
+<ul>
+<li class="chapter" data-level="" data-path="simple-versus-joint-hypothesis-tests.html"><a href="simple-versus-joint-hypothesis-tests.html#application-7"><i class="fa fa-check"></i>Application</a></li>
+</ul></li>
+<li class="chapter" data-level="12.2" data-path="conducting-a-joint-hypothesis-test.html"><a href="conducting-a-joint-hypothesis-test.html"><i class="fa fa-check"></i><b>12.2</b> Conducting a Joint Hypothesis Test</a>
+<ul>
+<li class="chapter" data-level="" data-path="conducting-a-joint-hypothesis-test.html"><a href="conducting-a-joint-hypothesis-test.html#estimate-an-unrestricted-model"><i class="fa fa-check"></i>1. Estimate an Unrestricted Model</a></li>
+<li class="chapter" data-level="" data-path="conducting-a-joint-hypothesis-test.html"><a href="conducting-a-joint-hypothesis-test.html#estimate-a-restricted-model"><i class="fa fa-check"></i>2. Estimate a Restricted Model</a></li>
+<li class="chapter" data-level="" data-path="conducting-a-joint-hypothesis-test.html"><a href="conducting-a-joint-hypothesis-test.html#construct-a-test-statistic-under-the-null"><i class="fa fa-check"></i>3. Construct a test statistic under the null</a></li>
+<li class="chapter" data-level="" data-path="conducting-a-joint-hypothesis-test.html"><a href="conducting-a-joint-hypothesis-test.html#determine-a-p-value-and-conclude"><i class="fa fa-check"></i>4. Determine a P-value and Conclude</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>12.3</b> Applications</a>
+<ul>
+<li class="chapter" data-level="" data-path="applications.html"><a href="applications.html#application-1-a-wage-application"><i class="fa fa-check"></i>Application 1: A wage application</a></li>
+<li class="chapter" data-level="" data-path="applications.html"><a href="applications.html#application-2-constant-returns-to-scale"><i class="fa fa-check"></i>Application 2: Constant Returns to Scale</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Course Companion for MBA 8370 and MBA 8380</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="conducting-a-joint-hypothesis-test" class="section level2 hasAnchor" number="12.2">
+<h2><span class="header-section-number">12.2</span> Conducting a Joint Hypothesis Test<a href="conducting-a-joint-hypothesis-test.html#conducting-a-joint-hypothesis-test" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A joint hypothesis test involves four steps:</p>
+<ol style="list-style-type: decimal">
+<li><p>Estimate an <em>unrestricted</em> model</p></li>
+<li><p>Impose the null hypothesis and estimate a <em>restricted</em> model</p></li>
+<li><p>Construct a <em>test statistic under the null</em></p></li>
+<li><p>Determine a p-value and conclude</p></li>
+</ol>
+<div id="estimate-an-unrestricted-model" class="section level3 unnumbered hasAnchor">
+<h3>1. Estimate an Unrestricted Model<a href="conducting-a-joint-hypothesis-test.html#estimate-an-unrestricted-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>An analysis begins with a regression model that can adequately capture what you are setting out to uncover. In general terms, this is a model that doesn’t impose any serious assumptions on the way the world works so you can adequately test these assumptions. Suppose we have a hypothesis that two independent variables impact a dependent variable by the same quantitative degree. In that case, we need a model that does not impose this hypothesis.</p>
+<p><span class="math display">\[Y_i = \beta_0 + \beta_1 X_{1i} + \beta_2 X_{2i} + \varepsilon_i\]</span></p>
+<p>The model above allows for the two independent variables to impact the dependent variable in whatever way the data sees fit. Since there is no imposition of the hypothesis on the model, or no restriction that the hypothesis be obeyed, then this model is called the <em>unrestricted</em> model.</p>
+</div>
+<div id="estimate-a-restricted-model" class="section level3 unnumbered hasAnchor">
+<h3>2. Estimate a Restricted Model<a href="conducting-a-joint-hypothesis-test.html#estimate-a-restricted-model" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A restricted model involves both the unrestricted model and the null hypothesis. If we wanted to test if the two slope hypotheses were the same, then our joint hypothesis is just like the one in the previous example:</p>
+<p><span class="math display">\[H_0:\beta_1=\beta_2 \quad \text{versus} \quad H_1:\beta_1 \neq \beta_2\]</span></p>
+<p>With the null hypothesis established, we now need to construct a <em>restricted</em> model which results from imposing the null hypothesis on the unrestricted model. In particular, starting with the unrestricted model and substituting the null, we get the following:</p>
+<p><span class="math display">\[Y_i = \beta_0 + \beta_1 X_{1i} + \beta_2 X_{2i} + \varepsilon_i\]</span></p>
+<p><span class="math display">\[Y_i = \beta_0 + \beta_2 X_{1i} + \beta_2 X_{2i} + \varepsilon_i\]</span></p>
+<p><span class="math display">\[Y_i = \beta_0 + \beta_2 (X_{1i} + X_{2i}) + \varepsilon_i\]</span></p>
+<p><span class="math display">\[Y_i = \beta_0 + \beta_2 \tilde{X}_{i} + \varepsilon_i \quad \text{where} \quad \tilde{X}_{i} = X_{1i} + X_{2i}\]</span></p>
+<p>Imposing the null hypothesis restricts the two slope coefficients to be identical. If we construct the new variable <span class="math inline">\(\tilde{X}_i\)</span> according to how the model dictates, then we can use the new variable to estimate the <em>restricted</em> model.</p>
+</div>
+<div id="construct-a-test-statistic-under-the-null" class="section level3 unnumbered hasAnchor">
+<h3>3. Construct a test statistic under the null<a href="conducting-a-joint-hypothesis-test.html#construct-a-test-statistic-under-the-null" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Now that we have our unrestricted and restricted models estimated, the only two things we need from them are the <span class="math inline">\(R^2\)</span> values from each. We will denote the <span class="math inline">\(R^2\)</span> from the unrestricted model as the <em>unrestricted</em> <span class="math inline">\(R^2\)</span> or <span class="math inline">\(R^2_u\)</span>, and the <span class="math inline">\(R^2\)</span> from the restricted model as the <em>restricted</em> <span class="math inline">\(R^2\)</span> or <span class="math inline">\(R^2_r\)</span>.</p>
+<p>These two pieces of information are used with <em>two</em> degrees of freedom measures to construct a test statistic under the null - which is conceptually similar to how we perform simple hypothesis tests. However, while simple hypothesis tests are performed assuming a Student’s t distribution, joint hypothesis tests are performed assuming an entirely new distribution: An F distribution.</p>
+<p>Roughly speaking, an F distribution arises from taking the square of a t distribution. Since simple hypothesis tests deal with t distributions, and the joint hypothesis deals with <span class="math inline">\(R^2\)</span> values, you get the general idea. An F-statistic under the null is given by</p>
+<p><span class="math display">\[F=\frac{(R^2_u - R^2_r)/m}{(1-R^2_u)/(n-k-1)} \sim F_{m,\;n-k-1}\]</span></p>
+<p>where</p>
+<ul>
+<li><p><span class="math inline">\(R^2_u\)</span> is the unrestricted <span class="math inline">\(R^2\)</span> - the <span class="math inline">\(R^2\)</span> from the unrestricted model.</p></li>
+<li><p><span class="math inline">\(R^2_r\)</span> is the restricted <span class="math inline">\(R^2\)</span> - the <span class="math inline">\(R^2\)</span> from the restricted model.</p></li>
+<li><p><span class="math inline">\(m\)</span> is the numerator degrees of freedom - the number of restrictions imposed on the restricted model. In other words, count up the number of equal signs in the null hypothesis.</p></li>
+<li><p><span class="math inline">\(n-k-1\)</span> is the denominator degrees of freedom - this is the degrees of freedom for a simple hypothesis test performed on the <em>unrestricted</em> model.</p></li>
+</ul>
+<p>In simple hypothesis tests, we constructed a t-statistic that is presumably drawn from a t-distribution. We are essentially doing the same thing here by constructing a F-statistic that is presumably drawn from a F-distribution.</p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-190-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>The F-distribution has a few conceptual properties we should discuss.</p>
+<p><strong>An F statistic is restricted to be non-negative.</strong></p>
+<p>This should make sense because the expressions in both the numerator and denominator of our F-statistic calculation are both going to be non-negative. The numerator is always going to be non-negative because <span class="math inline">\(R^2_u \geq R^2_r\)</span>. In other words, the unrestricted model will always explain more or at least as much of the variation in the dependent variable as the restricted model does. When the two models explain the same amount of variation, then the <span class="math inline">\(R^2\)</span> values are the same and the numerator is zero. When the two models explain different amounts of variation, then this means that the restriction prevents the model from explaining as much of the variation in the dependent variable it otherwise would when not being restricted.</p>
+<p><strong>The Rejection Region is Always in the Right Tail</strong></p>
+<p>If we have <span class="math inline">\(R^2_u = R^2_r\)</span>, then this implies that the restricted model and the unrestricted model are explaining the same amount of variation in the dependent variable. Think hard about what this is saying. If both models have the same <span class="math inline">\(R^2\)</span>, then they are essentially <em>the same model</em>. One model is unrestricted meaning it can choose any values for coefficients it sees fit. The other model is restricted meaning we are forcing it to follow whatever is specified in the null. If these two models are the same, then the <em>restriction doesn’t matter</em>. In other words, the model is choosing the values under the null whether or not we are imposing the null. If that is the case, then the f-statistic will be equal to or close to zero.</p>
+<p>If we have <span class="math inline">\(R^2_u &gt; R^2_r\)</span>, then this implies that the restriction imposed by the null hypothesis is hampering the model from explaining as much of the volatility in the dependent variable than it otherwise would have. The more <span class="math inline">\(R^2_u &gt; R^2_r\)</span>, the more <span class="math inline">\(F&gt;0\)</span>. Once this F-statistic under the null becomes large enough, we reject the null. This means that the difference between the unrestricted and restricted models is so large that we have evidence to state that the null hypothesis is simply not going on in the data. This implies that the rejection region is <em>always</em> in the right tail, and the p-value is always calculated from the right as well.</p>
+</div>
+<div id="determine-a-p-value-and-conclude" class="section level3 unnumbered hasAnchor">
+<h3>4. Determine a P-value and Conclude<a href="conducting-a-joint-hypothesis-test.html#determine-a-p-value-and-conclude" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Again, we establish a confidence level <span class="math inline">\(\alpha\)</span> as we would with any hypothesis test. This delivers an acceptable probability of a type I error and breaks the distribution into a rejection region and a non-rejection region.</p>
+<p>For example, suppose you set <span class="math inline">\(\alpha = 0.05\)</span> and have <span class="math inline">\(m=2\)</span> and <span class="math inline">\(n-k-1 = 100\)</span>. This means that the non-rejection region will take up 95% of the area of the F-distribution with 2 and 100 degrees of freedom.</p>
+<div class="sourceCode" id="cb336"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb336-1"><a href="conducting-a-joint-hypothesis-test.html#cb336-1" aria-hidden="true" tabindex="-1"></a>(Fcrit <span class="ot">&lt;-</span> <span class="fu">qf</span>(<span class="fl">0.95</span>,<span class="dv">2</span>,<span class="dv">100</span>))</span></code></pre></div>
+<pre><code>## [1] 3.087296</code></pre>
+<p>If an F-statistic is greater than 3.09 then we can reject the null of the joint hypothesis with at least 95% confidence.</p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-192-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>As in any hypothesis test, we can also calculate a p-value. This will deliver the maximum confidence level at which we can reject the null.</p>
+<pre><code>pf(q, df1, df2, lower.tail = TRUE)</code></pre>
+<p>Notice that since the probability is calculated from the left by default (like the other commands), we can use the above code to automatically calculate <span class="math inline">\(1-p\)</span>.</p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="simple-versus-joint-hypothesis-tests.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="applications.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": false
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/sjdres/MBA-8370-8380-Companion/edit/master/12-JHT.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/sjdres/MBA-8370-8380-Companion/blob/master/12-JHT.Rmd",
+"text": null
+},
+"download": ["bookdownproj.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection",
+"scroll_highlight": true
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

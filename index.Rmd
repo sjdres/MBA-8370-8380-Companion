@@ -13,7 +13,7 @@ description: Course companion
 
 #  {.unlisted .unnumbered}
 
-```{r, echo = FALSE, fig.align='center'}
+```{r, echo = FALSE, fig.align='center', warning=FALSE}
 library(jpeg)
 library(knitr)
 include_graphics("images/VU17BLUE3.jpg")
