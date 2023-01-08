@@ -504,19 +504,19 @@ We used the CLT to ultimately state that $\bar{X}$ was drawn from a normal distr
 
 First, $\hat{\beta}$ is an estimate of $\beta$ just like $\bar{X}$ is an estimate of $\mu$. However, the standard error of the sampling distribution of $\hat{\beta}$ is derived from the standard deviation of the residuals.
 
-$$S_\hat{\beta}=\frac{S_{YX}}{\sum{(X_i-\bar{X})^2}}$$
+$$S_{\hat{\beta}}=\frac{S_{YX}}{\sum{(X_i-\bar{X})^2}}$$
 
 This means that we construct a *standardized* random variable from a t distribution with $n-2$ degrees of freedom.
 
-$$t=\frac{\hat{\beta}-\beta}{S_\hat{\beta}}$$
+$$t=\frac{\hat{\beta}-\beta}{S_{\hat{\beta}}}$$
 
 We have already derived a confidence interval before, so we can skip to the punchline.
 
-$$Pr\left(\hat{\beta}-t_{(\frac{\alpha}{2},df=n-2)}S_\hat{\beta} \leq \beta \leq \hat{\beta}+t_{(\frac{\alpha}{2},df=n-2)}S_\hat{\beta}\right)=1-\alpha$$
+$$Pr\left(\hat{\beta}-t_{(\frac{\alpha}{2},df=n-2)}S_{\hat{\beta}} \leq \beta \leq \hat{\beta}+t_{(\frac{\alpha}{2},df=n-2)}S_{\hat{\beta}}\right)=1-\alpha$$
 
 This is the formula for a confidence interval around the *population* slope coefficient $\beta$ given the estimate $\hat{beta}$ and the regression characteristics. It can also be written compactly as before.
 
-$$\hat{\beta} \pm t_{(\frac{\alpha}{2},df=n-2)} S_\hat{\beta}$$
+$$\hat{\beta} \pm t_{(\frac{\alpha}{2},df=n-2)} S_{\hat{\beta}}$$
 
 Recall our regression explaining differences in house prices given information on house sizes.
 

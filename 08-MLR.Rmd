@@ -265,7 +265,7 @@ We used the Central Limit Theorem (CLT) to ultimately state that $\bar{X}$ was d
 
 First, $\hat{\beta}$ is an estimate of $\beta$ just like $\bar{X}$ is an estimate of $\mu$. However, the standard error of the sampling distribution of $\hat{\beta}$ is derived from the standard deviation of the residuals.
 
-$$S_\hat{\beta}=\frac{S_{YX}}{\sum{(X_i-\bar{X})^2}}$$
+$$S_{\hat{\beta}}=\frac{S_{YX}}{\sum{(X_i-\bar{X})^2}}$$
 
 with
 
@@ -273,15 +273,15 @@ $$S_{YX} = \sqrt{ \frac{\sum e_i^2}{n-k-1} }$$
 
 This means that we construct a *standardized* random variable from a t distribution with $n-k-1$ degrees of freedom, where $k$ is the number of independent variables (or slope coefficients) in the regression model.^[Note that the appendix in Chapter 7 states that the t distribution in the simple regression case has $n-2$ degrees of freedom. This is because there is only one independent variable in a simple regression, so $k=1$ and $n-k-1 = n - 2$.]
 
-$$t=\frac{\hat{\beta}-\beta}{S_\hat{\beta}}$$
+$$t=\frac{\hat{\beta}-\beta}{S_{\hat{\beta}}}$$
 
 We have already derived a confidence interval before, so we can skip to the punchline.
 
-$$Pr\left(\hat{\beta}-t_{(\frac{\alpha}{2},df=n-k-1)}S_\hat{\beta} \leq \beta \leq \hat{\beta}+t_{(\frac{\alpha}{2},df=n-k-1)}S_\hat{\beta}\right)=1-\alpha$$
+$$Pr\left(\hat{\beta}-t_{(\frac{\alpha}{2},df=n-k-1)}S_{\hat{\beta}} \leq \beta \leq \hat{\beta}+t_{(\frac{\alpha}{2},df=n-k-1)}S_{\hat{\beta}}\right)=1-\alpha$$
 
 This is the formula for a confidence interval around the *population* slope coefficient $\beta$ given the estimate $\hat{\beta}$ and the regression characteristics. It can also be written compactly as before.
 
-$$\hat{\beta} \pm t_{(\frac{\alpha}{2},df=n-k-1)} S_\hat{\beta}$$
+$$\hat{\beta} \pm t_{(\frac{\alpha}{2},df=n-k-1)} S_{\hat{\beta}}$$
 
 Recall our regression explaining differences in house prices given information on house sizes and number of bedrooms.
 

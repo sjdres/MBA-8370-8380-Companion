@@ -1,8 +1,9 @@
 --- 
-title: 'Course Companion for MBA 8370 and MBA 8380'
+title: "Course Companion for MBA 8370 and MBA 8380"
 author: "Scott Dressler"
 date: "`r Sys.Date()`"
 output:
+  pdf_document: default
   html_document:
     df_print: paged
 site: bookdown::bookdown_site
