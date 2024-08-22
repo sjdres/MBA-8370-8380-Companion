@@ -10,7 +10,13 @@ library(png)
 include_graphics("images/Rlogo.png")
 ```
 
-This chapter is designed to get R on your machine (Section 1), introduce you to some basic commands for data and variable manipulation (Section 2), and introduce you to some introductory data visualization (Section 3). We will also be using a companion software called Rstudio which will make our interaction with R much more pleasant.
+This chapter is designed to do the following:
+
+1. Get you up and running with R and RStudio either on the cloud or on your machine (Section 1)
+
+2. Introduce you to some basic commands for data and variable manipulation (Section 2)
+
+3. Introduce you to some introductory data visualization (Section 3)
 
 After the basics are covered in this chapter, you should be able to go back to Chapter 2 and have a better understanding of some of the code there. We will be learning additional R commands as they become needed in the subsequent chapters. By the end of the course, you should have a pretty solid understanding of working your way around R.
 
@@ -18,13 +24,13 @@ Let's get started!
 
 ## The R Project for Statistical Computing
 
-R is an open source (i.e. *free*) programming language and software environment for statistical computing, and is widely used among statisticians and data analysts.^[As of July 2020, R ranks 8th in the TIOBE index, a measure of popularity of programming languages.] It is similar to other programming languages you may have heard of before (e.g., Python), but R is more suited to our data analysis needs. However, once you get the hang of one programming language, it is easier to adopt subsequent languages.
+R is an open source (i.e. *free*) programming language and software environment for statistical computing, and is widely used among statisticians and data analysts. It is similar to other programming languages you may have heard of before (e.g., Python), but R is more suited to our data analysis needs. However, once you get the hang of one programming language, it is easier to adopt subsequent languages.
 
-In addition to using R, we will also be using RStudio. RStudio is an integrated development environment (IDE) for R. The desktop version of R studio is also free, and comes with many useful features. In fact, this course companion you are currently reading was entirely formatted in R studio.
+In addition to using R, we will also be using RStudio. RStudio is an integrated development environment (IDE) for R. The desktop version of R studio is also free, and comes with many useful features. Essentially, RStudio is a handy middle-man that we will be telling R what we want it to do. 
 
 This section will walk you through downloading, installing, and preparing R and RStudio for our purposes. Once this is accomplished, you should be able to replicate every application contained in this course companion by using the code contained in the gray boxes. Let us begin!
 
-## Before you Install... RStudio Cloud?
+## Before you Install... Posit (RStudio) Cloud?
 
 Before venturing into downloading and installing R and RStudio, you should ask yourself a series of questions.
 
@@ -37,17 +43,17 @@ Installation of R and RStudio can be complicated on older computers. For example
 **Are you planning to use a work computer with a high level of security?**
 Work computers are commonly shielded from the outside world with rather strong security firewalls. Being open source, R likes to regularly communicate with a *Mirror* server (explained below), and computers with high levels of security tend to prevent this.
 
-If you answered *yes* to any of the above questions (or if you simply do not feel like installing more software on your computer), then the solution for you is the RStudio Cloud.
+If you answered *yes* to any of the above questions (or if you simply do not feel like installing more software on your computer), then the solution for you is the Posit Cloud.
 
-The website is https://rstudio.cloud/
+The website is https://posit.cloud/
 
-```{r, echo = FALSE, fig.align='center', out.width="75%", fig.cap = "Welcome to RStudio Cloud!"}
+```{r, echo = FALSE, fig.align='center', out.width="75%", fig.cap = "Welcome to Posit Cloud!"}
 library(knitr)
 library(jpeg)
 include_graphics("images/RCloud.png")
 ```
 
-Signing up for a free account with the RStudio Cloud has it's benefits...
+Signing up for a free account with the Posit Cloud has it's benefits...
 
 1. You will be able to do everything for this class on the cloud-based version of the software without ever having to download anything.
 
@@ -55,20 +61,20 @@ Signing up for a free account with the RStudio Cloud has it's benefits...
 
 3. You can run the most up-to-date version of R and RStudio no matter what operating system you have.
 
-Of course, the RStudio Cloud also has a few drawbacks...
+Of course, the Posit Cloud also has a few drawbacks...
 
-1. The RStudio Cloud requires an active internet connection when in use.
+1. The Posit Cloud requires an active internet connection when in use.
 
 2. Your free account comes with limited usage time.^[At the time of this writing, the account comes with 25 hours per month. This may be subject to change.]  If you require more time, you are able to purchase additional usage time for a minimal fee.^[At the time of this writing, you can purchase an additional 50 hours of usage time for $5 per month. This may be subject to change.]
 
-The bottom line is that the cloud-based version of RStudio is an excellent alternative to installing your own version of the course software. It is fairly new and prices are uncertain at the moment - and this is the only reason why this course has yet to *fully* adopt the cloud version for all students. Once prices have settled, this course will most likely shift to the cloud and no longer need students to install R and RStudio.
+The bottom line is that the cloud-based version of RStudio is an excellent alternative to installing your own version of the course software. Students who have gone this route in the past have had zero issues with the time limit.
 
-**Note:** If you decide to go with the RStudio option, you can skip the following section entitled *Downloading and installing R* and proceed to the section entitled *Taking Stock* and all remaining sections of the chapter. These sections are relevant for all students regardless of their version of RStudio.
+**Note:** If you decide to go with the Posit Cloud option, you can skip the following section entitled *Downloading and installing R* and proceed to the section entitled *Taking Stock* and all remaining sections of the chapter. These sections are relevant for all students regardless of their version of RStudio.
 
 
 ## Downloading and installing R
 
-This section is intended for students who are not going with the RStudio Cloud option discussed above, and are intending to download and install R and RStudio on your machine. Note that the directions below have you first downloading R and then RStudio. They are two separate programs that work together.
+This section is intended for students who are not going with the Posit / RStudio Cloud option discussed above, and are intending to download and install R and RStudio on your machine. Note that the directions below have you first downloading R and then RStudio. They are two separate programs that work together.
 
 The first step to get R onto your machine is to go to the website, download the correct version of R, and install. 
 
@@ -124,7 +130,7 @@ https://rstudio.com/products/rstudio/download/
 
 ## Taking Stock
 
-If you have either installed the software or signed up to the RStudio Cloud correctly, you should now be able to open Rstudio (or your Cloud account) and see a screen that looks like this:
+If you have either installed the software or signed up to the Posit Cloud correctly, you should now be able to open Rstudio (or your Cloud account) and see a screen that looks something like this:
 
 ```{r, echo = FALSE, fig.align='center', out.width="75%", fig.cap = "Welcome to R!"}
 library(knitr)
@@ -134,7 +140,7 @@ include_graphics("images/Screenshot1.png")
 
 The window on the left is your *Console* which is exactly what you would see if you opened up R directly.^[Note that we will never open R by itself, because it is easier to communicate with R through Rstudio.] The window on the upper-right is your *Global Environment*. It will show you all of the data sets, variables, and result objects that are currently in R and available to you. Note that it is currently empty because we haven't done anything yet. The window on your bottom-right has several useful tabs that let us look at our folder directory (as shown) as well as any figures we generate and R packages at our disposal. 
 
-This is the default mode of Rstudio. You can input commands into the console right at the ">" and R will execute them line by line. This is fine if you wish to execute one single command at a time, but it becomes tedious if we have a series of commands we need to execute before we arrive at our desired result. We can therefore alter this default mode by adding R-scripts.
+This is the default mode of Rstudio. You can input commands into the console right at the prompt ">" and R will execute them line by line. This is fine if you wish to execute one single command at a time, but it becomes tedious if we have a series of commands we need to execute before we arrive at our desired result. We can therefore alter this default mode by adding R-scripts.
 
 ```{r, echo = FALSE, fig.align='center', out.width="75%", fig.cap = "An R-script!"}
 include_graphics("images/Screenshot2.png")
@@ -173,27 +179,29 @@ install.packages("name of package")
 
 Once this is done, the package is installed in your version of R and you will never need to install it again.^[You need to do this for your Cloud-based version of R as well.] You will need to *unpack* the packages each time you want to use them by calling a *library* command, but we will get to that later.
 
-The first R-script you will run as part of your first assignment is called *Install_Packages.R*. The executable portion of the code looks like this:
+The first R-script you will create and run as part of your first assignment contains an executable portion of the code looks like this:
 
 ```
 install.packages( c("AER", "car", "dplyr", 
 "fastDummies", "readxl", "xtable", "vars",
 "WDI", "xts", "zoo", "wooldridge") )
 ```
+
 This is a simple command that asks R to download 11 packages and install them. You can easily make your own RScript by opening up a blank RScript in R, and copying the code in the gray box above.^[You can also get the code directly from the first assignment.] Highlight the portion above in your RScript, and hit the *Run* tab at the top of the upper-left window of RStudio. A bunch of notifications will appear on the R console (lower-left window) while the list of packages will be downloaded from the mirror site you selected earlier and installed. This can take some time (about 20 mins) depending on your internet connection, so it is advised you do this when you can leave your computer alone for awhile.
 
 ### Assigning Objects
 
-We declare variable names and other data objects by *assigning* things names. For example, we can repeat the calculation above by first assigning some variables the same numbers:
+We declare variable names and other data objects by *assigning* names. For example, we can repeat the calculation above by first assigning some variables:
 
 ```{r}
 BIG <- 12
 SMALL <- 4
 (TOTAL <- BIG + SMALL)
 ```
-Notice that all of these variable names should now be in your global environment (upper-right window). The reason why 16 was returned on the console is because we put the last command in parentheses. That is the *print to screen* command.
 
-You might be asking why R simply doesn't use an equal sign in stead of the assign sign. The answer is that we will be assigning names to output objects that contain much more than a single number. Things like regression output is technically *assigned* a name, so we are simple being consistent. You can use an equal sign in place of the assign sign for some cases, and everything will go through equally well. However, this doesn't work for every command we will use in this class.
+Notice that all of these variable names should now be in your global environment (upper-right window). The reason why 16 was returned on the console is because we put the last command in parentheses. That is, parentheses around a calculation is considered the *print to screen* command.
+
+You might be asking why R simply doesn't use an equal sign in stead of the assign sign. The answer is that we will be assigning names to output objects that contain much more than a single number. Things like regression output is technically *assigned* a name, so we are simply being consistent. You can use an equal sign in place of the assign sign for some cases, and everything will go through equally well. However, this doesn't work for every command we will use in this class.
 
 ### Listing, Adding, and Removing
 
@@ -202,6 +210,7 @@ We can list all objects in our global environment using the list command: ls()
 ```{r}
 ls()
 ```
+
 As we already showed, we can add new variables by simply assigning names to our calculations.
 
 ```{r}
@@ -214,11 +223,19 @@ If you ever wanted to remove some variables from your global environment, you ca
 rm(TOTAL.SQUARED)
 ```
 
-### Loading Data
+### Importing Data
 
-R can handle data in almost any format imaginable. The main data format we will consider in this class is a trusty old MS Excel file. Note that there is a zip file associated with this companion that contains all data files needed for replication. You will need to download that zip file onto your computer and unzip it before proceeding. It is recommended that you put all of you data files somewhere easy to access. Like a single folder directly on your C drive.^[A folder on your *desktop* is the worst place for a data folder, because the file path is very messy. The closer to the C: drive, the better.]
+R can handle data in almost any format imaginable. The main data format we will consider in this class is a trusty old MS Excel file.^[Note that there is a zip file associated with this companion that contains all data files needed for replication. You will need to download that zip file onto your computer and unzip it before proceeding.] It is recommended that you put all of you data files somewhere easy to access. Like a single folder directly on your C drive.^[A folder on your *desktop* is the worst place for a data folder, because the file path is very messy. The closer to the C: drive, the better.]
 
-There are two ways to load data...
+There are two ways to import data, and we will go over them in turn. Either one of these way will work as described if you are using installed versions of R and RStudio on your computer.  **However**, if you are using the Posit Cloud, there is one small initial step.
+
+**POSIT CLOUD USERS**
+
+Before importing any data into R, you must first upload the data onto your portion of the cloud server. This can be done by selecting the *Upload* button in the lower-right portion of the screen (see enlarged image below). Selecting the upload button will open a window where you can select the data file from your computer, which will then be added to your server account. Once the data is there, you can proceed with the steps below.
+
+```{r, echo = FALSE, fig.align='center', out.width="75%", fig.cap = "Uploading files to the Server"}
+include_graphics("images/Upload.png")
+```
 
 **1. The Direct Way**
 
@@ -235,7 +252,7 @@ The term *"data/AUTO_SA.xlsx"* is the exact location on my computer for this dat
 
 You can also import data directly into R through Rstudio.
 
-1. Use the files tab (bottom-right window) and locate the data file you want to import.
+1. Use the files tab (bottom-right window of your screen) and locate the data file you want to import.^[This can also be done by selecting *File* in the upper-left of your screen, then *Import Dataset*, then *From Excel...*.]
 
 2. Left-click on file and select *Import Dataset...*
 

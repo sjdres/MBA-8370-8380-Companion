@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>7.1 A Simple Linear Regression Model | Course Companion for MBA 8370 and MBA 8380</title>
   <meta name="description" content="Course companion" />
-  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="7.1 A Simple Linear Regression Model | Course Companion for MBA 8370 and MBA 8380" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Scott Dressler" />
 
 
-<meta name="date" content="2023-01-08" />
+<meta name="date" content="2024-08-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -56,7 +56,7 @@
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -119,6 +119,10 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -178,7 +182,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3" data-path="R.html"><a href="R.html"><i class="fa fa-check"></i><b>3</b> Getting Started with R</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="the-r-project-for-statistical-computing.html"><a href="the-r-project-for-statistical-computing.html"><i class="fa fa-check"></i><b>3.1</b> The R Project for Statistical Computing</a></li>
-<li class="chapter" data-level="3.2" data-path="before-you-install-rstudio-cloud.html"><a href="before-you-install-rstudio-cloud.html"><i class="fa fa-check"></i><b>3.2</b> Before you Install… RStudio Cloud?</a></li>
+<li class="chapter" data-level="3.2" data-path="before-you-install-posit-rstudio-cloud.html"><a href="before-you-install-posit-rstudio-cloud.html"><i class="fa fa-check"></i><b>3.2</b> Before you Install… Posit (RStudio) Cloud?</a></li>
 <li class="chapter" data-level="3.3" data-path="downloading-and-installing-r.html"><a href="downloading-and-installing-r.html"><i class="fa fa-check"></i><b>3.3</b> Downloading and installing R</a>
 <ul>
 <li class="chapter" data-level="3.3.1" data-path="downloading-and-installing-r.html"><a href="downloading-and-installing-r.html#choosing-a-mirror"><i class="fa fa-check"></i><b>3.3.1</b> Choosing a <em>Mirror</em></a></li>
@@ -191,7 +195,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.5.1" data-path="coding-basics.html"><a href="coding-basics.html#installing-packages"><i class="fa fa-check"></i><b>3.5.1</b> Installing <em>Packages</em></a></li>
 <li class="chapter" data-level="3.5.2" data-path="coding-basics.html"><a href="coding-basics.html#assigning-objects"><i class="fa fa-check"></i><b>3.5.2</b> Assigning Objects</a></li>
 <li class="chapter" data-level="3.5.3" data-path="coding-basics.html"><a href="coding-basics.html#listing-adding-and-removing"><i class="fa fa-check"></i><b>3.5.3</b> Listing, Adding, and Removing</a></li>
-<li class="chapter" data-level="3.5.4" data-path="coding-basics.html"><a href="coding-basics.html#loading-data"><i class="fa fa-check"></i><b>3.5.4</b> Loading Data</a></li>
+<li class="chapter" data-level="3.5.4" data-path="coding-basics.html"><a href="coding-basics.html#importing-data"><i class="fa fa-check"></i><b>3.5.4</b> Importing Data</a></li>
 <li class="chapter" data-level="3.5.5" data-path="coding-basics.html"><a href="coding-basics.html#manipulating-data"><i class="fa fa-check"></i><b>3.5.5</b> Manipulating Data</a></li>
 <li class="chapter" data-level="3.5.6" data-path="coding-basics.html"><a href="coding-basics.html#subsetting-data"><i class="fa fa-check"></i><b>3.5.6</b> Subsetting Data</a></li>
 </ul></li>
@@ -281,13 +285,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.5.3" data-path="assumptions-of-the-linear-regression-model.html"><a href="assumptions-of-the-linear-regression-model.html#equal-variance"><i class="fa fa-check"></i><b>7.5.3</b> Equal Variance</a></li>
 <li class="chapter" data-level="7.5.4" data-path="assumptions-of-the-linear-regression-model.html"><a href="assumptions-of-the-linear-regression-model.html#normality-of-errors"><i class="fa fa-check"></i><b>7.5.4</b> Normality of Errors</a></li>
 </ul></li>
-<li class="chapter" data-level="7.6" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html"><i class="fa fa-check"></i><b>7.6</b> Appendix: Statistical Inference</a>
+<li class="chapter" data-level="7.6" data-path="a-concluding-application.html"><a href="a-concluding-application.html"><i class="fa fa-check"></i><b>7.6</b> A Concluding Application</a></li>
+<li class="chapter" data-level="7.7" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html"><i class="fa fa-check"></i><b>7.7</b> Appendix: Statistical Inference</a>
 <ul>
-<li class="chapter" data-level="7.6.1" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-population-parameters"><i class="fa fa-check"></i><b>7.6.1</b> Confidence Intervals (around population parameters)</a></li>
-<li class="chapter" data-level="7.6.2" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#hypothesis-tests"><i class="fa fa-check"></i><b>7.6.2</b> Hypothesis Tests</a></li>
-<li class="chapter" data-level="7.6.3" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-forecasts"><i class="fa fa-check"></i><b>7.6.3</b> Confidence Intervals (around forecasts)</a></li>
+<li class="chapter" data-level="7.7.1" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-population-parameters"><i class="fa fa-check"></i><b>7.7.1</b> Confidence Intervals (around population parameters)</a></li>
+<li class="chapter" data-level="7.7.2" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#hypothesis-tests"><i class="fa fa-check"></i><b>7.7.2</b> Hypothesis Tests</a></li>
+<li class="chapter" data-level="7.7.3" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-forecasts"><i class="fa fa-check"></i><b>7.7.3</b> Confidence Intervals (around forecasts)</a></li>
 </ul></li>
-<li class="chapter" data-level="7.7" data-path="up-next.html"><a href="up-next.html"><i class="fa fa-check"></i><b>7.7</b> Up Next…</a></li>
+<li class="chapter" data-level="7.8" data-path="up-next.html"><a href="up-next.html"><i class="fa fa-check"></i><b>7.8</b> Up Next…</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="MLR.html"><a href="MLR.html"><i class="fa fa-check"></i><b>8</b> Multiple Linear Regression</a>
 <ul>
@@ -307,6 +312,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.3.3" data-path="statistical-inference.html"><a href="statistical-inference.html#hypothesis-tests-1"><i class="fa fa-check"></i><b>8.3.3</b> Hypothesis Tests</a></li>
 <li class="chapter" data-level="8.3.4" data-path="statistical-inference.html"><a href="statistical-inference.html#confidence-intervals-around-forecasts-1"><i class="fa fa-check"></i><b>8.3.4</b> Confidence Intervals (around forecasts)</a></li>
 </ul></li>
+<li class="chapter" data-level="8.4" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html"><i class="fa fa-check"></i><b>8.4</b> A Concluding Application</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#interpretation"><i class="fa fa-check"></i>Interpretation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#confidence-intervals"><i class="fa fa-check"></i>Confidence Intervals</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#hypothesis-tests-2"><i class="fa fa-check"></i>Hypothesis Tests</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#forecasts"><i class="fa fa-check"></i>Forecasts</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="COL.html"><a href="COL.html"><i class="fa fa-check"></i><b>9</b> Collinearity</a>
 <ul>
@@ -322,17 +334,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="how-do-we-remove-collinearity.html"><a href="how-do-we-remove-collinearity.html#sometimes-removing-collinearity-might-involve-multiple-rounds"><i class="fa fa-check"></i>Sometimes removing collinearity might involve multiple rounds</a></li>
 </ul></li>
+<li class="chapter" data-level="9.5" data-path="a-concluding-application-2.html"><a href="a-concluding-application-2.html"><i class="fa fa-check"></i><b>9.5</b> A Concluding Application</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="DVS.html"><a href="DVS.html"><i class="fa fa-check"></i><b>10</b> Qualitative (Dummy) Variables</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="intercept-dummy-variable.html"><a href="intercept-dummy-variable.html"><i class="fa fa-check"></i><b>10.1</b> Intercept dummy variable</a></li>
 <li class="chapter" data-level="10.2" data-path="slope-dummy-variable.html"><a href="slope-dummy-variable.html"><i class="fa fa-check"></i><b>10.2</b> Slope dummy variable</a></li>
 <li class="chapter" data-level="10.3" data-path="what-if-there-are-more-than-two-categories.html"><a href="what-if-there-are-more-than-two-categories.html"><i class="fa fa-check"></i><b>10.3</b> What if there are more than two categories?</a></li>
-<li class="chapter" data-level="10.4" data-path="a-final-application.html"><a href="a-final-application.html"><i class="fa fa-check"></i><b>10.4</b> A Final Application</a>
+<li class="chapter" data-level="10.4" data-path="a-concluding-application-3.html"><a href="a-concluding-application-3.html"><i class="fa fa-check"></i><b>10.4</b> A Concluding Application</a></li>
+<li class="chapter" data-level="10.5" data-path="another-concluding-application.html"><a href="another-concluding-application.html"><i class="fa fa-check"></i><b>10.5</b> Another Concluding Application</a>
 <ul>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#make-a-nominal-series-a-real-series"><i class="fa fa-check"></i>Make a <em>Nominal</em> Series a <em>Real</em> Series</a></li>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#remove-a-trend"><i class="fa fa-check"></i>Remove a Trend</a></li>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#remove-seasonality"><i class="fa fa-check"></i>Remove Seasonality</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#make-a-nominal-series-a-real-series"><i class="fa fa-check"></i>Make a <em>Nominal</em> Series a <em>Real</em> Series</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#remove-a-trend"><i class="fa fa-check"></i>Remove a Trend</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#remove-seasonality"><i class="fa fa-check"></i>Remove Seasonality</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="FF.html"><a href="FF.html"><i class="fa fa-check"></i><b>11</b> Functional Forms</a>
@@ -354,6 +368,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="the-reciprocal-transformation.html"><a href="the-reciprocal-transformation.html#application-6"><i class="fa fa-check"></i>Application</a></li>
 </ul></li>
 <li class="chapter" data-level="11.6" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>11.6</b> Conclusion</a></li>
+<li class="chapter" data-level="11.7" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html"><i class="fa fa-check"></i><b>11.7</b> A Concluding Application</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#a-residual-analysis"><i class="fa fa-check"></i>A Residual Analysis</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#log-transformation"><i class="fa fa-check"></i>Log Transformation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#quadratic-transformation"><i class="fa fa-check"></i>Quadratic Transformation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#reciprocal-transformation"><i class="fa fa-check"></i>Reciprocal Transformation</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="JHT.html"><a href="JHT.html"><i class="fa fa-check"></i><b>12</b> Joint Hypothesis Tests</a>
 <ul>
@@ -373,6 +394,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="applications.html"><a href="applications.html#application-1-a-wage-application"><i class="fa fa-check"></i>Application 1: A wage application</a></li>
 <li class="chapter" data-level="" data-path="applications.html"><a href="applications.html#application-2-constant-returns-to-scale"><i class="fa fa-check"></i>Application 2: Constant Returns to Scale</a></li>
 </ul></li>
+<li class="chapter" data-level="12.4" data-path="a-concluding-application-5.html"><a href="a-concluding-application-5.html"><i class="fa fa-check"></i><b>12.4</b> A Concluding Application</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -409,16 +431,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">7.1.1</span> What does a regression model imply?<a href="a-simple-linear-regression-model.html#what-does-a-regression-model-imply" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><span class="math display">\[Y_i=\beta_0+\beta_1X_i\]</span></p>
 <p>When we write down a model like this, we are imposing a huge amount of assumptions on how we believe the world works.</p>
-<p>First, there is the <strong>Direction of causality</strong>. A regression implicitly assumes that changes in the independent variable (X) <em>causes</em> changes in the dependent variable (Y). This is the ONLY direction of causality we can handle, otherwise our analysis would be confounded (i.e., is don’t know <em>what causes what</em>) and not useful.</p>
-<p>Second, the equation assumes that information on the independent variable (X) is all the information you need to explain the dependent variable (Y). In other words, if we were to look at pairs of observations of X and Y on a plot, then the above equation assumes that all observations (data points) line up exactly on the (straight) regression line.</p>
+<p>First, there is the <strong>Direction of causality</strong>. A regression implicitly assumes that changes in the independent variable (X) <em>cause</em> changes in the dependent variable (Y). This is the ONLY direction of causality we can handle, otherwise our analysis would be confounded and not useful (i.e., we don’t know <em>what causes what</em>).</p>
+<p>Second, the equation assumes that information on the independent variable (X) is all the information needed to explain the dependent variable (Y). In other words, if we were to look at pairs of observations of X and Y on a plot, then the above equation assumes that all observations (data points) line up exactly on the (straight) regression line.</p>
 <p>This would be great if the observations look like the figure on the left, but not if they look like the figure on the right.</p>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-104-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-106-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>It would be extremely rare for the linear model (as detailed above) to account for all there is to know about the dependent variable Y…</p>
 <ol style="list-style-type: decimal">
 <li><p>There might be other independent variables that explain different parts of the dependent variable (i.e., multiple dimensions). <em>(more on this next chapter)</em></p></li>
-<li><p>There might be measurement error in the recording of the variables.</p></li>
-<li><p>There might be an incorrect functional form - meaning that the relationship between the dependent and independent variable might be more sophisticated than a straight line. <em>(more on this next chapter)</em></p></li>
-<li><p>There might be purely random and therefore totally unpredictable variation in the dependent variable.</p></li>
+<li><p>There might be measurement error in the recording of the variables. <em>(this is a quality of data issue)</em></p></li>
+<li><p>There might be an incorrect functional form - meaning that the relationship between the dependent and independent variable might be more sophisticated than a straight line. <em>(more on this in a later chapter)</em></p></li>
+<li><p>There might be purely random and totally unpredictable variation in the dependent variable.</p></li>
 </ol>
 <p>This last item can be easily dealt with!</p>
 <p>Adding a stochastic error term (<span class="math inline">\(\varepsilon_i\)</span>) to the model will effectively take care of all sources of variation in the dependent variable (Y) that is not explicitly captured by information contained in the independent variable (X).</p>
@@ -428,16 +450,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><span class="math display">\[Y_i=\beta_0+\beta_1X_i+\varepsilon_i\]</span></p>
 <p>The Linear Regression Model now explicitly states that the explanation of the dependent variable <span class="math inline">\((Y_i)\)</span> can be broken down into two components:</p>
 <ul>
-<li><p>A <strong>Deterministic</strong> Component: <span class="math inline">\(\beta_0+\beta_1X_i\)</span></p></li>
-<li><p>A <strong>Random / Stochastic / Explainable</strong> Component: <span class="math inline">\(\varepsilon_i\)</span></p></li>
+<li><p>A <strong>Deterministic / Explainable</strong> Component: <span class="math inline">\(\beta_0+\beta_1X_i\)</span></p></li>
+<li><p>A <strong>Random / Stochastic / Unexplainable</strong> Component: <span class="math inline">\(\varepsilon_i\)</span></p></li>
 </ul>
 <p>Lets address these two components in turn.</p>
 <div id="the-deterministic-component" class="section level4 unnumbered hasAnchor">
 <h4>The Deterministic Component<a href="a-simple-linear-regression-model.html#the-deterministic-component" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><span class="math display">\[\hat{Y}_i=\beta_0+\beta_1X_i\]</span></p>
-<p>The deterministic component delivers the expected (or <em>average</em>) value of the dependent variable (Y) given a values for the coefficients (<span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span>) and a value of the dependent variable (X).</p>
-<p>Since X is given, it is considered <em>deterministic</em> (i.e., non-stochastic)</p>
-<p>In other words, the deterministic component determines the mean value of Y associated with a particular value of X. This should make sense, because the average value of Y is the best guess.</p>
+<p>The deterministic component delivers the expected (or <em>average</em>) value of the dependent variable (Y) given values for the coefficients (<span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span>) and a value of the dependent variable (X).</p>
+<p>Since X is given, it is considered <em>deterministic</em> (i.e., non-stochastic).</p>
+<p>To put plainly, the deterministic component determines the mean value of Y associated with a particular value of X. It is now the <em>expected value of Y given a value of X</em>, because the mean value of Y is the best guess.</p>
 <p>Technically speaking, the deterministic component delivers the <em>expected value of Y conditional on a value of X</em> (i.e., a conditional expectation).</p>
 <p><span class="math display">\[\hat{Y}_i=\beta_0+\beta_1X_i=E[Y_i|X_i]\]</span></p>
 </div>
@@ -445,12 +467,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h4>The Unexpected (<em>Garbage Can</em>) Component<a href="a-simple-linear-regression-model.html#the-unexpected-garbage-can-component" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><span class="math display">\[\varepsilon_i=Y_i-\hat{Y}_i\]</span></p>
 <p>Once we obtain the coefficients, we can compare the observed values of <span class="math inline">\(Y_i\)</span> with the expected value of <span class="math inline">\(Y_i\)</span> conditional on the values of <span class="math inline">\(X_i\)</span>.</p>
-<p>The difference between the true value <span class="math inline">\((Y_i)\)</span> and the expected value <span class="math inline">\((\hat{Y}_i)\)</span> is by definition… <em>unexpected!</em></p>
+<p>The difference between the observed (true) value <span class="math inline">\((Y_i)\)</span> and the expected value <span class="math inline">\((\hat{Y}_i)\)</span> is by definition… <em>unexpected!</em></p>
 <p>This unexpected discrepancy is your <strong>prediction error</strong> - and everything your deterministic component cannot explain is deemed <em>random</em> and <em>unexplainable</em>.</p>
-<p>If a portion of the dependent variable is considered random and unexplainable - then it gets thrown away into the <em>garbage can</em> (<span class="math inline">\(\varepsilon_i\)</span>).</p>
+<p>If a portion of the dependent variable is considered random and unexplainable by deterministic portion of the model - then it gets thrown away into the <em>garbage can</em> (<span class="math inline">\(\varepsilon_i\)</span>).</p>
 <p>This is a subtle but crucial part of regression modeling…</p>
 <ul>
-<li><p>Your choice of the independent variable(s) dictate what you believe to be important in explaining the dependent variable.</p></li>
+<li><p>Your choice of the independent variable(s) dictates what you believe to be important in explaining the dependent variable.</p></li>
 <li><p>The unimportant (or random) changes in the dependent variable that your independent variables cannot explain end up in the garbage can <em>by design</em>.</p></li>
 <li><p>Therefore, <strong>the researcher</strong> essentially chooses what is important, and what gets thrown away into the garbage can.</p></li>
 </ul>

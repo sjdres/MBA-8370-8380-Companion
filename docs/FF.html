@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 11 Functional Forms | Course Companion for MBA 8370 and MBA 8380</title>
   <meta name="description" content="Course companion" />
-  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 11 Functional Forms | Course Companion for MBA 8370 and MBA 8380" />
   <meta property="og:type" content="book" />
@@ -23,14 +23,14 @@
 <meta name="author" content="Scott Dressler" />
 
 
-<meta name="date" content="2023-01-08" />
+<meta name="date" content="2024-08-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="a-final-application.html"/>
+<link rel="prev" href="another-concluding-application.html"/>
 <link rel="next" href="derivatives.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -56,7 +56,7 @@
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -119,6 +119,10 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -178,7 +182,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3" data-path="R.html"><a href="R.html"><i class="fa fa-check"></i><b>3</b> Getting Started with R</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="the-r-project-for-statistical-computing.html"><a href="the-r-project-for-statistical-computing.html"><i class="fa fa-check"></i><b>3.1</b> The R Project for Statistical Computing</a></li>
-<li class="chapter" data-level="3.2" data-path="before-you-install-rstudio-cloud.html"><a href="before-you-install-rstudio-cloud.html"><i class="fa fa-check"></i><b>3.2</b> Before you Install… RStudio Cloud?</a></li>
+<li class="chapter" data-level="3.2" data-path="before-you-install-posit-rstudio-cloud.html"><a href="before-you-install-posit-rstudio-cloud.html"><i class="fa fa-check"></i><b>3.2</b> Before you Install… Posit (RStudio) Cloud?</a></li>
 <li class="chapter" data-level="3.3" data-path="downloading-and-installing-r.html"><a href="downloading-and-installing-r.html"><i class="fa fa-check"></i><b>3.3</b> Downloading and installing R</a>
 <ul>
 <li class="chapter" data-level="3.3.1" data-path="downloading-and-installing-r.html"><a href="downloading-and-installing-r.html#choosing-a-mirror"><i class="fa fa-check"></i><b>3.3.1</b> Choosing a <em>Mirror</em></a></li>
@@ -191,7 +195,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.5.1" data-path="coding-basics.html"><a href="coding-basics.html#installing-packages"><i class="fa fa-check"></i><b>3.5.1</b> Installing <em>Packages</em></a></li>
 <li class="chapter" data-level="3.5.2" data-path="coding-basics.html"><a href="coding-basics.html#assigning-objects"><i class="fa fa-check"></i><b>3.5.2</b> Assigning Objects</a></li>
 <li class="chapter" data-level="3.5.3" data-path="coding-basics.html"><a href="coding-basics.html#listing-adding-and-removing"><i class="fa fa-check"></i><b>3.5.3</b> Listing, Adding, and Removing</a></li>
-<li class="chapter" data-level="3.5.4" data-path="coding-basics.html"><a href="coding-basics.html#loading-data"><i class="fa fa-check"></i><b>3.5.4</b> Loading Data</a></li>
+<li class="chapter" data-level="3.5.4" data-path="coding-basics.html"><a href="coding-basics.html#importing-data"><i class="fa fa-check"></i><b>3.5.4</b> Importing Data</a></li>
 <li class="chapter" data-level="3.5.5" data-path="coding-basics.html"><a href="coding-basics.html#manipulating-data"><i class="fa fa-check"></i><b>3.5.5</b> Manipulating Data</a></li>
 <li class="chapter" data-level="3.5.6" data-path="coding-basics.html"><a href="coding-basics.html#subsetting-data"><i class="fa fa-check"></i><b>3.5.6</b> Subsetting Data</a></li>
 </ul></li>
@@ -281,13 +285,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.5.3" data-path="assumptions-of-the-linear-regression-model.html"><a href="assumptions-of-the-linear-regression-model.html#equal-variance"><i class="fa fa-check"></i><b>7.5.3</b> Equal Variance</a></li>
 <li class="chapter" data-level="7.5.4" data-path="assumptions-of-the-linear-regression-model.html"><a href="assumptions-of-the-linear-regression-model.html#normality-of-errors"><i class="fa fa-check"></i><b>7.5.4</b> Normality of Errors</a></li>
 </ul></li>
-<li class="chapter" data-level="7.6" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html"><i class="fa fa-check"></i><b>7.6</b> Appendix: Statistical Inference</a>
+<li class="chapter" data-level="7.6" data-path="a-concluding-application.html"><a href="a-concluding-application.html"><i class="fa fa-check"></i><b>7.6</b> A Concluding Application</a></li>
+<li class="chapter" data-level="7.7" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html"><i class="fa fa-check"></i><b>7.7</b> Appendix: Statistical Inference</a>
 <ul>
-<li class="chapter" data-level="7.6.1" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-population-parameters"><i class="fa fa-check"></i><b>7.6.1</b> Confidence Intervals (around population parameters)</a></li>
-<li class="chapter" data-level="7.6.2" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#hypothesis-tests"><i class="fa fa-check"></i><b>7.6.2</b> Hypothesis Tests</a></li>
-<li class="chapter" data-level="7.6.3" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-forecasts"><i class="fa fa-check"></i><b>7.6.3</b> Confidence Intervals (around forecasts)</a></li>
+<li class="chapter" data-level="7.7.1" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-population-parameters"><i class="fa fa-check"></i><b>7.7.1</b> Confidence Intervals (around population parameters)</a></li>
+<li class="chapter" data-level="7.7.2" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#hypothesis-tests"><i class="fa fa-check"></i><b>7.7.2</b> Hypothesis Tests</a></li>
+<li class="chapter" data-level="7.7.3" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-forecasts"><i class="fa fa-check"></i><b>7.7.3</b> Confidence Intervals (around forecasts)</a></li>
 </ul></li>
-<li class="chapter" data-level="7.7" data-path="up-next.html"><a href="up-next.html"><i class="fa fa-check"></i><b>7.7</b> Up Next…</a></li>
+<li class="chapter" data-level="7.8" data-path="up-next.html"><a href="up-next.html"><i class="fa fa-check"></i><b>7.8</b> Up Next…</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="MLR.html"><a href="MLR.html"><i class="fa fa-check"></i><b>8</b> Multiple Linear Regression</a>
 <ul>
@@ -307,6 +312,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.3.3" data-path="statistical-inference.html"><a href="statistical-inference.html#hypothesis-tests-1"><i class="fa fa-check"></i><b>8.3.3</b> Hypothesis Tests</a></li>
 <li class="chapter" data-level="8.3.4" data-path="statistical-inference.html"><a href="statistical-inference.html#confidence-intervals-around-forecasts-1"><i class="fa fa-check"></i><b>8.3.4</b> Confidence Intervals (around forecasts)</a></li>
 </ul></li>
+<li class="chapter" data-level="8.4" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html"><i class="fa fa-check"></i><b>8.4</b> A Concluding Application</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#interpretation"><i class="fa fa-check"></i>Interpretation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#confidence-intervals"><i class="fa fa-check"></i>Confidence Intervals</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#hypothesis-tests-2"><i class="fa fa-check"></i>Hypothesis Tests</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#forecasts"><i class="fa fa-check"></i>Forecasts</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="COL.html"><a href="COL.html"><i class="fa fa-check"></i><b>9</b> Collinearity</a>
 <ul>
@@ -322,17 +334,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="how-do-we-remove-collinearity.html"><a href="how-do-we-remove-collinearity.html#sometimes-removing-collinearity-might-involve-multiple-rounds"><i class="fa fa-check"></i>Sometimes removing collinearity might involve multiple rounds</a></li>
 </ul></li>
+<li class="chapter" data-level="9.5" data-path="a-concluding-application-2.html"><a href="a-concluding-application-2.html"><i class="fa fa-check"></i><b>9.5</b> A Concluding Application</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="DVS.html"><a href="DVS.html"><i class="fa fa-check"></i><b>10</b> Qualitative (Dummy) Variables</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="intercept-dummy-variable.html"><a href="intercept-dummy-variable.html"><i class="fa fa-check"></i><b>10.1</b> Intercept dummy variable</a></li>
 <li class="chapter" data-level="10.2" data-path="slope-dummy-variable.html"><a href="slope-dummy-variable.html"><i class="fa fa-check"></i><b>10.2</b> Slope dummy variable</a></li>
 <li class="chapter" data-level="10.3" data-path="what-if-there-are-more-than-two-categories.html"><a href="what-if-there-are-more-than-two-categories.html"><i class="fa fa-check"></i><b>10.3</b> What if there are more than two categories?</a></li>
-<li class="chapter" data-level="10.4" data-path="a-final-application.html"><a href="a-final-application.html"><i class="fa fa-check"></i><b>10.4</b> A Final Application</a>
+<li class="chapter" data-level="10.4" data-path="a-concluding-application-3.html"><a href="a-concluding-application-3.html"><i class="fa fa-check"></i><b>10.4</b> A Concluding Application</a></li>
+<li class="chapter" data-level="10.5" data-path="another-concluding-application.html"><a href="another-concluding-application.html"><i class="fa fa-check"></i><b>10.5</b> Another Concluding Application</a>
 <ul>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#make-a-nominal-series-a-real-series"><i class="fa fa-check"></i>Make a <em>Nominal</em> Series a <em>Real</em> Series</a></li>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#remove-a-trend"><i class="fa fa-check"></i>Remove a Trend</a></li>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#remove-seasonality"><i class="fa fa-check"></i>Remove Seasonality</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#make-a-nominal-series-a-real-series"><i class="fa fa-check"></i>Make a <em>Nominal</em> Series a <em>Real</em> Series</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#remove-a-trend"><i class="fa fa-check"></i>Remove a Trend</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#remove-seasonality"><i class="fa fa-check"></i>Remove Seasonality</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="FF.html"><a href="FF.html"><i class="fa fa-check"></i><b>11</b> Functional Forms</a>
@@ -354,6 +368,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="the-reciprocal-transformation.html"><a href="the-reciprocal-transformation.html#application-6"><i class="fa fa-check"></i>Application</a></li>
 </ul></li>
 <li class="chapter" data-level="11.6" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>11.6</b> Conclusion</a></li>
+<li class="chapter" data-level="11.7" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html"><i class="fa fa-check"></i><b>11.7</b> A Concluding Application</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#a-residual-analysis"><i class="fa fa-check"></i>A Residual Analysis</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#log-transformation"><i class="fa fa-check"></i>Log Transformation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#quadratic-transformation"><i class="fa fa-check"></i>Quadratic Transformation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#reciprocal-transformation"><i class="fa fa-check"></i>Reciprocal Transformation</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="JHT.html"><a href="JHT.html"><i class="fa fa-check"></i><b>12</b> Joint Hypothesis Tests</a>
 <ul>
@@ -373,6 +394,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="applications.html"><a href="applications.html#application-1-a-wage-application"><i class="fa fa-check"></i>Application 1: A wage application</a></li>
 <li class="chapter" data-level="" data-path="applications.html"><a href="applications.html#application-2-constant-returns-to-scale"><i class="fa fa-check"></i>Application 2: Constant Returns to Scale</a></li>
 </ul></li>
+<li class="chapter" data-level="12.4" data-path="a-concluding-application-5.html"><a href="a-concluding-application-5.html"><i class="fa fa-check"></i><b>12.4</b> A Concluding Application</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -398,17 +420,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Chapter 11</span> Functional Forms<a href="FF.html#FF" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p><span class="math display">\[Y_i = \beta_0 + \beta_1 X_{1i} + \beta_2 X_{2i} + \varepsilon_i\]</span></p>
 <p>The regression model we have studied thus far has two main features. First, the model is linear in the coefficients. This important property allows us to estimate the model using OLS. Second the model is linear in the variables. This property imposes a linear relationship between the dependent and independent variables. In other words, the relationship is a straight line.</p>
-<p>A linear relationship between the independent and a dependent variable results in a slope that is <em>constant</em>.</p>
+<p>A linear relationship between the dependent and an independent variable results in a slope that is <em>constant</em>.</p>
 <p><span class="math display">\[\beta_1 = \frac{\Delta Y_i}{\Delta X_{1i}}\]</span></p>
-<p>This means that (holding <span class="math inline">\(X_{2i}\)</span> constant, of course) the expected value of <span class="math inline">\(Y\)</span> will increase by <span class="math inline">\(\beta_1\)</span> units in response to any unit-increase in <span class="math inline">\(X_{1i}\)</span>. The same increase occurs on average no matter where in the range of the independent variable you are. Sometimes this assumption is valid if the range of the independent variable is small enough such that a constant slope is appropriate. Sometimes it isn’t. If this assumption is not valid, then we are committing a specification error even if we have included all of the necessary independent variables. The specification error involves the assumption of a linear model.</p>
-<p>The types of models we will consider here will be non-linear in the variables but will still be linear in the coefficients. This means that we can still estimate the models using OLS, but we will be extending the model to uncover some highly non-linear relationships between the dependent and independent variables. We will do this by transforming the variables prior to estimation, and the names of these models are given by the types of transformations we perform. We then run a simple OLS estimation on the transformed variables, and <em>back-out</em> the non-linear relationships afterwards. This last bit is what will be new to us, but you will see that it only involves a brief refresher of… calculus.</p>
+<p>This means that (holding <span class="math inline">\(X_{2i}\)</span> constant, of course) the expected value of <span class="math inline">\(Y\)</span> will increase by <span class="math inline">\(\beta_1\)</span> units in response to <em>any</em> unit-increase in <span class="math inline">\(X_{1i}\)</span>. The same increase occurs on average no matter where in the range of the independent variable you are. Sometimes this assumption is valid if the range of the independent variable is small enough such that a constant slope is appropriate. Sometimes it isn’t. If this assumption is not valid, then we are committing a specification error even if we have included all of the necessary independent variables. The specification error involves the assumption of a linear model.</p>
+<p>The types of models we will consider here are non-linear in the variables but still linear in the coefficients. This means we can estimate the models using OLS, but we will be extending the model to uncover some highly non-linear relationships between the dependent and independent variables. We will do this by transforming the variables prior to estimation, and the names of these models are given by the types of transformations we perform. We then run a traditional OLS estimation on the transformed variables, and <em>back-out</em> the non-linear relationships afterwards. This last bit is what will be new to us, but you will see that it only involves a brief refresher of… calculus.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="a-final-application.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="another-concluding-application.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="derivatives.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

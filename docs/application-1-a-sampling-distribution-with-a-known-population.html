@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>4.2 Application 1: A Sampling Distribution with a Known Population | Course Companion for MBA 8370 and MBA 8380</title>
   <meta name="description" content="Course companion" />
-  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="4.2 Application 1: A Sampling Distribution with a Known Population | Course Companion for MBA 8370 and MBA 8380" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Scott Dressler" />
 
 
-<meta name="date" content="2023-01-08" />
+<meta name="date" content="2024-08-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -56,7 +56,7 @@
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -119,6 +119,10 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -178,7 +182,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3" data-path="R.html"><a href="R.html"><i class="fa fa-check"></i><b>3</b> Getting Started with R</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="the-r-project-for-statistical-computing.html"><a href="the-r-project-for-statistical-computing.html"><i class="fa fa-check"></i><b>3.1</b> The R Project for Statistical Computing</a></li>
-<li class="chapter" data-level="3.2" data-path="before-you-install-rstudio-cloud.html"><a href="before-you-install-rstudio-cloud.html"><i class="fa fa-check"></i><b>3.2</b> Before you Install… RStudio Cloud?</a></li>
+<li class="chapter" data-level="3.2" data-path="before-you-install-posit-rstudio-cloud.html"><a href="before-you-install-posit-rstudio-cloud.html"><i class="fa fa-check"></i><b>3.2</b> Before you Install… Posit (RStudio) Cloud?</a></li>
 <li class="chapter" data-level="3.3" data-path="downloading-and-installing-r.html"><a href="downloading-and-installing-r.html"><i class="fa fa-check"></i><b>3.3</b> Downloading and installing R</a>
 <ul>
 <li class="chapter" data-level="3.3.1" data-path="downloading-and-installing-r.html"><a href="downloading-and-installing-r.html#choosing-a-mirror"><i class="fa fa-check"></i><b>3.3.1</b> Choosing a <em>Mirror</em></a></li>
@@ -191,7 +195,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.5.1" data-path="coding-basics.html"><a href="coding-basics.html#installing-packages"><i class="fa fa-check"></i><b>3.5.1</b> Installing <em>Packages</em></a></li>
 <li class="chapter" data-level="3.5.2" data-path="coding-basics.html"><a href="coding-basics.html#assigning-objects"><i class="fa fa-check"></i><b>3.5.2</b> Assigning Objects</a></li>
 <li class="chapter" data-level="3.5.3" data-path="coding-basics.html"><a href="coding-basics.html#listing-adding-and-removing"><i class="fa fa-check"></i><b>3.5.3</b> Listing, Adding, and Removing</a></li>
-<li class="chapter" data-level="3.5.4" data-path="coding-basics.html"><a href="coding-basics.html#loading-data"><i class="fa fa-check"></i><b>3.5.4</b> Loading Data</a></li>
+<li class="chapter" data-level="3.5.4" data-path="coding-basics.html"><a href="coding-basics.html#importing-data"><i class="fa fa-check"></i><b>3.5.4</b> Importing Data</a></li>
 <li class="chapter" data-level="3.5.5" data-path="coding-basics.html"><a href="coding-basics.html#manipulating-data"><i class="fa fa-check"></i><b>3.5.5</b> Manipulating Data</a></li>
 <li class="chapter" data-level="3.5.6" data-path="coding-basics.html"><a href="coding-basics.html#subsetting-data"><i class="fa fa-check"></i><b>3.5.6</b> Subsetting Data</a></li>
 </ul></li>
@@ -281,13 +285,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.5.3" data-path="assumptions-of-the-linear-regression-model.html"><a href="assumptions-of-the-linear-regression-model.html#equal-variance"><i class="fa fa-check"></i><b>7.5.3</b> Equal Variance</a></li>
 <li class="chapter" data-level="7.5.4" data-path="assumptions-of-the-linear-regression-model.html"><a href="assumptions-of-the-linear-regression-model.html#normality-of-errors"><i class="fa fa-check"></i><b>7.5.4</b> Normality of Errors</a></li>
 </ul></li>
-<li class="chapter" data-level="7.6" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html"><i class="fa fa-check"></i><b>7.6</b> Appendix: Statistical Inference</a>
+<li class="chapter" data-level="7.6" data-path="a-concluding-application.html"><a href="a-concluding-application.html"><i class="fa fa-check"></i><b>7.6</b> A Concluding Application</a></li>
+<li class="chapter" data-level="7.7" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html"><i class="fa fa-check"></i><b>7.7</b> Appendix: Statistical Inference</a>
 <ul>
-<li class="chapter" data-level="7.6.1" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-population-parameters"><i class="fa fa-check"></i><b>7.6.1</b> Confidence Intervals (around population parameters)</a></li>
-<li class="chapter" data-level="7.6.2" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#hypothesis-tests"><i class="fa fa-check"></i><b>7.6.2</b> Hypothesis Tests</a></li>
-<li class="chapter" data-level="7.6.3" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-forecasts"><i class="fa fa-check"></i><b>7.6.3</b> Confidence Intervals (around forecasts)</a></li>
+<li class="chapter" data-level="7.7.1" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-population-parameters"><i class="fa fa-check"></i><b>7.7.1</b> Confidence Intervals (around population parameters)</a></li>
+<li class="chapter" data-level="7.7.2" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#hypothesis-tests"><i class="fa fa-check"></i><b>7.7.2</b> Hypothesis Tests</a></li>
+<li class="chapter" data-level="7.7.3" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-forecasts"><i class="fa fa-check"></i><b>7.7.3</b> Confidence Intervals (around forecasts)</a></li>
 </ul></li>
-<li class="chapter" data-level="7.7" data-path="up-next.html"><a href="up-next.html"><i class="fa fa-check"></i><b>7.7</b> Up Next…</a></li>
+<li class="chapter" data-level="7.8" data-path="up-next.html"><a href="up-next.html"><i class="fa fa-check"></i><b>7.8</b> Up Next…</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="MLR.html"><a href="MLR.html"><i class="fa fa-check"></i><b>8</b> Multiple Linear Regression</a>
 <ul>
@@ -307,6 +312,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.3.3" data-path="statistical-inference.html"><a href="statistical-inference.html#hypothesis-tests-1"><i class="fa fa-check"></i><b>8.3.3</b> Hypothesis Tests</a></li>
 <li class="chapter" data-level="8.3.4" data-path="statistical-inference.html"><a href="statistical-inference.html#confidence-intervals-around-forecasts-1"><i class="fa fa-check"></i><b>8.3.4</b> Confidence Intervals (around forecasts)</a></li>
 </ul></li>
+<li class="chapter" data-level="8.4" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html"><i class="fa fa-check"></i><b>8.4</b> A Concluding Application</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#interpretation"><i class="fa fa-check"></i>Interpretation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#confidence-intervals"><i class="fa fa-check"></i>Confidence Intervals</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#hypothesis-tests-2"><i class="fa fa-check"></i>Hypothesis Tests</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#forecasts"><i class="fa fa-check"></i>Forecasts</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="COL.html"><a href="COL.html"><i class="fa fa-check"></i><b>9</b> Collinearity</a>
 <ul>
@@ -322,17 +334,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="how-do-we-remove-collinearity.html"><a href="how-do-we-remove-collinearity.html#sometimes-removing-collinearity-might-involve-multiple-rounds"><i class="fa fa-check"></i>Sometimes removing collinearity might involve multiple rounds</a></li>
 </ul></li>
+<li class="chapter" data-level="9.5" data-path="a-concluding-application-2.html"><a href="a-concluding-application-2.html"><i class="fa fa-check"></i><b>9.5</b> A Concluding Application</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="DVS.html"><a href="DVS.html"><i class="fa fa-check"></i><b>10</b> Qualitative (Dummy) Variables</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="intercept-dummy-variable.html"><a href="intercept-dummy-variable.html"><i class="fa fa-check"></i><b>10.1</b> Intercept dummy variable</a></li>
 <li class="chapter" data-level="10.2" data-path="slope-dummy-variable.html"><a href="slope-dummy-variable.html"><i class="fa fa-check"></i><b>10.2</b> Slope dummy variable</a></li>
 <li class="chapter" data-level="10.3" data-path="what-if-there-are-more-than-two-categories.html"><a href="what-if-there-are-more-than-two-categories.html"><i class="fa fa-check"></i><b>10.3</b> What if there are more than two categories?</a></li>
-<li class="chapter" data-level="10.4" data-path="a-final-application.html"><a href="a-final-application.html"><i class="fa fa-check"></i><b>10.4</b> A Final Application</a>
+<li class="chapter" data-level="10.4" data-path="a-concluding-application-3.html"><a href="a-concluding-application-3.html"><i class="fa fa-check"></i><b>10.4</b> A Concluding Application</a></li>
+<li class="chapter" data-level="10.5" data-path="another-concluding-application.html"><a href="another-concluding-application.html"><i class="fa fa-check"></i><b>10.5</b> Another Concluding Application</a>
 <ul>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#make-a-nominal-series-a-real-series"><i class="fa fa-check"></i>Make a <em>Nominal</em> Series a <em>Real</em> Series</a></li>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#remove-a-trend"><i class="fa fa-check"></i>Remove a Trend</a></li>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#remove-seasonality"><i class="fa fa-check"></i>Remove Seasonality</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#make-a-nominal-series-a-real-series"><i class="fa fa-check"></i>Make a <em>Nominal</em> Series a <em>Real</em> Series</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#remove-a-trend"><i class="fa fa-check"></i>Remove a Trend</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#remove-seasonality"><i class="fa fa-check"></i>Remove Seasonality</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="FF.html"><a href="FF.html"><i class="fa fa-check"></i><b>11</b> Functional Forms</a>
@@ -354,6 +368,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="the-reciprocal-transformation.html"><a href="the-reciprocal-transformation.html#application-6"><i class="fa fa-check"></i>Application</a></li>
 </ul></li>
 <li class="chapter" data-level="11.6" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>11.6</b> Conclusion</a></li>
+<li class="chapter" data-level="11.7" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html"><i class="fa fa-check"></i><b>11.7</b> A Concluding Application</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#a-residual-analysis"><i class="fa fa-check"></i>A Residual Analysis</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#log-transformation"><i class="fa fa-check"></i>Log Transformation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#quadratic-transformation"><i class="fa fa-check"></i>Quadratic Transformation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#reciprocal-transformation"><i class="fa fa-check"></i>Reciprocal Transformation</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="JHT.html"><a href="JHT.html"><i class="fa fa-check"></i><b>12</b> Joint Hypothesis Tests</a>
 <ul>
@@ -373,6 +394,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="applications.html"><a href="applications.html#application-1-a-wage-application"><i class="fa fa-check"></i>Application 1: A wage application</a></li>
 <li class="chapter" data-level="" data-path="applications.html"><a href="applications.html#application-2-constant-returns-to-scale"><i class="fa fa-check"></i>Application 2: Constant Returns to Scale</a></li>
 </ul></li>
+<li class="chapter" data-level="12.4" data-path="a-concluding-application-5.html"><a href="a-concluding-application-5.html"><i class="fa fa-check"></i><b>12.4</b> A Concluding Application</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -397,22 +419,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="application-1-a-sampling-distribution-with-a-known-population" class="section level2 hasAnchor" number="4.2">
 <h2><span class="header-section-number">4.2</span> Application 1: A Sampling Distribution with a Known Population<a href="application-1-a-sampling-distribution-with-a-known-population.html#application-1-a-sampling-distribution-with-a-known-population" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The first application presents sampling distributions for a random process where we know the underlying process of the population: The rolling of two die.</p>
-<p>Suppose you worked for a gaming commission and placed in charge of making sure the dice at a casino were fair. <strong>We know</strong> that the (population) average roll of 2 fair die is 7 while the standard deviation is 2.45.<a href="#fn13" class="footnote-ref" id="fnref13"><sup>13</sup></a></p>
+<p>Suppose you worked for a gaming commission and placed in charge of making sure the dice at a casino were fair. <strong>We know</strong> that the (population) average roll of 2 fair die is 7 while the standard deviation is 2.45.<a href="#fn15" class="footnote-ref" id="fnref15"><sup>15</sup></a></p>
 <p>It wouldn’t be fair for you to test a set of dice by rolling them once because there is a large probability of rolling a number other than 7. In particular, there are 36 possible outcomes of rolling two die and only 6 of those outcomes equal 7. This means that although 7 is the highest probability single outcome, there is a much higher probability of rolling a number other than 7 (<em>ever play craps?</em>).</p>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-49-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p>The figure above is the population distribution of rolling two die. The average (mean) value is 7, the range of possible outcomes are between 2 and 12, and the standard deviation is a number that represents the dispersion of individual values around the mean. If you were to roll two die, then the outcome of that roll is conceptually a draw from this distribution.</p>
-<p>Since we don’t want to wrongfully accuse the casino of cheating, we need to roll the dice a few times to get an idea of what the average roll value is. If it is fair dice, then we know they will roll a 7 on average - but that means we would need to roll the dice an <em>infinite</em> amount of times to achieve this. To be realistic, lets settle on a number of rolls to be generally given by <span class="math inline">\(n\)</span>. If we choose <span class="math inline">\(n=5\)</span>, then that means we roll the dice 5 times, record the roll each time, and then record the average. This is a sample average of a sample of size 5. We could do this for <span class="math inline">\(n=10\)</span>, <span class="math inline">\(n=30\)</span>, <span class="math inline">\(n=300\)</span>, etc.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-50"></span>
-<img src="bookdownproj_files/figure-html/unnamed-chunk-50-1.png" alt="Sampling Distributions" width="624" />
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-50-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>The figure above is the population distribution of rolling two die. The average (mean) value is 7, the range of possible outcomes is between 2 and 12, and the standard deviation is a number that represents the dispersion of individual values around the mean. If you were to roll two die, then the outcome of that roll is conceptually a draw from this distribution.</p>
+<p>Since we don’t want to wrongfully accuse the casino of cheating, we need to roll the dice a few times to get an idea of what the average roll value is. If the dice is fair, then we know they will roll a 7 on average - but that means we would need to roll the dice an <em>infinite</em> amount of times to achieve this. To be realistic, lets settle on a number of rolls to be generally given by <span class="math inline">\(n\)</span>. If we choose <span class="math inline">\(n=5\)</span>, then that means we roll the dice 5 times, record the roll each time, and then record the average. The final result is a sample average of a sample of size 5. We could do this for <span class="math inline">\(n=10\)</span>, <span class="math inline">\(n=30\)</span>, <span class="math inline">\(n=300\)</span>, etc.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-51"></span>
+<img src="bookdownproj_files/figure-html/unnamed-chunk-51-1.png" alt="Sampling Distributions" width="624" />
 <p class="caption">
 Figure 4.1: Sampling Distributions
 </p>
 </div>
-<p>The figure is illustrating four potential <em>sampling distributions</em>. For example, if you were to collect a sample of 5 rolls, then you would technically be drawing a sample average from the distribution in the upper left. On the other hand, if you decide to roll the dice 300 times, then you are technically drawing a sample average from the distribution in the lower-right.</p>
+<p>The figure is illustrating four potential <em>sampling distributions</em>. For example, if you were to collect a sample of 5 rolls, then you would technically be drawing one sample average from the distribution in the upper left. On the other hand, if you decide to roll the dice 300 times, then you are technically drawing one sample average from the distribution in the lower-right.</p>
 <p>There are two main takeaways from the above illustration.</p>
 <ol style="list-style-type: decimal">
-<li><p>Sampling distributions <em>appear</em> to approximate normal distributions. The normal distribution is the classic <em>bell-curve</em> distribution that tends to magically show up in empirical analyses. The CLT is the reason why. Note that even though the original distribution didn’t look like a normal distribution at all, you still can construct sampling distributions that appear normal. This holds regardless of the initial population distribution.</p></li>
-<li><p>Sampling distributions become <em>more</em> normal and have a lower standard deviation when the sample size gets bigger. Notice that as the sample size goes up, the distributions become narrower. This means that when there is a big sample size there is a very low probability that your going to see sample averages near 2 or 12. This should make sense: If you roll two dice 300 times and take the average, there is no way you are going to record a sample average of 2 unless you roll <em>snake eyes</em> 300 times in a row. As the sample size increases, the <em>extreme</em> events start getting diluted. This reduces the standard deviation of the sampling distribution.</p></li>
+<li><p>Sampling distributions <em>appear</em> to approximate normal distributions. The normal distribution is the classic <em>bell-curve</em> distribution that tends to magically show up in empirical analyses. The CLT is the reason why. Note that even though the original distribution didn’t look like a normal distribution at all, you still can rely on sampling distributions that appear normal. This holds regardless of the initial population distribution.</p></li>
+<li><p>Sampling distributions become <em>more</em> normal and have a lower standard deviation when the sample size gets bigger. Notice that as the sample size goes up, the distributions become narrower. This means that when there is a big sample size there is a very low probability that your going to see sample averages near 2 or 12. This should make sense: If you roll two dice 300 times and take the average, there is no way you are going to record a sample average of 2 unless you roll <em>snake eyes</em> 300 times in a row. As the sample size increases, the <em>extreme</em> events in the population start getting diluted. This reduces the standard deviation of the sampling distribution.</p></li>
 <li><p>The sampling distributions (for <span class="math inline">\(n \geq 30\)</span>) are distributed normal with mean <span class="math inline">\(\mu\)</span> and standard deviation <span class="math inline">\(\sigma / \sqrt{n}\)</span>. Technically this means that your random sample will produce a random outcome (a sample mean) which we denote <span class="math inline">\(\bar{X}\)</span>.</p></li>
 </ol>
 <p><span class="math display">\[ \bar{X} \sim N \left( \mu, \frac{\sigma}{\sqrt{n}} \right) \]</span></p>
@@ -420,10 +442,10 @@ Figure 4.1: Sampling Distributions
 </div>
 <div class="footnotes">
 <hr />
-<ol start="13">
-<li id="fn13"><p>The mean of a single dice throw is 3.5,
+<ol start="15">
+<li id="fn15"><p>The mean of a single dice throw is 3.5,
 <span class="math display">\[ 3.5 = (1 + 2 + 3 + 4 + 5 + 6) / 6\]</span>
-and the expected value of two independent dice is the sum of expected values of each die. Standard deviation can be calculated using this mean value and the formula presented earlier.<a href="application-1-a-sampling-distribution-with-a-known-population.html#fnref13" class="footnote-back">↩︎</a></p></li>
+and the expected value of two independent dice is the sum of expected values of each die. Standard deviation can be calculated using this mean value and the formula presented earlier.<a href="application-1-a-sampling-distribution-with-a-known-population.html#fnref15" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

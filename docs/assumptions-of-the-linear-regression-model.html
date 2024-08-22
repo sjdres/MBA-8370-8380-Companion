@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>7.5 Assumptions of the Linear Regression Model | Course Companion for MBA 8370 and MBA 8380</title>
   <meta name="description" content="Course companion" />
-  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="7.5 Assumptions of the Linear Regression Model | Course Companion for MBA 8370 and MBA 8380" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Scott Dressler" />
 
 
-<meta name="date" content="2023-01-08" />
+<meta name="date" content="2024-08-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="decomposition-of-variance.html"/>
-<link rel="next" href="appendix-statistical-inference.html"/>
+<link rel="next" href="a-concluding-application.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -56,7 +56,7 @@
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -119,6 +119,10 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -178,7 +182,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3" data-path="R.html"><a href="R.html"><i class="fa fa-check"></i><b>3</b> Getting Started with R</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="the-r-project-for-statistical-computing.html"><a href="the-r-project-for-statistical-computing.html"><i class="fa fa-check"></i><b>3.1</b> The R Project for Statistical Computing</a></li>
-<li class="chapter" data-level="3.2" data-path="before-you-install-rstudio-cloud.html"><a href="before-you-install-rstudio-cloud.html"><i class="fa fa-check"></i><b>3.2</b> Before you Install… RStudio Cloud?</a></li>
+<li class="chapter" data-level="3.2" data-path="before-you-install-posit-rstudio-cloud.html"><a href="before-you-install-posit-rstudio-cloud.html"><i class="fa fa-check"></i><b>3.2</b> Before you Install… Posit (RStudio) Cloud?</a></li>
 <li class="chapter" data-level="3.3" data-path="downloading-and-installing-r.html"><a href="downloading-and-installing-r.html"><i class="fa fa-check"></i><b>3.3</b> Downloading and installing R</a>
 <ul>
 <li class="chapter" data-level="3.3.1" data-path="downloading-and-installing-r.html"><a href="downloading-and-installing-r.html#choosing-a-mirror"><i class="fa fa-check"></i><b>3.3.1</b> Choosing a <em>Mirror</em></a></li>
@@ -191,7 +195,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.5.1" data-path="coding-basics.html"><a href="coding-basics.html#installing-packages"><i class="fa fa-check"></i><b>3.5.1</b> Installing <em>Packages</em></a></li>
 <li class="chapter" data-level="3.5.2" data-path="coding-basics.html"><a href="coding-basics.html#assigning-objects"><i class="fa fa-check"></i><b>3.5.2</b> Assigning Objects</a></li>
 <li class="chapter" data-level="3.5.3" data-path="coding-basics.html"><a href="coding-basics.html#listing-adding-and-removing"><i class="fa fa-check"></i><b>3.5.3</b> Listing, Adding, and Removing</a></li>
-<li class="chapter" data-level="3.5.4" data-path="coding-basics.html"><a href="coding-basics.html#loading-data"><i class="fa fa-check"></i><b>3.5.4</b> Loading Data</a></li>
+<li class="chapter" data-level="3.5.4" data-path="coding-basics.html"><a href="coding-basics.html#importing-data"><i class="fa fa-check"></i><b>3.5.4</b> Importing Data</a></li>
 <li class="chapter" data-level="3.5.5" data-path="coding-basics.html"><a href="coding-basics.html#manipulating-data"><i class="fa fa-check"></i><b>3.5.5</b> Manipulating Data</a></li>
 <li class="chapter" data-level="3.5.6" data-path="coding-basics.html"><a href="coding-basics.html#subsetting-data"><i class="fa fa-check"></i><b>3.5.6</b> Subsetting Data</a></li>
 </ul></li>
@@ -281,13 +285,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.5.3" data-path="assumptions-of-the-linear-regression-model.html"><a href="assumptions-of-the-linear-regression-model.html#equal-variance"><i class="fa fa-check"></i><b>7.5.3</b> Equal Variance</a></li>
 <li class="chapter" data-level="7.5.4" data-path="assumptions-of-the-linear-regression-model.html"><a href="assumptions-of-the-linear-regression-model.html#normality-of-errors"><i class="fa fa-check"></i><b>7.5.4</b> Normality of Errors</a></li>
 </ul></li>
-<li class="chapter" data-level="7.6" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html"><i class="fa fa-check"></i><b>7.6</b> Appendix: Statistical Inference</a>
+<li class="chapter" data-level="7.6" data-path="a-concluding-application.html"><a href="a-concluding-application.html"><i class="fa fa-check"></i><b>7.6</b> A Concluding Application</a></li>
+<li class="chapter" data-level="7.7" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html"><i class="fa fa-check"></i><b>7.7</b> Appendix: Statistical Inference</a>
 <ul>
-<li class="chapter" data-level="7.6.1" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-population-parameters"><i class="fa fa-check"></i><b>7.6.1</b> Confidence Intervals (around population parameters)</a></li>
-<li class="chapter" data-level="7.6.2" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#hypothesis-tests"><i class="fa fa-check"></i><b>7.6.2</b> Hypothesis Tests</a></li>
-<li class="chapter" data-level="7.6.3" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-forecasts"><i class="fa fa-check"></i><b>7.6.3</b> Confidence Intervals (around forecasts)</a></li>
+<li class="chapter" data-level="7.7.1" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-population-parameters"><i class="fa fa-check"></i><b>7.7.1</b> Confidence Intervals (around population parameters)</a></li>
+<li class="chapter" data-level="7.7.2" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#hypothesis-tests"><i class="fa fa-check"></i><b>7.7.2</b> Hypothesis Tests</a></li>
+<li class="chapter" data-level="7.7.3" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-forecasts"><i class="fa fa-check"></i><b>7.7.3</b> Confidence Intervals (around forecasts)</a></li>
 </ul></li>
-<li class="chapter" data-level="7.7" data-path="up-next.html"><a href="up-next.html"><i class="fa fa-check"></i><b>7.7</b> Up Next…</a></li>
+<li class="chapter" data-level="7.8" data-path="up-next.html"><a href="up-next.html"><i class="fa fa-check"></i><b>7.8</b> Up Next…</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="MLR.html"><a href="MLR.html"><i class="fa fa-check"></i><b>8</b> Multiple Linear Regression</a>
 <ul>
@@ -307,6 +312,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.3.3" data-path="statistical-inference.html"><a href="statistical-inference.html#hypothesis-tests-1"><i class="fa fa-check"></i><b>8.3.3</b> Hypothesis Tests</a></li>
 <li class="chapter" data-level="8.3.4" data-path="statistical-inference.html"><a href="statistical-inference.html#confidence-intervals-around-forecasts-1"><i class="fa fa-check"></i><b>8.3.4</b> Confidence Intervals (around forecasts)</a></li>
 </ul></li>
+<li class="chapter" data-level="8.4" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html"><i class="fa fa-check"></i><b>8.4</b> A Concluding Application</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#interpretation"><i class="fa fa-check"></i>Interpretation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#confidence-intervals"><i class="fa fa-check"></i>Confidence Intervals</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#hypothesis-tests-2"><i class="fa fa-check"></i>Hypothesis Tests</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#forecasts"><i class="fa fa-check"></i>Forecasts</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="COL.html"><a href="COL.html"><i class="fa fa-check"></i><b>9</b> Collinearity</a>
 <ul>
@@ -322,17 +334,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="how-do-we-remove-collinearity.html"><a href="how-do-we-remove-collinearity.html#sometimes-removing-collinearity-might-involve-multiple-rounds"><i class="fa fa-check"></i>Sometimes removing collinearity might involve multiple rounds</a></li>
 </ul></li>
+<li class="chapter" data-level="9.5" data-path="a-concluding-application-2.html"><a href="a-concluding-application-2.html"><i class="fa fa-check"></i><b>9.5</b> A Concluding Application</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="DVS.html"><a href="DVS.html"><i class="fa fa-check"></i><b>10</b> Qualitative (Dummy) Variables</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="intercept-dummy-variable.html"><a href="intercept-dummy-variable.html"><i class="fa fa-check"></i><b>10.1</b> Intercept dummy variable</a></li>
 <li class="chapter" data-level="10.2" data-path="slope-dummy-variable.html"><a href="slope-dummy-variable.html"><i class="fa fa-check"></i><b>10.2</b> Slope dummy variable</a></li>
 <li class="chapter" data-level="10.3" data-path="what-if-there-are-more-than-two-categories.html"><a href="what-if-there-are-more-than-two-categories.html"><i class="fa fa-check"></i><b>10.3</b> What if there are more than two categories?</a></li>
-<li class="chapter" data-level="10.4" data-path="a-final-application.html"><a href="a-final-application.html"><i class="fa fa-check"></i><b>10.4</b> A Final Application</a>
+<li class="chapter" data-level="10.4" data-path="a-concluding-application-3.html"><a href="a-concluding-application-3.html"><i class="fa fa-check"></i><b>10.4</b> A Concluding Application</a></li>
+<li class="chapter" data-level="10.5" data-path="another-concluding-application.html"><a href="another-concluding-application.html"><i class="fa fa-check"></i><b>10.5</b> Another Concluding Application</a>
 <ul>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#make-a-nominal-series-a-real-series"><i class="fa fa-check"></i>Make a <em>Nominal</em> Series a <em>Real</em> Series</a></li>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#remove-a-trend"><i class="fa fa-check"></i>Remove a Trend</a></li>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#remove-seasonality"><i class="fa fa-check"></i>Remove Seasonality</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#make-a-nominal-series-a-real-series"><i class="fa fa-check"></i>Make a <em>Nominal</em> Series a <em>Real</em> Series</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#remove-a-trend"><i class="fa fa-check"></i>Remove a Trend</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#remove-seasonality"><i class="fa fa-check"></i>Remove Seasonality</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="FF.html"><a href="FF.html"><i class="fa fa-check"></i><b>11</b> Functional Forms</a>
@@ -354,6 +368,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="the-reciprocal-transformation.html"><a href="the-reciprocal-transformation.html#application-6"><i class="fa fa-check"></i>Application</a></li>
 </ul></li>
 <li class="chapter" data-level="11.6" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>11.6</b> Conclusion</a></li>
+<li class="chapter" data-level="11.7" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html"><i class="fa fa-check"></i><b>11.7</b> A Concluding Application</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#a-residual-analysis"><i class="fa fa-check"></i>A Residual Analysis</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#log-transformation"><i class="fa fa-check"></i>Log Transformation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#quadratic-transformation"><i class="fa fa-check"></i>Quadratic Transformation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#reciprocal-transformation"><i class="fa fa-check"></i>Reciprocal Transformation</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="JHT.html"><a href="JHT.html"><i class="fa fa-check"></i><b>12</b> Joint Hypothesis Tests</a>
 <ul>
@@ -373,6 +394,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="applications.html"><a href="applications.html#application-1-a-wage-application"><i class="fa fa-check"></i>Application 1: A wage application</a></li>
 <li class="chapter" data-level="" data-path="applications.html"><a href="applications.html#application-2-constant-returns-to-scale"><i class="fa fa-check"></i>Application 2: Constant Returns to Scale</a></li>
 </ul></li>
+<li class="chapter" data-level="12.4" data-path="a-concluding-application-5.html"><a href="a-concluding-application-5.html"><i class="fa fa-check"></i><b>12.4</b> A Concluding Application</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -396,7 +418,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="assumptions-of-the-linear-regression-model" class="section level2 hasAnchor" number="7.5">
 <h2><span class="header-section-number">7.5</span> Assumptions of the Linear Regression Model<a href="assumptions-of-the-linear-regression-model.html#assumptions-of-the-linear-regression-model" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>An empirical regression analysis always begins with a statement of the population regression function (PRF). The PRF explicitly states exactly how you (the researcher) believes the independent variable is related to the dependent variable. One thing to be clear about when stating a PRF is that you are imposing a great deal of assumptions on how the world works. If your assumptions are correct, then the PRF is a reasonable depiction of reality and OLS will uncover accurate estimates of the PRF parameters. If your assumptions are incorrect, then the estimates are highly unreliable and might actually be misleading.</p>
+<p>An empirical regression analysis always begins with a statement of the population regression function (PRF). The PRF explicitly states exactly how you (the researcher) believe the independent variable is related to the dependent variable. One thing to be clear about when stating a PRF is that you are imposing a great deal of assumptions on how the world works. If your assumptions are correct, then the PRF is a reasonable depiction of reality and OLS will uncover accurate estimates of the PRF parameters. If your assumptions are incorrect, then the estimates are highly unreliable and might actually be misleading.</p>
 <p>Verifying the assumptions of a linear regression model is a majority of the work involved with an empirical analysis, and we will be doing this for the rest of the course. Before getting into the details of <em>how</em> to verify the assumptions, we first need to know what they are.</p>
 <p>One should note that these are not assumptions of our model, because these assumption are actually imposed on our model. These assumptions are made on what we think are going on in reality - at least on the relationship between the dependent and independent variables that actually occurs in the world.</p>
 <p>The main assumptions of a linear regression model that we will focus on are as follows.</p>
@@ -419,19 +441,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>There is an entire chapter devoted to relaxing the linearity assumption later on, but consider the following application to illustrate a violation of this assumption. Suppose you consider a simple linear regression model to uncover the relationship between a dependent variable and an independent variable.</p>
 <p><span class="math display">\[Y_i=\beta_0+\beta_1 \; X_i+\varepsilon_i\]</span></p>
 <p>However, suppose the true relationship (shown in the figure) is clearly nonlinear, and the blue line in the figure is the estimated (linear) SRF. As the line suggests, it is horizontal suggesting that the linear relationship between Y and X is <em>zero</em>. This doesn’t mean that there is no relationship - because there clearly is. However, our assumption of this relationship being linear is incorrect because the results tell us that there is no <em>linear</em> relationship.</p>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-114-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-116-1.png" width="672" style="display: block; margin: auto;" /></p>
 </div>
 <div id="independence-of-errors" class="section level3 hasAnchor" number="7.5.2">
 <h3><span class="header-section-number">7.5.2</span> Independence of Errors<a href="assumptions-of-the-linear-regression-model.html#independence-of-errors" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Serial correlation exists when an observation of the error term is correlated with past values of itself. This means that the errors are not independent of each other.</p>
 <p><span class="math display">\[\varepsilon_t=\rho \varepsilon_{t-1}+\nu_t\]</span></p>
-<p>If this is the case, the model violates the idea that the errors are completely unpredictable. If we would be able to view our past mistakes and improve upon our predictions - why wouldn’t we?<a href="#fn26" class="footnote-ref" id="fnref26"><sup>26</sup></a></p>
+<p>If this is the case, the model violates the idea that the errors are completely unpredictable. If we would be able to view our past mistakes and improve upon our predictions - why wouldn’t we?<a href="#fn30" class="footnote-ref" id="fnref30"><sup>30</sup></a></p>
 </div>
 <div id="equal-variance" class="section level3 hasAnchor" number="7.5.3">
 <h3><span class="header-section-number">7.5.3</span> Equal Variance<a href="assumptions-of-the-linear-regression-model.html#equal-variance" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The error term must have a constant variance throughout the range of each independent variable because we will soon see that the confidence we place in our estimates are partially determined by this variance. We are unable to change our confidence in the estimates throughout the observed range of independent values - it is one size fits all. Therefore, the size of the errors (i.e., the dispersion in the garbage can) must be constant throughout.</p>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-115-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p>Suppose you wanted to estimate how much of an additional dollar of income the population would spend on consumption.<a href="#fn27" class="footnote-ref" id="fnref27"><sup>27</sup></a> Your data set has 50 household observations from each of three annual income levels: $10,000, $75,000, and $150,000 as well as their annual consumption expenditures. As the figure illustrates, households earning around $10,000 a year all have roughly the same consumption level (because they all save very little). As income levels increase, you see more <em>dispersion</em> in consumption expenditures because more income is paired with more options. Households earning $150,000 annually could choose to save a majority of it or even go into debt (i.e., spend more than $150,000). This data could be used to estimate a regression line (illustrated in black), but you can see that the model looks like it does a poorer job of predicting consumption expenditures as the income levels increase. This means that the forecast errors are increasing (becoming more disperse) as income levels increase, and this is <em>heteroskedasticity</em>. We will briefly come back to potential solutions to this later in the advanced topics section.</p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-117-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Suppose you wanted to estimate how much of an additional dollar of income the population would spend on consumption.<a href="#fn31" class="footnote-ref" id="fnref31"><sup>31</sup></a> Your data set has 50 household observations from each of three annual income levels: $10,000, $75,000, and $150,000 as well as their annual consumption expenditures. As the figure illustrates, households earning around $10,000 a year all have roughly the same consumption level (because they all save very little). As income levels increase, you see more <em>dispersion</em> in consumption expenditures because more income is paired with more options. Households earning $150,000 annually could choose to save a majority of it or even go into debt (i.e., spend more than $150,000). This data could be used to estimate a regression line (illustrated in black), but you can see that the model looks like it does a poorer job of predicting consumption expenditures as the income levels increase. This means that the forecast errors are increasing (becoming more disperse) as income levels increase, and this is <em>heteroskedasticity</em>. We will briefly come back to potential solutions to this later in the advanced topics section.</p>
 </div>
 <div id="normality-of-errors" class="section level3 hasAnchor" number="7.5.4">
 <h3><span class="header-section-number">7.5.4</span> Normality of Errors<a href="assumptions-of-the-linear-regression-model.html#normality-of-errors" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -440,9 +462,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div class="footnotes">
 <hr />
-<ol start="26">
-<li id="fn26"><p>Note that serial correlation is potentially a problem in time-series data (i.e., data that must be in chronological order).<a href="assumptions-of-the-linear-regression-model.html#fnref26" class="footnote-back">↩︎</a></p></li>
-<li id="fn27"><p>In economics this is called the <em>Marginal Propensity to Consume</em> and is an important measure for considering who should and should not get hit with a tax.<a href="assumptions-of-the-linear-regression-model.html#fnref27" class="footnote-back">↩︎</a></p></li>
+<ol start="30">
+<li id="fn30"><p>Note that serial correlation is potentially a problem in time-series data (i.e., data that must be in chronological order).<a href="assumptions-of-the-linear-regression-model.html#fnref30" class="footnote-back">↩︎</a></p></li>
+<li id="fn31"><p>In economics this is called the <em>Marginal Propensity to Consume</em> and is an important measure for considering who should and should not get hit with a tax.<a href="assumptions-of-the-linear-regression-model.html#fnref31" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
@@ -451,7 +473,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         </div>
       </div>
 <a href="decomposition-of-variance.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="appendix-statistical-inference.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="a-concluding-application.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

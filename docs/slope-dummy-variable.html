@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>10.2 Slope dummy variable | Course Companion for MBA 8370 and MBA 8380</title>
   <meta name="description" content="Course companion" />
-  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="10.2 Slope dummy variable | Course Companion for MBA 8370 and MBA 8380" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Scott Dressler" />
 
 
-<meta name="date" content="2023-01-08" />
+<meta name="date" content="2024-08-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -56,7 +56,7 @@
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -119,6 +119,10 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -178,7 +182,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3" data-path="R.html"><a href="R.html"><i class="fa fa-check"></i><b>3</b> Getting Started with R</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="the-r-project-for-statistical-computing.html"><a href="the-r-project-for-statistical-computing.html"><i class="fa fa-check"></i><b>3.1</b> The R Project for Statistical Computing</a></li>
-<li class="chapter" data-level="3.2" data-path="before-you-install-rstudio-cloud.html"><a href="before-you-install-rstudio-cloud.html"><i class="fa fa-check"></i><b>3.2</b> Before you Install… RStudio Cloud?</a></li>
+<li class="chapter" data-level="3.2" data-path="before-you-install-posit-rstudio-cloud.html"><a href="before-you-install-posit-rstudio-cloud.html"><i class="fa fa-check"></i><b>3.2</b> Before you Install… Posit (RStudio) Cloud?</a></li>
 <li class="chapter" data-level="3.3" data-path="downloading-and-installing-r.html"><a href="downloading-and-installing-r.html"><i class="fa fa-check"></i><b>3.3</b> Downloading and installing R</a>
 <ul>
 <li class="chapter" data-level="3.3.1" data-path="downloading-and-installing-r.html"><a href="downloading-and-installing-r.html#choosing-a-mirror"><i class="fa fa-check"></i><b>3.3.1</b> Choosing a <em>Mirror</em></a></li>
@@ -191,7 +195,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.5.1" data-path="coding-basics.html"><a href="coding-basics.html#installing-packages"><i class="fa fa-check"></i><b>3.5.1</b> Installing <em>Packages</em></a></li>
 <li class="chapter" data-level="3.5.2" data-path="coding-basics.html"><a href="coding-basics.html#assigning-objects"><i class="fa fa-check"></i><b>3.5.2</b> Assigning Objects</a></li>
 <li class="chapter" data-level="3.5.3" data-path="coding-basics.html"><a href="coding-basics.html#listing-adding-and-removing"><i class="fa fa-check"></i><b>3.5.3</b> Listing, Adding, and Removing</a></li>
-<li class="chapter" data-level="3.5.4" data-path="coding-basics.html"><a href="coding-basics.html#loading-data"><i class="fa fa-check"></i><b>3.5.4</b> Loading Data</a></li>
+<li class="chapter" data-level="3.5.4" data-path="coding-basics.html"><a href="coding-basics.html#importing-data"><i class="fa fa-check"></i><b>3.5.4</b> Importing Data</a></li>
 <li class="chapter" data-level="3.5.5" data-path="coding-basics.html"><a href="coding-basics.html#manipulating-data"><i class="fa fa-check"></i><b>3.5.5</b> Manipulating Data</a></li>
 <li class="chapter" data-level="3.5.6" data-path="coding-basics.html"><a href="coding-basics.html#subsetting-data"><i class="fa fa-check"></i><b>3.5.6</b> Subsetting Data</a></li>
 </ul></li>
@@ -281,13 +285,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.5.3" data-path="assumptions-of-the-linear-regression-model.html"><a href="assumptions-of-the-linear-regression-model.html#equal-variance"><i class="fa fa-check"></i><b>7.5.3</b> Equal Variance</a></li>
 <li class="chapter" data-level="7.5.4" data-path="assumptions-of-the-linear-regression-model.html"><a href="assumptions-of-the-linear-regression-model.html#normality-of-errors"><i class="fa fa-check"></i><b>7.5.4</b> Normality of Errors</a></li>
 </ul></li>
-<li class="chapter" data-level="7.6" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html"><i class="fa fa-check"></i><b>7.6</b> Appendix: Statistical Inference</a>
+<li class="chapter" data-level="7.6" data-path="a-concluding-application.html"><a href="a-concluding-application.html"><i class="fa fa-check"></i><b>7.6</b> A Concluding Application</a></li>
+<li class="chapter" data-level="7.7" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html"><i class="fa fa-check"></i><b>7.7</b> Appendix: Statistical Inference</a>
 <ul>
-<li class="chapter" data-level="7.6.1" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-population-parameters"><i class="fa fa-check"></i><b>7.6.1</b> Confidence Intervals (around population parameters)</a></li>
-<li class="chapter" data-level="7.6.2" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#hypothesis-tests"><i class="fa fa-check"></i><b>7.6.2</b> Hypothesis Tests</a></li>
-<li class="chapter" data-level="7.6.3" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-forecasts"><i class="fa fa-check"></i><b>7.6.3</b> Confidence Intervals (around forecasts)</a></li>
+<li class="chapter" data-level="7.7.1" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-population-parameters"><i class="fa fa-check"></i><b>7.7.1</b> Confidence Intervals (around population parameters)</a></li>
+<li class="chapter" data-level="7.7.2" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#hypothesis-tests"><i class="fa fa-check"></i><b>7.7.2</b> Hypothesis Tests</a></li>
+<li class="chapter" data-level="7.7.3" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-forecasts"><i class="fa fa-check"></i><b>7.7.3</b> Confidence Intervals (around forecasts)</a></li>
 </ul></li>
-<li class="chapter" data-level="7.7" data-path="up-next.html"><a href="up-next.html"><i class="fa fa-check"></i><b>7.7</b> Up Next…</a></li>
+<li class="chapter" data-level="7.8" data-path="up-next.html"><a href="up-next.html"><i class="fa fa-check"></i><b>7.8</b> Up Next…</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="MLR.html"><a href="MLR.html"><i class="fa fa-check"></i><b>8</b> Multiple Linear Regression</a>
 <ul>
@@ -307,6 +312,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.3.3" data-path="statistical-inference.html"><a href="statistical-inference.html#hypothesis-tests-1"><i class="fa fa-check"></i><b>8.3.3</b> Hypothesis Tests</a></li>
 <li class="chapter" data-level="8.3.4" data-path="statistical-inference.html"><a href="statistical-inference.html#confidence-intervals-around-forecasts-1"><i class="fa fa-check"></i><b>8.3.4</b> Confidence Intervals (around forecasts)</a></li>
 </ul></li>
+<li class="chapter" data-level="8.4" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html"><i class="fa fa-check"></i><b>8.4</b> A Concluding Application</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#interpretation"><i class="fa fa-check"></i>Interpretation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#confidence-intervals"><i class="fa fa-check"></i>Confidence Intervals</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#hypothesis-tests-2"><i class="fa fa-check"></i>Hypothesis Tests</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#forecasts"><i class="fa fa-check"></i>Forecasts</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="COL.html"><a href="COL.html"><i class="fa fa-check"></i><b>9</b> Collinearity</a>
 <ul>
@@ -322,17 +334,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="how-do-we-remove-collinearity.html"><a href="how-do-we-remove-collinearity.html#sometimes-removing-collinearity-might-involve-multiple-rounds"><i class="fa fa-check"></i>Sometimes removing collinearity might involve multiple rounds</a></li>
 </ul></li>
+<li class="chapter" data-level="9.5" data-path="a-concluding-application-2.html"><a href="a-concluding-application-2.html"><i class="fa fa-check"></i><b>9.5</b> A Concluding Application</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="DVS.html"><a href="DVS.html"><i class="fa fa-check"></i><b>10</b> Qualitative (Dummy) Variables</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="intercept-dummy-variable.html"><a href="intercept-dummy-variable.html"><i class="fa fa-check"></i><b>10.1</b> Intercept dummy variable</a></li>
 <li class="chapter" data-level="10.2" data-path="slope-dummy-variable.html"><a href="slope-dummy-variable.html"><i class="fa fa-check"></i><b>10.2</b> Slope dummy variable</a></li>
 <li class="chapter" data-level="10.3" data-path="what-if-there-are-more-than-two-categories.html"><a href="what-if-there-are-more-than-two-categories.html"><i class="fa fa-check"></i><b>10.3</b> What if there are more than two categories?</a></li>
-<li class="chapter" data-level="10.4" data-path="a-final-application.html"><a href="a-final-application.html"><i class="fa fa-check"></i><b>10.4</b> A Final Application</a>
+<li class="chapter" data-level="10.4" data-path="a-concluding-application-3.html"><a href="a-concluding-application-3.html"><i class="fa fa-check"></i><b>10.4</b> A Concluding Application</a></li>
+<li class="chapter" data-level="10.5" data-path="another-concluding-application.html"><a href="another-concluding-application.html"><i class="fa fa-check"></i><b>10.5</b> Another Concluding Application</a>
 <ul>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#make-a-nominal-series-a-real-series"><i class="fa fa-check"></i>Make a <em>Nominal</em> Series a <em>Real</em> Series</a></li>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#remove-a-trend"><i class="fa fa-check"></i>Remove a Trend</a></li>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#remove-seasonality"><i class="fa fa-check"></i>Remove Seasonality</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#make-a-nominal-series-a-real-series"><i class="fa fa-check"></i>Make a <em>Nominal</em> Series a <em>Real</em> Series</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#remove-a-trend"><i class="fa fa-check"></i>Remove a Trend</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#remove-seasonality"><i class="fa fa-check"></i>Remove Seasonality</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="FF.html"><a href="FF.html"><i class="fa fa-check"></i><b>11</b> Functional Forms</a>
@@ -354,6 +368,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="the-reciprocal-transformation.html"><a href="the-reciprocal-transformation.html#application-6"><i class="fa fa-check"></i>Application</a></li>
 </ul></li>
 <li class="chapter" data-level="11.6" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>11.6</b> Conclusion</a></li>
+<li class="chapter" data-level="11.7" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html"><i class="fa fa-check"></i><b>11.7</b> A Concluding Application</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#a-residual-analysis"><i class="fa fa-check"></i>A Residual Analysis</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#log-transformation"><i class="fa fa-check"></i>Log Transformation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#quadratic-transformation"><i class="fa fa-check"></i>Quadratic Transformation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#reciprocal-transformation"><i class="fa fa-check"></i>Reciprocal Transformation</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="JHT.html"><a href="JHT.html"><i class="fa fa-check"></i><b>12</b> Joint Hypothesis Tests</a>
 <ul>
@@ -373,6 +394,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="applications.html"><a href="applications.html#application-1-a-wage-application"><i class="fa fa-check"></i>Application 1: A wage application</a></li>
 <li class="chapter" data-level="" data-path="applications.html"><a href="applications.html#application-2-constant-returns-to-scale"><i class="fa fa-check"></i>Application 2: Constant Returns to Scale</a></li>
 </ul></li>
+<li class="chapter" data-level="12.4" data-path="a-concluding-application-5.html"><a href="a-concluding-application-5.html"><i class="fa fa-check"></i><b>12.4</b> A Concluding Application</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -396,24 +418,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="slope-dummy-variable" class="section level2 hasAnchor" number="10.2">
 <h2><span class="header-section-number">10.2</span> Slope dummy variable<a href="slope-dummy-variable.html#slope-dummy-variable" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>While an intercept dummy variable is a very powerful modeling tool, it makes one glaring assumption. Consider the regression results above, namely the estimated slope coefficient with respect to tenure</p>
+<p>While an intercept dummy variable is a very powerful tool, it makes one glaring assumption. Consider the regression results above, namely the estimated slope coefficient with respect to tenure</p>
 <p><span class="math display">\[\hat{\beta}_3 = 0.14\]</span></p>
 <p>The interpretation of this slope coefficient is as follows:</p>
 <blockquote>
 <p>Holding education, experience, and gender constant, an individual will receive $0.14 more in wages for every additional year of tenure, on average.</p>
 </blockquote>
-<p>In particular, holding gender constant implies that a female receives the same annual raise than a male. This is an <em>assumption</em> of the model, because the model is incapable of differentiating the annual wage with respect to gender. Do men and women get significantly different average annual raises? We can extend the model to explicitly test this assumption with the use of a <em>slope dummy variable</em>.</p>
-<p>A slope dummy variable is an example of an <em>interaction term</em>. In other words, it is a new variable that arises from taking the product of two variables. In this case, in order for us to examine the gender difference of tenure, we consider the product between female and tenure.</p>
-<p><span class="math display">\[\begin{aligned}
-wage_i = \;&amp;\beta_0+\beta_1educ_i+\beta_2exper_i+ \beta_3tenure_i+\beta_4female_i+... \\ &amp;\beta_5(tenure_i*female_i)+\varepsilon_i
-\end{aligned}\]</span></p>
+<p>In particular, holding gender constant implies that a female receives the same annual raise than a male. This is an <em>explicit assumption</em> of the model, because the model is incapable of differentiating the annual wage with respect to gender. Do men and women get significantly different average annual raises? We can extend the model to test this assumption with the use of a <em>slope dummy variable</em>.</p>
+<p>A slope dummy variable is an example of an <em>interaction term</em>. In other words, it is a new variable that arises from taking the product of two existing variables. In this case, in order for us to examine the gender difference of tenure, we consider the product between female and tenure.</p>
+<p><span class="math display">\[wage_i = \beta_0+\beta_1\;educ_i+\beta_2\;exper_i+\beta_3\;tenure_i+...\]</span>
+<span class="math display">\[\beta_4\;female_i+\beta_5\;(tenure_i*female_i)+\varepsilon_i\]</span></p>
 <p>Like our illustration of an intercept dummy, we can see what this PRF looks like for males and females.</p>
 <p><span class="math display">\[Male: wage_i=\beta_0+\beta_1educ_i+\beta_2exper_i+\beta_3tenure_i+\varepsilon_i\]</span>
 <span class="math display">\[Female: wage_i=(\beta_0+\beta_4)+\beta_1educ_i+\beta_2exper_i+(\beta_3+\beta_5)tenure_i+\varepsilon_i\]</span></p>
 <p>For males, the PRF looks <em>exactly</em> as it does when we only considered an intercept dummy because both <span class="math inline">\(\beta_4\)</span> and <span class="math inline">\(\beta_5\)</span> drop out when <span class="math inline">\(female_i = 0\)</span>. For females, we can see the potential change in the intercept (as before), but we can now see a potential change in the slope with respect to tenure.</p>
-<div class="sourceCode" id="cb312"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb312-1"><a href="slope-dummy-variable.html#cb312-1" aria-hidden="true" tabindex="-1"></a>REG <span class="ot">&lt;-</span> <span class="fu">lm</span>(wage<span class="sc">~</span>educ<span class="sc">+</span>exper<span class="sc">+</span>tenure<span class="sc">+</span></span>
-<span id="cb312-2"><a href="slope-dummy-variable.html#cb312-2" aria-hidden="true" tabindex="-1"></a>            female<span class="sc">+</span>female<span class="sc">*</span>tenure,<span class="at">data=</span>wage1)</span>
-<span id="cb312-3"><a href="slope-dummy-variable.html#cb312-3" aria-hidden="true" tabindex="-1"></a><span class="fu">coef</span>(REG)</span></code></pre></div>
+<div class="sourceCode" id="cb345"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb345-1"><a href="slope-dummy-variable.html#cb345-1" tabindex="-1"></a>REG <span class="ot">&lt;-</span> <span class="fu">lm</span>(wage<span class="sc">~</span>educ<span class="sc">+</span>exper<span class="sc">+</span>tenure<span class="sc">+</span></span>
+<span id="cb345-2"><a href="slope-dummy-variable.html#cb345-2" tabindex="-1"></a>            female<span class="sc">+</span>female<span class="sc">*</span>tenure,<span class="at">data=</span>wage1)</span>
+<span id="cb345-3"><a href="slope-dummy-variable.html#cb345-3" tabindex="-1"></a><span class="fu">coef</span>(REG)</span></code></pre></div>
 <pre><code>##   (Intercept)          educ         exper        tenure        female 
 ##   -2.00229568    0.58279061    0.02834532    0.17780235   -1.17787884 
 ## tenure:female 
@@ -427,7 +448,7 @@ wage_i = \;&amp;\beta_0+\beta_1educ_i+\beta_2exper_i+ \beta_3tenure_i+\beta_4fem
 <p><span class="math display">\[Males: \frac{\Delta wage}{\Delta tenure} = \hat{\beta}_3=0.18\]</span>
 <span class="math display">\[Females: \frac{\Delta wage}{\Delta tenure} = \hat{\beta}_3+\hat{\beta}_5=0.18-0.14=0.04\]</span></p>
 <p>The regression states that males receive an $0.18 increase in wages on average for every additional year in tenure (holding all else constant), while females receive only a $0.04 increase in wages on average.</p>
-<p>Note that we could also consider slope dummy variables with respect to education as well as experience. You should do those on your own.</p>
+<p>Note that we could also consider slope dummy variables with respect to education as well as experience. You can analyze those on your own.</p>
 </div>
             </section>
 

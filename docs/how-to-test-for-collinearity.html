@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>9.3 How to test for Collinearity? | Course Companion for MBA 8370 and MBA 8380</title>
   <meta name="description" content="Course companion" />
-  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="9.3 How to test for Collinearity? | Course Companion for MBA 8370 and MBA 8380" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Scott Dressler" />
 
 
-<meta name="date" content="2023-01-08" />
+<meta name="date" content="2024-08-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -56,7 +56,7 @@
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -119,6 +119,10 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -178,7 +182,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3" data-path="R.html"><a href="R.html"><i class="fa fa-check"></i><b>3</b> Getting Started with R</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="the-r-project-for-statistical-computing.html"><a href="the-r-project-for-statistical-computing.html"><i class="fa fa-check"></i><b>3.1</b> The R Project for Statistical Computing</a></li>
-<li class="chapter" data-level="3.2" data-path="before-you-install-rstudio-cloud.html"><a href="before-you-install-rstudio-cloud.html"><i class="fa fa-check"></i><b>3.2</b> Before you Install… RStudio Cloud?</a></li>
+<li class="chapter" data-level="3.2" data-path="before-you-install-posit-rstudio-cloud.html"><a href="before-you-install-posit-rstudio-cloud.html"><i class="fa fa-check"></i><b>3.2</b> Before you Install… Posit (RStudio) Cloud?</a></li>
 <li class="chapter" data-level="3.3" data-path="downloading-and-installing-r.html"><a href="downloading-and-installing-r.html"><i class="fa fa-check"></i><b>3.3</b> Downloading and installing R</a>
 <ul>
 <li class="chapter" data-level="3.3.1" data-path="downloading-and-installing-r.html"><a href="downloading-and-installing-r.html#choosing-a-mirror"><i class="fa fa-check"></i><b>3.3.1</b> Choosing a <em>Mirror</em></a></li>
@@ -191,7 +195,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.5.1" data-path="coding-basics.html"><a href="coding-basics.html#installing-packages"><i class="fa fa-check"></i><b>3.5.1</b> Installing <em>Packages</em></a></li>
 <li class="chapter" data-level="3.5.2" data-path="coding-basics.html"><a href="coding-basics.html#assigning-objects"><i class="fa fa-check"></i><b>3.5.2</b> Assigning Objects</a></li>
 <li class="chapter" data-level="3.5.3" data-path="coding-basics.html"><a href="coding-basics.html#listing-adding-and-removing"><i class="fa fa-check"></i><b>3.5.3</b> Listing, Adding, and Removing</a></li>
-<li class="chapter" data-level="3.5.4" data-path="coding-basics.html"><a href="coding-basics.html#loading-data"><i class="fa fa-check"></i><b>3.5.4</b> Loading Data</a></li>
+<li class="chapter" data-level="3.5.4" data-path="coding-basics.html"><a href="coding-basics.html#importing-data"><i class="fa fa-check"></i><b>3.5.4</b> Importing Data</a></li>
 <li class="chapter" data-level="3.5.5" data-path="coding-basics.html"><a href="coding-basics.html#manipulating-data"><i class="fa fa-check"></i><b>3.5.5</b> Manipulating Data</a></li>
 <li class="chapter" data-level="3.5.6" data-path="coding-basics.html"><a href="coding-basics.html#subsetting-data"><i class="fa fa-check"></i><b>3.5.6</b> Subsetting Data</a></li>
 </ul></li>
@@ -281,13 +285,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.5.3" data-path="assumptions-of-the-linear-regression-model.html"><a href="assumptions-of-the-linear-regression-model.html#equal-variance"><i class="fa fa-check"></i><b>7.5.3</b> Equal Variance</a></li>
 <li class="chapter" data-level="7.5.4" data-path="assumptions-of-the-linear-regression-model.html"><a href="assumptions-of-the-linear-regression-model.html#normality-of-errors"><i class="fa fa-check"></i><b>7.5.4</b> Normality of Errors</a></li>
 </ul></li>
-<li class="chapter" data-level="7.6" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html"><i class="fa fa-check"></i><b>7.6</b> Appendix: Statistical Inference</a>
+<li class="chapter" data-level="7.6" data-path="a-concluding-application.html"><a href="a-concluding-application.html"><i class="fa fa-check"></i><b>7.6</b> A Concluding Application</a></li>
+<li class="chapter" data-level="7.7" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html"><i class="fa fa-check"></i><b>7.7</b> Appendix: Statistical Inference</a>
 <ul>
-<li class="chapter" data-level="7.6.1" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-population-parameters"><i class="fa fa-check"></i><b>7.6.1</b> Confidence Intervals (around population parameters)</a></li>
-<li class="chapter" data-level="7.6.2" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#hypothesis-tests"><i class="fa fa-check"></i><b>7.6.2</b> Hypothesis Tests</a></li>
-<li class="chapter" data-level="7.6.3" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-forecasts"><i class="fa fa-check"></i><b>7.6.3</b> Confidence Intervals (around forecasts)</a></li>
+<li class="chapter" data-level="7.7.1" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-population-parameters"><i class="fa fa-check"></i><b>7.7.1</b> Confidence Intervals (around population parameters)</a></li>
+<li class="chapter" data-level="7.7.2" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#hypothesis-tests"><i class="fa fa-check"></i><b>7.7.2</b> Hypothesis Tests</a></li>
+<li class="chapter" data-level="7.7.3" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-forecasts"><i class="fa fa-check"></i><b>7.7.3</b> Confidence Intervals (around forecasts)</a></li>
 </ul></li>
-<li class="chapter" data-level="7.7" data-path="up-next.html"><a href="up-next.html"><i class="fa fa-check"></i><b>7.7</b> Up Next…</a></li>
+<li class="chapter" data-level="7.8" data-path="up-next.html"><a href="up-next.html"><i class="fa fa-check"></i><b>7.8</b> Up Next…</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="MLR.html"><a href="MLR.html"><i class="fa fa-check"></i><b>8</b> Multiple Linear Regression</a>
 <ul>
@@ -307,6 +312,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.3.3" data-path="statistical-inference.html"><a href="statistical-inference.html#hypothesis-tests-1"><i class="fa fa-check"></i><b>8.3.3</b> Hypothesis Tests</a></li>
 <li class="chapter" data-level="8.3.4" data-path="statistical-inference.html"><a href="statistical-inference.html#confidence-intervals-around-forecasts-1"><i class="fa fa-check"></i><b>8.3.4</b> Confidence Intervals (around forecasts)</a></li>
 </ul></li>
+<li class="chapter" data-level="8.4" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html"><i class="fa fa-check"></i><b>8.4</b> A Concluding Application</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#interpretation"><i class="fa fa-check"></i>Interpretation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#confidence-intervals"><i class="fa fa-check"></i>Confidence Intervals</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#hypothesis-tests-2"><i class="fa fa-check"></i>Hypothesis Tests</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#forecasts"><i class="fa fa-check"></i>Forecasts</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="COL.html"><a href="COL.html"><i class="fa fa-check"></i><b>9</b> Collinearity</a>
 <ul>
@@ -322,17 +334,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="how-do-we-remove-collinearity.html"><a href="how-do-we-remove-collinearity.html#sometimes-removing-collinearity-might-involve-multiple-rounds"><i class="fa fa-check"></i>Sometimes removing collinearity might involve multiple rounds</a></li>
 </ul></li>
+<li class="chapter" data-level="9.5" data-path="a-concluding-application-2.html"><a href="a-concluding-application-2.html"><i class="fa fa-check"></i><b>9.5</b> A Concluding Application</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="DVS.html"><a href="DVS.html"><i class="fa fa-check"></i><b>10</b> Qualitative (Dummy) Variables</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="intercept-dummy-variable.html"><a href="intercept-dummy-variable.html"><i class="fa fa-check"></i><b>10.1</b> Intercept dummy variable</a></li>
 <li class="chapter" data-level="10.2" data-path="slope-dummy-variable.html"><a href="slope-dummy-variable.html"><i class="fa fa-check"></i><b>10.2</b> Slope dummy variable</a></li>
 <li class="chapter" data-level="10.3" data-path="what-if-there-are-more-than-two-categories.html"><a href="what-if-there-are-more-than-two-categories.html"><i class="fa fa-check"></i><b>10.3</b> What if there are more than two categories?</a></li>
-<li class="chapter" data-level="10.4" data-path="a-final-application.html"><a href="a-final-application.html"><i class="fa fa-check"></i><b>10.4</b> A Final Application</a>
+<li class="chapter" data-level="10.4" data-path="a-concluding-application-3.html"><a href="a-concluding-application-3.html"><i class="fa fa-check"></i><b>10.4</b> A Concluding Application</a></li>
+<li class="chapter" data-level="10.5" data-path="another-concluding-application.html"><a href="another-concluding-application.html"><i class="fa fa-check"></i><b>10.5</b> Another Concluding Application</a>
 <ul>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#make-a-nominal-series-a-real-series"><i class="fa fa-check"></i>Make a <em>Nominal</em> Series a <em>Real</em> Series</a></li>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#remove-a-trend"><i class="fa fa-check"></i>Remove a Trend</a></li>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#remove-seasonality"><i class="fa fa-check"></i>Remove Seasonality</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#make-a-nominal-series-a-real-series"><i class="fa fa-check"></i>Make a <em>Nominal</em> Series a <em>Real</em> Series</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#remove-a-trend"><i class="fa fa-check"></i>Remove a Trend</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#remove-seasonality"><i class="fa fa-check"></i>Remove Seasonality</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="FF.html"><a href="FF.html"><i class="fa fa-check"></i><b>11</b> Functional Forms</a>
@@ -354,6 +368,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="the-reciprocal-transformation.html"><a href="the-reciprocal-transformation.html#application-6"><i class="fa fa-check"></i>Application</a></li>
 </ul></li>
 <li class="chapter" data-level="11.6" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>11.6</b> Conclusion</a></li>
+<li class="chapter" data-level="11.7" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html"><i class="fa fa-check"></i><b>11.7</b> A Concluding Application</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#a-residual-analysis"><i class="fa fa-check"></i>A Residual Analysis</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#log-transformation"><i class="fa fa-check"></i>Log Transformation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#quadratic-transformation"><i class="fa fa-check"></i>Quadratic Transformation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#reciprocal-transformation"><i class="fa fa-check"></i>Reciprocal Transformation</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="JHT.html"><a href="JHT.html"><i class="fa fa-check"></i><b>12</b> Joint Hypothesis Tests</a>
 <ul>
@@ -373,6 +394,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="applications.html"><a href="applications.html#application-1-a-wage-application"><i class="fa fa-check"></i>Application 1: A wage application</a></li>
 <li class="chapter" data-level="" data-path="applications.html"><a href="applications.html#application-2-constant-returns-to-scale"><i class="fa fa-check"></i>Application 2: Constant Returns to Scale</a></li>
 </ul></li>
+<li class="chapter" data-level="12.4" data-path="a-concluding-application-5.html"><a href="a-concluding-application-5.html"><i class="fa fa-check"></i><b>12.4</b> A Concluding Application</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -396,7 +418,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="how-to-test-for-collinearity" class="section level2 hasAnchor" number="9.3">
 <h2><span class="header-section-number">9.3</span> How to test for Collinearity?<a href="how-to-test-for-collinearity.html#how-to-test-for-collinearity" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Note that most variables are correlated to some degree (even if completely at random). Therefore, the question is really how much collinearity exists in our data? Is it not enough so we can disregard (as in the first example in the previous section) or enough to cause issues (as in the third or fourth example)?</p>
+<p>Note that most variables are correlated to some degree (even if completely at random). Therefore, the question is really how much collinearity exists in our data? Is it little so we can disregard (as in the first example in the previous section) or large enough to cause issues (as in the third or fourth example)?</p>
 <p>There are two data characteristics that help detect the degree of collinearity in a regression:</p>
 <ul>
 <li><p>High simple correlation coefficients</p></li>
@@ -409,19 +431,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span class="math display">\[S_{X_2} = \frac{1}{n-1} \sum_{i=1}^n (X_{2i}-\bar{X}_2)^2\]</span></p>
 <p><span class="math display">\[\rho(X_1,X_2) = \frac{Cov(X_1,X_2)}{S_{X_1}S_{X_2}}\]</span></p>
 <p>If a simple correlation coefficient between any two explanatory variables, <span class="math inline">\(\rho(X_1,X_2)\)</span>, is high in absolute value, then collinearity is a potential problem. Like we saw in the application, high is rather arbitrary. Therefore, researchers settle on a threshold of 0.80. In other words, if you have a correlation of 0.80 or higher, then you are running the risk of having your estimates biased by the existence of collinearity.</p>
-<p>The problem with looking at simple correlations is that they are only <em>pairwise</em> calculations. In other words, you can only look at two variables at a time. What if a collinearity problem is bigger than just two variables?</p>
+<p>The problem with looking at simple correlations is that they are only <em>pairwise</em> calculations. In other words, you can only look at two variables at a time. What if a collinearity problem is spread across more than just two variables?</p>
 </div>
 <div id="variance-inflation-factors-vifs" class="section level3 unnumbered hasAnchor">
 <h3>Variance Inflation Factors (VIFs)<a href="how-to-test-for-collinearity.html#variance-inflation-factors-vifs" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Suppose you want to estimate a regression with three independent variables, but you want to test for collinearity first.</p>
 <p><span class="math display">\[Y_i = \beta_0 + \beta_1 \; X_{1i} + \beta_2 \; X_{2i} + \beta_3\;  X_{3i} + \varepsilon_i\]</span></p>
-<p>Correlation coefficients, being pairwise, will not be able to uncover a correlation structure that might exist across <em>all three</em> independent variables.</p>
-<p>Take for example three independent variables: a pitcher’s ERA, the number of earned runs, and the number of innings pitched. For those of you (like me) who are unfamiliar with baseball, a pitcher’s ERA is essentially, their earned runs divided by the number of innings pitched. This means that ERA might be positively correlated with earned runs and negatively correlated with innings pitched, but you wouldn’t realize that the correlation is <em>perfect</em> (meaning, equal to 1) unless you consider both variables <em>simultaneously</em> - and correlation coefficients cannot look at this issue simultaneously. A Variance Inflation Factor (or VIF) is a method for examining a complete correlation structure on a list of three or more independent variables.</p>
+<p>Correlation coefficients, being pairwise, will not be able to uncover a correlation structure that exists across <em>all three</em> independent variables.</p>
+<p>Take for example three independent variables: a pitcher’s ERA, the number of earned runs, and the number of innings pitched. For those of you (like me) who are unfamiliar with baseball, a pitcher’s ERA is essentially their earned runs divided by the number of innings pitched. This means that ERA might be positively correlated with earned runs and negatively correlated with innings pitched, but you wouldn’t realize that the correlation is <em>perfect</em> (meaning, equal to 1) unless you consider both variables <em>simultaneously</em> - and pairwise correlation coefficients cannot uncover this. A Variance Inflation Factor (or VIF) is a method for examining a complete correlation structure on a list of three or more independent variables.</p>
 <p>A Variance Inflation Factor (VIF) is calculated in two steps:</p>
 <p>First, run an OLS regression where an independent variable (say, X1) takes a turn at being a dependent variable.</p>
 <p><span class="math display">\[X_{1i} = a_0 + a_1\;  X_{2i} + a_2 \; X_{3i} + u_i\]</span></p>
 <p>Note that the original dependent variable <span class="math inline">\((Y_i)\)</span> is NOT in this equation!</p>
-<p>The purpose of this auxiliary regression is to see if there is a sophisticated correlation structure between <span class="math inline">\(X_{1i}\)</span> and the right-hand side variables. Conveniently, we already have an <span class="math inline">\(R^2\)</span> which will indicate exactly how much the variation in the left-hand variable is <em>explained</em> by the right-hand variables.</p>
+<p>The purpose of this auxiliary regression is to see if there is a sophisticated correlation structure between <span class="math inline">\(X_{1i}\)</span> and the current right-hand side variables. Conveniently, we already have an <span class="math inline">\(R^2\)</span> which will indicate exactly how much the variation in the left-hand variable is <em>explained</em> by the right-hand variables.</p>
 <p>The second step takes the <span class="math inline">\(R^2\)</span> from this regression and calculates the VIF for independent variable <span class="math inline">\(X_{1i}\)</span>. Since the VIF impacts the estimated coefficient of <span class="math inline">\(\beta_1\)</span> in the original regression, it is sometimes referred to as <span class="math inline">\(VIF(\hat{\beta}_1)\)</span>:</p>
 <p><span class="math display">\[VIF(\hat{\beta}_1) = \frac{1}{1-R^2}\]</span></p>
 <p>If we did this for every independent variable in the original regression, we would arrive at three VIF values.</p>
@@ -432,32 +454,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="an-application-2" class="section level3 hasAnchor" number="9.3.1">
 <h3><span class="header-section-number">9.3.1</span> An Application:<a href="how-to-test-for-collinearity.html#an-application-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="sourceCode" id="cb299"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb299-1"><a href="how-to-test-for-collinearity.html#cb299-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb299-2"><a href="how-to-test-for-collinearity.html#cb299-2" aria-hidden="true" tabindex="-1"></a>MULTI2 <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">&quot;data/MULTI2.xlsx&quot;</span>)</span>
-<span id="cb299-3"><a href="how-to-test-for-collinearity.html#cb299-3" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(MULTI2)</span></code></pre></div>
+<div class="sourceCode" id="cb326"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb326-1"><a href="how-to-test-for-collinearity.html#cb326-1" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb326-2"><a href="how-to-test-for-collinearity.html#cb326-2" tabindex="-1"></a>MULTI2 <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">&quot;data/MULTI2.xlsx&quot;</span>)</span>
+<span id="cb326-3"><a href="how-to-test-for-collinearity.html#cb326-3" tabindex="-1"></a><span class="fu">names</span>(MULTI2)</span></code></pre></div>
 <pre><code>## [1] &quot;Team&quot;          &quot;League&quot;        &quot;Wins&quot;          &quot;ERA&quot;          
 ## [5] &quot;Runs&quot;          &quot;Hits_Allowed&quot;  &quot;Walks_Allowed&quot; &quot;Saves&quot;        
 ## [9] &quot;Errors&quot;</code></pre>
 <p>Suppose that you want to explain why some baseball teams recorded more wins than others by looking at the season statistics listed above. Before we run a full regression with <em>Wins</em> as the dependent variable and the other right variables as independent variables, we need to test for collinearity.</p>
 <p>If we were to follow the steps above for each independent variable, we will need to calculate seven VIF values (Team isn’t a variable… it’s a name). This is a lot easier done than said in R:</p>
-<div class="sourceCode" id="cb301"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb301-1"><a href="how-to-test-for-collinearity.html#cb301-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Estimate the &#39;intended&#39; model:</span></span>
-<span id="cb301-2"><a href="how-to-test-for-collinearity.html#cb301-2" aria-hidden="true" tabindex="-1"></a>REG <span class="ot">&lt;-</span> <span class="fu">lm</span>(Wins <span class="sc">~</span> League <span class="sc">+</span> ERA <span class="sc">+</span> Runs <span class="sc">+</span> Hits_Allowed <span class="sc">+</span> </span>
-<span id="cb301-3"><a href="how-to-test-for-collinearity.html#cb301-3" aria-hidden="true" tabindex="-1"></a>            Walks_Allowed <span class="sc">+</span> Saves <span class="sc">+</span> Errors, <span class="at">data =</span> MULTI2)</span>
-<span id="cb301-4"><a href="how-to-test-for-collinearity.html#cb301-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb301-5"><a href="how-to-test-for-collinearity.html#cb301-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Use REG object to determine the VIFS:</span></span>
-<span id="cb301-6"><a href="how-to-test-for-collinearity.html#cb301-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car)</span>
-<span id="cb301-7"><a href="how-to-test-for-collinearity.html#cb301-7" aria-hidden="true" tabindex="-1"></a><span class="fu">vif</span>(REG)</span></code></pre></div>
+<div class="sourceCode" id="cb328"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb328-1"><a href="how-to-test-for-collinearity.html#cb328-1" tabindex="-1"></a><span class="co"># Estimate the &#39;intended&#39; model:</span></span>
+<span id="cb328-2"><a href="how-to-test-for-collinearity.html#cb328-2" tabindex="-1"></a>REG <span class="ot">&lt;-</span> <span class="fu">lm</span>(Wins <span class="sc">~</span> League <span class="sc">+</span> ERA <span class="sc">+</span> Runs <span class="sc">+</span> Hits_Allowed <span class="sc">+</span> </span>
+<span id="cb328-3"><a href="how-to-test-for-collinearity.html#cb328-3" tabindex="-1"></a>            Walks_Allowed <span class="sc">+</span> Saves <span class="sc">+</span> Errors, <span class="at">data =</span> MULTI2)</span>
+<span id="cb328-4"><a href="how-to-test-for-collinearity.html#cb328-4" tabindex="-1"></a></span>
+<span id="cb328-5"><a href="how-to-test-for-collinearity.html#cb328-5" tabindex="-1"></a><span class="co"># Use REG object to determine the VIFS:</span></span>
+<span id="cb328-6"><a href="how-to-test-for-collinearity.html#cb328-6" tabindex="-1"></a><span class="fu">library</span>(car)</span>
+<span id="cb328-7"><a href="how-to-test-for-collinearity.html#cb328-7" tabindex="-1"></a><span class="fu">vif</span>(REG)</span></code></pre></div>
 <pre><code>##        League           ERA          Runs  Hits_Allowed Walks_Allowed 
 ##      1.221101     11.026091      1.279997      6.342662      3.342659 
 ##         Saves        Errors 
 ##      1.762577      1.548678</code></pre>
-<p>The output above shows a VIF for each of the independent variables. The largest are for ERA and Hits Allowed, and these are problematic given that they are above our threshold of 5.<a href="#fn33" class="footnote-ref" id="fnref33"><sup>33</sup></a> So now that we detected collinearity… what do we do about it?</p>
+<p>The output above shows a VIF for each of the independent variables. The largest are for ERA and Hits Allowed, and these are problematic given that they are above our threshold of 5.<a href="#fn42" class="footnote-ref" id="fnref42"><sup>42</sup></a> So now that we detected collinearity… what do we do about it?</p>
 </div>
 </div>
 <div class="footnotes">
 <hr />
-<ol start="33">
-<li id="fn33"><p>Note that the handy command <em>vif</em> is located in the <em>car</em> package. That is why we needed to open the car package using the library command. See the chapter on R basics for more details.<a href="how-to-test-for-collinearity.html#fnref33" class="footnote-back">↩︎</a></p></li>
+<ol start="42">
+<li id="fn42"><p>Note that the handy command <em>vif</em> is located in the <em>car</em> package. That is why we needed to open the car package using the library command. See the chapter on R basics for more details.<a href="how-to-test-for-collinearity.html#fnref42" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

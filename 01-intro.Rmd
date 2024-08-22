@@ -5,7 +5,7 @@
 knitr::opts_chunk$set(fig.align='center', message = FALSE)
 ```
 
-We are constantly bombarded with statistics on a daily basis (whether we like it or not). This chapter starts with some motivating examples that make heavy use of statistics, and an introduction to some important terminology and equations used to calculate descriptive measures (e.g., mean, standard deviation, etc.). We will start throwing around some data and R code in the applications, but we will not formally get into these details until later. When initially reading this chapter, you should skip or skim over the coding details and focus more on the conclusions. You can always come back to this chapter and focus on replicating the code after we cover R in subsequent chapters.
+We are constantly bombarded with statistics on a daily basis (whether we like it or not). This chapter starts with some motivating examples to illustrate the heavy use of statistics in our daily lives, and to introduce some important terminology and equations used to calculate descriptive measures (e.g., mean, standard deviation, etc.). We will start throwing around some data and R code in the applications, but we will not formally get into these details until later. When initially reading this chapter, you should skip or skim over the coding details and focus more on the conclusions. You can always come back to this chapter and focus on replicating the code after we cover R in subsequent chapters.
 
 ## The "Big Picture" of Statistics
    
@@ -112,7 +112,7 @@ This section summarizes the measures we use to describe data samples.
 
 These measures will be used repeatedly in our analyses, and will affect how confident we are in our conclusions. 
 
-To introduce you to some numerical results in R, we will continue with our light bulb scenario and add some actual data. Suppose we randomly selected 60 light bulbs from our population (i.e., our sample), turned them on, and timed each one until it burned out. If we recorded the lifetime of each light bulb, then we have a dataset (or data sample) of 60 observations of the lifetimes of light bulbs. This is what we will be using below.
+To introduce you to some numerical results in R, we will continue with our light bulb scenario and add some actual data. Suppose we randomly selected 60 light bulbs from our population (i.e., our sample), turned them on, and timed each one until it burned out. If we recorded the lifetime of each light bulb, then we have a dataset (or data sample) of 60 observations on the lifetime of a light bulb. This is what we will be using below.
 
 ---
 
@@ -124,11 +124,20 @@ $$\bar{X}=\frac{\text{Sum of values}}{\text{Number of observations}}=\frac{1}{n}
 
 ```{r}
 # the mean of our light bulb sample:
-# First we load the data set and this will give us 60 observations of the lifespan of each of our 60 light bulbs in the sample. The variable is called "Lifetime" - which can be observed by using the "list" command.
+# First we create a vector containing 60 observations of the lifespan of each of our light bulbs in the sample. The variable is called "Lifetime".
 
-load("data/Lightbulb.Rdata")
-list(Lifetime)
+Lifetime=c(858.9164,  797.2652, 1013.5366, 1064.8195,  874.2275,  825.1137,
+           897.0879,  924.0998,  870.0674,  966.2095,  955.1281,  977.2073,
+           888.1690,  826.6483,  776.7479,  877.5691,  998.7101,  892.8178,
+           886.0261,  831.7615, 1082.9650, 1034.9549,  784.5026,  919.2082,
+           1049.1824,  923.5767,  907.7295,  890.3758,  856.4240,  808.8035,
+           1009.7146,  890.3709,  930.9597,  809.9274,  919.9381,  793.7455,
+           919.9824,  948.8593,  810.6887,  846.9573,  955.3873,  833.2762,
+           892.4969,  973.1861,  913.7650,  928.6057,  940.7637,  964.4341,
+           914.2733,  880.3329,  831.5395,  967.2442, 1030.7598,  857.5421,
+           889.3689, 1094.1440,  927.7684,  730.9976,  918.8359,  867.5931)
 
+# Calculate the mean of the variable Lifetime
 (mean(Lifetime))
 ```
 The average lifetime of our 60 $(n=60)$ observed light bulbs is 908 hours.
@@ -210,7 +219,7 @@ The variance of our sample of light bulb lifetimes is 6236 squared-hours. After 
 
 #### Discussion {-}
 
-* The term $(X_i-\bar{X})$ is squared because individual observations are either above or below the mean by design. If you don't square the terms (making the negative numbers positive) then they will sum to zero by design.
+* The term $(X_i-\bar{X})$ is squared because individual observations are either above or below the mean. If you don't square the terms (making the negative numbers positive) then they will sum to zero by design.
 
 * The term $(n-1)$ appears in the denominator because this is a *sample* variance and not a *population* variance. In a population variance equation, $(n-1)$ gets replaced with $n$ because we know the population mean. Since we had to estimate the population mean (i.e., used the sample mean), we had to deduct one **degree of freedom**. We will talk more about degrees of freedom later, but the rule of thumb is that we deduct a degree of freedom every time we build a sample statistic (like sample variance) using another sample statistic (like sample mean).
 
@@ -225,12 +234,15 @@ $$CV=\frac{S}{\bar{X}}*100\%$$
 Take for example the Gross Domestic Product (i.e., output) for the states of California and Delaware.
 
 ```{r}
-library(readxl)
-CARGSP <- read_excel("data/CARGSP.xls")
-DENGSP <- read_excel("data/DENGSP.xls")
+CGDP <- c(1379722, 1470543, 1583231, 1709491, 1707065, 1747200, 1829297,
+          1902550, 1988737, 2072274, 2103015, 2110596, 2025633, 2056990,
+          2090837, 2144090, 2219611, 2316331, 2437367, 2519134, 2628315,
+          2708967, 2800505, 2722839)
 
-CGDP <- CARGSP$CGDP
-DGDP <- DENGSP$DGDP
+DGDP <- c(33400.0, 37065.1, 40427.3, 43515.9, 46555.9, 45828.2, 47731.3,
+          51337.7, 52028.2, 54956.7, 56281.3, 54777.6, 57267.3, 57986.7,
+          60821.8, 61866.7, 61007.5, 67549.8, 71547.8, 69284.2, 69899.4,
+          74186.7, 77082.4, 75512.5)
 
 (mean(CGDP))
 (sd(CGDP))

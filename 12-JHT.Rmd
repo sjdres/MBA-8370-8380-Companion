@@ -6,7 +6,7 @@ library(pander)
 library(plot3D)
 ```
 
-This final chapter deals with a powerful tool of statistical inference: *joint hypothesis tests*. The concept of a joint hypothesis test is detailed in contrast to *simple hypothesis tests* - which are the  types of hypothesis tests we have learned thus far. Once we establish what a joint hypothesis test can do, we then go about conducting the tests. This does introduce a new probability distribution that we need to use when calculating p-values. However, once a p-value is calculated we can use it to make a conclusion just like before.
+This final chapter deals with a powerful tool of statistical inference: *joint hypothesis tests*. The concept of a joint hypothesis test is detailed in contrast to *simple hypothesis tests* - which are the types of hypothesis tests we have learned thus far. Once we establish what a joint hypothesis test can do, we then go about conducting the tests. This does introduce a new probability distribution that we need to use when calculating p-values. However, once a p-value is calculated we can use it to make a conclusion just like before.
 
 ## Simple versus Joint Hypothesis Tests
 
@@ -30,7 +30,7 @@ is conducted under the assumption that $\beta_2$ and $\beta_3$ are left to be wh
 
 A joint hypothesis states a null hypothesis that considers multiple PRF coefficients simultaneously. The statement in the null hypothesis can become quite sophisticated and test some very interesting statements.
 
-For example, we can test if *all* population coefficients are equal to zero - which explicitly states that none of the independent variables are important.
+For example, we can test if *all* population coefficients are equal to zero - which explicitly states that none of the independent variables are important simultaneously.
 
 $$H_0: \beta_1 = \beta_2 = \beta_3 = 0 \quad \text{versus} \quad H_1: \beta_1 \neq 0,\; \beta_2 \neq 0,\; \text{or} \; \beta_3 \neq 0$$
 
@@ -42,7 +42,7 @@ If we have a specific theory in mind, we could also test if PRF coefficients are
 
 $$H_0: \beta_1 = 1 \; \text{or} \; \beta_3 = 4 \quad \text{versus} \quad H_1: \beta_1 \neq 1\; \text{or} \; \beta_3 \neq 4$$
 
-Finally, we can test if PRF coefficients behave according to some relative measures. Instead of stating in the null that coefficients are equal to some specific number, we can state that they are equal (or opposite) to each other or they behave according to some mathematical condition.
+Finally, we can test if PRF coefficients behave according to some relative measures. Instead of stating in the null that coefficients are equal to some specific number, we can state that they are equal (or opposite) to each other or they behave according to some linear mathematical condition.
 
 $$H_0: \beta_1 = -\beta_3 \quad \text{versus} \quad H_1: \beta_1 \neq -\beta_3$$
 
@@ -54,7 +54,7 @@ As long as you can state a hypothesis involving multiple PRF coefficients in a l
 
 ### Application {-}
 
-One chapter of my PhD dissertation concluded with a single joint hypothesis test. The topic I was researching was the *Bank-Lending Channel of Monetary Policy Transmission*, which is a bunch of jargon dealing with how banks respond to changes in monetary policy established by the Federal Reserve. A paper from 1992 written by Ben Bernanke and Alan Blinder established that aggregate bank lending volume responded to changes in monetary policy (identified as movements in the Federal Funds Rate).^[Bernanke, B., & Blinder, A. (1992). The Federal Funds Rate and the Channels of Monetary Transmission. *The American Economic Review*, 82(4), 901-921.] A simplified version of their model (below) considers the movement in bank lending as the dependent variable and the movement in the Fed Funds Rate (FFR) as the independent variable.
+One chapter of my PhD dissertation concluded with a single joint hypothesis test. The topic I was researching was the *Bank-Lending Channel of Monetary Policy Transmission*, which is a bunch of jargon dealing with how commercial banks respond to changes in monetary policy established by the Federal Reserve. A 1992 paper written by Ben Bernanke and Alan Blinder established that aggregate bank lending volume responded to changes in monetary policy (identified as movements in the Federal Funds Rate).^[Bernanke, B., & Blinder, A. (1992). The Federal Funds Rate and the Channels of Monetary Transmission. *The American Economic Review*, 82(4), 901-921.] A simplified version of their model (below) considers the movement in commercial bank lending as the dependent variable and the movement in the Fed Funds Rate (FFR) as the independent variable.
 
 $$L_i = \beta_0 + \beta_1 FFR_i + \varepsilon_i$$
 
@@ -89,7 +89,7 @@ Notice that both $\beta_1$ and $\beta_2$ are still hypothesized to be negative n
 
 $$H_0: \beta_1=\beta_2 \quad \text{versus} \quad H_1: \beta_1 \neq \beta_2$$
 
-In case you were curious, the null hypothesis get rejected and this provides evidence that the bank lending channel is indeed *asymmetric*. This implies that banks respond more to monetary tightenings than monetary expansions, which should make sense given all of the low amounts of bank lending in the post-global recession of 2008 despite interest rates being at all time lows.
+In case you were curious, the null hypothesis gets rejected and this provides evidence that the bank lending channel is indeed *asymmetric*. This implies that banks respond more to monetary tightenings than monetary expansions, which should make sense given all of the low amounts of bank lending in the post-global recession of 2008 despite interest rates being at all time lows.
 
 ## Conducting a Joint Hypothesis Test
 
@@ -272,7 +272,7 @@ Note that since our F-statistic is far from 0, we can reject the null with appro
 
 #### What can we conclude from this? {-}
 
-Since we rejected the null hypothesis, that means we have statistical evidence that the alternative hypothesis is true. However, take a look at the what the alternative hypothesis actually says. It says that *at least one* of the population coefficients are statistically different from zero. It doesn't say which ones. It doesn't say how many. That's it...
+Since we rejected the null hypothesis, that means we have statistical evidence that the alternative hypothesis is true. However, take a look at what the alternative hypothesis actually says. It says that *at least one* of the population coefficients are statistically different from zero. It doesn't say which ones. It doesn't say how many. That's it...
 
 **Is there a short cut?**
 
@@ -356,3 +356,121 @@ m = 1; n = 24; k = 2
 ```
 
 As in the previous application, we received a very high F-statistic and a very low p-value. This means we *reject* the hypothesis that this country has an aggregate production function that exhibits constant returns to scale with slightly over 99.5% confidence.
+
+## A Concluding Application
+
+Let us turn one final time to our analysis of the starting salaries of law students. In our chapter on dummy variables, we made the coarse distinction between school ranks inside and outside of the top 25 schools only. Suppose we make this distinction a bit finer.
+
+$$SALARY_i = \beta_0 + \beta_1 \; LSAT_i + \beta_2 \; TOP10_i + \beta_3 \; R11\_25_i + \varepsilon_i$$
+
+
+where...
+
+* $TOP10_i = 1$ if school i is ranked in the top ten (0 otherwise)
+
+* $R11\_25_i = 1$ if school i is ranked 11 to 25 (0 otherwise)
+
+* benchmark... all schools ranked 26 or higher!
+
+Note that this application is actually one where we have three qualitative categories (top 10, top 11-15, and all the rest). These three categories can be captured by two dummy variables, with schools not ranked in the top 25 serving as the benchmark category.
+
+```{r,eval = FALSE}
+REG <- lm(SALARY~LSAT+TOP10+R11_25, data = LAW)
+summary(REG)
+```
+
+
+```{r,echo = FALSE}
+library(readxl)
+LAW <- read_excel("data/LAW.xlsx")
+REG <- lm(SALARY~LSAT+TOP10+R11_25, data = LAW)
+pander(summary(REG))
+tB0 <- format(round(summary(REG)$coefficient[1,1],2), scientific = FALSE)
+tB1 <- format(round(summary(REG)$coefficient[2,1],2), scientific = FALSE)
+tB2 <- format(round(summary(REG)$coefficient[3,1],2), scientific = FALSE)
+tB3 <- format(round(summary(REG)$coefficient[4,1],2), scientific = FALSE)
+
+```
+
+Estimating our regression allows us to quantify the impact of graduating from a top 10 school (relative to a 26+ school) and differentiating it from the impact of graduating from a 11-25 school (relative to a 26+ school). Formal interpretations are as follows.
+
+$$\frac{\Delta \widehat{SALARY}}{\Delta TOP10} = `r tB2`$$
+
+Holding LSAT constant, graduating from a top 10 school (relative to a school ranked 26 or lower) will result in $`r tB2` in additional median starting salary, on average.
+
+$$\frac{\Delta \widehat{SALARY}}{\Delta R11\_25} = `r tB3`$$
+
+Holding LSAT constant, graduating from a school ranked between 11-25 (relative to a school ranked 26 or lower) will result in $`r tB3` in additional median starting salary, on average.
+
+The big difference between this regression model and the one we estimated in our dummy variable chapter is that the previous model implicitly assumed that the impact of graduating from a top 10 or top 11-25 school was the same (because we only considered top 25). This model relaxed that assumption and considered two *potentially* different impacts. The question remains: is this refinement necessary? In other words, is there a significant difference between top 10 and top 11-25 in the population?
+
+We can test this by way of a joint hypothesis test:
+
+$$H_0: \beta_2 = \beta_3 \quad vs \quad H_1: \beta_2 \neq \beta_3$$
+
+The null hypothesis states that the two slope coefficients are the same, while the alternative states that they are different. Remember this boils down to simply saying that there is no difference between top 10 and top 11-25 (under the null). 
+
+Step 1: Estimate the unrestricted model.
+
+This is the model where the coefficients can be whatever R says they should be. We actually already did this above, so we just need to collect the unrestricted $R^2$.
+
+```{r}
+(R2u = summary(REG)$r.squared)
+```
+
+Step 2: Estimate the restricted model.
+
+This is the step where we need to construct and estimate the model with the null hypothesis imposed. Since the restriction under the null is $\beta_2 = \beta_3$, we simply set $\beta_2$ to be the same as $\beta_3$ and combine terms.
+
+$$SALARY_i = \beta_0 + \beta_1 \; LSAT_i + \beta_2 \; TOP10_i + \beta_3 \; R11\_25_i + \varepsilon_i$$
+
+$$SALARY_i = \beta_0 + \beta_1 \; LSAT_i + \beta_3 \; TOP10_i + \beta_3 \; R11\_25_i + \varepsilon_i$$
+
+$$SALARY_i = \beta_0 + \beta_1 \; LSAT_i + \beta_3 (TOP10_i + R11\_25_i) + \varepsilon_i$$
+
+Once we determine what the restricted model looks like on paper, we simply estimate it and collect the *restricted* $R^2$.^[Think about the following. TOP10 is a column that has a 1 if the school is in the top 10 (zero otherwise), while R11_25 is a column that has a 1 if the school is ranked 11 through 25 (zero otherwise). This directly implies that the sum of these two columns now delivers a column that has a 1 if the school is ranked 1 through 25 (zero otherwise), which is identical to the top 25 variable we considered earlier.]
+
+```{r}
+REG2 <- lm(SALARY~LSAT + I(TOP10 + R11_25), data = LAW)
+(R2r = summary(REG2)$r.squared)
+```
+
+Step 3: Calculate an F-Statistic under the null
+
+$$F_{stat} = \frac{(R^2_u - R^2_r)/m}{(1-R^2_u)/(n-k-1)}$$
+
+Our one restriction results in $m=1$, while $n-k-1$ from the unrestricted model is easy to determine. These two degrees of freedom combined with our restricted and unrestricted $R^2s$ is all we need to calculate our F statistic under the null.
+
+```{r}
+m = 1; n = 142; k = 3
+(Fstat = ( (R2u - R2r)/m) / ( (1 - R2u)/(n-k-1) ))
+```
+
+```{r, echo = FALSE}
+X <- seq(0,4,0.01)
+Y <- df(X,10,30)
+
+plot(X,Y,type="n",ylab = "Density", xlab = " ",
+     yaxt = "n", xaxt = "n", main = "F Distribution")
+  xtick<-c(0, 3)
+  axis(side=1, at=xtick, labels = FALSE)
+  text(x=xtick, par("usr")[3],  
+     labels = c(0,round(Fstat,2)), 
+     pos = 1, xpd = TRUE)
+  i <- X >= 0 & X <= 3
+  i2 <- X >= 3 & X <= 4
+  lines(X, Y)
+  polygon(c(0,X[i],3), c(0,Y[i],0), col="orchid")
+  polygon(c(3,X[i2],4), c(0,Y[i2],0), col="cyan")
+```
+
+Step 4: Calculate a p-value and conclude
+
+```{r}
+(P = pf(Fstat,m,n-k-1,lower.tail = FALSE))
+(1-P)*100
+```
+
+Our p-value states that we can reject the null with `r round((1-P)*100,2)` percent confidence.
+
+This tells us that we can reject the hypothesis that graduation from the top 10 schools is the same as graduating from the top 25 (with over 98% confidence).

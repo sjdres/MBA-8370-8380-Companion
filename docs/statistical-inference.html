@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>8.3 Statistical Inference | Course Companion for MBA 8370 and MBA 8380</title>
   <meta name="description" content="Course companion" />
-  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="8.3 Statistical Inference | Course Companion for MBA 8370 and MBA 8380" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Scott Dressler" />
 
 
-<meta name="date" content="2023-01-08" />
+<meta name="date" content="2024-08-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="adjusted-r2.html"/>
-<link rel="next" href="COL.html"/>
+<link rel="next" href="a-concluding-application-1.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -56,7 +56,7 @@
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -119,6 +119,10 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -178,7 +182,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3" data-path="R.html"><a href="R.html"><i class="fa fa-check"></i><b>3</b> Getting Started with R</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="the-r-project-for-statistical-computing.html"><a href="the-r-project-for-statistical-computing.html"><i class="fa fa-check"></i><b>3.1</b> The R Project for Statistical Computing</a></li>
-<li class="chapter" data-level="3.2" data-path="before-you-install-rstudio-cloud.html"><a href="before-you-install-rstudio-cloud.html"><i class="fa fa-check"></i><b>3.2</b> Before you Install… RStudio Cloud?</a></li>
+<li class="chapter" data-level="3.2" data-path="before-you-install-posit-rstudio-cloud.html"><a href="before-you-install-posit-rstudio-cloud.html"><i class="fa fa-check"></i><b>3.2</b> Before you Install… Posit (RStudio) Cloud?</a></li>
 <li class="chapter" data-level="3.3" data-path="downloading-and-installing-r.html"><a href="downloading-and-installing-r.html"><i class="fa fa-check"></i><b>3.3</b> Downloading and installing R</a>
 <ul>
 <li class="chapter" data-level="3.3.1" data-path="downloading-and-installing-r.html"><a href="downloading-and-installing-r.html#choosing-a-mirror"><i class="fa fa-check"></i><b>3.3.1</b> Choosing a <em>Mirror</em></a></li>
@@ -191,7 +195,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.5.1" data-path="coding-basics.html"><a href="coding-basics.html#installing-packages"><i class="fa fa-check"></i><b>3.5.1</b> Installing <em>Packages</em></a></li>
 <li class="chapter" data-level="3.5.2" data-path="coding-basics.html"><a href="coding-basics.html#assigning-objects"><i class="fa fa-check"></i><b>3.5.2</b> Assigning Objects</a></li>
 <li class="chapter" data-level="3.5.3" data-path="coding-basics.html"><a href="coding-basics.html#listing-adding-and-removing"><i class="fa fa-check"></i><b>3.5.3</b> Listing, Adding, and Removing</a></li>
-<li class="chapter" data-level="3.5.4" data-path="coding-basics.html"><a href="coding-basics.html#loading-data"><i class="fa fa-check"></i><b>3.5.4</b> Loading Data</a></li>
+<li class="chapter" data-level="3.5.4" data-path="coding-basics.html"><a href="coding-basics.html#importing-data"><i class="fa fa-check"></i><b>3.5.4</b> Importing Data</a></li>
 <li class="chapter" data-level="3.5.5" data-path="coding-basics.html"><a href="coding-basics.html#manipulating-data"><i class="fa fa-check"></i><b>3.5.5</b> Manipulating Data</a></li>
 <li class="chapter" data-level="3.5.6" data-path="coding-basics.html"><a href="coding-basics.html#subsetting-data"><i class="fa fa-check"></i><b>3.5.6</b> Subsetting Data</a></li>
 </ul></li>
@@ -281,13 +285,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.5.3" data-path="assumptions-of-the-linear-regression-model.html"><a href="assumptions-of-the-linear-regression-model.html#equal-variance"><i class="fa fa-check"></i><b>7.5.3</b> Equal Variance</a></li>
 <li class="chapter" data-level="7.5.4" data-path="assumptions-of-the-linear-regression-model.html"><a href="assumptions-of-the-linear-regression-model.html#normality-of-errors"><i class="fa fa-check"></i><b>7.5.4</b> Normality of Errors</a></li>
 </ul></li>
-<li class="chapter" data-level="7.6" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html"><i class="fa fa-check"></i><b>7.6</b> Appendix: Statistical Inference</a>
+<li class="chapter" data-level="7.6" data-path="a-concluding-application.html"><a href="a-concluding-application.html"><i class="fa fa-check"></i><b>7.6</b> A Concluding Application</a></li>
+<li class="chapter" data-level="7.7" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html"><i class="fa fa-check"></i><b>7.7</b> Appendix: Statistical Inference</a>
 <ul>
-<li class="chapter" data-level="7.6.1" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-population-parameters"><i class="fa fa-check"></i><b>7.6.1</b> Confidence Intervals (around population parameters)</a></li>
-<li class="chapter" data-level="7.6.2" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#hypothesis-tests"><i class="fa fa-check"></i><b>7.6.2</b> Hypothesis Tests</a></li>
-<li class="chapter" data-level="7.6.3" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-forecasts"><i class="fa fa-check"></i><b>7.6.3</b> Confidence Intervals (around forecasts)</a></li>
+<li class="chapter" data-level="7.7.1" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-population-parameters"><i class="fa fa-check"></i><b>7.7.1</b> Confidence Intervals (around population parameters)</a></li>
+<li class="chapter" data-level="7.7.2" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#hypothesis-tests"><i class="fa fa-check"></i><b>7.7.2</b> Hypothesis Tests</a></li>
+<li class="chapter" data-level="7.7.3" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-forecasts"><i class="fa fa-check"></i><b>7.7.3</b> Confidence Intervals (around forecasts)</a></li>
 </ul></li>
-<li class="chapter" data-level="7.7" data-path="up-next.html"><a href="up-next.html"><i class="fa fa-check"></i><b>7.7</b> Up Next…</a></li>
+<li class="chapter" data-level="7.8" data-path="up-next.html"><a href="up-next.html"><i class="fa fa-check"></i><b>7.8</b> Up Next…</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="MLR.html"><a href="MLR.html"><i class="fa fa-check"></i><b>8</b> Multiple Linear Regression</a>
 <ul>
@@ -307,6 +312,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.3.3" data-path="statistical-inference.html"><a href="statistical-inference.html#hypothesis-tests-1"><i class="fa fa-check"></i><b>8.3.3</b> Hypothesis Tests</a></li>
 <li class="chapter" data-level="8.3.4" data-path="statistical-inference.html"><a href="statistical-inference.html#confidence-intervals-around-forecasts-1"><i class="fa fa-check"></i><b>8.3.4</b> Confidence Intervals (around forecasts)</a></li>
 </ul></li>
+<li class="chapter" data-level="8.4" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html"><i class="fa fa-check"></i><b>8.4</b> A Concluding Application</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#interpretation"><i class="fa fa-check"></i>Interpretation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#confidence-intervals"><i class="fa fa-check"></i>Confidence Intervals</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#hypothesis-tests-2"><i class="fa fa-check"></i>Hypothesis Tests</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#forecasts"><i class="fa fa-check"></i>Forecasts</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="COL.html"><a href="COL.html"><i class="fa fa-check"></i><b>9</b> Collinearity</a>
 <ul>
@@ -322,17 +334,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="how-do-we-remove-collinearity.html"><a href="how-do-we-remove-collinearity.html#sometimes-removing-collinearity-might-involve-multiple-rounds"><i class="fa fa-check"></i>Sometimes removing collinearity might involve multiple rounds</a></li>
 </ul></li>
+<li class="chapter" data-level="9.5" data-path="a-concluding-application-2.html"><a href="a-concluding-application-2.html"><i class="fa fa-check"></i><b>9.5</b> A Concluding Application</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="DVS.html"><a href="DVS.html"><i class="fa fa-check"></i><b>10</b> Qualitative (Dummy) Variables</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="intercept-dummy-variable.html"><a href="intercept-dummy-variable.html"><i class="fa fa-check"></i><b>10.1</b> Intercept dummy variable</a></li>
 <li class="chapter" data-level="10.2" data-path="slope-dummy-variable.html"><a href="slope-dummy-variable.html"><i class="fa fa-check"></i><b>10.2</b> Slope dummy variable</a></li>
 <li class="chapter" data-level="10.3" data-path="what-if-there-are-more-than-two-categories.html"><a href="what-if-there-are-more-than-two-categories.html"><i class="fa fa-check"></i><b>10.3</b> What if there are more than two categories?</a></li>
-<li class="chapter" data-level="10.4" data-path="a-final-application.html"><a href="a-final-application.html"><i class="fa fa-check"></i><b>10.4</b> A Final Application</a>
+<li class="chapter" data-level="10.4" data-path="a-concluding-application-3.html"><a href="a-concluding-application-3.html"><i class="fa fa-check"></i><b>10.4</b> A Concluding Application</a></li>
+<li class="chapter" data-level="10.5" data-path="another-concluding-application.html"><a href="another-concluding-application.html"><i class="fa fa-check"></i><b>10.5</b> Another Concluding Application</a>
 <ul>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#make-a-nominal-series-a-real-series"><i class="fa fa-check"></i>Make a <em>Nominal</em> Series a <em>Real</em> Series</a></li>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#remove-a-trend"><i class="fa fa-check"></i>Remove a Trend</a></li>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#remove-seasonality"><i class="fa fa-check"></i>Remove Seasonality</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#make-a-nominal-series-a-real-series"><i class="fa fa-check"></i>Make a <em>Nominal</em> Series a <em>Real</em> Series</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#remove-a-trend"><i class="fa fa-check"></i>Remove a Trend</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#remove-seasonality"><i class="fa fa-check"></i>Remove Seasonality</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="FF.html"><a href="FF.html"><i class="fa fa-check"></i><b>11</b> Functional Forms</a>
@@ -354,6 +368,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="the-reciprocal-transformation.html"><a href="the-reciprocal-transformation.html#application-6"><i class="fa fa-check"></i>Application</a></li>
 </ul></li>
 <li class="chapter" data-level="11.6" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>11.6</b> Conclusion</a></li>
+<li class="chapter" data-level="11.7" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html"><i class="fa fa-check"></i><b>11.7</b> A Concluding Application</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#a-residual-analysis"><i class="fa fa-check"></i>A Residual Analysis</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#log-transformation"><i class="fa fa-check"></i>Log Transformation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#quadratic-transformation"><i class="fa fa-check"></i>Quadratic Transformation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#reciprocal-transformation"><i class="fa fa-check"></i>Reciprocal Transformation</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="JHT.html"><a href="JHT.html"><i class="fa fa-check"></i><b>12</b> Joint Hypothesis Tests</a>
 <ul>
@@ -373,6 +394,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="applications.html"><a href="applications.html#application-1-a-wage-application"><i class="fa fa-check"></i>Application 1: A wage application</a></li>
 <li class="chapter" data-level="" data-path="applications.html"><a href="applications.html#application-2-constant-returns-to-scale"><i class="fa fa-check"></i>Application 2: Constant Returns to Scale</a></li>
 </ul></li>
+<li class="chapter" data-level="12.4" data-path="a-concluding-application-5.html"><a href="a-concluding-application-5.html"><i class="fa fa-check"></i><b>12.4</b> A Concluding Application</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -396,17 +418,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="statistical-inference" class="section level2 hasAnchor" number="8.3">
 <h2><span class="header-section-number">8.3</span> Statistical Inference<a href="statistical-inference.html#statistical-inference" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The course officially discusses statistical inference using the multiple regression model as opposed to the simple regression model, so this section should contain everything that is needed. If any preliminary material desired, there is an appendix to Chapter 7 that discusses statistical inference specifically with respect to the simple (one independent variable) regression model. One might also want to briefly review the chapters of statistical inference from MBA 8370 (i.e., Chapters 5 and 6).</p>
+<p>The course officially discusses statistical inference using the multiple regression model as opposed to the simple regression model, so this section should contain everything that is needed. If any preliminary material is desired, there is an appendix to Chapter 7 that discusses statistical inference specifically with respect to the simple (one independent variable) regression model. One might also want to briefly review the chapters of statistical inference from MBA 8370 (i.e., Chapters 5 and 6).</p>
 <div id="recalling-the-concept-of-statistical-inference" class="section level3 hasAnchor" number="8.3.1">
 <h3><span class="header-section-number">8.3.1</span> Recalling the Concept of Statistical Inference<a href="statistical-inference.html#recalling-the-concept-of-statistical-inference" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Back in MBA 8370, we wanted to get an idea about the <em>parameters</em> of a <em>population</em> (i.e., the population mean <span class="math inline">\(\mu\)</span> and the population standard deviation <span class="math inline">\(\sigma\)</span>), but only had concrete information on the <em>statistics</em> of a <em>sample</em> (i.e., the sample mean <span class="math inline">\(\bar{X}\)</span> and the sample standard deviation <span class="math inline">\(S\)</span>). We were able to make probabilistic statements (i.e., <em>educated guesses</em>) concerning the population parameters given the sample statistics along the lines of <em>confidence intervals</em> and <em>hypothesis tests</em>.</p>
+<p>Back in MBA 8370, we wanted to get an idea about the <em>parameters</em> of a <em>population</em> (i.e., the population mean <span class="math inline">\(\mu\)</span> and the population standard deviation <span class="math inline">\(\sigma\)</span>), but only had information on the <em>statistics</em> of a <em>sample</em> (i.e., the sample mean <span class="math inline">\(\bar{X}\)</span> and the sample standard deviation <span class="math inline">\(S\)</span>). We were able to make probabilistic statements (i.e., <em>educated guesses</em>) concerning the population parameters given the sample statistics along the lines of <em>confidence intervals</em> and <em>hypothesis tests</em>.</p>
 <ul>
 <li><p>Confidence Intervals allowed us to make general statements concerning the range of values in which the population mean <span class="math inline">\(\mu\)</span> will reside given the characteristics of the sample <span class="math inline">\((\bar{X},\;S)\)</span> and a particular probability or <em>level of confidence</em> <span class="math inline">\(\alpha\)</span>.</p></li>
 <li><p>Hypothesis Tests allowed us to determine if nonarbitrary statements concerning the value of the population mean <span class="math inline">\(\mu\)</span> are consistent or inconsistent with the characteristics of the sample <span class="math inline">\((\bar{X},\;S)\)</span>.</p></li>
 </ul>
 <p>The same concept of statistical inference can be applied to regression models. A population regression model contains parameters such as the intercept, slope coefficients, and residual standard error <span class="math inline">\((\sigma_{XY})\)</span>.</p>
 <p><span class="math display">\[PRF:\;Y_i=\beta_0+\beta_1X_{1i}+\beta_2X_{2i}+...+\beta_kX_{ki}+\varepsilon_i\]</span></p>
-<p>We would like to know these population parameters, but we won’t know them for sure because we cannot analyze the population. Since we can only observe a sample, we can estimate a sample regression model containing statistics such as the intercept, slope coefficients, and residual standard error <span class="math inline">\((S_{XY})\)</span>.</p>
+<p>We would like to know these population parameters, but we cannot because we cannot analyze the population. Since we can only observe a sample, we can estimate a sample regression model containing statistics such as the intercept, slope coefficients, and residual standard error <span class="math inline">\((S_{XY})\)</span>.</p>
 <p><span class="math display">\[SRF:\;Y_i=\hat{\beta}_0+\hat{\beta}_1\;X_{1i}+\hat{\beta}_2\;X_{2i}+...+\hat{\beta}_k\;X_{ki}+e_i\]</span></p>
 <p>Our statistical inference will again amount to using our sample characteristics to make probabilistic statements about our population parameters. Statistical inference will take the form of our familiar confidence intervals and hypothesis tests, and a new statistical inference tool of forecasting.</p>
 </div>
@@ -415,19 +437,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Recall our earlier formula for calculating a confidence interval in a univariate context:</p>
 <p><span class="math display">\[Pr\left(\bar{X}-t_{(\frac{\alpha}{2},df=n-1)}\frac{S}{\sqrt{n}} \leq \mu \leq \bar{X}+t_{(\frac{\alpha}{2},df=n-1)}\frac{S}{\sqrt{n}}\right)=1-\alpha\]</span></p>
 <p>We used the Central Limit Theorem (CLT) to ultimately state that <span class="math inline">\(\bar{X}\)</span> was drawn from a normal distribution with a mean of <span class="math inline">\(\mu\)</span> and standard deviation <span class="math inline">\(\sigma/\sqrt{n}\)</span> (but we only have <span class="math inline">\(S\)</span> which makes this a t distribution). This line of reasoning is <em>very</em> similar to what we have with regression analyses.</p>
-<p>First, <span class="math inline">\(\hat{\beta}\)</span> is an estimate of <span class="math inline">\(\beta\)</span> just like <span class="math inline">\(\bar{X}\)</span> is an estimate of <span class="math inline">\(\mu\)</span>. However, the standard error of the sampling distribution of <span class="math inline">\(\hat{\beta}\)</span> is derived from the standard deviation of the residuals.</p>
+<p>First, <span class="math inline">\(\hat{\beta}\)</span> is an estimate of <span class="math inline">\(\beta\)</span> just like <span class="math inline">\(\bar{X}\)</span> is an estimate of <span class="math inline">\(\mu\)</span>. However, the standard error of the distribution of <span class="math inline">\(\hat{\beta}\)</span> is derived from the standard deviation of the residuals.</p>
 <p><span class="math display">\[S_{\hat{\beta}}=\frac{S_{YX}}{\sum{(X_i-\bar{X})^2}}\]</span></p>
 <p>with</p>
 <p><span class="math display">\[S_{YX} = \sqrt{ \frac{\sum e_i^2}{n-k-1} }\]</span></p>
-<p>This means that we construct a <em>standardized</em> random variable from a t distribution with <span class="math inline">\(n-k-1\)</span> degrees of freedom, where <span class="math inline">\(k\)</span> is the number of independent variables (or slope coefficients) in the regression model.<a href="#fn29" class="footnote-ref" id="fnref29"><sup>29</sup></a></p>
+<p>This means that we construct a <em>standardized</em> random variable from a t distribution with <span class="math inline">\(n-k-1\)</span> degrees of freedom, where <span class="math inline">\(k\)</span> is the number of independent variables (or slope coefficients) in the regression model.<a href="#fn34" class="footnote-ref" id="fnref34"><sup>34</sup></a></p>
 <p><span class="math display">\[t=\frac{\hat{\beta}-\beta}{S_{\hat{\beta}}}\]</span></p>
 <p>We have already derived a confidence interval before, so we can skip to the punchline.</p>
 <p><span class="math display">\[Pr\left(\hat{\beta}-t_{(\frac{\alpha}{2},df=n-k-1)}S_{\hat{\beta}} \leq \beta \leq \hat{\beta}+t_{(\frac{\alpha}{2},df=n-k-1)}S_{\hat{\beta}}\right)=1-\alpha\]</span></p>
 <p>This is the formula for a confidence interval around the <em>population</em> slope coefficient <span class="math inline">\(\beta\)</span> given the estimate <span class="math inline">\(\hat{\beta}\)</span> and the regression characteristics. It can also be written compactly as before.</p>
 <p><span class="math display">\[\hat{\beta} \pm t_{(\frac{\alpha}{2},df=n-k-1)} S_{\hat{\beta}}\]</span></p>
 <p>Recall our regression explaining differences in house prices given information on house sizes and number of bedrooms.</p>
-<div class="sourceCode" id="cb242"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb242-1"><a href="statistical-inference.html#cb242-1" aria-hidden="true" tabindex="-1"></a>REG <span class="ot">&lt;-</span> <span class="fu">lm</span>(price <span class="sc">~</span> sqrft <span class="sc">+</span> bdrms, <span class="at">data =</span> hprice1)</span>
-<span id="cb242-2"><a href="statistical-inference.html#cb242-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(REG)</span></code></pre></div>
+<div class="sourceCode" id="cb255"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb255-1"><a href="statistical-inference.html#cb255-1" tabindex="-1"></a>REG <span class="ot">&lt;-</span> <span class="fu">lm</span>(price <span class="sc">~</span> sqrft <span class="sc">+</span> bdrms, <span class="at">data =</span> hprice1)</span>
+<span id="cb255-2"><a href="statistical-inference.html#cb255-2" tabindex="-1"></a><span class="fu">summary</span>(REG)</span></code></pre></div>
 <table style="width:89%;">
 <colgroup>
 <col width="25%" />
@@ -495,26 +517,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tbody>
 </table>
 <p>The information included in the regression summary is all that is needed for us to construct a 95 percent <span class="math inline">\((\alpha=0.05)\)</span> confidence interval around the <em>population</em> slope coefficient <span class="math inline">\(\beta_1\)</span>. In other words, we can build a range where the population slope between house price and size will reside with 95 percent confidence.</p>
-<div class="sourceCode" id="cb243"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb243-1"><a href="statistical-inference.html#cb243-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Back out all of the needed information:</span></span>
-<span id="cb243-2"><a href="statistical-inference.html#cb243-2" aria-hidden="true" tabindex="-1"></a>Bhat1 <span class="ot">&lt;-</span> <span class="fu">summary</span>(REG)<span class="sc">$</span>coef[<span class="dv">2</span>,<span class="dv">1</span>]</span>
-<span id="cb243-3"><a href="statistical-inference.html#cb243-3" aria-hidden="true" tabindex="-1"></a>SBhat1 <span class="ot">&lt;-</span> <span class="fu">summary</span>(REG)<span class="sc">$</span>coef[<span class="dv">2</span>,<span class="dv">2</span>]</span>
-<span id="cb243-4"><a href="statistical-inference.html#cb243-4" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">length</span>(<span class="fu">residuals</span>(REG))</span>
-<span id="cb243-5"><a href="statistical-inference.html#cb243-5" aria-hidden="true" tabindex="-1"></a>k <span class="ot">=</span> <span class="dv">2</span></span>
-<span id="cb243-6"><a href="statistical-inference.html#cb243-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb243-7"><a href="statistical-inference.html#cb243-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Find the critical t-distribution values... same as before</span></span>
-<span id="cb243-8"><a href="statistical-inference.html#cb243-8" aria-hidden="true" tabindex="-1"></a>AL <span class="ot">&lt;-</span> <span class="fl">0.05</span></span>
-<span id="cb243-9"><a href="statistical-inference.html#cb243-9" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> n<span class="sc">-</span>k<span class="dv">-1</span></span>
-<span id="cb243-10"><a href="statistical-inference.html#cb243-10" aria-hidden="true" tabindex="-1"></a>tcrit <span class="ot">&lt;-</span> <span class="fu">qt</span>(AL<span class="sc">/</span><span class="dv">2</span>,df,<span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb243-11"><a href="statistical-inference.html#cb243-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb243-12"><a href="statistical-inference.html#cb243-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Use the formula... same as before</span></span>
-<span id="cb243-13"><a href="statistical-inference.html#cb243-13" aria-hidden="true" tabindex="-1"></a>(LEFT <span class="ot">&lt;-</span> Bhat1 <span class="sc">-</span> tcrit <span class="sc">*</span> SBhat1)</span></code></pre></div>
+<div class="sourceCode" id="cb256"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb256-1"><a href="statistical-inference.html#cb256-1" tabindex="-1"></a><span class="co"># Back out all of the needed information:</span></span>
+<span id="cb256-2"><a href="statistical-inference.html#cb256-2" tabindex="-1"></a>Bhat1 <span class="ot">&lt;-</span> <span class="fu">summary</span>(REG)<span class="sc">$</span>coef[<span class="dv">2</span>,<span class="dv">1</span>]</span>
+<span id="cb256-3"><a href="statistical-inference.html#cb256-3" tabindex="-1"></a>SBhat1 <span class="ot">&lt;-</span> <span class="fu">summary</span>(REG)<span class="sc">$</span>coef[<span class="dv">2</span>,<span class="dv">2</span>]</span>
+<span id="cb256-4"><a href="statistical-inference.html#cb256-4" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">length</span>(<span class="fu">residuals</span>(REG))</span>
+<span id="cb256-5"><a href="statistical-inference.html#cb256-5" tabindex="-1"></a>k <span class="ot">=</span> <span class="dv">2</span></span>
+<span id="cb256-6"><a href="statistical-inference.html#cb256-6" tabindex="-1"></a></span>
+<span id="cb256-7"><a href="statistical-inference.html#cb256-7" tabindex="-1"></a><span class="co"># Find the critical t-distribution values... same as before</span></span>
+<span id="cb256-8"><a href="statistical-inference.html#cb256-8" tabindex="-1"></a>AL <span class="ot">&lt;-</span> <span class="fl">0.05</span></span>
+<span id="cb256-9"><a href="statistical-inference.html#cb256-9" tabindex="-1"></a>df <span class="ot">&lt;-</span> n<span class="sc">-</span>k<span class="dv">-1</span></span>
+<span id="cb256-10"><a href="statistical-inference.html#cb256-10" tabindex="-1"></a>tcrit <span class="ot">&lt;-</span> <span class="fu">qt</span>(AL<span class="sc">/</span><span class="dv">2</span>,df,<span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb256-11"><a href="statistical-inference.html#cb256-11" tabindex="-1"></a></span>
+<span id="cb256-12"><a href="statistical-inference.html#cb256-12" tabindex="-1"></a><span class="co"># Use the formula... same as before</span></span>
+<span id="cb256-13"><a href="statistical-inference.html#cb256-13" tabindex="-1"></a>(LEFT <span class="ot">&lt;-</span> Bhat1 <span class="sc">-</span> tcrit <span class="sc">*</span> SBhat1)</span></code></pre></div>
 <pre><code>## [1] 0.1009495</code></pre>
-<div class="sourceCode" id="cb245"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb245-1"><a href="statistical-inference.html#cb245-1" aria-hidden="true" tabindex="-1"></a>(RIGHT <span class="ot">&lt;-</span> Bhat1 <span class="sc">+</span> tcrit <span class="sc">*</span> SBhat1)</span></code></pre></div>
+<div class="sourceCode" id="cb258"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb258-1"><a href="statistical-inference.html#cb258-1" tabindex="-1"></a>(RIGHT <span class="ot">&lt;-</span> Bhat1 <span class="sc">+</span> tcrit <span class="sc">*</span> SBhat1)</span></code></pre></div>
 <pre><code>## [1] 0.1559229</code></pre>
 <p><span class="math display">\[Pr(0.101 \leq \beta_1 \leq 0.156)=0.95\]</span></p>
-<p>This states that while an increase in house size by one square foot will increase the house price by $128 <span class="math inline">\((\hat{\beta_1})\)</span> on average in the sample, we can also state that an increase in house size by one square foot will increase the house price on average <em>in the population</em> somewhere between $101 and $156 with 95% confidence.</p>
-<p>While the code above showed you how to calculate a confidence interval from scratch as we did before, there is an easier (one-line) way in R:</p>
-<div class="sourceCode" id="cb247"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb247-1"><a href="statistical-inference.html#cb247-1" aria-hidden="true" tabindex="-1"></a><span class="fu">confint</span>(REG)</span></code></pre></div>
+<p>This states that while an increase in house size by one square foot (holding number of bedrooms constant) will increase the house price by $128 <span class="math inline">\((\hat{\beta_1})\)</span> on average in the sample, we can also state that an increase in house size by one square foot (holding number of bedrooms constant) will increase the house price on average <em>in the population</em> somewhere between $101 and $156 with 95% confidence.</p>
+<p>While the code above showed you how to calculate a confidence interval from scratch as we did before, there is an easier (one-line) way in R that gives you all confidence intervals for a desired level:</p>
+<div class="sourceCode" id="cb260"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb260-1"><a href="statistical-inference.html#cb260-1" tabindex="-1"></a><span class="fu">confint</span>(REG, <span class="at">level =</span> <span class="fl">0.95</span>)</span></code></pre></div>
 <pre><code>##                   2.5 %     97.5 %
 ## (Intercept) -81.0439924 42.4140009
 ## sqrft         0.1009495  0.1559229
@@ -524,21 +546,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">8.3.3</span> Hypothesis Tests<a href="statistical-inference.html#hypothesis-tests-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>We are able to conduct hypothesis tests regarding the values of the population regression coefficients. For example:</p>
 <p><span class="math display">\[H_0:\beta_1 = 0 \quad vs. \quad H_1:\beta_1 \neq 0\]</span></p>
-<p>In the context of our house price application, this null hypothesis states that the population slope between house price and size is zero… meaning that there is <em>no</em> relationship between the two variables in the population.</p>
+<p>In the context of our house price application, this null hypothesis states that the population slope between house price and size is zero… meaning that there is <em>no</em> relationship between these two variables in the population.</p>
 <p>Given the null hypothesis above, we follow the remaining steps laid out previously: we calculate a test statistic under the null, calculate a p-value, and conclude.</p>
 <p>The test statistic under the null is given by</p>
 <p><span class="math display">\[t=\frac{\hat{\beta}_1 - \beta_1}{S_{\hat{\beta}_1}}\]</span></p>
 <p>and this test statistic is drawn from a t distribution with <span class="math inline">\(n-k-1\)</span> degrees of freedom. Concluding this test is no more difficult that what we’ve done previously.</p>
-<div class="sourceCode" id="cb249"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb249-1"><a href="statistical-inference.html#cb249-1" aria-hidden="true" tabindex="-1"></a>B1 <span class="ot">=</span> <span class="dv">0</span></span>
-<span id="cb249-2"><a href="statistical-inference.html#cb249-2" aria-hidden="true" tabindex="-1"></a>(tstat <span class="ot">&lt;-</span> (Bhat1 <span class="sc">-</span> B1)<span class="sc">/</span>SBhat1)</span></code></pre></div>
+<div class="sourceCode" id="cb262"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb262-1"><a href="statistical-inference.html#cb262-1" tabindex="-1"></a>B1 <span class="ot">=</span> <span class="dv">0</span></span>
+<span id="cb262-2"><a href="statistical-inference.html#cb262-2" tabindex="-1"></a>(tstat <span class="ot">&lt;-</span> (Bhat1 <span class="sc">-</span> B1)<span class="sc">/</span>SBhat1)</span></code></pre></div>
 <pre><code>## [1] 9.290506</code></pre>
-<div class="sourceCode" id="cb251"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb251-1"><a href="statistical-inference.html#cb251-1" aria-hidden="true" tabindex="-1"></a>(Pval <span class="ot">&lt;-</span> <span class="fu">pt</span>(tstat,df,<span class="at">lower.tail=</span><span class="cn">FALSE</span>)<span class="sc">*</span><span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb264"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb264-1"><a href="statistical-inference.html#cb264-1" tabindex="-1"></a>(Pval <span class="ot">&lt;-</span> <span class="fu">pt</span>(tstat,df,<span class="at">lower.tail=</span><span class="cn">FALSE</span>)<span class="sc">*</span><span class="dv">2</span>)</span></code></pre></div>
 <pre><code>## [1] 1.393748e-14</code></pre>
-<div class="sourceCode" id="cb253"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb253-1"><a href="statistical-inference.html#cb253-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">1</span><span class="sc">-</span>Pval)</span></code></pre></div>
+<div class="sourceCode" id="cb266"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb266-1"><a href="statistical-inference.html#cb266-1" tabindex="-1"></a>(<span class="dv">1</span><span class="sc">-</span>Pval)</span></code></pre></div>
 <pre><code>## [1] 1</code></pre>
-<p>Our results state that we can reject this null hypothesis with approximately 100% confidence, meaning that there is a statistically significant relationship between house prices and house sizes. By <em>statistically significant</em>, we are essentially saying that the population relationship is some number other than zero.</p>
-<p>As with the confidence interval exercise above, we actually do not need to conduct hypothesis tests where the null sets the population parameter to zero because R does this automatically. If you look again at the columns to the right of the estimated coefficient <span class="math inline">\(\hat{\beta}_1\)</span> in the regression summary above, you will see a t value that is exactly what we calculated above and a p value that is essentially zero. This implies that a test with the null hypothesis set to zero is always done for you.</p>
-<div class="sourceCode" id="cb255"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb255-1"><a href="statistical-inference.html#cb255-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(REG)</span></code></pre></div>
+<p>Our results state that we can reject this null hypothesis with approximately 100% confidence, meaning that there is a statistically significant relationship between house prices and house sizes. By <em>statistically significant</em>, we are essentially saying that the population relationship (i.e., slope) is some number other than zero.</p>
+<p>As with the confidence interval exercise above, we actually do not need to conduct hypothesis tests where the null sets the population parameter to zero because R does this automatically. If you look again at the columns to the right of the estimated coefficient <span class="math inline">\(\hat{\beta}_1\)</span> in the regression summary, you will see a t value that is exactly what we calculated above and a p value that is essentially zero. This implies that a test with the null hypothesis set to zero is always done for you.</p>
+<div class="sourceCode" id="cb268"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb268-1"><a href="statistical-inference.html#cb268-1" tabindex="-1"></a><span class="fu">summary</span>(REG)</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = price ~ sqrft + bdrms, data = hprice1)
@@ -561,35 +583,35 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>This isn’t to say that <em>all</em> hypothesis tests are automatically done for you.</p>
 <p>Suppose a realtor believes that homes sell for $150 per square foot. This is a non-arbitrary statement on a population parameter that delivers the following hypotheses, followed by a test statistic, p-value, and conclusion.</p>
 <p><span class="math display">\[H_0:\beta_1=0.150 \quad vs. \quad H_1:\beta_1\neq0.150\]</span></p>
-<div class="sourceCode" id="cb257"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb257-1"><a href="statistical-inference.html#cb257-1" aria-hidden="true" tabindex="-1"></a>B1 <span class="ot">=</span> <span class="fl">0.150</span></span>
-<span id="cb257-2"><a href="statistical-inference.html#cb257-2" aria-hidden="true" tabindex="-1"></a>(tstat <span class="ot">&lt;-</span> (Bhat1 <span class="sc">-</span> B1)<span class="sc">/</span>SBhat1)</span></code></pre></div>
+<div class="sourceCode" id="cb270"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb270-1"><a href="statistical-inference.html#cb270-1" tabindex="-1"></a>B1 <span class="ot">=</span> <span class="fl">0.150</span></span>
+<span id="cb270-2"><a href="statistical-inference.html#cb270-2" tabindex="-1"></a>(tstat <span class="ot">&lt;-</span> (Bhat1 <span class="sc">-</span> B1)<span class="sc">/</span>SBhat1)</span></code></pre></div>
 <pre><code>## [1] -1.559829</code></pre>
-<div class="sourceCode" id="cb259"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb259-1"><a href="statistical-inference.html#cb259-1" aria-hidden="true" tabindex="-1"></a>(Pval <span class="ot">&lt;-</span> <span class="fu">pt</span>(tstat,df)<span class="sc">*</span><span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb272"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb272-1"><a href="statistical-inference.html#cb272-1" tabindex="-1"></a>(Pval <span class="ot">&lt;-</span> <span class="fu">pt</span>(tstat,df,<span class="at">lower.tail =</span> <span class="cn">TRUE</span>)<span class="sc">*</span><span class="dv">2</span>)</span></code></pre></div>
 <pre><code>## [1] 0.122516</code></pre>
-<div class="sourceCode" id="cb261"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb261-1"><a href="statistical-inference.html#cb261-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">1</span><span class="sc">-</span>Pval)</span></code></pre></div>
+<div class="sourceCode" id="cb274"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb274-1"><a href="statistical-inference.html#cb274-1" tabindex="-1"></a>(<span class="dv">1</span><span class="sc">-</span>Pval)</span></code></pre></div>
 <pre><code>## [1] 0.877484</code></pre>
-<p>Our p-value implies that there is a 12 percent chance of being wrong if we reject the null hypothesis. In other words, we can reject the null with at most 88 percent confidence. We therefore do not have evidence that the population slope is different from 0.150 with any traditional level of confidence (e.g., <span class="math inline">\(\alpha \leq 0.10\)</span>).</p>
+<p>Our p-value implies that there is a 12 percent chance of being wrong if we reject the null hypothesis. In other words, we can reject the null with at most 88 percent confidence. We therefore do not have evidence that the population slope is different from 0.150 with any traditional level of confidence (e.g., <span class="math inline">\(\alpha \leq 0.10\)</span>).<a href="#fn35" class="footnote-ref" id="fnref35"><sup>35</sup></a></p>
 <p>One-sided tests are also like before. We can consider <em>right-tailed</em> tests where the rejection region (and p-value) are in the right tail, as well as <em>left-tailed</em> tests where the rejection region (and p-value) are in the left tail. Let us examine one of each.</p>
-<p>Suppose a realtor believes that homes sell for <em>more than</em> $120 per square foot.<a href="#fn30" class="footnote-ref" id="fnref30"><sup>30</sup></a> Since we can lend statistical support to this claim by rejecting everything else, This delivers the following hypotheses, which gives rise to a <strong>right-tailed</strong> test.</p>
+<p>Suppose a realtor believes that homes sell for <em>more than</em> $120 per square foot.<a href="#fn36" class="footnote-ref" id="fnref36"><sup>36</sup></a> Since we can lend statistical support to this claim by rejecting everything else, This delivers the following hypotheses, which gives rise to a <strong>right-tailed</strong> test.</p>
 <p><span class="math display">\[H_0:\beta_1\leq0.120 \quad vs. \quad H_1:\beta_1&gt;0.120\]</span></p>
 <p>We calculate a test statistic under the null as always. But since this is a right-tailed test, we calculate the p-value (and conclusion) by always calculating the area to the <strong>right</strong> of the test statistic.</p>
-<div class="sourceCode" id="cb263"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb263-1"><a href="statistical-inference.html#cb263-1" aria-hidden="true" tabindex="-1"></a>B1 <span class="ot">=</span> <span class="fl">0.120</span></span>
-<span id="cb263-2"><a href="statistical-inference.html#cb263-2" aria-hidden="true" tabindex="-1"></a>(tstat <span class="ot">&lt;-</span> (Bhat1 <span class="sc">-</span> B1)<span class="sc">/</span>SBhat1)</span></code></pre></div>
+<div class="sourceCode" id="cb276"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb276-1"><a href="statistical-inference.html#cb276-1" tabindex="-1"></a>B1 <span class="ot">=</span> <span class="fl">0.120</span></span>
+<span id="cb276-2"><a href="statistical-inference.html#cb276-2" tabindex="-1"></a>(tstat <span class="ot">&lt;-</span> (Bhat1 <span class="sc">-</span> B1)<span class="sc">/</span>SBhat1)</span></code></pre></div>
 <pre><code>## [1] 0.610238</code></pre>
-<div class="sourceCode" id="cb265"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb265-1"><a href="statistical-inference.html#cb265-1" aria-hidden="true" tabindex="-1"></a>(Pval <span class="ot">&lt;-</span> <span class="fu">pt</span>(tstat,df,<span class="at">lower.tail =</span> <span class="cn">FALSE</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb278"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb278-1"><a href="statistical-inference.html#cb278-1" tabindex="-1"></a>(Pval <span class="ot">&lt;-</span> <span class="fu">pt</span>(tstat,df,<span class="at">lower.tail =</span> <span class="cn">FALSE</span>))</span></code></pre></div>
 <pre><code>## [1] 0.2716661</code></pre>
-<div class="sourceCode" id="cb267"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb267-1"><a href="statistical-inference.html#cb267-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">1</span><span class="sc">-</span>Pval)</span></code></pre></div>
+<div class="sourceCode" id="cb280"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb280-1"><a href="statistical-inference.html#cb280-1" tabindex="-1"></a>(<span class="dv">1</span><span class="sc">-</span>Pval)</span></code></pre></div>
 <pre><code>## [1] 0.7283339</code></pre>
 <p>Our test concludes that we can reject the null with at most 73 percent confidence.</p>
-<p>Suppose a different realtor believes that homes sell for <em>less than</em> $130 per square foot.<a href="#fn31" class="footnote-ref" id="fnref31"><sup>31</sup></a> Since we can lend statistical support to this claim by rejecting everything else, This delivers the following hypotheses, which gives rise to a <strong>left-tailed</strong> test.</p>
+<p>Suppose a different realtor believes that homes sell for <em>less than</em> $130 per square foot.<a href="#fn37" class="footnote-ref" id="fnref37"><sup>37</sup></a> Since we can lend statistical support to this claim by rejecting everything else, This delivers the following hypotheses, which gives rise to a <strong>left-tailed</strong> test.</p>
 <p><span class="math display">\[H_0:\beta_1\geq0.130 \quad vs. \quad H_1:\beta_1&lt;0.130\]</span></p>
 <p>We calculate a test statistic under the null as always. But since this is a left-tailed test, we calculate the p-value (and conclusion) by always calculating the area to the <strong>left</strong> of the test statistic.</p>
-<div class="sourceCode" id="cb269"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb269-1"><a href="statistical-inference.html#cb269-1" aria-hidden="true" tabindex="-1"></a>B1 <span class="ot">=</span> <span class="fl">0.130</span></span>
-<span id="cb269-2"><a href="statistical-inference.html#cb269-2" aria-hidden="true" tabindex="-1"></a>(tstat <span class="ot">&lt;-</span> (Bhat1 <span class="sc">-</span> B1)<span class="sc">/</span>SBhat1)</span></code></pre></div>
+<div class="sourceCode" id="cb282"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb282-1"><a href="statistical-inference.html#cb282-1" tabindex="-1"></a>B1 <span class="ot">=</span> <span class="fl">0.130</span></span>
+<span id="cb282-2"><a href="statistical-inference.html#cb282-2" tabindex="-1"></a>(tstat <span class="ot">&lt;-</span> (Bhat1 <span class="sc">-</span> B1)<span class="sc">/</span>SBhat1)</span></code></pre></div>
 <pre><code>## [1] -0.1131176</code></pre>
-<div class="sourceCode" id="cb271"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb271-1"><a href="statistical-inference.html#cb271-1" aria-hidden="true" tabindex="-1"></a>(Pval <span class="ot">&lt;-</span> <span class="fu">pt</span>(tstat,df,<span class="at">lower.tail =</span> <span class="cn">TRUE</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb284"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb284-1"><a href="statistical-inference.html#cb284-1" tabindex="-1"></a>(Pval <span class="ot">&lt;-</span> <span class="fu">pt</span>(tstat,df,<span class="at">lower.tail =</span> <span class="cn">TRUE</span>))</span></code></pre></div>
 <pre><code>## [1] 0.455102</code></pre>
-<div class="sourceCode" id="cb273"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb273-1"><a href="statistical-inference.html#cb273-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">1</span><span class="sc">-</span>Pval)</span></code></pre></div>
+<div class="sourceCode" id="cb286"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb286-1"><a href="statistical-inference.html#cb286-1" tabindex="-1"></a>(<span class="dv">1</span><span class="sc">-</span>Pval)</span></code></pre></div>
 <pre><code>## [1] 0.544898</code></pre>
 <p>Our test concludes that we can reject the null with at most 54 percent confidence.</p>
 </div>
@@ -597,25 +619,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">8.3.4</span> Confidence Intervals (around forecasts)<a href="statistical-inference.html#confidence-intervals-around-forecasts-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>A regression can also build confidence intervals around the conditional expectations (i.e., forecasts) of the dependent variable.</p>
 <p>Suppose you want to use our model to predict the price of a 1000 square foot house with 3 bedrooms. The conditional expectation is calculated by using our regression coefficients, a value of house size of 1000, a value of bedrooms of 3, and setting our forecast error to zero.</p>
-<p><span class="math display">\[\hat{Y}_i=\hat{\beta}_0+\hat{\beta}_1\;1000+\hat{\beta}_2\;3\]</span></p>
-<div class="sourceCode" id="cb275"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb275-1"><a href="statistical-inference.html#cb275-1" aria-hidden="true" tabindex="-1"></a>Bhat0 <span class="ot">=</span> <span class="fu">summary</span>(REG)<span class="sc">$</span>coef[<span class="dv">1</span>,<span class="dv">1</span>]</span>
-<span id="cb275-2"><a href="statistical-inference.html#cb275-2" aria-hidden="true" tabindex="-1"></a>Bhat1 <span class="ot">=</span> <span class="fu">summary</span>(REG)<span class="sc">$</span>coef[<span class="dv">2</span>,<span class="dv">1</span>]</span>
-<span id="cb275-3"><a href="statistical-inference.html#cb275-3" aria-hidden="true" tabindex="-1"></a>Bhat2 <span class="ot">=</span> <span class="fu">summary</span>(REG)<span class="sc">$</span>coef[<span class="dv">3</span>,<span class="dv">1</span>]</span>
-<span id="cb275-4"><a href="statistical-inference.html#cb275-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb275-5"><a href="statistical-inference.html#cb275-5" aria-hidden="true" tabindex="-1"></a>(<span class="at">Yhat =</span> Bhat0 <span class="sc">+</span> Bhat1 <span class="sc">*</span> <span class="dv">1000</span> <span class="sc">+</span> Bhat2 <span class="sc">*</span> <span class="dv">3</span>)</span></code></pre></div>
+<p><span class="math display">\[\widehat{price}_i=\hat{\beta}_0+\hat{\beta}_1\;1000+\hat{\beta}_2\;3\]</span></p>
+<div class="sourceCode" id="cb288"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb288-1"><a href="statistical-inference.html#cb288-1" tabindex="-1"></a>Bhat0 <span class="ot">=</span> <span class="fu">summary</span>(REG)<span class="sc">$</span>coef[<span class="dv">1</span>,<span class="dv">1</span>]</span>
+<span id="cb288-2"><a href="statistical-inference.html#cb288-2" tabindex="-1"></a>Bhat1 <span class="ot">=</span> <span class="fu">summary</span>(REG)<span class="sc">$</span>coef[<span class="dv">2</span>,<span class="dv">1</span>]</span>
+<span id="cb288-3"><a href="statistical-inference.html#cb288-3" tabindex="-1"></a>Bhat2 <span class="ot">=</span> <span class="fu">summary</span>(REG)<span class="sc">$</span>coef[<span class="dv">3</span>,<span class="dv">1</span>]</span>
+<span id="cb288-4"><a href="statistical-inference.html#cb288-4" tabindex="-1"></a></span>
+<span id="cb288-5"><a href="statistical-inference.html#cb288-5" tabindex="-1"></a>(<span class="at">Yhat =</span> Bhat0 <span class="sc">+</span> Bhat1 <span class="sc">*</span> <span class="dv">1000</span> <span class="sc">+</span> Bhat2 <span class="sc">*</span> <span class="dv">3</span>)</span></code></pre></div>
 <pre><code>## [1] 154.7158</code></pre>
-<p>This calculation suggests that we expect a house with 1000 square feet and 3 bedrooms to sell for approximately 154.716 (thousand) dollars. Another way to calculate this forecast is using the predict command in R. This command creates a new data frame that includes only the value for the independent variable you want to make a prediction with. The rest is done for you.</p>
-<div class="sourceCode" id="cb277"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb277-1"><a href="statistical-inference.html#cb277-1" aria-hidden="true" tabindex="-1"></a><span class="fu">predict</span>(REG,<span class="fu">data.frame</span>(<span class="at">sqrft =</span> <span class="dv">1000</span>, <span class="at">bdrms =</span> <span class="dv">3</span>))</span></code></pre></div>
+<p>This calculation suggests that we expect a house with 1000 square feet and 3 bedrooms to sell for approximately 154.716 (thousand) dollars. Another way to calculate this forecast is using the predict command in R. This command creates a new data frame that includes only the values for the independent variables you want to make a prediction with. The rest is done for you.</p>
+<div class="sourceCode" id="cb290"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb290-1"><a href="statistical-inference.html#cb290-1" tabindex="-1"></a><span class="fu">predict</span>(REG,<span class="fu">data.frame</span>(<span class="at">sqrft =</span> <span class="dv">1000</span>, <span class="at">bdrms =</span> <span class="dv">3</span>))</span></code></pre></div>
 <pre><code>##        1 
 ## 154.7158</code></pre>
-<p>While this is an expected value based on the sample, we need to appreciate that we want to see what the prediction is in the population. We are able to build a confidence interval around this forecast in a number of ways.</p>
+<p>While this is an expected value based on the sample, we need to appreciate that we want to see what the prediction is in the population. Just like we did with the population coefficients, we are able to build a confidence interval around this forecast. In this case, however, there are two different intervals based on what exactly we would like to discuss.</p>
 <ul>
 <li><p>A confidence interval for the mean response</p></li>
-<li><p>A confidence interval for an individual response</p></li>
+<li><p>A prediction interval for an individual response</p></li>
 </ul>
 <div id="the-mean-response-a-confidence-interval-1" class="section level4 unnumbered hasAnchor">
 <h4>The mean response: a confidence interval<a href="statistical-inference.html#the-mean-response-a-confidence-interval-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Suppose you want to build a confidence interval around the mean price for a 1000 square foot house with 3 bedrooms in the population. This is a conditional mean. In other words, we want the average house price but <em>only</em> for homes with a particular size. This conditional mean is generally given by <span class="math inline">\(\mu_{Y|X}\)</span> and in this case by <span class="math inline">\(\mu_{Y|X_1=1000,\;X_2=3}\)</span>. Building a confidence interval for the mean response is given by</p>
+<p>Suppose you want to build a confidence interval around the population mean price for a 1000 square foot house with 3 bedrooms. This is a conditional mean, because we want the average house price but <em>only</em> for homes with these characteristics. This conditional mean is generally given by <span class="math inline">\(\mu_{Y|X}\)</span> and in this case by <span class="math inline">\(\mu_{Y|X_1=1000,\;X_2=3}\)</span>. Building a confidence interval for the mean response is given by</p>
 <p><span class="math display">\[ \hat{Y}_{X} \pm t_{(\frac{\alpha}{2},df=n-k-1)}S_{YX} \sqrt{h_i}\]</span>
 or</p>
 <p><span class="math display">\[ \hat{Y}_{X} - t_{(\frac{\alpha}{2},df=n-k-1)}S_{YX} \sqrt{h_i} \leq \mu_{Y|X} \leq \hat{Y}_{X} + t_{(\frac{\alpha}{2},df=n-k-1)}S_{YX} \sqrt{h_i}\]</span></p>
@@ -623,14 +645,14 @@ or</p>
 <ul>
 <li><p><span class="math inline">\(\hat{Y}_{X}\)</span> is the expectation of the dependent variable conditional on the desired value of <span class="math inline">\(X\)</span>.</p></li>
 <li><p><span class="math inline">\(S_{YX}\)</span> is the standard error of the estimate (calculated previously)</p></li>
-<li><p><span class="math inline">\(t_{(\frac{\alpha}{2},df=n-k-1)}\)</span> is the critical t statistic for a given value of <span class="math inline">\(\alpha\)</span> (calculate previously)</p></li>
+<li><p><span class="math inline">\(t_{(\frac{\alpha}{2},df=n-k-1)}\)</span> is the critical t statistic for a given value of <span class="math inline">\(\alpha\)</span> (calculated previously)</p></li>
 <li><p><span class="math inline">\(h_i = \frac{1}{n}+\frac{(X_i - \bar{X})^2}{\sum_{i=1}^n(X_i - \bar{X})^2}\)</span></p></li>
 </ul>
-<p>This last variable <span class="math inline">\(h_i\)</span> is what is new to us and increases the size of the confidence interval when the desired value of <span class="math inline">\(X_i\)</span> is farther away from the average value of the observations <span class="math inline">\(\bar{X}\)</span>. This variable can sometimes be difficult to calculate, but R again does it for you.<a href="#fn32" class="footnote-ref" id="fnref32"><sup>32</sup></a> In R, a confidence interval around the population mean is simply called a <em>confidence</em> interval.</p>
-<div class="sourceCode" id="cb279"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb279-1"><a href="statistical-inference.html#cb279-1" aria-hidden="true" tabindex="-1"></a><span class="fu">predict</span>(REG,</span>
-<span id="cb279-2"><a href="statistical-inference.html#cb279-2" aria-hidden="true" tabindex="-1"></a>        <span class="fu">data.frame</span>(<span class="at">sqrft =</span> <span class="dv">1000</span>,<span class="at">bdrms =</span> <span class="dv">3</span>), </span>
-<span id="cb279-3"><a href="statistical-inference.html#cb279-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">interval =</span> <span class="st">&quot;confidence&quot;</span>,</span>
-<span id="cb279-4"><a href="statistical-inference.html#cb279-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">level =</span> <span class="fl">0.95</span>)</span></code></pre></div>
+<p>This last variable <span class="math inline">\(h_i\)</span> is what is new to us and increases the size of the confidence interval when the desired values of <span class="math inline">\(X_i\)</span> are farther away from the average values of the observations <span class="math inline">\(\bar{X}\)</span>. This variable can sometimes be difficult to calculate when dealing with multiple independent variables, but R again does it for you.<a href="#fn38" class="footnote-ref" id="fnref38"><sup>38</sup></a> In R, a confidence interval around the population mean is simply called a <em>confidence</em> interval.</p>
+<div class="sourceCode" id="cb292"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb292-1"><a href="statistical-inference.html#cb292-1" tabindex="-1"></a><span class="fu">predict</span>(REG,</span>
+<span id="cb292-2"><a href="statistical-inference.html#cb292-2" tabindex="-1"></a>        <span class="fu">data.frame</span>(<span class="at">sqrft =</span> <span class="dv">1000</span>,<span class="at">bdrms =</span> <span class="dv">3</span>), </span>
+<span id="cb292-3"><a href="statistical-inference.html#cb292-3" tabindex="-1"></a>        <span class="at">interval =</span> <span class="st">&quot;confidence&quot;</span>,</span>
+<span id="cb292-4"><a href="statistical-inference.html#cb292-4" tabindex="-1"></a>        <span class="at">level =</span> <span class="fl">0.95</span>)</span></code></pre></div>
 <pre><code>##        fit      lwr      upr
 ## 1 154.7158 127.2862 182.1454</code></pre>
 <p><span class="math display">\[Pr(127.29\leq\mu_{Y|X}\leq182.15)=0.95\]</span></p>
@@ -650,26 +672,25 @@ or</p>
 <li><p><span class="math inline">\(h_i = \frac{1}{n}+\frac{(X_i - \bar{X})^2}{\sum_{i=1}^n(X_i - \bar{X})^2}\)</span></p></li>
 </ul>
 <p>The only difference is that we replace <span class="math inline">\(\sqrt{h_i}\)</span> with <span class="math inline">\(\sqrt{1+h_i}\)</span>. Conceptually, we inserted the one in the formula because we are selecting a <em>single</em> home with a specified size and number of bedrooms out of the population. This is very different from building a confidence interval around a population mean, but in R it is simply the change of one word.</p>
-<div class="sourceCode" id="cb281"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb281-1"><a href="statistical-inference.html#cb281-1" aria-hidden="true" tabindex="-1"></a><span class="fu">predict</span>(REG,</span>
-<span id="cb281-2"><a href="statistical-inference.html#cb281-2" aria-hidden="true" tabindex="-1"></a>        <span class="fu">data.frame</span>(<span class="at">sqrft =</span> <span class="dv">1000</span>, <span class="at">bdrms =</span> <span class="dv">3</span>), </span>
-<span id="cb281-3"><a href="statistical-inference.html#cb281-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">interval =</span> <span class="st">&quot;prediction&quot;</span>,</span>
-<span id="cb281-4"><a href="statistical-inference.html#cb281-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">level =</span> <span class="fl">0.95</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb294"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb294-1"><a href="statistical-inference.html#cb294-1" tabindex="-1"></a><span class="fu">predict</span>(REG,</span>
+<span id="cb294-2"><a href="statistical-inference.html#cb294-2" tabindex="-1"></a>        <span class="fu">data.frame</span>(<span class="at">sqrft =</span> <span class="dv">1000</span>, <span class="at">bdrms =</span> <span class="dv">3</span>), </span>
+<span id="cb294-3"><a href="statistical-inference.html#cb294-3" tabindex="-1"></a>        <span class="at">interval =</span> <span class="st">&quot;prediction&quot;</span>,</span>
+<span id="cb294-4"><a href="statistical-inference.html#cb294-4" tabindex="-1"></a>        <span class="at">level =</span> <span class="fl">0.95</span>)</span></code></pre></div>
 <pre><code>##        fit      lwr      upr
 ## 1 154.7158 26.39973 283.0318</code></pre>
 <p><span class="math display">\[Pr(26.40\leq Y_{X} \leq 283.03)=0.95\]</span></p>
 <p>We can now state with 95% confidence that <em>a single draw of a house price</em> from the population of all 1000 square-foot houses will be somewhere between $26,400 and $283,030. Note that the prediction interval is also centered at our conditional expectation <span class="math inline">\((\hat{Y})\)</span>, but now the interval is much wider than in the previous calculation. This should make sense, because when you are selecting a single home then you have a positive probability of selecting either very cheap homes or very expensive homes. A mean would wash these extreme values out.</p>
-
 </div>
 </div>
 </div>
-<!-- </div> -->
 <div class="footnotes">
 <hr />
-<ol start="29">
-<li id="fn29"><p>Note that the appendix in Chapter 7 states that the t distribution in the simple regression case has <span class="math inline">\(n-2\)</span> degrees of freedom. This is because there is only one independent variable in a simple regression, so <span class="math inline">\(k=1\)</span> and <span class="math inline">\(n-k-1 = n - 2\)</span>.<a href="statistical-inference.html#fnref29" class="footnote-back">↩︎</a></p></li>
-<li id="fn30"><p>Note that while the estimate from our sample is greater than 0.120, the statement we are testing is regarding what is going on in the population.<a href="statistical-inference.html#fnref30" class="footnote-back">↩︎</a></p></li>
-<li id="fn31"><p>Note that while the estimate from our sample is less than 0.130, the statement we are testing is regarding what is going on in the population.<a href="statistical-inference.html#fnref31" class="footnote-back">↩︎</a></p></li>
-<li id="fn32"><p>Note that this equation is provided for only one independent variable. It becomes even more messy in a multivariate setting. However, the important concept is that this value gets larger when we consider values of X that are farther away from the average values in the sample.<a href="statistical-inference.html#fnref32" class="footnote-back">↩︎</a></p></li>
+<ol start="34">
+<li id="fn34"><p>Note that the appendix in Chapter 7 states that the t distribution in the simple regression case has <span class="math inline">\(n-2\)</span> degrees of freedom. This is because there is only one independent variable in a simple regression, so <span class="math inline">\(k=1\)</span> and <span class="math inline">\(n-k-1 = n - 2\)</span>.<a href="statistical-inference.html#fnref34" class="footnote-back">↩︎</a></p></li>
+<li id="fn35"><p>Note that since the test statistic under the null was a negative value, the p-value is technically twice the area to the <em>right</em> of that number. This is precisely why <em>lower.tail = TRUE</em> is the code.<a href="statistical-inference.html#fnref35" class="footnote-back">↩︎</a></p></li>
+<li id="fn36"><p>Note that while the estimate from our sample is greater than 0.120, the statement we are testing is regarding what is going on in the population.<a href="statistical-inference.html#fnref36" class="footnote-back">↩︎</a></p></li>
+<li id="fn37"><p>Note that while the estimate from our sample is less than 0.130, the statement we are testing is regarding what is going on in the population.<a href="statistical-inference.html#fnref37" class="footnote-back">↩︎</a></p></li>
+<li id="fn38"><p>Note that this equation is provided for only one independent variable. It becomes even more messy in a multivariate setting. However, the important concept is that this value gets larger when we consider values of X that are farther away from the average values in the sample.<a href="statistical-inference.html#fnref38" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
@@ -678,7 +699,7 @@ or</p>
         </div>
       </div>
 <a href="adjusted-r2.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="COL.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="a-concluding-application-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

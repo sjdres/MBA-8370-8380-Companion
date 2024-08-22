@@ -6,7 +6,7 @@ library(pander)
 library(plot3D)
 ```
 
-Quantitative variables are easy to model and interpret because they take on numerical values and are readily dealt with by computers. Qualitative variables, however, are variables that do not naturally deliver numerical values. In other words, they are more like *categories*. Examples of qualitative variables are: 
+Quantitative variables are easy to model and interpret because they take on numerical values that are readily dealt with by computers. Qualitative variables, however, are variables that do not naturally deliver numerical values. In other words, they are more like *categories*. Examples of qualitative variables are: 
 
 * Gender (male, female)
 
@@ -36,7 +36,7 @@ Suppose you are a consultant hired by a firm to help determine the underlying fe
 
 These independent variables are all *quantitative* because they directly translate to numbers. We can also add a qualitative variable to this list of independent variables to see if gender can help explain why some people earn a higher wage than others. In particular, consider the qualitative variable *female* which equals 1 if the individual is female and 0 if the individual is not (i.e., male). 
 
-The Specified model (the PRF) now becomes
+The specified model (the PRF) now becomes
 
 $$wage_i=\beta_0+\beta_1educ_i+\beta_2exper_i+\beta_3tenure_i+\beta_4female_i+\varepsilon_i$$
 
@@ -81,7 +81,7 @@ Interpretations of the other independent variables are unchanged. However, $\hat
 
 >Holding education, tenure, and experience constant, a female earns \$1.81 less in wages relative to a male, on average
 
-This states that we can compare two individuals with the same education, experience, and tenure levels but differ in gender and conclude that the male earns more.
+This states that we can compare two individuals with the same education, experience, and tenure levels, but differ in gender and conclude that the male earns more.
 
 Let us examine this further to show exactly why this type of qualitative variable is called an *intercept dummy variable*. Since the dummy variable can only take on the values 1 or 0, we can write down the PRF for both cases. In particular, the PRF for a male has $female_i = 0$ while the PRF for a female has $female_i = 1$.
 
@@ -94,7 +94,7 @@ Notice that $\beta_4$ does not appear in the PRF for males because the female va
 
 ## Slope dummy variable
 
-While an intercept dummy variable is a very powerful modeling tool, it makes one glaring assumption. Consider the regression results above, namely the estimated slope coefficient with respect to tenure
+While an intercept dummy variable is a very powerful tool, it makes one glaring assumption. Consider the regression results above, namely the estimated slope coefficient with respect to tenure
 
 $$\hat{\beta}_3 = 0.14$$
 
@@ -102,13 +102,12 @@ The interpretation of this slope coefficient is as follows:
 
 >Holding education, experience, and gender constant, an individual will receive \$0.14 more in wages for every additional year of tenure, on average. 
 
-In particular, holding gender constant implies that a female receives the same annual raise than a male. This is an *assumption* of the model, because the model is incapable of differentiating the annual wage with respect to gender. Do men and women get significantly different average annual raises? We can extend the model to explicitly test this assumption with the use of a *slope dummy variable*.
+In particular, holding gender constant implies that a female receives the same annual raise than a male. This is an *explicit assumption* of the model, because the model is incapable of differentiating the annual wage with respect to gender. Do men and women get significantly different average annual raises? We can extend the model to test this assumption with the use of a *slope dummy variable*.
 
-A slope dummy variable is an example of an *interaction term*. In other words, it is a new variable that arises from taking the product of two variables. In this case, in order for us to examine the gender difference of tenure, we consider the product between female and tenure.
+A slope dummy variable is an example of an *interaction term*. In other words, it is a new variable that arises from taking the product of two existing variables. In this case, in order for us to examine the gender difference of tenure, we consider the product between female and tenure.
 
-$$\begin{aligned}
-wage_i = \;&\beta_0+\beta_1educ_i+\beta_2exper_i+ \beta_3tenure_i+\beta_4female_i+... \\ &\beta_5(tenure_i*female_i)+\varepsilon_i 
-\end{aligned}$$
+$$wage_i = \beta_0+\beta_1\;educ_i+\beta_2\;exper_i+\beta_3\;tenure_i+...$$
+$$\beta_4\;female_i+\beta_5\;(tenure_i*female_i)+\varepsilon_i$$
 
 Like our illustration of an intercept dummy, we can see what this PRF looks like for males and females.
 
@@ -135,7 +134,7 @@ $$Females: \frac{\Delta wage}{\Delta tenure} = \hat{\beta}_3+\hat{\beta}_5=0.18-
 
 The regression states that males receive an \$0.18 increase in wages on average for every additional year in tenure (holding all else constant), while females receive only a \$0.04 increase in wages on average. 
 
-Note that we could also consider slope dummy variables with respect to education as well as experience. You should do those on your own.
+Note that we could also consider slope dummy variables with respect to education as well as experience. You can analyze those on your own.
 
 ## What if there are more than two categories?
 
@@ -145,25 +144,26 @@ The rule of thumb (to be explained in detail soon) is:
 
 **A variable containing $N$ categories requires $N-1$ dummy variables.**
 
-This rule actually applies to our standard case, because we can model $N=2$ categories with $N-1=1$ dummy variables. In our example above, we wanted to identify 2 categories of gender (male or female) so we needed 1 dummy variable. However, we need to take a little more care and follow additional steps when dealing with more than two categories. Suppose we extended our gender characteristics to identify a third gender category (*nonbinary*) in order to account for individuals who do not subscribe to one of the two traditional categories. We will use this scenario to illustrate how our model gets extended. 
+This rule actually applies to our standard case, because we can model $N=2$ categories with $N-1=1$ dummy variables. In our example above, we wanted to identify 2 categories of gender (male or female) so we needed 1 dummy variable. However, we need to take a little more care and follow additional steps when dealing with more than two categories. Suppose we extended our gender characteristics to identify a third gender category (*other*) in order to account for individuals who do not subscribe to one of the two traditional categories. We will use this scenario to illustrate how our model gets extended. 
 
 1. Identify a *benchmark* category
 
-A benchmark category is one of the characteristics that the researcher identifies as the category that all other categories get compared against. In our gender example, suppose we choose *male* as our benchmark characteristic. You will find that this choice is arbitrary, but it may have implications.
+A benchmark category is one of the characteristics that the researcher identifies as the category that all other categories get compared against. In our gender example, we choose *male* as our benchmark characteristic because we are comparing females to males. You will find that this choice is arbitrary, but it may have implications.
 
 2. Construct appropriate dummy variables
 
-Once the benchmark category has been established as male, we need two dummy variables: one that identifies individuals as *female* and one that identifies individuals as *nonbinary*.
+Once the benchmark category has been established as male, we need two dummy variables: one that identifies individuals as *female* and one that identifies individuals as *other*.
 
-$$female_i = 1 \mbox{ if female; }\; 0 \mbox{ if male or nonbinary }$$
+$$female_i = 1 \mbox{ if female; }\; 0 \mbox{ if male or other }$$
 
-$$\mbox{non-binary}_i = 1 \mbox{ if nonbinary; }\;  0 \mbox{ if male or female }$$
+$$\mbox{other}_i = 1 \mbox{ if other; }\;  0 \mbox{ if male or female }$$
 
 Note that each dummy variable is still a switch that signals the presence or absence of a characteristic. However, when **BOTH** dummy variables are zero at the same time... you have your benchmark category. That is how you can identify three categories with only two dummy variables.
 
 To illustrate, consider the original model restricting attention to intercept dummies.
 
-$$wage_i=\beta_0+\beta_1educ_i+\beta_2exper_i+\beta_3tenure_i+\beta_4female_i +\beta_5(nonbinary_i) +\varepsilon_i$$
+$$wage_i=\beta_0+\beta_1\;educ_i+\beta_2\;exper_i+\beta_3\;tenure_i+...$$
+$$\beta_4\;female_i +\beta_5\;other_i +\varepsilon_i$$
 
 We can write down what the model looks like for each of our three categories:
 
@@ -171,17 +171,134 @@ $$Male: wage_i=\beta_0+\beta_1educ_i+\beta_2exper_i+\beta_3tenure_i+\varepsilon_
 
 $$Female: wage_i=(\beta_0+\beta_4)+\beta_1educ_i+\beta_2exper_i+\beta_3tenure_i+\varepsilon_i$$
 
-$$\mbox{Non-binary}: wage_i=(\beta_0+\beta_5)+\beta_1educ_i+\beta_2exper_i+\beta_3tenure_i+\varepsilon_i$$
+$$\mbox{Other}: wage_i=(\beta_0+\beta_5)+\beta_1educ_i+\beta_2exper_i+\beta_3tenure_i+\varepsilon_i$$
 
-When comparing these three equations, you can hopefully see how the benchmark category comes into play. The first equation is essentially the benchmark equation, indicating that $\beta_0$ is the intercept term for males. The second equation is for females, and shows how the intercept for females differs from males (given by $\beta_4$). The third equation is for those identifying as nonbinary, and shows how the intercept for these individuals differs from males (given by $\beta_5$). Note that all of the other slopes are *assumed* to be identical here (but we could consider slope dummies like above).
+When comparing these three equations, you can see how the benchmark category comes into play. The first equation is essentially the benchmark equation, indicating that $\beta_0$ is the intercept term for males. The second equation is for females, and shows how the intercept for females differs from males (given by $\beta_4$). The third equation is for those identifying as other, and shows how the intercept for these individuals differs from males (given by $\beta_5$). Note that all of the other slopes are *assumed* to be identical here (but we could consider slope dummies like above).
 
 One detail worth mentioning about the application above is that the coefficients $\beta_4$ and $\beta_5$ show how each category compares to the benchmark category. We can test if these coefficients are significantly different from zero with standard hypothesis tests. For example:
 
 $$H_0: \; \beta_4 = 0 \quad H_1: \; \beta_4 \neq 0$$
 
-However, if we show that $\beta_4$ and $\beta_5$ were significantly different than zero, we can only conclude that females and nonbinary individuals are treated differently than males (because it was the benchmark category). We cannot determine if *female* and *nonbinary* are significantly different from each other without a joint hypothesis test (examined below) or a choice of a new benchmark category. For example, you can easily change the benchmark category to be female and end up with a formal test of the difference between female and nonbinary. 
+However, if we show that $\beta_4$ and $\beta_5$ were significantly different than zero, we can only conclude that females and other individuals are treated differently than males (because it was the benchmark category). We cannot determine if *female* and *other* are significantly different from each other without a joint hypothesis test (examined below) or a choice of a new benchmark category. For example, you can easily change the benchmark category to be female and end up with a formal test of the difference between female and other.
 
-## A Final Application
+## A Concluding Application
+
+Let us return again to our analysis on the median starting salaries of graduating law classes by adding a dummy variable that replaces our original measure of school quality.
+
+$$SALARY_i = \beta_0 + \beta_1 \; LSAT_i + \beta_2 \; TOP25_i + \varepsilon_i$$
+
+where...
+
+* $TOP25_i = 1$ if school i is ranked in the top 25
+
+* $TOP25_i = 0$ if school i is ranked 26 or higher
+
+The model above replaced the rank of each school with an indicator variable breaking the schools into two categories: the top 25 best schools and all the rest. This switch makes the assumption that there is a more broad impact of school quality. In other words, there is no difference between the top school and any other school in the top 25, but there is a difference between this top 25 and the rest.
+
+```{r,eval = FALSE}
+REG <- lm(SALARY~LSAT+TOP25, data = LAW)
+```
+
+```{r,echo = FALSE}
+library(readxl)
+LAW <- read_excel("data/LAW.xlsx")
+REG <- lm(SALARY~LSAT+TOP25, data = LAW)
+tB0 <- format(round(summary(REG)$coefficient[1,1],2), scientific = FALSE)
+tB1 <- format(round(summary(REG)$coefficient[2,1],2), scientific = FALSE)
+tB2 <- format(round(summary(REG)$coefficient[3,1],2), scientific = FALSE)
+summary(REG)
+```
+
+Interpretations are as follows:
+
+$$\hat{\beta}_1 = \frac{\Delta \widehat{SALARY}}{\Delta LSAT} =  `r tB1`$$
+
+
+Holding $TOP25$ constant, one additional LSAT point will result in a $`r tB1` increase in median starting salary on average. Note that holding *TOP25* constant implies that we are making no distinction between graduates inside and outside of the top 25. This coefficient is isolating the impact of LSAT score.
+
+
+
+$$\hat{\beta}_2 = \frac{\Delta \widehat{SALARY}}{\Delta TOP25} =  `r tB2`$$
+
+
+Holding $LSAT$ constant, graduating from a top 25 school will result in a \$`r tB2` increase in median starting salary (than graduating from a non-top 25 school) on average. Note that this coefficient is isolating the impact of moving from outside the top 25 (i.e., the *zero* category) to inside the top 25 (i.e., the *one* category).
+
+The figure below illustrates why this type of dummy variable is called an intercept dummy. The figure shows the relationship in the data between the median starting salary and the average LSAT score, only the red dots indicate data observations from within the top 25 law schools while the blue dots indicate data observations outside of the top 25. The regression line for the top 25 schools is parallel to the regression line for the rest of the schools (by design), but is simply elevated by the value of the coefficient in front of the dummy variable. This means that the dummy variable increased the intercept of the regression line by `r tB2`.
+
+```{r,echo = FALSE}
+plot(SALARY~LSAT, data = subset(LAW,TOP25 == 0),
+       col = "steelblue", pch = 16,
+     xlim=c(min(LAW$LSAT),max(LAW$LSAT)),
+     ylim=c(min(LAW$SALARY),max(LAW$SALARY)))
+points(SALARY~LSAT, data = subset(LAW,TOP25 == 1),
+     col = "darkred", pch = 16)
+
+LAW$Yhat = fitted(REG)
+
+lines(Yhat~LSAT, data = subset(LAW,TOP25 == 1),
+     col = "darkred")
+lines(Yhat~LSAT, data = subset(LAW,TOP25 == 0),
+     col = "steelblue")
+```
+
+We can extend this analysis to test the assumption implicitly made by our model: does an extra LSAT point impact starting salary differently if a student is in the top 25?
+
+$$SALARY_i = \beta_0 + \beta_1 \; LSAT_i + \beta_2 \; TOP25_i + \beta_3 \; (LSAT_i \times TOP25_i) + \varepsilon_i$$
+
+Our slope dummy is a specific example of an interaction term (which is simply a new independent variable being the product of two existing independent variables). An interaction term allows the two slopes to impact each other in a very straightforward way.
+
+```{r,eval = FALSE}
+REG <- lm(SALARY~LSAT+TOP25+I(LSAT*TOP25), data = LAW)
+summary(REG)
+```
+
+```{r,echo = FALSE}
+REG <- lm(SALARY~LSAT+TOP25+I(LSAT*TOP25), data = LAW)
+summary(REG)
+tB0 <- format(round(summary(REG)$coefficient[1,1],2), scientific = FALSE)
+tB1 <- format(round(summary(REG)$coefficient[2,1],2), scientific = FALSE)
+tB2 <- format(round(summary(REG)$coefficient[3,1],2), scientific = FALSE)
+tB3 <- format(round(summary(REG)$coefficient[4,1],2), scientific = FALSE)
+```
+
+To see if an additional LSAT point has a different impact inside or outside of the top 25, we examine the coefficient infront of the LSAT variable as well as the *partial derivative* of the interaction term.
+
+$$\frac{\Delta \widehat{SALARY}}{\Delta LSAT} = \hat{\beta}_1 + \hat{\beta}_3 \; TOP25$$
+
+Recall that $TOP25$ takes on a value of 1 if the school is in the top 25 schools (0 otherwise).
+
+If $TOP25 = 0$:
+
+$$\frac{\Delta \widehat{SALARY}}{\Delta LSAT} = \hat{\beta}_1 + \hat{\beta}_3 \times 0 = `r tB1`$$
+
+If $TOP25 = 1$:
+
+$$\frac{\Delta \widehat{SALARY}}{\Delta LSAT} = \hat{\beta}_1 + \hat{\beta}_3 \times 1 = `r tB1` + `r tB3`$$
+
+According to our estimates, an additional LSAT point has a larger impact of about $568 if the law student was in the top 25 schools. This means that the slope with respect to LSAT is 568 higher, as the figure below illustrates.
+
+```{r,echo = FALSE}
+plot(SALARY ~ LSAT, data = subset(LAW,TOP25 == 0),
+       col = "steelblue", pch = 16,
+     xlim=c(min(LAW$LSAT),max(LAW$LSAT)),
+     ylim=c(min(LAW$SALARY),max(LAW$SALARY)))
+points(SALARY ~ LSAT, data = subset(LAW,TOP25 == 1),
+     col = "darkred", pch = 16)
+
+LAW$Yhat = fitted(REG)
+
+lines(Yhat~LSAT, data = subset(LAW,TOP25 == 1),
+     col = "darkred")
+lines(Yhat~LSAT, data = subset(LAW,TOP25 == 0),
+     col = "steelblue")
+```
+
+
+$$H_0: \beta_3 = 0 \quad vs \quad H_1: \beta_3 \neq 0$$
+
+Of course, while our sample suggests that students from the top 25 benefit more from an additional LSAT point, the main concern is what we think is happening in the population. The p-value for our slope dummy variable is 0.177, indicating that we cannot reject the null hypothesis stating that $\beta_3$ is not significantly different from zero (at 90% confidence or better). This ultimately suggests that our first model that assumed there was no interaction between LSAT and TOP25 is actually the more appropriate model. What we gained by extending the model and showing that the extension wasn't necessary is that we have more confidence that our intercept dummy variable model is closer to true model.
+
+## Another Concluding Application
 
 Let us consider an in-depth application where dummy variables are essential for making time-series variables ready for analysis by removing a *seasonal cycle*.
 

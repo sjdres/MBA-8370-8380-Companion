@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>7.4 Decomposition of Variance | Course Companion for MBA 8370 and MBA 8380</title>
   <meta name="description" content="Course companion" />
-  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="7.4 Decomposition of Variance | Course Companion for MBA 8370 and MBA 8380" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Scott Dressler" />
 
 
-<meta name="date" content="2023-01-08" />
+<meta name="date" content="2024-08-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -56,7 +56,7 @@
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -119,6 +119,10 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -178,7 +182,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3" data-path="R.html"><a href="R.html"><i class="fa fa-check"></i><b>3</b> Getting Started with R</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="the-r-project-for-statistical-computing.html"><a href="the-r-project-for-statistical-computing.html"><i class="fa fa-check"></i><b>3.1</b> The R Project for Statistical Computing</a></li>
-<li class="chapter" data-level="3.2" data-path="before-you-install-rstudio-cloud.html"><a href="before-you-install-rstudio-cloud.html"><i class="fa fa-check"></i><b>3.2</b> Before you Install… RStudio Cloud?</a></li>
+<li class="chapter" data-level="3.2" data-path="before-you-install-posit-rstudio-cloud.html"><a href="before-you-install-posit-rstudio-cloud.html"><i class="fa fa-check"></i><b>3.2</b> Before you Install… Posit (RStudio) Cloud?</a></li>
 <li class="chapter" data-level="3.3" data-path="downloading-and-installing-r.html"><a href="downloading-and-installing-r.html"><i class="fa fa-check"></i><b>3.3</b> Downloading and installing R</a>
 <ul>
 <li class="chapter" data-level="3.3.1" data-path="downloading-and-installing-r.html"><a href="downloading-and-installing-r.html#choosing-a-mirror"><i class="fa fa-check"></i><b>3.3.1</b> Choosing a <em>Mirror</em></a></li>
@@ -191,7 +195,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.5.1" data-path="coding-basics.html"><a href="coding-basics.html#installing-packages"><i class="fa fa-check"></i><b>3.5.1</b> Installing <em>Packages</em></a></li>
 <li class="chapter" data-level="3.5.2" data-path="coding-basics.html"><a href="coding-basics.html#assigning-objects"><i class="fa fa-check"></i><b>3.5.2</b> Assigning Objects</a></li>
 <li class="chapter" data-level="3.5.3" data-path="coding-basics.html"><a href="coding-basics.html#listing-adding-and-removing"><i class="fa fa-check"></i><b>3.5.3</b> Listing, Adding, and Removing</a></li>
-<li class="chapter" data-level="3.5.4" data-path="coding-basics.html"><a href="coding-basics.html#loading-data"><i class="fa fa-check"></i><b>3.5.4</b> Loading Data</a></li>
+<li class="chapter" data-level="3.5.4" data-path="coding-basics.html"><a href="coding-basics.html#importing-data"><i class="fa fa-check"></i><b>3.5.4</b> Importing Data</a></li>
 <li class="chapter" data-level="3.5.5" data-path="coding-basics.html"><a href="coding-basics.html#manipulating-data"><i class="fa fa-check"></i><b>3.5.5</b> Manipulating Data</a></li>
 <li class="chapter" data-level="3.5.6" data-path="coding-basics.html"><a href="coding-basics.html#subsetting-data"><i class="fa fa-check"></i><b>3.5.6</b> Subsetting Data</a></li>
 </ul></li>
@@ -281,13 +285,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.5.3" data-path="assumptions-of-the-linear-regression-model.html"><a href="assumptions-of-the-linear-regression-model.html#equal-variance"><i class="fa fa-check"></i><b>7.5.3</b> Equal Variance</a></li>
 <li class="chapter" data-level="7.5.4" data-path="assumptions-of-the-linear-regression-model.html"><a href="assumptions-of-the-linear-regression-model.html#normality-of-errors"><i class="fa fa-check"></i><b>7.5.4</b> Normality of Errors</a></li>
 </ul></li>
-<li class="chapter" data-level="7.6" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html"><i class="fa fa-check"></i><b>7.6</b> Appendix: Statistical Inference</a>
+<li class="chapter" data-level="7.6" data-path="a-concluding-application.html"><a href="a-concluding-application.html"><i class="fa fa-check"></i><b>7.6</b> A Concluding Application</a></li>
+<li class="chapter" data-level="7.7" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html"><i class="fa fa-check"></i><b>7.7</b> Appendix: Statistical Inference</a>
 <ul>
-<li class="chapter" data-level="7.6.1" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-population-parameters"><i class="fa fa-check"></i><b>7.6.1</b> Confidence Intervals (around population parameters)</a></li>
-<li class="chapter" data-level="7.6.2" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#hypothesis-tests"><i class="fa fa-check"></i><b>7.6.2</b> Hypothesis Tests</a></li>
-<li class="chapter" data-level="7.6.3" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-forecasts"><i class="fa fa-check"></i><b>7.6.3</b> Confidence Intervals (around forecasts)</a></li>
+<li class="chapter" data-level="7.7.1" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-population-parameters"><i class="fa fa-check"></i><b>7.7.1</b> Confidence Intervals (around population parameters)</a></li>
+<li class="chapter" data-level="7.7.2" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#hypothesis-tests"><i class="fa fa-check"></i><b>7.7.2</b> Hypothesis Tests</a></li>
+<li class="chapter" data-level="7.7.3" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-forecasts"><i class="fa fa-check"></i><b>7.7.3</b> Confidence Intervals (around forecasts)</a></li>
 </ul></li>
-<li class="chapter" data-level="7.7" data-path="up-next.html"><a href="up-next.html"><i class="fa fa-check"></i><b>7.7</b> Up Next…</a></li>
+<li class="chapter" data-level="7.8" data-path="up-next.html"><a href="up-next.html"><i class="fa fa-check"></i><b>7.8</b> Up Next…</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="MLR.html"><a href="MLR.html"><i class="fa fa-check"></i><b>8</b> Multiple Linear Regression</a>
 <ul>
@@ -307,6 +312,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.3.3" data-path="statistical-inference.html"><a href="statistical-inference.html#hypothesis-tests-1"><i class="fa fa-check"></i><b>8.3.3</b> Hypothesis Tests</a></li>
 <li class="chapter" data-level="8.3.4" data-path="statistical-inference.html"><a href="statistical-inference.html#confidence-intervals-around-forecasts-1"><i class="fa fa-check"></i><b>8.3.4</b> Confidence Intervals (around forecasts)</a></li>
 </ul></li>
+<li class="chapter" data-level="8.4" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html"><i class="fa fa-check"></i><b>8.4</b> A Concluding Application</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#interpretation"><i class="fa fa-check"></i>Interpretation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#confidence-intervals"><i class="fa fa-check"></i>Confidence Intervals</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#hypothesis-tests-2"><i class="fa fa-check"></i>Hypothesis Tests</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#forecasts"><i class="fa fa-check"></i>Forecasts</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="COL.html"><a href="COL.html"><i class="fa fa-check"></i><b>9</b> Collinearity</a>
 <ul>
@@ -322,17 +334,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="how-do-we-remove-collinearity.html"><a href="how-do-we-remove-collinearity.html#sometimes-removing-collinearity-might-involve-multiple-rounds"><i class="fa fa-check"></i>Sometimes removing collinearity might involve multiple rounds</a></li>
 </ul></li>
+<li class="chapter" data-level="9.5" data-path="a-concluding-application-2.html"><a href="a-concluding-application-2.html"><i class="fa fa-check"></i><b>9.5</b> A Concluding Application</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="DVS.html"><a href="DVS.html"><i class="fa fa-check"></i><b>10</b> Qualitative (Dummy) Variables</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="intercept-dummy-variable.html"><a href="intercept-dummy-variable.html"><i class="fa fa-check"></i><b>10.1</b> Intercept dummy variable</a></li>
 <li class="chapter" data-level="10.2" data-path="slope-dummy-variable.html"><a href="slope-dummy-variable.html"><i class="fa fa-check"></i><b>10.2</b> Slope dummy variable</a></li>
 <li class="chapter" data-level="10.3" data-path="what-if-there-are-more-than-two-categories.html"><a href="what-if-there-are-more-than-two-categories.html"><i class="fa fa-check"></i><b>10.3</b> What if there are more than two categories?</a></li>
-<li class="chapter" data-level="10.4" data-path="a-final-application.html"><a href="a-final-application.html"><i class="fa fa-check"></i><b>10.4</b> A Final Application</a>
+<li class="chapter" data-level="10.4" data-path="a-concluding-application-3.html"><a href="a-concluding-application-3.html"><i class="fa fa-check"></i><b>10.4</b> A Concluding Application</a></li>
+<li class="chapter" data-level="10.5" data-path="another-concluding-application.html"><a href="another-concluding-application.html"><i class="fa fa-check"></i><b>10.5</b> Another Concluding Application</a>
 <ul>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#make-a-nominal-series-a-real-series"><i class="fa fa-check"></i>Make a <em>Nominal</em> Series a <em>Real</em> Series</a></li>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#remove-a-trend"><i class="fa fa-check"></i>Remove a Trend</a></li>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#remove-seasonality"><i class="fa fa-check"></i>Remove Seasonality</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#make-a-nominal-series-a-real-series"><i class="fa fa-check"></i>Make a <em>Nominal</em> Series a <em>Real</em> Series</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#remove-a-trend"><i class="fa fa-check"></i>Remove a Trend</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#remove-seasonality"><i class="fa fa-check"></i>Remove Seasonality</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="FF.html"><a href="FF.html"><i class="fa fa-check"></i><b>11</b> Functional Forms</a>
@@ -354,6 +368,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="the-reciprocal-transformation.html"><a href="the-reciprocal-transformation.html#application-6"><i class="fa fa-check"></i>Application</a></li>
 </ul></li>
 <li class="chapter" data-level="11.6" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>11.6</b> Conclusion</a></li>
+<li class="chapter" data-level="11.7" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html"><i class="fa fa-check"></i><b>11.7</b> A Concluding Application</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#a-residual-analysis"><i class="fa fa-check"></i>A Residual Analysis</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#log-transformation"><i class="fa fa-check"></i>Log Transformation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#quadratic-transformation"><i class="fa fa-check"></i>Quadratic Transformation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#reciprocal-transformation"><i class="fa fa-check"></i>Reciprocal Transformation</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="JHT.html"><a href="JHT.html"><i class="fa fa-check"></i><b>12</b> Joint Hypothesis Tests</a>
 <ul>
@@ -373,6 +394,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="applications.html"><a href="applications.html#application-1-a-wage-application"><i class="fa fa-check"></i>Application 1: A wage application</a></li>
 <li class="chapter" data-level="" data-path="applications.html"><a href="applications.html#application-2-constant-returns-to-scale"><i class="fa fa-check"></i>Application 2: Constant Returns to Scale</a></li>
 </ul></li>
+<li class="chapter" data-level="12.4" data-path="a-concluding-application-5.html"><a href="a-concluding-application-5.html"><i class="fa fa-check"></i><b>12.4</b> A Concluding Application</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -398,24 +420,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">7.4</span> Decomposition of Variance<a href="decomposition-of-variance.html#decomposition-of-variance" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Using our regression estimates and sample information, we can construct one of the most popular (and most abused) measures of <em>goodness of fit</em> for a regression. We will construct this measure in pieces.</p>
 <p>First, the <strong>total sum of squares</strong> (or TSS) can be calculated to measure the total variation in the dependent variable:</p>
-<p><span class="math display">\[TSS = \sum^{N}_{i=1}(Y_i - \bar{Y})^2\]</span></p>
-<p>This expression is similar to a variance equation (without averaging), and since the movements in the dependent variable are ultimately what we are after, this measure delivers <em>the total variation in the dependent variable that we would like our model to explain</em>.</p>
-<p>Next, we can use our regression estimates to calculate an <strong>estimated sum of squares</strong> (or ESS) which measures the total variation in the dependent variable that our model <em>actually</em> explained:</p>
-<p><span class="math display">\[ESS = \sum^{N}_{i=1}(\hat{Y}_i - \bar{Y})^2\]</span></p>
+<p><span class="math display">\[TSS = \sum^{n}_{i=1}(Y_i - \bar{Y})^2\]</span></p>
+<p>This expression is similar to a variance equation (without averaging), and since the movements in the dependent variable are ultimately what we are after, this measure delivers <em>the total variation in the dependent variable that we would like to explain</em>.</p>
+<p>Next, we can use our regression estimates to calculate an <strong>estimated sum of squares</strong> (or ESS) which measures the total variation in the dependent variable that our model <em>actually</em> captures:</p>
+<p><span class="math display">\[ESS = \sum^{n}_{i=1}(\hat{Y}_i - \bar{Y})^2\]</span></p>
 <p>Note that this measure uses our conditional forecasts from our regression model in place of the actual observations of the dependent variable.</p>
 <p><span class="math display">\[\hat{Y}_i = \hat{\beta}_0 + \hat{\beta}_1 X_i\]</span></p>
 <p>Finally, we can use our regression estimates to also calculate a <strong>residual sum of squares</strong> (or RSS) which measures the total variation in the dependent variable that our model <em>cannot</em> explain:</p>
-<p><span class="math display">\[RSS = \sum^{N}_{i=1}(Y_i - \hat{Y}_i)^2 = \sum^{N}_{i=1}e_i^2\]</span></p>
-<p>Note that this is a measure of the variation in the garbage can, and the garage can is where all of the variation in the dependent variable that your model cannot explain ends up.</p>
+<p><span class="math display">\[RSS = \sum^{n}_{i=1}(Y_i - \hat{Y}_i)^2 = \sum^{n}_{i=1}e_i^2\]</span></p>
+<p>Note that this is a measure of the variation in the garbage can, and the garbage can is where all of the variation in the dependent variable that your model cannot explain ends up.</p>
 <div id="the-r2" class="section level3 hasAnchor" number="7.4.1">
 <h3><span class="header-section-number">7.4.1</span> The <span class="math inline">\(R^2\)</span><a href="decomposition-of-variance.html#the-r2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Our regression breaks the variation in <span class="math inline">\(Y_i\)</span> (the TSS) into what can be explained (the ESS) and what cannot be explained (the RSS). This essentially means <span class="math inline">\(TSS=ESS+RSS\)</span>. Furthermore, our OLS estimates attempt to maximize the ESS and minimize the RSS. This delivers our first measure of how well our model explains the movements in the dependent variable or <em>goodness of fit</em></p>
+<p>Our regression breaks the variation in <span class="math inline">\(Y_i\)</span> (the TSS) into what can be explained (the ESS) and what cannot be explained (the RSS). This essentially means <span class="math inline">\(TSS=ESS+RSS\)</span>. Furthermore, our OLS estimates attempt to maximize the ESS and minimize the RSS as much as possible. This delivers our first measure of how well our model explains the movements in the dependent variable or <em>goodness of fit</em></p>
 <p><span class="math display">\[R^2 = \frac{ESS}{TSS} = 1 - \frac{RSS}{TSS}\]</span></p>
-<p>This <strong>coefficient of determination</strong> or <span class="math inline">\(R^2\)</span> should be an intuitive measure. First, it is bounded between 0 and 1. If the measure is 0 then the model explains <strong>NOTHING</strong> and all variation is in the garbage can. If the measure is 1 then the model explains <strong>EVERYTHING</strong> and the garbage can is empty. Any number in between is simply the proportion of the variation in the dependent variable explained by the model.</p>
-<div class="sourceCode" id="cb186"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb186-1"><a href="decomposition-of-variance.html#cb186-1" aria-hidden="true" tabindex="-1"></a>REG3 <span class="ot">&lt;-</span> <span class="fu">lm</span>(price <span class="sc">~</span> sqrft, <span class="at">data =</span> hprice1)</span>
-<span id="cb186-2"><a href="decomposition-of-variance.html#cb186-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(REG3)<span class="sc">$</span>r.squared</span></code></pre></div>
+<p>This <strong>coefficient of determination</strong> or <span class="math inline">\(R^2\)</span> should be an intuitive measure. First, it is bounded between 0 and 1. If the measure is 0 then the model explains <strong>NOTHING</strong> and all variation is in the garbage can. If the measure is 1 then the model explains <strong>EVERYTHING</strong> and the garbage can is completely empty. Any number in between is simply the proportion of the variation in the dependent variable explained by the model.</p>
+<div class="sourceCode" id="cb192"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb192-1"><a href="decomposition-of-variance.html#cb192-1" tabindex="-1"></a>REG3 <span class="ot">&lt;-</span> <span class="fu">lm</span>(price <span class="sc">~</span> sqrft, <span class="at">data =</span> hprice1)</span>
+<span id="cb192-2"><a href="decomposition-of-variance.html#cb192-2" tabindex="-1"></a><span class="fu">summary</span>(REG3)<span class="sc">$</span>r.squared</span></code></pre></div>
 <pre><code>## [1] 0.6207967</code></pre>
-<div class="sourceCode" id="cb188"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb188-1"><a href="decomposition-of-variance.html#cb188-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pander</span>(<span class="fu">summary</span>(REG3))</span></code></pre></div>
+<div class="sourceCode" id="cb194"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb194-1"><a href="decomposition-of-variance.html#cb194-1" tabindex="-1"></a><span class="fu">pander</span>(<span class="fu">summary</span>(REG3))</span></code></pre></div>
 <table style="width:89%;">
 <colgroup>
 <col width="25%" />
@@ -475,7 +497,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 </tbody>
 </table>
-<p>Returning to our house price application above, you can see that our coefficient of determination <span class="math inline">\((R^2)\)</span> is 0.62.<a href="#fn24" class="footnote-ref" id="fnref24"><sup>24</sup></a> This states that approximately 62 percent of the variation in the prices of homes in our sample is explained by the size of the house (in square feet), while the remaining 38 percent is <em>unexplained</em> by our model and shoved into the garbage can. That is all it says… no more and no less.</p>
+<p>Returning to our house price application above, you can see that our coefficient of determination <span class="math inline">\((R^2)\)</span> is 0.62.<a href="#fn28" class="footnote-ref" id="fnref28"><sup>28</sup></a> This states that approximately 62 percent of the variation in the prices of homes in our sample is explained by the size of the house (in square feet), while the remaining 38 percent is <em>unexplained</em> by our model and shoved into the garbage can. That is all it says… no more and no less.</p>
 </div>
 <div id="what-is-a-good-r2" class="section level3 hasAnchor" number="7.4.2">
 <h3><span class="header-section-number">7.4.2</span> What is a <em>good</em> <span class="math inline">\(R^2\)</span>?<a href="decomposition-of-variance.html#what-is-a-good-r2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -483,18 +505,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="standard-error-of-the-estimate" class="section level3 hasAnchor" number="7.4.3">
 <h3><span class="header-section-number">7.4.3</span> Standard Error of the Estimate<a href="decomposition-of-variance.html#standard-error-of-the-estimate" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><span class="math display">\[S_{YX} = \sqrt{\frac{RSS}{n-2}} = \sqrt{\frac{\sum^{N}_{i=1}e_i^2}{n-2}}\]</span></p>
+<p><span class="math display">\[S_{YX} = \sqrt{\frac{RSS}{n-2}} = \sqrt{\frac{\sum^{n}_{i=1}e_i^2}{n-2}}\]</span></p>
 <p>The standard error of the estimate is much like a standard deviation equation. However, while the standard deviation measures the variability around a mean, the standard error of the estimate measures the variability around the prediction line.</p>
 <p>Note that the denominator of this measure is <span class="math inline">\(n-2\)</span>. The reason that we are <em>averaging</em> the sum of squared errors by <span class="math inline">\(n-2\)</span> is because we lost <strong>two degrees of freedom</strong>. Recall that we lose a degree of freedom whenever we need to estimate something based on other estimates. When we consider how we calculated the residuals in the first place,</p>
 <p><span class="math display">\[ e_i = Y_i - \hat{Y}_i = Y_i - \hat{\beta}_0 - \hat{\beta}_1 \; X_i\]</span></p>
-<p>you will see that we had to estimate <strong>two</strong> line coefficients before we can determine what the prediction error is. That is why we deduct two degrees of freedom.<a href="#fn25" class="footnote-ref" id="fnref25"><sup>25</sup></a></p>
+<p>you will see that we had to estimate <strong>two</strong> line coefficients before we can determine what the prediction error is. That is why we deduct two degrees of freedom.<a href="#fn29" class="footnote-ref" id="fnref29"><sup>29</sup></a></p>
 </div>
 </div>
 <div class="footnotes">
 <hr />
-<ol start="24">
-<li id="fn24"><p>Note that this number is sometimes called the <em>multiple</em> <span class="math inline">\(R^2\)</span><a href="decomposition-of-variance.html#fnref24" class="footnote-back">↩︎</a></p></li>
-<li id="fn25"><p>NOTE: this line of reasoning implies that we will lose more degrees of freedom when we estimate models with more independent variables. The general formula for degrees of freedom is <span class="math inline">\(n-k-1\)</span> where <span class="math inline">\(k\)</span> is the number of estimated slope coefficients.<a href="decomposition-of-variance.html#fnref25" class="footnote-back">↩︎</a></p></li>
+<ol start="28">
+<li id="fn28"><p>Note that this number is sometimes called the <em>multiple</em> <span class="math inline">\(R^2\)</span><a href="decomposition-of-variance.html#fnref28" class="footnote-back">↩︎</a></p></li>
+<li id="fn29"><p>NOTE: this line of reasoning implies that we will lose more degrees of freedom when we estimate models with more independent variables. The general formula for degrees of freedom is <span class="math inline">\(n-k-1\)</span> where <span class="math inline">\(k\)</span> is the number of estimated slope coefficients.<a href="decomposition-of-variance.html#fnref29" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

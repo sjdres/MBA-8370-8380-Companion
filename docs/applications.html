@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>12.3 Applications | Course Companion for MBA 8370 and MBA 8380</title>
   <meta name="description" content="Course companion" />
-  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="12.3 Applications | Course Companion for MBA 8370 and MBA 8380" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Scott Dressler" />
 
 
-<meta name="date" content="2023-01-08" />
+<meta name="date" content="2024-08-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="conducting-a-joint-hypothesis-test.html"/>
-
+<link rel="next" href="a-concluding-application-5.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -56,7 +56,7 @@
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -119,6 +119,10 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -178,7 +182,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3" data-path="R.html"><a href="R.html"><i class="fa fa-check"></i><b>3</b> Getting Started with R</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="the-r-project-for-statistical-computing.html"><a href="the-r-project-for-statistical-computing.html"><i class="fa fa-check"></i><b>3.1</b> The R Project for Statistical Computing</a></li>
-<li class="chapter" data-level="3.2" data-path="before-you-install-rstudio-cloud.html"><a href="before-you-install-rstudio-cloud.html"><i class="fa fa-check"></i><b>3.2</b> Before you Install… RStudio Cloud?</a></li>
+<li class="chapter" data-level="3.2" data-path="before-you-install-posit-rstudio-cloud.html"><a href="before-you-install-posit-rstudio-cloud.html"><i class="fa fa-check"></i><b>3.2</b> Before you Install… Posit (RStudio) Cloud?</a></li>
 <li class="chapter" data-level="3.3" data-path="downloading-and-installing-r.html"><a href="downloading-and-installing-r.html"><i class="fa fa-check"></i><b>3.3</b> Downloading and installing R</a>
 <ul>
 <li class="chapter" data-level="3.3.1" data-path="downloading-and-installing-r.html"><a href="downloading-and-installing-r.html#choosing-a-mirror"><i class="fa fa-check"></i><b>3.3.1</b> Choosing a <em>Mirror</em></a></li>
@@ -191,7 +195,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.5.1" data-path="coding-basics.html"><a href="coding-basics.html#installing-packages"><i class="fa fa-check"></i><b>3.5.1</b> Installing <em>Packages</em></a></li>
 <li class="chapter" data-level="3.5.2" data-path="coding-basics.html"><a href="coding-basics.html#assigning-objects"><i class="fa fa-check"></i><b>3.5.2</b> Assigning Objects</a></li>
 <li class="chapter" data-level="3.5.3" data-path="coding-basics.html"><a href="coding-basics.html#listing-adding-and-removing"><i class="fa fa-check"></i><b>3.5.3</b> Listing, Adding, and Removing</a></li>
-<li class="chapter" data-level="3.5.4" data-path="coding-basics.html"><a href="coding-basics.html#loading-data"><i class="fa fa-check"></i><b>3.5.4</b> Loading Data</a></li>
+<li class="chapter" data-level="3.5.4" data-path="coding-basics.html"><a href="coding-basics.html#importing-data"><i class="fa fa-check"></i><b>3.5.4</b> Importing Data</a></li>
 <li class="chapter" data-level="3.5.5" data-path="coding-basics.html"><a href="coding-basics.html#manipulating-data"><i class="fa fa-check"></i><b>3.5.5</b> Manipulating Data</a></li>
 <li class="chapter" data-level="3.5.6" data-path="coding-basics.html"><a href="coding-basics.html#subsetting-data"><i class="fa fa-check"></i><b>3.5.6</b> Subsetting Data</a></li>
 </ul></li>
@@ -281,13 +285,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.5.3" data-path="assumptions-of-the-linear-regression-model.html"><a href="assumptions-of-the-linear-regression-model.html#equal-variance"><i class="fa fa-check"></i><b>7.5.3</b> Equal Variance</a></li>
 <li class="chapter" data-level="7.5.4" data-path="assumptions-of-the-linear-regression-model.html"><a href="assumptions-of-the-linear-regression-model.html#normality-of-errors"><i class="fa fa-check"></i><b>7.5.4</b> Normality of Errors</a></li>
 </ul></li>
-<li class="chapter" data-level="7.6" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html"><i class="fa fa-check"></i><b>7.6</b> Appendix: Statistical Inference</a>
+<li class="chapter" data-level="7.6" data-path="a-concluding-application.html"><a href="a-concluding-application.html"><i class="fa fa-check"></i><b>7.6</b> A Concluding Application</a></li>
+<li class="chapter" data-level="7.7" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html"><i class="fa fa-check"></i><b>7.7</b> Appendix: Statistical Inference</a>
 <ul>
-<li class="chapter" data-level="7.6.1" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-population-parameters"><i class="fa fa-check"></i><b>7.6.1</b> Confidence Intervals (around population parameters)</a></li>
-<li class="chapter" data-level="7.6.2" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#hypothesis-tests"><i class="fa fa-check"></i><b>7.6.2</b> Hypothesis Tests</a></li>
-<li class="chapter" data-level="7.6.3" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-forecasts"><i class="fa fa-check"></i><b>7.6.3</b> Confidence Intervals (around forecasts)</a></li>
+<li class="chapter" data-level="7.7.1" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-population-parameters"><i class="fa fa-check"></i><b>7.7.1</b> Confidence Intervals (around population parameters)</a></li>
+<li class="chapter" data-level="7.7.2" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#hypothesis-tests"><i class="fa fa-check"></i><b>7.7.2</b> Hypothesis Tests</a></li>
+<li class="chapter" data-level="7.7.3" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-forecasts"><i class="fa fa-check"></i><b>7.7.3</b> Confidence Intervals (around forecasts)</a></li>
 </ul></li>
-<li class="chapter" data-level="7.7" data-path="up-next.html"><a href="up-next.html"><i class="fa fa-check"></i><b>7.7</b> Up Next…</a></li>
+<li class="chapter" data-level="7.8" data-path="up-next.html"><a href="up-next.html"><i class="fa fa-check"></i><b>7.8</b> Up Next…</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="MLR.html"><a href="MLR.html"><i class="fa fa-check"></i><b>8</b> Multiple Linear Regression</a>
 <ul>
@@ -307,6 +312,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.3.3" data-path="statistical-inference.html"><a href="statistical-inference.html#hypothesis-tests-1"><i class="fa fa-check"></i><b>8.3.3</b> Hypothesis Tests</a></li>
 <li class="chapter" data-level="8.3.4" data-path="statistical-inference.html"><a href="statistical-inference.html#confidence-intervals-around-forecasts-1"><i class="fa fa-check"></i><b>8.3.4</b> Confidence Intervals (around forecasts)</a></li>
 </ul></li>
+<li class="chapter" data-level="8.4" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html"><i class="fa fa-check"></i><b>8.4</b> A Concluding Application</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#interpretation"><i class="fa fa-check"></i>Interpretation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#confidence-intervals"><i class="fa fa-check"></i>Confidence Intervals</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#hypothesis-tests-2"><i class="fa fa-check"></i>Hypothesis Tests</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#forecasts"><i class="fa fa-check"></i>Forecasts</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="COL.html"><a href="COL.html"><i class="fa fa-check"></i><b>9</b> Collinearity</a>
 <ul>
@@ -322,17 +334,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="how-do-we-remove-collinearity.html"><a href="how-do-we-remove-collinearity.html#sometimes-removing-collinearity-might-involve-multiple-rounds"><i class="fa fa-check"></i>Sometimes removing collinearity might involve multiple rounds</a></li>
 </ul></li>
+<li class="chapter" data-level="9.5" data-path="a-concluding-application-2.html"><a href="a-concluding-application-2.html"><i class="fa fa-check"></i><b>9.5</b> A Concluding Application</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="DVS.html"><a href="DVS.html"><i class="fa fa-check"></i><b>10</b> Qualitative (Dummy) Variables</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="intercept-dummy-variable.html"><a href="intercept-dummy-variable.html"><i class="fa fa-check"></i><b>10.1</b> Intercept dummy variable</a></li>
 <li class="chapter" data-level="10.2" data-path="slope-dummy-variable.html"><a href="slope-dummy-variable.html"><i class="fa fa-check"></i><b>10.2</b> Slope dummy variable</a></li>
 <li class="chapter" data-level="10.3" data-path="what-if-there-are-more-than-two-categories.html"><a href="what-if-there-are-more-than-two-categories.html"><i class="fa fa-check"></i><b>10.3</b> What if there are more than two categories?</a></li>
-<li class="chapter" data-level="10.4" data-path="a-final-application.html"><a href="a-final-application.html"><i class="fa fa-check"></i><b>10.4</b> A Final Application</a>
+<li class="chapter" data-level="10.4" data-path="a-concluding-application-3.html"><a href="a-concluding-application-3.html"><i class="fa fa-check"></i><b>10.4</b> A Concluding Application</a></li>
+<li class="chapter" data-level="10.5" data-path="another-concluding-application.html"><a href="another-concluding-application.html"><i class="fa fa-check"></i><b>10.5</b> Another Concluding Application</a>
 <ul>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#make-a-nominal-series-a-real-series"><i class="fa fa-check"></i>Make a <em>Nominal</em> Series a <em>Real</em> Series</a></li>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#remove-a-trend"><i class="fa fa-check"></i>Remove a Trend</a></li>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#remove-seasonality"><i class="fa fa-check"></i>Remove Seasonality</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#make-a-nominal-series-a-real-series"><i class="fa fa-check"></i>Make a <em>Nominal</em> Series a <em>Real</em> Series</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#remove-a-trend"><i class="fa fa-check"></i>Remove a Trend</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#remove-seasonality"><i class="fa fa-check"></i>Remove Seasonality</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="FF.html"><a href="FF.html"><i class="fa fa-check"></i><b>11</b> Functional Forms</a>
@@ -354,6 +368,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="the-reciprocal-transformation.html"><a href="the-reciprocal-transformation.html#application-6"><i class="fa fa-check"></i>Application</a></li>
 </ul></li>
 <li class="chapter" data-level="11.6" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>11.6</b> Conclusion</a></li>
+<li class="chapter" data-level="11.7" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html"><i class="fa fa-check"></i><b>11.7</b> A Concluding Application</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#a-residual-analysis"><i class="fa fa-check"></i>A Residual Analysis</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#log-transformation"><i class="fa fa-check"></i>Log Transformation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#quadratic-transformation"><i class="fa fa-check"></i>Quadratic Transformation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#reciprocal-transformation"><i class="fa fa-check"></i>Reciprocal Transformation</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="JHT.html"><a href="JHT.html"><i class="fa fa-check"></i><b>12</b> Joint Hypothesis Tests</a>
 <ul>
@@ -373,6 +394,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="applications.html"><a href="applications.html#application-1-a-wage-application"><i class="fa fa-check"></i>Application 1: A wage application</a></li>
 <li class="chapter" data-level="" data-path="applications.html"><a href="applications.html#application-2-constant-returns-to-scale"><i class="fa fa-check"></i>Application 2: Constant Returns to Scale</a></li>
 </ul></li>
+<li class="chapter" data-level="12.4" data-path="a-concluding-application-5.html"><a href="a-concluding-application-5.html"><i class="fa fa-check"></i><b>12.4</b> A Concluding Application</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -411,34 +433,34 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Suppose we wanted to test that none of these independent variables help explain movements in wages, so the resulting joint hypothesis would be</p>
 <p><span class="math display">\[H_0: \beta_1 = \beta_2 = \beta_3 = 0 \quad \text{versus} \quad H_1: \beta_1 \neq 0, \; \beta_2 \neq 0, \; \text{or} \; \beta_3 \neq 0\]</span></p>
 <p>The unrestricted model is one where each of the coefficients can be whatever number the data wants them to be.</p>
-<div class="sourceCode" id="cb339"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb339-1"><a href="applications.html#cb339-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(wage1, <span class="at">package =</span> <span class="st">&quot;wooldridge&quot;</span>)</span>
-<span id="cb339-2"><a href="applications.html#cb339-2" aria-hidden="true" tabindex="-1"></a>UREG <span class="ot">&lt;-</span> <span class="fu">lm</span>(wage<span class="sc">~</span>educ<span class="sc">+</span>exper<span class="sc">+</span>tenure,<span class="at">data=</span>wage1)</span>
-<span id="cb339-3"><a href="applications.html#cb339-3" aria-hidden="true" tabindex="-1"></a>(R2u <span class="ot">&lt;-</span> <span class="fu">summary</span>(UREG)<span class="sc">$</span>r.squared)</span></code></pre></div>
+<div class="sourceCode" id="cb387"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb387-1"><a href="applications.html#cb387-1" tabindex="-1"></a><span class="fu">data</span>(wage1, <span class="at">package =</span> <span class="st">&quot;wooldridge&quot;</span>)</span>
+<span id="cb387-2"><a href="applications.html#cb387-2" tabindex="-1"></a>UREG <span class="ot">&lt;-</span> <span class="fu">lm</span>(wage<span class="sc">~</span>educ<span class="sc">+</span>exper<span class="sc">+</span>tenure,<span class="at">data=</span>wage1)</span>
+<span id="cb387-3"><a href="applications.html#cb387-3" tabindex="-1"></a>(R2u <span class="ot">&lt;-</span> <span class="fu">summary</span>(UREG)<span class="sc">$</span>r.squared)</span></code></pre></div>
 <pre><code>## [1] 0.3064224</code></pre>
 <p>Our unrestricted model can explain roughly 30% of the variation in wages.</p>
 <p>The next step is to estimate the restricted model - the model with the null hypothesis imposed. In this case you will notice that setting all slope coefficients to zero results in a rather strange looking model:</p>
 <p><span class="math display">\[wage_i=\beta_0+\varepsilon_i\]</span></p>
 <p>This model contains no independent variables. If you were to estimate this model, then the intercept term would return the average wage in the data and the error term will simply be every deviation from the individual wage observations with it’s average value. Since it is impossible for the deterministic component of this model to explain <em>any</em> of the variation in wages, then this implies that the restricted <span class="math inline">\(R^2\)</span> is zero by definition. Note that this is only a special case because of what the restricted model looks like. There will be more interesting cases where the restricted <span class="math inline">\(R^2\)</span> will need to be determined by estimating a restricted model.</p>
-<div class="sourceCode" id="cb341"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb341-1"><a href="applications.html#cb341-1" aria-hidden="true" tabindex="-1"></a>R2r <span class="ot">&lt;-</span> <span class="dv">0</span> <span class="co"># By definition</span></span></code></pre></div>
+<div class="sourceCode" id="cb389"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb389-1"><a href="applications.html#cb389-1" tabindex="-1"></a>R2r <span class="ot">&lt;-</span> <span class="dv">0</span> <span class="co"># By definition</span></span></code></pre></div>
 <p>Now that we have the restricted and unrestricted <span class="math inline">\(R^2\)</span>, we need the degrees of freedom to calculate an F-statistic under the null. The numerator degrees of freedom <span class="math inline">\((m)\)</span> denotes how many restrictions we placed on the restricted model. Since the null hypothesis sets all three slope coefficients to zero, we consider this to be 3 restrictions. The denominator degrees of freedom <span class="math inline">\((n-k-1)\)</span> is taken directly from the unrestricted model. Since <span class="math inline">\(n=526\)</span> and we originally had 3 independent variables (<span class="math inline">\(k=3\)</span>), the denominator degrees of freedom is <span class="math inline">\(n-k-1=522\)</span>. We can now calculate our F statistic under the null as well as our p-value.</p>
-<div class="sourceCode" id="cb342"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb342-1"><a href="applications.html#cb342-1" aria-hidden="true" tabindex="-1"></a>m <span class="ot">=</span> <span class="dv">3</span>; n <span class="ot">=</span> <span class="dv">526</span>; k <span class="ot">=</span> <span class="dv">3</span></span>
-<span id="cb342-2"><a href="applications.html#cb342-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb342-3"><a href="applications.html#cb342-3" aria-hidden="true" tabindex="-1"></a>(Fstat <span class="ot">&lt;-</span> ((R2u <span class="sc">-</span> R2r)<span class="sc">/</span>m)<span class="sc">/</span>((<span class="dv">1</span><span class="sc">-</span>R2u)<span class="sc">/</span>(n<span class="sc">-</span>k<span class="dv">-1</span>)))</span></code></pre></div>
+<div class="sourceCode" id="cb390"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb390-1"><a href="applications.html#cb390-1" tabindex="-1"></a>m <span class="ot">=</span> <span class="dv">3</span>; n <span class="ot">=</span> <span class="dv">526</span>; k <span class="ot">=</span> <span class="dv">3</span></span>
+<span id="cb390-2"><a href="applications.html#cb390-2" tabindex="-1"></a></span>
+<span id="cb390-3"><a href="applications.html#cb390-3" tabindex="-1"></a>(Fstat <span class="ot">&lt;-</span> ((R2u <span class="sc">-</span> R2r)<span class="sc">/</span>m)<span class="sc">/</span>((<span class="dv">1</span><span class="sc">-</span>R2u)<span class="sc">/</span>(n<span class="sc">-</span>k<span class="dv">-1</span>)))</span></code></pre></div>
 <pre><code>## [1] 76.87317</code></pre>
-<div class="sourceCode" id="cb344"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb344-1"><a href="applications.html#cb344-1" aria-hidden="true" tabindex="-1"></a>(Pval <span class="ot">&lt;-</span> <span class="fu">pf</span>(Fstat,m,n<span class="sc">-</span>k<span class="dv">-1</span>,<span class="at">lower.tail =</span> <span class="cn">FALSE</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb392"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb392-1"><a href="applications.html#cb392-1" tabindex="-1"></a>(Pval <span class="ot">&lt;-</span> <span class="fu">pf</span>(Fstat,m,n<span class="sc">-</span>k<span class="dv">-1</span>,<span class="at">lower.tail =</span> <span class="cn">FALSE</span>))</span></code></pre></div>
 <pre><code>## [1] 3.405862e-41</code></pre>
-<div class="sourceCode" id="cb346"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb346-1"><a href="applications.html#cb346-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">1</span><span class="sc">-</span>Pval)</span></code></pre></div>
+<div class="sourceCode" id="cb394"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb394-1"><a href="applications.html#cb394-1" tabindex="-1"></a>(<span class="dv">1</span><span class="sc">-</span>Pval)</span></code></pre></div>
 <pre><code>## [1] 1</code></pre>
 <p>Note that since our F-statistic is far from 0, we can reject the null with approximately 100% confidence (i.e. the p-value is essentially zero).</p>
 <div id="what-can-we-conclude-from-this" class="section level4 unnumbered hasAnchor">
 <h4>What can we conclude from this?<a href="applications.html#what-can-we-conclude-from-this" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<p>Since we rejected the null hypothesis, that means we have statistical evidence that the alternative hypothesis is true. However, take a look at the what the alternative hypothesis actually says. It says that <em>at least one</em> of the population coefficients are statistically different from zero. It doesn’t say which ones. It doesn’t say how many. That’s it…</p>
+<p>Since we rejected the null hypothesis, that means we have statistical evidence that the alternative hypothesis is true. However, take a look at what the alternative hypothesis actually says. It says that <em>at least one</em> of the population coefficients are statistically different from zero. It doesn’t say which ones. It doesn’t say how many. That’s it…</p>
 <p><strong>Is there a short cut?</strong></p>
 <p>Remember that all regression results provide the simple hypothesis that each slope coefficient is equal to zero.</p>
 <p><span class="math display">\[H_0: \beta=0 \quad \text{versus} \quad H_1: \beta \neq 0\]</span></p>
 <p>All regression results also provide the joint hypothesis that all slope coefficients are equal to zero. You can see the result at the bottom of the summary page. The last line delivers the same F-statistic we calculated above as well as a p-value that is essentially zero.</p>
 <p>Note that while this uninteresting joint hypothesis test is done by default. Other joint tests require a bit more work.</p>
-<div class="sourceCode" id="cb348"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb348-1"><a href="applications.html#cb348-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(UREG)</span></code></pre></div>
+<div class="sourceCode" id="cb396"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb396-1"><a href="applications.html#cb396-1" tabindex="-1"></a><span class="fu">summary</span>(UREG)</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = wage ~ educ + exper + tenure, data = wage1)
@@ -476,15 +498,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>If we are testing for constant returns to scale, then we want to show that increasing all of the inputs by a certain amount will result in the same increase in output. Technical issues aside, this results in the following null hypothesis for a joint test:</p>
 <p><span class="math display">\[H_0: \beta_K + \beta_L = 1 \quad \text{versus} \quad H_1: \beta_K + \beta_L \neq 1\]</span></p>
 <p>We now have all we need to test for CRS:</p>
-<div class="sourceCode" id="cb350"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb350-1"><a href="applications.html#cb350-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load data...</span></span>
-<span id="cb350-2"><a href="applications.html#cb350-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb350-3"><a href="applications.html#cb350-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb350-4"><a href="applications.html#cb350-4" aria-hidden="true" tabindex="-1"></a>CDdata <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">&quot;data/CDdata.xlsx&quot;</span>)</span>
-<span id="cb350-5"><a href="applications.html#cb350-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb350-6"><a href="applications.html#cb350-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Run unrestricted model, get R^2...</span></span>
-<span id="cb350-7"><a href="applications.html#cb350-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb350-8"><a href="applications.html#cb350-8" aria-hidden="true" tabindex="-1"></a>UREG <span class="ot">&lt;-</span> <span class="fu">lm</span>(lnGDP <span class="sc">~</span> lnK <span class="sc">+</span> lnL, <span class="at">data =</span> CDdata)</span>
-<span id="cb350-9"><a href="applications.html#cb350-9" aria-hidden="true" tabindex="-1"></a>(R2u <span class="ot">&lt;-</span> <span class="fu">summary</span>(UREG)<span class="sc">$</span>r.squared)</span></code></pre></div>
+<div class="sourceCode" id="cb398"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb398-1"><a href="applications.html#cb398-1" tabindex="-1"></a><span class="co"># Load data...</span></span>
+<span id="cb398-2"><a href="applications.html#cb398-2" tabindex="-1"></a></span>
+<span id="cb398-3"><a href="applications.html#cb398-3" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb398-4"><a href="applications.html#cb398-4" tabindex="-1"></a>CDdata <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">&quot;data/CDdata.xlsx&quot;</span>)</span>
+<span id="cb398-5"><a href="applications.html#cb398-5" tabindex="-1"></a></span>
+<span id="cb398-6"><a href="applications.html#cb398-6" tabindex="-1"></a><span class="co"># Run unrestricted model, get R^2...</span></span>
+<span id="cb398-7"><a href="applications.html#cb398-7" tabindex="-1"></a></span>
+<span id="cb398-8"><a href="applications.html#cb398-8" tabindex="-1"></a>UREG <span class="ot">&lt;-</span> <span class="fu">lm</span>(lnGDP <span class="sc">~</span> lnK <span class="sc">+</span> lnL, <span class="at">data =</span> CDdata)</span>
+<span id="cb398-9"><a href="applications.html#cb398-9" tabindex="-1"></a>(R2u <span class="ot">&lt;-</span> <span class="fu">summary</span>(UREG)<span class="sc">$</span>r.squared)</span></code></pre></div>
 <pre><code>## [1] 0.9574247</code></pre>
 <p>The unrestricted model can explain around 96% of the variation in the dependent variable. For us to determine how much the restricted model can explain, we first need to see exactly what the restriction does to our model. Starting from the unrestricted model, imposing the restriction delivers the following:</p>
 <p><span class="math display">\[lnGDP_i = \beta_0 + \beta_K \; lnK_i + \beta_L \; lnL_i + \varepsilon_i\]</span>
@@ -494,76 +516,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 where
 <span class="math display">\[\tilde{Y}_i=lnGDP_i - lnK_i \quad \text{and} \quad \tilde{X}_i=lnL_i - lnK_i\]</span></p>
 <p>Notice how these derivations deliver exactly how the variables of the model need to be transformed and what the restricted model needs to be estimated.</p>
-<div class="sourceCode" id="cb352"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb352-1"><a href="applications.html#cb352-1" aria-hidden="true" tabindex="-1"></a>Y <span class="ot">=</span> CDdata<span class="sc">$</span>lnGDP <span class="sc">-</span> CDdata<span class="sc">$</span>lnK</span>
-<span id="cb352-2"><a href="applications.html#cb352-2" aria-hidden="true" tabindex="-1"></a>X <span class="ot">=</span> CDdata<span class="sc">$</span>lnL <span class="sc">-</span> CDdata<span class="sc">$</span>lnK</span>
-<span id="cb352-3"><a href="applications.html#cb352-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb352-4"><a href="applications.html#cb352-4" aria-hidden="true" tabindex="-1"></a>RREG <span class="ot">&lt;-</span> <span class="fu">lm</span>(Y<span class="sc">~</span>X)</span>
-<span id="cb352-5"><a href="applications.html#cb352-5" aria-hidden="true" tabindex="-1"></a>(R2r <span class="ot">&lt;-</span> <span class="fu">summary</span>(RREG)<span class="sc">$</span>r.squared)</span></code></pre></div>
+<div class="sourceCode" id="cb400"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb400-1"><a href="applications.html#cb400-1" tabindex="-1"></a>Y <span class="ot">=</span> CDdata<span class="sc">$</span>lnGDP <span class="sc">-</span> CDdata<span class="sc">$</span>lnK</span>
+<span id="cb400-2"><a href="applications.html#cb400-2" tabindex="-1"></a>X <span class="ot">=</span> CDdata<span class="sc">$</span>lnL <span class="sc">-</span> CDdata<span class="sc">$</span>lnK</span>
+<span id="cb400-3"><a href="applications.html#cb400-3" tabindex="-1"></a></span>
+<span id="cb400-4"><a href="applications.html#cb400-4" tabindex="-1"></a>RREG <span class="ot">&lt;-</span> <span class="fu">lm</span>(Y<span class="sc">~</span>X)</span>
+<span id="cb400-5"><a href="applications.html#cb400-5" tabindex="-1"></a>(R2r <span class="ot">&lt;-</span> <span class="fu">summary</span>(RREG)<span class="sc">$</span>r.squared)</span></code></pre></div>
 <pre><code>## [1] 0.9370283</code></pre>
 <p>The restricted model can explain roughly 94% of the variation in the dependent variable. To see if this reduction in <span class="math inline">\(R^2\)</span> is enough to reject the null hypothesis, we need to calculate an F-statistic. The numerator degrees of freedom is <span class="math inline">\(m=1\)</span> because there is technically only one restriction in the null. The denominator degrees of freedom uses <span class="math inline">\(n=24\)</span> and <span class="math inline">\(k=2\)</span>.</p>
-<div class="sourceCode" id="cb354"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb354-1"><a href="applications.html#cb354-1" aria-hidden="true" tabindex="-1"></a>m <span class="ot">=</span> <span class="dv">1</span>; n <span class="ot">=</span> <span class="dv">24</span>; k <span class="ot">=</span> <span class="dv">2</span></span>
-<span id="cb354-2"><a href="applications.html#cb354-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb354-3"><a href="applications.html#cb354-3" aria-hidden="true" tabindex="-1"></a>(Fstat <span class="ot">&lt;-</span> ((R2u <span class="sc">-</span> R2r)<span class="sc">/</span>m)<span class="sc">/</span>((<span class="dv">1</span><span class="sc">-</span>R2u)<span class="sc">/</span>(n<span class="sc">-</span>k<span class="dv">-1</span>)))</span></code></pre></div>
+<div class="sourceCode" id="cb402"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb402-1"><a href="applications.html#cb402-1" tabindex="-1"></a>m <span class="ot">=</span> <span class="dv">1</span>; n <span class="ot">=</span> <span class="dv">24</span>; k <span class="ot">=</span> <span class="dv">2</span></span>
+<span id="cb402-2"><a href="applications.html#cb402-2" tabindex="-1"></a></span>
+<span id="cb402-3"><a href="applications.html#cb402-3" tabindex="-1"></a>(Fstat <span class="ot">&lt;-</span> ((R2u <span class="sc">-</span> R2r)<span class="sc">/</span>m)<span class="sc">/</span>((<span class="dv">1</span><span class="sc">-</span>R2u)<span class="sc">/</span>(n<span class="sc">-</span>k<span class="dv">-1</span>)))</span></code></pre></div>
 <pre><code>## [1] 10.0604</code></pre>
-<div class="sourceCode" id="cb356"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb356-1"><a href="applications.html#cb356-1" aria-hidden="true" tabindex="-1"></a>(Pval <span class="ot">&lt;-</span> <span class="fu">pf</span>(Fstat,m,n<span class="sc">-</span>k<span class="dv">-1</span>,<span class="at">lower.tail =</span> <span class="cn">FALSE</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb404"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb404-1"><a href="applications.html#cb404-1" tabindex="-1"></a>(Pval <span class="ot">&lt;-</span> <span class="fu">pf</span>(Fstat,m,n<span class="sc">-</span>k<span class="dv">-1</span>,<span class="at">lower.tail =</span> <span class="cn">FALSE</span>))</span></code></pre></div>
 <pre><code>## [1] 0.004594084</code></pre>
-<div class="sourceCode" id="cb358"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb358-1"><a href="applications.html#cb358-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">1</span><span class="sc">-</span>Pval)</span></code></pre></div>
+<div class="sourceCode" id="cb406"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb406-1"><a href="applications.html#cb406-1" tabindex="-1"></a>(<span class="dv">1</span><span class="sc">-</span>Pval)</span></code></pre></div>
 <pre><code>## [1] 0.9954059</code></pre>
 <p>As in the previous application, we received a very high F-statistic and a very low p-value. This means we <em>reject</em> the hypothesis that this country has an aggregate production function that exhibits constant returns to scale with slightly over 99.5% confidence.</p>
-
 </div>
 </div>
-<!-- </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             </section>
 
           </div>
         </div>
       </div>
-<a href="conducting-a-joint-hypothesis-test.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="conducting-a-joint-hypothesis-test.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="a-concluding-application-5.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

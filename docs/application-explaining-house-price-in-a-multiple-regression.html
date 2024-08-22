@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>8.1 Application: Explaining house price in a multiple regression | Course Companion for MBA 8370 and MBA 8380</title>
   <meta name="description" content="Course companion" />
-  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="8.1 Application: Explaining house price in a multiple regression | Course Companion for MBA 8370 and MBA 8380" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Scott Dressler" />
 
 
-<meta name="date" content="2023-01-08" />
+<meta name="date" content="2024-08-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -56,7 +56,7 @@
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -119,6 +119,10 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -178,7 +182,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3" data-path="R.html"><a href="R.html"><i class="fa fa-check"></i><b>3</b> Getting Started with R</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="the-r-project-for-statistical-computing.html"><a href="the-r-project-for-statistical-computing.html"><i class="fa fa-check"></i><b>3.1</b> The R Project for Statistical Computing</a></li>
-<li class="chapter" data-level="3.2" data-path="before-you-install-rstudio-cloud.html"><a href="before-you-install-rstudio-cloud.html"><i class="fa fa-check"></i><b>3.2</b> Before you Install… RStudio Cloud?</a></li>
+<li class="chapter" data-level="3.2" data-path="before-you-install-posit-rstudio-cloud.html"><a href="before-you-install-posit-rstudio-cloud.html"><i class="fa fa-check"></i><b>3.2</b> Before you Install… Posit (RStudio) Cloud?</a></li>
 <li class="chapter" data-level="3.3" data-path="downloading-and-installing-r.html"><a href="downloading-and-installing-r.html"><i class="fa fa-check"></i><b>3.3</b> Downloading and installing R</a>
 <ul>
 <li class="chapter" data-level="3.3.1" data-path="downloading-and-installing-r.html"><a href="downloading-and-installing-r.html#choosing-a-mirror"><i class="fa fa-check"></i><b>3.3.1</b> Choosing a <em>Mirror</em></a></li>
@@ -191,7 +195,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.5.1" data-path="coding-basics.html"><a href="coding-basics.html#installing-packages"><i class="fa fa-check"></i><b>3.5.1</b> Installing <em>Packages</em></a></li>
 <li class="chapter" data-level="3.5.2" data-path="coding-basics.html"><a href="coding-basics.html#assigning-objects"><i class="fa fa-check"></i><b>3.5.2</b> Assigning Objects</a></li>
 <li class="chapter" data-level="3.5.3" data-path="coding-basics.html"><a href="coding-basics.html#listing-adding-and-removing"><i class="fa fa-check"></i><b>3.5.3</b> Listing, Adding, and Removing</a></li>
-<li class="chapter" data-level="3.5.4" data-path="coding-basics.html"><a href="coding-basics.html#loading-data"><i class="fa fa-check"></i><b>3.5.4</b> Loading Data</a></li>
+<li class="chapter" data-level="3.5.4" data-path="coding-basics.html"><a href="coding-basics.html#importing-data"><i class="fa fa-check"></i><b>3.5.4</b> Importing Data</a></li>
 <li class="chapter" data-level="3.5.5" data-path="coding-basics.html"><a href="coding-basics.html#manipulating-data"><i class="fa fa-check"></i><b>3.5.5</b> Manipulating Data</a></li>
 <li class="chapter" data-level="3.5.6" data-path="coding-basics.html"><a href="coding-basics.html#subsetting-data"><i class="fa fa-check"></i><b>3.5.6</b> Subsetting Data</a></li>
 </ul></li>
@@ -281,13 +285,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.5.3" data-path="assumptions-of-the-linear-regression-model.html"><a href="assumptions-of-the-linear-regression-model.html#equal-variance"><i class="fa fa-check"></i><b>7.5.3</b> Equal Variance</a></li>
 <li class="chapter" data-level="7.5.4" data-path="assumptions-of-the-linear-regression-model.html"><a href="assumptions-of-the-linear-regression-model.html#normality-of-errors"><i class="fa fa-check"></i><b>7.5.4</b> Normality of Errors</a></li>
 </ul></li>
-<li class="chapter" data-level="7.6" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html"><i class="fa fa-check"></i><b>7.6</b> Appendix: Statistical Inference</a>
+<li class="chapter" data-level="7.6" data-path="a-concluding-application.html"><a href="a-concluding-application.html"><i class="fa fa-check"></i><b>7.6</b> A Concluding Application</a></li>
+<li class="chapter" data-level="7.7" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html"><i class="fa fa-check"></i><b>7.7</b> Appendix: Statistical Inference</a>
 <ul>
-<li class="chapter" data-level="7.6.1" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-population-parameters"><i class="fa fa-check"></i><b>7.6.1</b> Confidence Intervals (around population parameters)</a></li>
-<li class="chapter" data-level="7.6.2" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#hypothesis-tests"><i class="fa fa-check"></i><b>7.6.2</b> Hypothesis Tests</a></li>
-<li class="chapter" data-level="7.6.3" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-forecasts"><i class="fa fa-check"></i><b>7.6.3</b> Confidence Intervals (around forecasts)</a></li>
+<li class="chapter" data-level="7.7.1" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-population-parameters"><i class="fa fa-check"></i><b>7.7.1</b> Confidence Intervals (around population parameters)</a></li>
+<li class="chapter" data-level="7.7.2" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#hypothesis-tests"><i class="fa fa-check"></i><b>7.7.2</b> Hypothesis Tests</a></li>
+<li class="chapter" data-level="7.7.3" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-forecasts"><i class="fa fa-check"></i><b>7.7.3</b> Confidence Intervals (around forecasts)</a></li>
 </ul></li>
-<li class="chapter" data-level="7.7" data-path="up-next.html"><a href="up-next.html"><i class="fa fa-check"></i><b>7.7</b> Up Next…</a></li>
+<li class="chapter" data-level="7.8" data-path="up-next.html"><a href="up-next.html"><i class="fa fa-check"></i><b>7.8</b> Up Next…</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="MLR.html"><a href="MLR.html"><i class="fa fa-check"></i><b>8</b> Multiple Linear Regression</a>
 <ul>
@@ -307,6 +312,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.3.3" data-path="statistical-inference.html"><a href="statistical-inference.html#hypothesis-tests-1"><i class="fa fa-check"></i><b>8.3.3</b> Hypothesis Tests</a></li>
 <li class="chapter" data-level="8.3.4" data-path="statistical-inference.html"><a href="statistical-inference.html#confidence-intervals-around-forecasts-1"><i class="fa fa-check"></i><b>8.3.4</b> Confidence Intervals (around forecasts)</a></li>
 </ul></li>
+<li class="chapter" data-level="8.4" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html"><i class="fa fa-check"></i><b>8.4</b> A Concluding Application</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#interpretation"><i class="fa fa-check"></i>Interpretation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#confidence-intervals"><i class="fa fa-check"></i>Confidence Intervals</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#hypothesis-tests-2"><i class="fa fa-check"></i>Hypothesis Tests</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#forecasts"><i class="fa fa-check"></i>Forecasts</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="COL.html"><a href="COL.html"><i class="fa fa-check"></i><b>9</b> Collinearity</a>
 <ul>
@@ -322,17 +334,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="how-do-we-remove-collinearity.html"><a href="how-do-we-remove-collinearity.html#sometimes-removing-collinearity-might-involve-multiple-rounds"><i class="fa fa-check"></i>Sometimes removing collinearity might involve multiple rounds</a></li>
 </ul></li>
+<li class="chapter" data-level="9.5" data-path="a-concluding-application-2.html"><a href="a-concluding-application-2.html"><i class="fa fa-check"></i><b>9.5</b> A Concluding Application</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="DVS.html"><a href="DVS.html"><i class="fa fa-check"></i><b>10</b> Qualitative (Dummy) Variables</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="intercept-dummy-variable.html"><a href="intercept-dummy-variable.html"><i class="fa fa-check"></i><b>10.1</b> Intercept dummy variable</a></li>
 <li class="chapter" data-level="10.2" data-path="slope-dummy-variable.html"><a href="slope-dummy-variable.html"><i class="fa fa-check"></i><b>10.2</b> Slope dummy variable</a></li>
 <li class="chapter" data-level="10.3" data-path="what-if-there-are-more-than-two-categories.html"><a href="what-if-there-are-more-than-two-categories.html"><i class="fa fa-check"></i><b>10.3</b> What if there are more than two categories?</a></li>
-<li class="chapter" data-level="10.4" data-path="a-final-application.html"><a href="a-final-application.html"><i class="fa fa-check"></i><b>10.4</b> A Final Application</a>
+<li class="chapter" data-level="10.4" data-path="a-concluding-application-3.html"><a href="a-concluding-application-3.html"><i class="fa fa-check"></i><b>10.4</b> A Concluding Application</a></li>
+<li class="chapter" data-level="10.5" data-path="another-concluding-application.html"><a href="another-concluding-application.html"><i class="fa fa-check"></i><b>10.5</b> Another Concluding Application</a>
 <ul>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#make-a-nominal-series-a-real-series"><i class="fa fa-check"></i>Make a <em>Nominal</em> Series a <em>Real</em> Series</a></li>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#remove-a-trend"><i class="fa fa-check"></i>Remove a Trend</a></li>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#remove-seasonality"><i class="fa fa-check"></i>Remove Seasonality</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#make-a-nominal-series-a-real-series"><i class="fa fa-check"></i>Make a <em>Nominal</em> Series a <em>Real</em> Series</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#remove-a-trend"><i class="fa fa-check"></i>Remove a Trend</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#remove-seasonality"><i class="fa fa-check"></i>Remove Seasonality</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="FF.html"><a href="FF.html"><i class="fa fa-check"></i><b>11</b> Functional Forms</a>
@@ -354,6 +368,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="the-reciprocal-transformation.html"><a href="the-reciprocal-transformation.html#application-6"><i class="fa fa-check"></i>Application</a></li>
 </ul></li>
 <li class="chapter" data-level="11.6" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>11.6</b> Conclusion</a></li>
+<li class="chapter" data-level="11.7" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html"><i class="fa fa-check"></i><b>11.7</b> A Concluding Application</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#a-residual-analysis"><i class="fa fa-check"></i>A Residual Analysis</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#log-transformation"><i class="fa fa-check"></i>Log Transformation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#quadratic-transformation"><i class="fa fa-check"></i>Quadratic Transformation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#reciprocal-transformation"><i class="fa fa-check"></i>Reciprocal Transformation</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="JHT.html"><a href="JHT.html"><i class="fa fa-check"></i><b>12</b> Joint Hypothesis Tests</a>
 <ul>
@@ -373,6 +394,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="applications.html"><a href="applications.html#application-1-a-wage-application"><i class="fa fa-check"></i>Application 1: A wage application</a></li>
 <li class="chapter" data-level="" data-path="applications.html"><a href="applications.html#application-2-constant-returns-to-scale"><i class="fa fa-check"></i>Application 2: Constant Returns to Scale</a></li>
 </ul></li>
+<li class="chapter" data-level="12.4" data-path="a-concluding-application-5.html"><a href="a-concluding-application-5.html"><i class="fa fa-check"></i><b>12.4</b> A Concluding Application</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -402,40 +424,40 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Our SRF becomes:</p>
 <p><span class="math display">\[price_i=\hat{\beta}_0+\hat{\beta}_1 \;sqrft_i+\hat{\beta}_2 \;bdrms_i+e_i\]</span></p>
 <p>To visualize what we are about to do, lets start with scatter plots looking at the relationships between the dependent variable and each independent variable.</p>
-<p>The figure on the left is the scatter plot between the House Price and House Size. This positive relationship is exactly what we have looked at previously. The figure on the right is the scatter plot between the same House Price but the number of bedrooms each house has. This figure illustrates that the houses in our sample have between 2 and 7 bedrooms (with no half-rooms), and homes with more bedrooms generally have higher prices (as expected). Note that we are looking at the same dependent variable along different <em>dimensions</em>. We can combine these dimensions into a singe (3-Dimensional) figure to see how the relationships between the dependent variable and each independent variable appear simultaneously.</p>
-<div class="sourceCode" id="cb224"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb224-1"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb224-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(hprice1,<span class="at">package=</span><span class="st">&#39;wooldridge&#39;</span>)</span>
-<span id="cb224-2"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb224-2" aria-hidden="true" tabindex="-1"></a>Y <span class="ot">&lt;-</span> hprice1<span class="sc">$</span>price</span>
-<span id="cb224-3"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb224-3" aria-hidden="true" tabindex="-1"></a>X1 <span class="ot">&lt;-</span> hprice1<span class="sc">$</span>sqrft</span>
-<span id="cb224-4"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb224-4" aria-hidden="true" tabindex="-1"></a>X2 <span class="ot">&lt;-</span> hprice1<span class="sc">$</span>bdrms</span>
-<span id="cb224-5"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb224-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb224-6"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb224-6" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>))</span>
-<span id="cb224-7"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb224-7" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(X1,Y, <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>,</span>
-<span id="cb224-8"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb224-8" aria-hidden="true" tabindex="-1"></a>          <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">cex =</span> <span class="dv">1</span>,</span>
-<span id="cb224-9"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb224-9" aria-hidden="true" tabindex="-1"></a>          <span class="at">xlab =</span> <span class="st">&quot;House Size&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;House Price&quot;</span>)</span>
-<span id="cb224-10"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb224-10" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(X2,Y, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>,</span>
-<span id="cb224-11"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb224-11" aria-hidden="true" tabindex="-1"></a>          <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">cex =</span> <span class="dv">1</span>,</span>
-<span id="cb224-12"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb224-12" aria-hidden="true" tabindex="-1"></a>          <span class="at">xlab =</span> <span class="st">&quot;Bedrooms&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;House Price&quot;</span>)</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-128-1.png" width="672" style="display: block; margin: auto;" /></p>
-<div class="sourceCode" id="cb225"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb225-1"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb225-1" aria-hidden="true" tabindex="-1"></a><span class="fu">scatter3D</span>(X1, X2, Y, <span class="at">pch =</span> <span class="dv">20</span>, <span class="at">cex =</span> <span class="dv">1</span>, <span class="at">phi =</span> <span class="dv">0</span>,</span>
-<span id="cb225-2"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb225-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">colkey=</span><span class="cn">FALSE</span>, <span class="at">ticktype =</span> <span class="st">&quot;detailed&quot;</span>,</span>
-<span id="cb225-3"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb225-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">xlab =</span> <span class="st">&quot;House Size&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Bedrooms&quot;</span>,</span>
-<span id="cb225-4"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb225-4" aria-hidden="true" tabindex="-1"></a>          <span class="at">zlab =</span> <span class="st">&quot;House Price&quot;</span>, <span class="at">main =</span> <span class="st">&quot;3D Scatterplot&quot;</span>)</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-129-1.png" width="624" style="display: block; margin: auto;" /></p>
-<p>For comparison, suppose that we consider these independent variables one at a time in two simple regressions. In particular, we can examine one simple regression model where House Size is the only independent variable, and another simple regression model where Bedrooms is the only independent variable.<a href="#fn28" class="footnote-ref" id="fnref28"><sup>28</sup></a></p>
-<div class="sourceCode" id="cb226"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb226-1"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb226-1" aria-hidden="true" tabindex="-1"></a>REG1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(hprice1<span class="sc">$</span>price <span class="sc">~</span> hprice1<span class="sc">$</span>sqrft)</span>
-<span id="cb226-2"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb226-2" aria-hidden="true" tabindex="-1"></a><span class="fu">coef</span>(REG1)</span></code></pre></div>
+<p>The figure on the left is the scatter plot between the House Price and House Size. This positive relationship is exactly what we have looked at previously. The figure on the right is the scatter plot between the House Price and the number of bedrooms each house has. This figure illustrates that the houses in our sample have between 2 and 7 bedrooms (with no half-rooms), and homes with more bedrooms generally have higher prices (as expected). Note that we are looking at the same dependent variable along different <em>dimensions</em>. We can combine these dimensions into a singe (3-Dimensional) figure to see how the relationships between the dependent variable and each independent variable appear simultaneously.</p>
+<div class="sourceCode" id="cb237"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb237-1"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb237-1" tabindex="-1"></a><span class="fu">data</span>(hprice1,<span class="at">package=</span><span class="st">&#39;wooldridge&#39;</span>)</span>
+<span id="cb237-2"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb237-2" tabindex="-1"></a>Y <span class="ot">&lt;-</span> hprice1<span class="sc">$</span>price</span>
+<span id="cb237-3"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb237-3" tabindex="-1"></a>X1 <span class="ot">&lt;-</span> hprice1<span class="sc">$</span>sqrft</span>
+<span id="cb237-4"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb237-4" tabindex="-1"></a>X2 <span class="ot">&lt;-</span> hprice1<span class="sc">$</span>bdrms</span>
+<span id="cb237-5"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb237-5" tabindex="-1"></a></span>
+<span id="cb237-6"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb237-6" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>))</span>
+<span id="cb237-7"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb237-7" tabindex="-1"></a><span class="fu">plot</span>(X1,Y, <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>,</span>
+<span id="cb237-8"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb237-8" tabindex="-1"></a>          <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">cex =</span> <span class="dv">1</span>,</span>
+<span id="cb237-9"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb237-9" tabindex="-1"></a>          <span class="at">xlab =</span> <span class="st">&quot;House Size&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;House Price&quot;</span>)</span>
+<span id="cb237-10"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb237-10" tabindex="-1"></a><span class="fu">plot</span>(X2,Y, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>,</span>
+<span id="cb237-11"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb237-11" tabindex="-1"></a>          <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">cex =</span> <span class="dv">1</span>,</span>
+<span id="cb237-12"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb237-12" tabindex="-1"></a>          <span class="at">xlab =</span> <span class="st">&quot;Bedrooms&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;House Price&quot;</span>)</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-138-1.png" width="672" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb238"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb238-1"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb238-1" tabindex="-1"></a><span class="fu">scatter3D</span>(X1, X2, Y, <span class="at">pch =</span> <span class="dv">20</span>, <span class="at">cex =</span> <span class="dv">1</span>, <span class="at">phi =</span> <span class="dv">0</span>,</span>
+<span id="cb238-2"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb238-2" tabindex="-1"></a>          <span class="at">colkey=</span><span class="cn">FALSE</span>, <span class="at">ticktype =</span> <span class="st">&quot;detailed&quot;</span>,</span>
+<span id="cb238-3"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb238-3" tabindex="-1"></a>          <span class="at">xlab =</span> <span class="st">&quot;House Size&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Bedrooms&quot;</span>,</span>
+<span id="cb238-4"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb238-4" tabindex="-1"></a>          <span class="at">zlab =</span> <span class="st">&quot;House Price&quot;</span>, <span class="at">main =</span> <span class="st">&quot;3D Scatterplot&quot;</span>)</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-139-1.png" width="624" style="display: block; margin: auto;" /></p>
+<p>For comparison, suppose we consider these independent variables one at a time in two simple regressions. In particular, we can examine one simple regression model where House Size is the only independent variable, and another simple regression model where Bedrooms is the only independent variable.<a href="#fn32" class="footnote-ref" id="fnref32"><sup>32</sup></a></p>
+<div class="sourceCode" id="cb239"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb239-1"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb239-1" tabindex="-1"></a>REG1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(hprice1<span class="sc">$</span>price <span class="sc">~</span> hprice1<span class="sc">$</span>sqrft)</span>
+<span id="cb239-2"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb239-2" tabindex="-1"></a><span class="fu">coef</span>(REG1)</span></code></pre></div>
 <pre><code>##   (Intercept) hprice1$sqrft 
 ##     11.204145      0.140211</code></pre>
-<div class="sourceCode" id="cb228"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb228-1"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb228-1" aria-hidden="true" tabindex="-1"></a>REG2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(hprice1<span class="sc">$</span>price <span class="sc">~</span> hprice1<span class="sc">$</span>bdrms)</span>
-<span id="cb228-2"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb228-2" aria-hidden="true" tabindex="-1"></a><span class="fu">coef</span>(REG2)</span></code></pre></div>
+<div class="sourceCode" id="cb241"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb241-1"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb241-1" tabindex="-1"></a>REG2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(hprice1<span class="sc">$</span>price <span class="sc">~</span> hprice1<span class="sc">$</span>bdrms)</span>
+<span id="cb241-2"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb241-2" tabindex="-1"></a><span class="fu">coef</span>(REG2)</span></code></pre></div>
 <pre><code>##   (Intercept) hprice1$bdrms 
 ##      72.23111      62.02456</code></pre>
 <p>The regression considering house size alone has a slope coefficient of 0.14. Remember that since house price was denoted in thousands of dollars and house size was denoted in square feet, this slope coefficient states that an additional square foot of house size will increase the average house price by $140.</p>
 <p>The regression considering number of bedrooms alone has a slope coefficient of 62. This slope coefficient states that an additional bedroom will increase the average house price by $62,000.</p>
 <p>While the results from these two simple regressions make sense, we need to realize that a simple regression model only considers a single independent variable (and throws all of the other information into the garbage can). This means the first regression takes no notice of the number of rooms a house has, while the second regression takes no notice of the size of the home. Since it is reasonable to assume that bigger homes have more bedrooms, then a regression model that is only given one of these pieces of information might be overstating the quantitative impact of the single independent variable.</p>
 <p>To illustrate this, let us run a multiple regression model where both house size and number of bedrooms are considered.</p>
-<div class="sourceCode" id="cb230"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb230-1"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb230-1" aria-hidden="true" tabindex="-1"></a>REG3 <span class="ot">&lt;-</span> <span class="fu">lm</span>(price <span class="sc">~</span> sqrft <span class="sc">+</span> bdrms, <span class="at">data =</span> hprice1)</span>
-<span id="cb230-2"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb230-2" aria-hidden="true" tabindex="-1"></a><span class="fu">coef</span>(REG3)</span></code></pre></div>
+<div class="sourceCode" id="cb243"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb243-1"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb243-1" tabindex="-1"></a>REG3 <span class="ot">&lt;-</span> <span class="fu">lm</span>(price <span class="sc">~</span> sqrft <span class="sc">+</span> bdrms, <span class="at">data =</span> hprice1)</span>
+<span id="cb243-2"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb243-2" tabindex="-1"></a><span class="fu">coef</span>(REG3)</span></code></pre></div>
 <pre><code>## (Intercept)       sqrft       bdrms 
 ## -19.3149958   0.1284362  15.1981910</code></pre>
 <p>The slope with respect to house size is now 0.128 (down from 0.14) while the slope with respect to number of bedrooms is now 15.2 (down from 62). In order to make sense of these changes, let us explicitly interpret these slope coefficients within the context of a multiple regression model (where we can hold all other independent variables constant).</p>
@@ -447,20 +469,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </blockquote>
 <p>The power of a multiple regression comes through when you look at the second slope interpretation. Multiple regression allows us to consider two houses that have the same house size but one house has an additional bedroom. In other words, imagine building a wall that turns one bedroom into two smaller bedrooms (and doesn’t change the house size). This will increase the expected house price by $15,200. This is much smaller than the simple regression relationship of $62,000 because the simple regression could not differentiate the impact of a bedroom from the impact of an increase in house size. The multiple regression model can.</p>
 <p>The final figure shows the 3-dimensional regression line (i.e., plane) that best fits the sample. You can see that considering multiple dimensions increases the performance of the deterministic component of the model and therefore reduces the amount of information that goes into the garbage can as <em>unpredictable</em>. This can be shown in the last picture that only looks at the relationship from the “sqrft” dimension. In the figure on the left, the blue dots are the observations in the data, the black line is the regression line from the simple regression model (without Bedrooms), while the red dots are the model predictions from the multiple regression model with Bedrooms included as an additional independent variable. Notice how this allows the regression predictions to veer off of a straight line. This results in slightly less prediction errors showing up in your garbage can - as illustrated in the figure on the right.</p>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-132-1.png" width="624" style="display: block; margin: auto;" /></p>
-<div class="sourceCode" id="cb232"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb232-1"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb232-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>))</span>
-<span id="cb232-2"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb232-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(hprice1<span class="sc">$</span>sqrft,hprice1<span class="sc">$</span>price, <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>,</span>
-<span id="cb232-3"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb232-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">cex =</span> <span class="dv">1</span>,</span>
-<span id="cb232-4"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb232-4" aria-hidden="true" tabindex="-1"></a>          <span class="at">xlab =</span> <span class="st">&quot;House Size&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;House Price&quot;</span>)</span>
-<span id="cb232-5"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb232-5" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(hprice1<span class="sc">$</span>sqrft,<span class="fu">fitted</span>(REG1))</span>
-<span id="cb232-6"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb232-6" aria-hidden="true" tabindex="-1"></a><span class="fu">points</span>(hprice1<span class="sc">$</span>sqrft,<span class="fu">fitted</span>(REG3),<span class="at">col =</span> <span class="st">&quot;red&quot;</span>)</span>
-<span id="cb232-7"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb232-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb232-8"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb232-8" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(hprice1<span class="sc">$</span>sqrft,<span class="fu">residuals</span>(REG1), <span class="at">col =</span> <span class="st">&quot;black&quot;</span>,</span>
-<span id="cb232-9"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb232-9" aria-hidden="true" tabindex="-1"></a>          <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">cex =</span> <span class="dv">1</span>,</span>
-<span id="cb232-10"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb232-10" aria-hidden="true" tabindex="-1"></a>          <span class="at">xlab =</span> <span class="st">&quot;House Size&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Residuals&quot;</span>)</span>
-<span id="cb232-11"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb232-11" aria-hidden="true" tabindex="-1"></a><span class="fu">points</span>(hprice1<span class="sc">$</span>sqrft,<span class="fu">residuals</span>(REG3),<span class="at">col =</span> <span class="st">&quot;red&quot;</span>)</span>
-<span id="cb232-12"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb232-12" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>,<span class="at">col=</span><span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-133-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-142-1.png" width="624" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb245"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb245-1"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb245-1" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>))</span>
+<span id="cb245-2"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb245-2" tabindex="-1"></a><span class="fu">plot</span>(hprice1<span class="sc">$</span>sqrft,hprice1<span class="sc">$</span>price, <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>,</span>
+<span id="cb245-3"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb245-3" tabindex="-1"></a>          <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">cex =</span> <span class="dv">1</span>,</span>
+<span id="cb245-4"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb245-4" tabindex="-1"></a>          <span class="at">xlab =</span> <span class="st">&quot;House Size&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;House Price&quot;</span>)</span>
+<span id="cb245-5"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb245-5" tabindex="-1"></a><span class="fu">lines</span>(hprice1<span class="sc">$</span>sqrft,<span class="fu">fitted</span>(REG1))</span>
+<span id="cb245-6"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb245-6" tabindex="-1"></a><span class="fu">points</span>(hprice1<span class="sc">$</span>sqrft,<span class="fu">fitted</span>(REG3),<span class="at">col =</span> <span class="st">&quot;red&quot;</span>)</span>
+<span id="cb245-7"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb245-7" tabindex="-1"></a></span>
+<span id="cb245-8"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb245-8" tabindex="-1"></a><span class="fu">plot</span>(hprice1<span class="sc">$</span>sqrft,<span class="fu">residuals</span>(REG1), <span class="at">col =</span> <span class="st">&quot;black&quot;</span>,</span>
+<span id="cb245-9"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb245-9" tabindex="-1"></a>          <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">cex =</span> <span class="dv">1</span>,</span>
+<span id="cb245-10"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb245-10" tabindex="-1"></a>          <span class="at">xlab =</span> <span class="st">&quot;House Size&quot;</span>, <span class="at">ylab =</span> <span class="st">&quot;Residuals&quot;</span>)</span>
+<span id="cb245-11"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb245-11" tabindex="-1"></a><span class="fu">points</span>(hprice1<span class="sc">$</span>sqrft,<span class="fu">residuals</span>(REG3),<span class="at">col =</span> <span class="st">&quot;red&quot;</span>)</span>
+<span id="cb245-12"><a href="application-explaining-house-price-in-a-multiple-regression.html#cb245-12" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h =</span> <span class="dv">0</span>,<span class="at">col=</span><span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-143-1.png" width="672" style="display: block; margin: auto;" /></p>
 <div id="the-importance-of-controls" class="section level3 hasAnchor" number="8.1.1">
 <h3><span class="header-section-number">8.1.1</span> The Importance of “Controls”<a href="application-explaining-house-price-in-a-multiple-regression.html#the-importance-of-controls" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>One very important item to point out in the last application is exactly why the coefficient on number of bedrooms dropped from $62,000 to $15,200 when the size of the house was added to the regression. The reason can be broken up into two categories.</p>
@@ -471,15 +493,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="all-else-equal-in-a-multiple-regression-is-more-than-just-words" class="section level4 unnumbered hasAnchor">
 <h4>2. “All Else Equal” in a Multiple Regression is more than just words<a href="application-explaining-house-price-in-a-multiple-regression.html#all-else-equal-in-a-multiple-regression-is-more-than-just-words" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>A multiple regression can separately identify the average impact of each independent variable on the dependent variable.</p>
-<p>Put together, these two items suggest that when two independent variables are correlated, then they should both appear in the regression model. If not, then the correlation between an included independent variable and an omitted independent variable might lead to <em>omitted variable bias</em>. This is what we saw above in the regression with only number of bedrooms as an independent variable. The coefficient of $62,000 is giving you the combined impact of an additional room <em>and</em> a bigger house. When you add house size as another independent variable, you are now able to determine the expected increase in house price for an additional bedroom <em>holding house size constant</em>.</p>
-<p>Bottom line is that even though you are concerned with the results from a particular independent variable, it is important to try and include all independent variables that might be correlated with the independent variable of interest. This attempts to alleviate omitted variable bias.</p>
+<p>Put together, these two items suggest that when two independent variables are correlated, they should both appear in the regression model. If not, then the correlation between an included independent variable and an omitted independent variable might lead to <em>omitted variable bias</em>.<a href="#fn33" class="footnote-ref" id="fnref33"><sup>33</sup></a> This is what we saw above in the regression with only number of bedrooms as an independent variable. The coefficient of $62,000 is giving you the combined impact of an additional room <em>and</em> a bigger house. When you add house size as another independent variable, you are now able to determine the expected increase in house price for an additional bedroom <em>holding house size constant</em>.</p>
+<p>Bottom line is that even though you are concerned with the results from a particular independent variable, it is important to try and include all independent variables that might be correlated with the independent variable of interest. This attempts to alleviate omitted variable bias, and why we quickly switched from simple to multiple regression analysis.</p>
 </div>
 </div>
 </div>
 <div class="footnotes">
 <hr />
-<ol start="28">
-<li id="fn28"><p>Note that this is only for explanatory purposes only. If this were an actual analysis, we really wouldn’t gain much from considering each independent variable separately.<a href="application-explaining-house-price-in-a-multiple-regression.html#fnref28" class="footnote-back">↩︎</a></p></li>
+<ol start="32">
+<li id="fn32"><p>Note that this is only for explanatory purposes only. If this were an actual analysis, we really wouldn’t gain much from considering each independent variable separately.<a href="application-explaining-house-price-in-a-multiple-regression.html#fnref32" class="footnote-back">↩︎</a></p></li>
+<li id="fn33"><p>Note that it could also be a problem if the independent variables are <em>too correlated</em> with each other. This is called <em>collinearity</em> and is addressed in the next chapter.<a href="application-explaining-house-price-in-a-multiple-regression.html#fnref33" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

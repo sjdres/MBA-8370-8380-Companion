@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>6.3 Two methods for conducting a hypothesis test (when \(\sigma\) is known) | Course Companion for MBA 8370 and MBA 8380</title>
   <meta name="description" content="Course companion" />
-  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="6.3 Two methods for conducting a hypothesis test (when \(\sigma\) is known) | Course Companion for MBA 8370 and MBA 8380" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Scott Dressler" />
 
 
-<meta name="date" content="2023-01-08" />
+<meta name="date" content="2024-08-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -56,7 +56,7 @@
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -119,6 +119,10 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -178,7 +182,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3" data-path="R.html"><a href="R.html"><i class="fa fa-check"></i><b>3</b> Getting Started with R</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="the-r-project-for-statistical-computing.html"><a href="the-r-project-for-statistical-computing.html"><i class="fa fa-check"></i><b>3.1</b> The R Project for Statistical Computing</a></li>
-<li class="chapter" data-level="3.2" data-path="before-you-install-rstudio-cloud.html"><a href="before-you-install-rstudio-cloud.html"><i class="fa fa-check"></i><b>3.2</b> Before you Install… RStudio Cloud?</a></li>
+<li class="chapter" data-level="3.2" data-path="before-you-install-posit-rstudio-cloud.html"><a href="before-you-install-posit-rstudio-cloud.html"><i class="fa fa-check"></i><b>3.2</b> Before you Install… Posit (RStudio) Cloud?</a></li>
 <li class="chapter" data-level="3.3" data-path="downloading-and-installing-r.html"><a href="downloading-and-installing-r.html"><i class="fa fa-check"></i><b>3.3</b> Downloading and installing R</a>
 <ul>
 <li class="chapter" data-level="3.3.1" data-path="downloading-and-installing-r.html"><a href="downloading-and-installing-r.html#choosing-a-mirror"><i class="fa fa-check"></i><b>3.3.1</b> Choosing a <em>Mirror</em></a></li>
@@ -191,7 +195,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.5.1" data-path="coding-basics.html"><a href="coding-basics.html#installing-packages"><i class="fa fa-check"></i><b>3.5.1</b> Installing <em>Packages</em></a></li>
 <li class="chapter" data-level="3.5.2" data-path="coding-basics.html"><a href="coding-basics.html#assigning-objects"><i class="fa fa-check"></i><b>3.5.2</b> Assigning Objects</a></li>
 <li class="chapter" data-level="3.5.3" data-path="coding-basics.html"><a href="coding-basics.html#listing-adding-and-removing"><i class="fa fa-check"></i><b>3.5.3</b> Listing, Adding, and Removing</a></li>
-<li class="chapter" data-level="3.5.4" data-path="coding-basics.html"><a href="coding-basics.html#loading-data"><i class="fa fa-check"></i><b>3.5.4</b> Loading Data</a></li>
+<li class="chapter" data-level="3.5.4" data-path="coding-basics.html"><a href="coding-basics.html#importing-data"><i class="fa fa-check"></i><b>3.5.4</b> Importing Data</a></li>
 <li class="chapter" data-level="3.5.5" data-path="coding-basics.html"><a href="coding-basics.html#manipulating-data"><i class="fa fa-check"></i><b>3.5.5</b> Manipulating Data</a></li>
 <li class="chapter" data-level="3.5.6" data-path="coding-basics.html"><a href="coding-basics.html#subsetting-data"><i class="fa fa-check"></i><b>3.5.6</b> Subsetting Data</a></li>
 </ul></li>
@@ -281,13 +285,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.5.3" data-path="assumptions-of-the-linear-regression-model.html"><a href="assumptions-of-the-linear-regression-model.html#equal-variance"><i class="fa fa-check"></i><b>7.5.3</b> Equal Variance</a></li>
 <li class="chapter" data-level="7.5.4" data-path="assumptions-of-the-linear-regression-model.html"><a href="assumptions-of-the-linear-regression-model.html#normality-of-errors"><i class="fa fa-check"></i><b>7.5.4</b> Normality of Errors</a></li>
 </ul></li>
-<li class="chapter" data-level="7.6" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html"><i class="fa fa-check"></i><b>7.6</b> Appendix: Statistical Inference</a>
+<li class="chapter" data-level="7.6" data-path="a-concluding-application.html"><a href="a-concluding-application.html"><i class="fa fa-check"></i><b>7.6</b> A Concluding Application</a></li>
+<li class="chapter" data-level="7.7" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html"><i class="fa fa-check"></i><b>7.7</b> Appendix: Statistical Inference</a>
 <ul>
-<li class="chapter" data-level="7.6.1" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-population-parameters"><i class="fa fa-check"></i><b>7.6.1</b> Confidence Intervals (around population parameters)</a></li>
-<li class="chapter" data-level="7.6.2" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#hypothesis-tests"><i class="fa fa-check"></i><b>7.6.2</b> Hypothesis Tests</a></li>
-<li class="chapter" data-level="7.6.3" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-forecasts"><i class="fa fa-check"></i><b>7.6.3</b> Confidence Intervals (around forecasts)</a></li>
+<li class="chapter" data-level="7.7.1" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-population-parameters"><i class="fa fa-check"></i><b>7.7.1</b> Confidence Intervals (around population parameters)</a></li>
+<li class="chapter" data-level="7.7.2" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#hypothesis-tests"><i class="fa fa-check"></i><b>7.7.2</b> Hypothesis Tests</a></li>
+<li class="chapter" data-level="7.7.3" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-forecasts"><i class="fa fa-check"></i><b>7.7.3</b> Confidence Intervals (around forecasts)</a></li>
 </ul></li>
-<li class="chapter" data-level="7.7" data-path="up-next.html"><a href="up-next.html"><i class="fa fa-check"></i><b>7.7</b> Up Next…</a></li>
+<li class="chapter" data-level="7.8" data-path="up-next.html"><a href="up-next.html"><i class="fa fa-check"></i><b>7.8</b> Up Next…</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="MLR.html"><a href="MLR.html"><i class="fa fa-check"></i><b>8</b> Multiple Linear Regression</a>
 <ul>
@@ -307,6 +312,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.3.3" data-path="statistical-inference.html"><a href="statistical-inference.html#hypothesis-tests-1"><i class="fa fa-check"></i><b>8.3.3</b> Hypothesis Tests</a></li>
 <li class="chapter" data-level="8.3.4" data-path="statistical-inference.html"><a href="statistical-inference.html#confidence-intervals-around-forecasts-1"><i class="fa fa-check"></i><b>8.3.4</b> Confidence Intervals (around forecasts)</a></li>
 </ul></li>
+<li class="chapter" data-level="8.4" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html"><i class="fa fa-check"></i><b>8.4</b> A Concluding Application</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#interpretation"><i class="fa fa-check"></i>Interpretation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#confidence-intervals"><i class="fa fa-check"></i>Confidence Intervals</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#hypothesis-tests-2"><i class="fa fa-check"></i>Hypothesis Tests</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#forecasts"><i class="fa fa-check"></i>Forecasts</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="COL.html"><a href="COL.html"><i class="fa fa-check"></i><b>9</b> Collinearity</a>
 <ul>
@@ -322,17 +334,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="how-do-we-remove-collinearity.html"><a href="how-do-we-remove-collinearity.html#sometimes-removing-collinearity-might-involve-multiple-rounds"><i class="fa fa-check"></i>Sometimes removing collinearity might involve multiple rounds</a></li>
 </ul></li>
+<li class="chapter" data-level="9.5" data-path="a-concluding-application-2.html"><a href="a-concluding-application-2.html"><i class="fa fa-check"></i><b>9.5</b> A Concluding Application</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="DVS.html"><a href="DVS.html"><i class="fa fa-check"></i><b>10</b> Qualitative (Dummy) Variables</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="intercept-dummy-variable.html"><a href="intercept-dummy-variable.html"><i class="fa fa-check"></i><b>10.1</b> Intercept dummy variable</a></li>
 <li class="chapter" data-level="10.2" data-path="slope-dummy-variable.html"><a href="slope-dummy-variable.html"><i class="fa fa-check"></i><b>10.2</b> Slope dummy variable</a></li>
 <li class="chapter" data-level="10.3" data-path="what-if-there-are-more-than-two-categories.html"><a href="what-if-there-are-more-than-two-categories.html"><i class="fa fa-check"></i><b>10.3</b> What if there are more than two categories?</a></li>
-<li class="chapter" data-level="10.4" data-path="a-final-application.html"><a href="a-final-application.html"><i class="fa fa-check"></i><b>10.4</b> A Final Application</a>
+<li class="chapter" data-level="10.4" data-path="a-concluding-application-3.html"><a href="a-concluding-application-3.html"><i class="fa fa-check"></i><b>10.4</b> A Concluding Application</a></li>
+<li class="chapter" data-level="10.5" data-path="another-concluding-application.html"><a href="another-concluding-application.html"><i class="fa fa-check"></i><b>10.5</b> Another Concluding Application</a>
 <ul>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#make-a-nominal-series-a-real-series"><i class="fa fa-check"></i>Make a <em>Nominal</em> Series a <em>Real</em> Series</a></li>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#remove-a-trend"><i class="fa fa-check"></i>Remove a Trend</a></li>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#remove-seasonality"><i class="fa fa-check"></i>Remove Seasonality</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#make-a-nominal-series-a-real-series"><i class="fa fa-check"></i>Make a <em>Nominal</em> Series a <em>Real</em> Series</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#remove-a-trend"><i class="fa fa-check"></i>Remove a Trend</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#remove-seasonality"><i class="fa fa-check"></i>Remove Seasonality</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="FF.html"><a href="FF.html"><i class="fa fa-check"></i><b>11</b> Functional Forms</a>
@@ -354,6 +368,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="the-reciprocal-transformation.html"><a href="the-reciprocal-transformation.html#application-6"><i class="fa fa-check"></i>Application</a></li>
 </ul></li>
 <li class="chapter" data-level="11.6" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>11.6</b> Conclusion</a></li>
+<li class="chapter" data-level="11.7" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html"><i class="fa fa-check"></i><b>11.7</b> A Concluding Application</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#a-residual-analysis"><i class="fa fa-check"></i>A Residual Analysis</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#log-transformation"><i class="fa fa-check"></i>Log Transformation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#quadratic-transformation"><i class="fa fa-check"></i>Quadratic Transformation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#reciprocal-transformation"><i class="fa fa-check"></i>Reciprocal Transformation</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="JHT.html"><a href="JHT.html"><i class="fa fa-check"></i><b>12</b> Joint Hypothesis Tests</a>
 <ul>
@@ -373,6 +394,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="applications.html"><a href="applications.html#application-1-a-wage-application"><i class="fa fa-check"></i>Application 1: A wage application</a></li>
 <li class="chapter" data-level="" data-path="applications.html"><a href="applications.html#application-2-constant-returns-to-scale"><i class="fa fa-check"></i>Application 2: Constant Returns to Scale</a></li>
 </ul></li>
+<li class="chapter" data-level="12.4" data-path="a-concluding-application-5.html"><a href="a-concluding-application-5.html"><i class="fa fa-check"></i><b>12.4</b> A Concluding Application</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -407,8 +429,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>A region of rejection (a.k.a., critical region): values of the test statistic that are unlikely to occur <strong>if the null hypothesis is true</strong>. These values are inconsistent with the null hypothesis.</p></li>
 <li><p>A region of nonrejection: values of the test statistic that are likely to occur if the null hypothesis is true. These values are <em>consistent with the null hypothesis</em>.</p></li>
 </ol>
-<p>The regions of rejection and nonrejection are identified by determining <em>critical values</em> from the normal probability distribution. These are particular values of the sampling distribution that divides the entire distribution into rejection and nonrejection regions. This is why some people refer to the <em>rejection region</em> approach as the <em>critical value</em> approach.</p>
-<p>Once the different regions are established, then you simply see where the calculated test statistic under the null falls and conclude (Step 4). If it falls inside the rejection region, then you <strong>reject the null</strong> because the characteristics of the sample are <em>too inconsistent</em> with the population parameter stated inside the null hypothesis. If it falls inside the nonrejection region, then you <strong>do not reject the null</strong> because the characteristics of the sample are such that the population parameter stated inside the null is <em>possible</em> (but we can’t say if it’s necessarily true).</p>
+<p>The regions of rejection and nonrejection are identified by determining <em>critical values</em> from the normal probability distribution. These are particular values of the sampling distribution that divide the entire distribution into rejection and nonrejection regions. This is why some people refer to the <em>rejection region</em> approach as the <em>critical value</em> approach.</p>
+<p>Once the different regions are established, you simply see where the calculated test statistic under the null falls and conclude (Step 4). If it falls inside the rejection region, then you <strong>reject the null</strong> because the characteristics of the sample are <em>significantly inconsistent</em> with the population parameter stated in the null hypothesis. If it falls inside the nonrejection region, then you <strong>do not reject the null</strong> because the characteristics of the sample are such that the population parameter stated inside the null is <em>possible</em> (but we can’t say if it’s necessarily true).</p>
 <div id="the-steps-of-a-hypothesis-test-rejection-region-method" class="section level4 unnumbered hasAnchor">
 <h4>The Steps of a Hypothesis Test (Rejection Region Method)<a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#the-steps-of-a-hypothesis-test-rejection-region-method" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ol style="list-style-type: decimal">
@@ -423,64 +445,64 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Suppose a fast-food manager wants to determine whether the waiting time to place an order has changed from the previous mean of 4.5 minutes. We want to see if our sample characteristics are consistent with an average of 4.5 minutes or not. We start with a statement of the two hypotheses.</p>
 <p><span class="math display">\[H_0:\mu=4.5 \quad versus \quad H_1:\mu\neq 4.5\]</span></p>
 <p>The null explicitly states that <span class="math inline">\(\mu=4.5\)</span>, so we can use this value to construct a test statistic using the information from our sample. Suppose that a sample of <span class="math inline">\(n=25\)</span> observations delivered a sample mean of <span class="math inline">\(\bar{X}=5.1\)</span> minutes. Suppose further that we know the population standard deviation of the wait time process to be <span class="math inline">\(\sigma=1.2\)</span>. We can calculate a test statistic under the null.</p>
-<div class="sourceCode" id="cb135"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb135-1"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb135-1" aria-hidden="true" tabindex="-1"></a>mu <span class="ot">=</span> <span class="fl">4.5</span></span>
-<span id="cb135-2"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb135-2" aria-hidden="true" tabindex="-1"></a>Xbar <span class="ot">=</span> <span class="fl">5.1</span></span>
-<span id="cb135-3"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb135-3" aria-hidden="true" tabindex="-1"></a>Sig <span class="ot">=</span> <span class="fl">1.2</span></span>
-<span id="cb135-4"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb135-4" aria-hidden="true" tabindex="-1"></a>n <span class="ot">=</span> <span class="dv">25</span></span>
-<span id="cb135-5"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb135-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb135-6"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb135-6" aria-hidden="true" tabindex="-1"></a>(<span class="at">Zstat =</span> (Xbar <span class="sc">-</span> mu)<span class="sc">/</span>(Sig<span class="sc">/</span><span class="fu">sqrt</span>(n)))</span></code></pre></div>
+<div class="sourceCode" id="cb133"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb133-1"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb133-1" tabindex="-1"></a>mu <span class="ot">=</span> <span class="fl">4.5</span></span>
+<span id="cb133-2"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb133-2" tabindex="-1"></a>Xbar <span class="ot">=</span> <span class="fl">5.1</span></span>
+<span id="cb133-3"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb133-3" tabindex="-1"></a>Sig <span class="ot">=</span> <span class="fl">1.2</span></span>
+<span id="cb133-4"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb133-4" tabindex="-1"></a>n <span class="ot">=</span> <span class="dv">25</span></span>
+<span id="cb133-5"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb133-5" tabindex="-1"></a></span>
+<span id="cb133-6"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb133-6" tabindex="-1"></a>(<span class="at">Zstat =</span> (Xbar <span class="sc">-</span> mu)<span class="sc">/</span>(Sig<span class="sc">/</span><span class="fu">sqrt</span>(n)))</span></code></pre></div>
 <pre><code>## [1] 2.5</code></pre>
 <p><span class="math display">\[ Z = \frac{\bar{X}-\mu}{\left(\sigma / \sqrt{n} \right)} = \frac{5.1-4.5}{\left(1.2 / \sqrt{25} \right)} = 2.5\]</span></p>
 <p>The next step involves taking a standard normal sampling distribution and breaking it up into regions of rejection and nonrejection. Before we do this, lets take a step back and think about what it means for a sample to be consistent or inconsistent with the null hypothesis. If you had a sample average <span class="math inline">\((\bar{X})\)</span> that was the same value as the parameter value stated in the null hypothesis <span class="math inline">\((\mu)\)</span> then you could state that the value of <span class="math inline">\(\mu\)</span> in the null hypothesis is <em>very consistent</em> with the characteristics of the sample. In fact, you can’t be more consistent than having <span class="math inline">\(\bar{X}\)</span> and <span class="math inline">\(\mu\)</span> being the exact same number. Furthermore, a test statistic under the null would be equal to zero because <span class="math inline">\((\bar{X}-\mu)\)</span> is in the numerator. This implies that a test statistic under the null equal to zero is very consistent with the null hypothesis, and you will therefore <em>not reject</em> the null hypothesis. However, the farther away the test statistic under the null gets from zero, the farther away it gets from the center of the <em>do not reject region</em> and the closer it gets to one of the <em>rejection regions</em>.</p>
 <p>Lets illustrate this supposing that we want to test the hypothesis at the 95% confidence level <span class="math inline">\((\alpha=0.05)\)</span>. The central 95% of a standard normal distribution is given by</p>
 <p><span class="math display">\[Pr(-1.96 \leq Z \leq 1.96) = 0.95\]</span></p>
 <p>This means that if you reached into a bowl of numbers comprising a standard normal distribution, then 95% of the time you will draw a number between -1.96 and 1.96. The remaining numbers outside of this range will show up only 5% of the time. These regions are the bases for confidence intervals and also the bases for the nonrejection and rejection regions.</p>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-89-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p>The yellow-shaded region is centered on zero and represents the <em>nonrejection region</em>. It tells you that if you calculate a test statistic under the null to be between -1.96 and 1.96, then you do not have enough evidence to reject the null. However, the green-shaded regions are the <em>rejection regions</em>. It tells you that if you calculate a test statistic under the null that is greater than 1.96 or less than -1.96, then you have enough evidence to reject the null (with 95% confidence). In other words, it is so unlikely to have the null be correct while simultaneously randomly selecting a sample with the observed sample characteristics, so we conclude that the statement in the null cannot be true. In the fast food example above, the test statistic under the null of 2.5 falls in the rejection region. This means that we can <em>reject</em> the null hypothesis of <span class="math inline">\(\mu=4.5\)</span> minutes with 95% confidence. In other words, we are 95% confident that the population mean is some number other than 4.5 minutes - the statement made in the alternative hypothesis.</p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-90-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>The yellow-shaded region is centered on zero and represents the <em>nonrejection region</em>. It tells you that if you calculate a test statistic under the null to be between -1.96 and 1.96, then you do not have enough evidence to reject the null (with 95% confidence). However, the green-shaded regions are the <em>rejection regions</em>. It tells you that if you calculate a test statistic under the null that is greater than 1.96 or less than -1.96, then you have enough evidence to reject the null (with 95% confidence). In other words, it is unlikely to have the null statement be correct while simultaneously randomly selecting a sample with the observed sample characteristics. We therefore conclude that the statement in the null cannot be true. In the fast food example above, the test statistic under the null of 2.5 falls in the rejection region. This means that we can <em>reject</em> the null hypothesis of <span class="math inline">\(\mu=4.5\)</span> minutes with 95% confidence. In other words, we are 95% confident that the population mean is some number other than 4.5 minutes - the statement made in the alternative hypothesis.</p>
 <p><strong>Changing the level of confidence <span class="math inline">\((\alpha)\)</span></strong></p>
 <p>The hypothesis test above was concluded under a specified 95% confidence level <span class="math inline">\((\alpha=0.05)\)</span>. This level of confidence effectively delivered our rejection and nonrejection regions. So… what happens when we change <span class="math inline">\(\alpha\)</span>?</p>
-<p>The first thing to understand is that the level of confidence does not impact the hypotheses or the test statistic under the null. The <strong>only</strong> thing the level of confidence impacts is the shaded regions in the sampling distribution. The figure below illustrates rejection and nonrejection regions for <span class="math inline">\(\alpha\)</span> values of 0.10, 0.05, and 0.01. Note that as <span class="math inline">\(\alpha\)</span> gets smaller, the size of the nonrejection region gets larger. This means that <em>do not reject</em> is becoming a more likely conclusion. This should make sense because <em>do not reject</em> is a wishy-washy conclusion, while <em>reject</em> is definitive. Do not reject states that the null may or may not be true. It’s a punt! A <em>“Maybe, maybe not”</em> answer! Therefore, if you are placing more confidence on your conclusion, the more likely you are to make the wishy-washy conclusion.</p>
+<p>The first thing to understand is that the level of confidence does not impact the hypotheses or the test statistic under the null. The <strong>only</strong> thing the level of confidence impacts is the shaded regions in the sampling distribution. The figure below illustrates rejection and nonrejection regions for <span class="math inline">\(\alpha\)</span> values of 0.10, 0.05, and 0.01. Note that as <span class="math inline">\(\alpha\)</span> gets smaller, the size of the nonrejection region gets larger. This means that <em>do not reject</em> is becoming a more likely conclusion. This should make sense because <em>do not reject</em> is a wishy-washy conclusion, while <em>reject</em> is definitive. Do not reject states that the null may or may not be true. It’s a punt! A <em>“Maybe, maybe not”</em> answer! Therefore, if you are placing more confidence on your conclusion, the more likely you are to make the wishy-washy conclusion.<a href="#fn19" class="footnote-ref" id="fnref19"><sup>19</sup></a></p>
 <p>The fast food example had a test statistic under the null of 2.5. This test statistic falls in the rejection region for both 90% and 95% levels of confidence. This suggests that if you can reject a null hypothesis with a certain level of confidence, then you can automatically reject at all lower levels of confidence. However, the do not reject region under 99% confidence is given by
 <span class="math display">\[Pr(-2.58 \leq Z \leq 2.58)=0.99\]</span>
 and our test statistic of 2.5 falls inside it. We therefore conclude that we <em>do NOT reject</em> the null with 99% confidence. In other words, we do not have enough evidence to say that the null hypothesis is incorrect at 99% confidence, so we conclude that it <em>may or may not</em> be true (i.e., we punt) at this confidence level.</p>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-90-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-91-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>Using the rejection region method, we were able to reject the null with 95% confidence <span class="math inline">\((\alpha=0.05)\)</span> but unable to reject with 99% confidence <span class="math inline">\((\alpha=0.01)\)</span>. This begs the question as to the highest confidence level at which we can reject the null. We know it is some confidence level between 95% and 99%, but what is it exactly? We can use the rejection region approach multiple times by choosing various values of <span class="math inline">\(\alpha\)</span> and narrow things down, or we can conduct the hypothesis test using the <em>p-value</em> approach.</p>
 </div>
 </div>
 <div id="p-value-approach" class="section level3 hasAnchor" number="6.3.2">
 <h3><span class="header-section-number">6.3.2</span> P-value Approach<a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#p-value-approach" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The P-value is an extremely useful and often misunderstood number. I therefore have THREE equivalent ways of explaining it. Each one works - so just stick with the one that works for you. Before we get to those, lets talk explicitly about what we mean when we make statements based on confidence.</p>
-<p>When using a sample statistic to draw conclusions about a population parameter, there is always the risk of reaching an incorrect conclusion. In other words, you can make an <strong>error</strong>.</p>
+<p>When using a sample statistic to draw conclusions about a population parameter, there is always the risk of reaching an incorrect conclusion. In other words, you can make an <strong>error</strong>. Think of this along the lines of drawing a sample from a sampling distribution. We can see that drawing a sample with characteristics in the extreme tails of the sampling distribution is unlikely, but it is not <em>impossible</em>. Nonetheless, once we draw a single sample, we proceed as if it is drawn from the more likely area of the sampling distribution.</p>
 <p>When making a conclusion about a hypothesis test, one can either reject a null hypothesis or not. Therefore, there are two possible types of errors to be made.</p>
 <ol style="list-style-type: decimal">
 <li><p>A <strong>Type I error</strong> occurs when a researcher incorrectly rejects a true hypothesis. (<em>You rejected something that shouldn’t have been rejected.</em>)</p></li>
 <li><p>A <strong>Type II error</strong> occurs when a researcher incorrectly fails to reject a false hypothesis. (<em>You did not reject something that should have been rejected.</em>)</p></li>
 </ol>
-<p>The <strong>acceptable</strong> probability of committing either one of these errors depends upon an arbitrary confidence level <span class="math inline">\(\alpha\)</span>. To be precise, when you reject a hypothesis with 95% confidence, then you are implicitly stating that you are accepting a 5% chance of being wrong. That is where <span class="math inline">\(\alpha=0.05\)</span> (or 5% comes from). If you decrease <span class="math inline">\(\alpha\)</span> to 0.01 (or 1%), then you can reject a hypothesis with 99% confidence and implicitly accept a 1% chance of being wrong. The kicker is that the more you decrease the probability of committing a type I error, the more you increase the chance of not rejecting a hypothesis that you should be rejecting (a type II error). For example, if you want a conclusion with 100% confidence, then you will <em>never</em> reject a hypothesis no matter how wrong it actually is.<a href="#fn18" class="footnote-ref" id="fnref18"><sup>18</sup></a></p>
+<p>The <strong>acceptable</strong> probability of committing either one of these errors depends upon an arbitrary confidence level <span class="math inline">\(\alpha\)</span>. To be precise, when you reject a hypothesis with 95% confidence, then you are implicitly stating that you are accepting a 5% chance of being wrong. That is where <span class="math inline">\(\alpha=0.05\)</span> (or 5% comes from). If you decrease <span class="math inline">\(\alpha\)</span> to 0.01 (or 1%), then you can reject a hypothesis with 99% confidence and implicitly accept a 1% chance of being wrong. The kicker is that the more you decrease the probability of committing a type I error, the more you increase the chance of not rejecting a hypothesis that you should be rejecting (a type II error). For example, if you want a conclusion with 100% confidence, then you will <em>never</em> reject a hypothesis no matter how wrong it actually is.<a href="#fn20" class="footnote-ref" id="fnref20"><sup>20</sup></a></p>
 <p>The main take away from the previous statement is that <span class="math inline">\(\alpha\)</span> states the <em>acceptable</em> probability of committing a type one error. Recall in our fast food example that we rejected the null hypothesis with 95% confidence (i.e., a 5% acceptable probability of being wrong ), but we did not reject the null hypothesis with 99% confidence (i.e., a 1% acceptable probability of being wrong ). This means that the <em>actual</em> probability of committing a type one error is somewhere in between 0.05 and 0.01 (i.e., 5% and 1%). This actual probability of committing a type I error is called the <strong>p-value</strong>.</p>
-<div class="sourceCode" id="cb137"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb137-1"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb137-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fast Food Example Revisited</span></span>
-<span id="cb137-2"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb137-2" aria-hidden="true" tabindex="-1"></a>mu <span class="ot">=</span> <span class="fl">4.5</span></span>
-<span id="cb137-3"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb137-3" aria-hidden="true" tabindex="-1"></a>Xbar <span class="ot">=</span> <span class="fl">5.1</span></span>
-<span id="cb137-4"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb137-4" aria-hidden="true" tabindex="-1"></a>Sig <span class="ot">=</span> <span class="fl">1.2</span></span>
-<span id="cb137-5"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb137-5" aria-hidden="true" tabindex="-1"></a>n <span class="ot">=</span> <span class="dv">25</span></span>
-<span id="cb137-6"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb137-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb137-7"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb137-7" aria-hidden="true" tabindex="-1"></a>(<span class="at">Zstat =</span> (Xbar <span class="sc">-</span> mu)<span class="sc">/</span>(Sig<span class="sc">/</span><span class="fu">sqrt</span>(n)))</span></code></pre></div>
+<div class="sourceCode" id="cb135"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb135-1"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb135-1" tabindex="-1"></a><span class="co"># Fast Food Example Revisited</span></span>
+<span id="cb135-2"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb135-2" tabindex="-1"></a>mu <span class="ot">=</span> <span class="fl">4.5</span></span>
+<span id="cb135-3"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb135-3" tabindex="-1"></a>Xbar <span class="ot">=</span> <span class="fl">5.1</span></span>
+<span id="cb135-4"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb135-4" tabindex="-1"></a>Sig <span class="ot">=</span> <span class="fl">1.2</span></span>
+<span id="cb135-5"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb135-5" tabindex="-1"></a>n <span class="ot">=</span> <span class="dv">25</span></span>
+<span id="cb135-6"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb135-6" tabindex="-1"></a></span>
+<span id="cb135-7"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb135-7" tabindex="-1"></a>(<span class="at">Zstat =</span> (Xbar <span class="sc">-</span> mu)<span class="sc">/</span>(Sig<span class="sc">/</span><span class="fu">sqrt</span>(n)))</span></code></pre></div>
 <pre><code>## [1] 2.5</code></pre>
-<div class="sourceCode" id="cb139"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb139-1"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb139-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 95% confidence:</span></span>
-<span id="cb139-2"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb139-2" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">=</span> <span class="fl">0.05</span></span>
-<span id="cb139-3"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb139-3" aria-hidden="true" tabindex="-1"></a>(<span class="at">Zcrit =</span> <span class="fu">qnorm</span>(alpha<span class="sc">/</span><span class="dv">2</span>,<span class="at">lower.tail =</span> <span class="cn">FALSE</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb137"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb137-1"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb137-1" tabindex="-1"></a><span class="co"># 95% confidence:</span></span>
+<span id="cb137-2"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb137-2" tabindex="-1"></a>alpha <span class="ot">=</span> <span class="fl">0.05</span></span>
+<span id="cb137-3"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb137-3" tabindex="-1"></a>(<span class="at">Zcrit =</span> <span class="fu">qnorm</span>(alpha<span class="sc">/</span><span class="dv">2</span>,<span class="at">lower.tail =</span> <span class="cn">FALSE</span>))</span></code></pre></div>
 <pre><code>## [1] 1.959964</code></pre>
-<div class="sourceCode" id="cb141"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb141-1"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb141-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 99% confidence:</span></span>
-<span id="cb141-2"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb141-2" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">=</span> <span class="fl">0.01</span></span>
-<span id="cb141-3"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb141-3" aria-hidden="true" tabindex="-1"></a>(<span class="at">Zcrit =</span> <span class="fu">qnorm</span>(alpha<span class="sc">/</span><span class="dv">2</span>,<span class="at">lower.tail =</span> <span class="cn">FALSE</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb139"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb139-1"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb139-1" tabindex="-1"></a><span class="co"># 99% confidence:</span></span>
+<span id="cb139-2"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb139-2" tabindex="-1"></a>alpha <span class="ot">=</span> <span class="fl">0.01</span></span>
+<span id="cb139-3"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb139-3" tabindex="-1"></a>(<span class="at">Zcrit =</span> <span class="fu">qnorm</span>(alpha<span class="sc">/</span><span class="dv">2</span>,<span class="at">lower.tail =</span> <span class="cn">FALSE</span>))</span></code></pre></div>
 <pre><code>## [1] 2.575829</code></pre>
-<div class="sourceCode" id="cb143"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb143-1"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb143-1" aria-hidden="true" tabindex="-1"></a><span class="co"># p-value:</span></span>
-<span id="cb143-2"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb143-2" aria-hidden="true" tabindex="-1"></a>(<span class="at">Pval =</span> <span class="fu">pnorm</span>(Zstat,<span class="at">lower.tail =</span> <span class="cn">FALSE</span>)<span class="sc">*</span><span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb141"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb141-1"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb141-1" tabindex="-1"></a><span class="co"># p-value:</span></span>
+<span id="cb141-2"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb141-2" tabindex="-1"></a>(<span class="at">Pval =</span> <span class="fu">pnorm</span>(Zstat,<span class="at">lower.tail =</span> <span class="cn">FALSE</span>)<span class="sc">*</span><span class="dv">2</span>)</span></code></pre></div>
 <pre><code>## [1] 0.01241933</code></pre>
-<div class="sourceCode" id="cb145"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb145-1"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb145-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Actual confidence level:</span></span>
-<span id="cb145-2"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb145-2" aria-hidden="true" tabindex="-1"></a>((<span class="dv">1</span><span class="sc">-</span>Pval)<span class="sc">*</span><span class="dv">100</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb143"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb143-1"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb143-1" tabindex="-1"></a><span class="co"># Actual confidence level:</span></span>
+<span id="cb143-2"><a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#cb143-2" tabindex="-1"></a>((<span class="dv">1</span><span class="sc">-</span>Pval)<span class="sc">*</span><span class="dv">100</span>)</span></code></pre></div>
 <pre><code>## [1] 98.75807</code></pre>
-<p>The calculations regarding the fast food example were repeated and continued to include a p-value. Recall that the null hypothesis stated that the population mean was equal to 4.5, and the test statistic under the null is equal to 2.5. The critical values marking the boundaries between the do not reject region and the reject regions was <span class="math inline">\(\pm 1.96\)</span> for <span class="math inline">\(\alpha=0.05\)</span> and <span class="math inline">\(\pm 2.58\)</span> for <span class="math inline">\(\alpha=0.01\)</span>. Our test statistic falls inside the rejection region for <span class="math inline">\(\alpha=0.05\)</span> and inside the nonrejection region for <span class="math inline">\(\alpha=0.01\)</span>. Our test statistic falls <em>right on the boundary</em> of a rejection and nonrejection region when <span class="math inline">\(p=0.0124\)</span>. This is the p-value of the problem. It states that you can reject the null hypothesis with <em>at most</em> 98.76% confidence and you will incur a 1.24% chance of being wrong. As expected, it is between 5% and 1% and gives you a tailor-made confidence level for the hypothesis test at hand.</p>
+<p>The calculations regarding the fast food example were repeated and continued to include a p-value. Recall that the null hypothesis stated that the population mean was equal to 4.5, and the test statistic under the null is equal to 2.5. The critical values marking the boundaries between the do not reject region and the reject regions was <span class="math inline">\(\pm 1.96\)</span> for <span class="math inline">\(\alpha=0.05\)</span> and <span class="math inline">\(\pm 2.58\)</span> for <span class="math inline">\(\alpha=0.01\)</span>. Our test statistic falls inside the rejection region for <span class="math inline">\(\alpha=0.05\)</span> and inside the nonrejection region for <span class="math inline">\(\alpha=0.01\)</span>. Our test statistic falls <em>right on the boundary</em> of a rejection and nonrejection region when <span class="math inline">\(p=0.0124\)</span>. This is the p-value of the problem. It states that you can reject the null hypothesis with <em>at most</em> 98.76% confidence and you will incur a 1.24% chance of rejecting and being wrong. As expected, it is between 5% and 1% and gives you a tailor-made confidence level for the hypothesis test at hand.</p>
 <div id="the-definitions-of-a-p-value" class="section level4 unnumbered hasAnchor">
 <h4>The definitions of a P-value<a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#the-definitions-of-a-p-value" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <blockquote>
@@ -500,8 +522,9 @@ and our test statistic of 2.5 falls inside it. We therefore conclude that we <em
 </div>
 <div class="footnotes">
 <hr />
-<ol start="18">
-<li id="fn18"><p>This point touches on the idea of confidence in statistics. If you want me to make a statement with 100% confidence, then I’ll simply say <em>anything can happen</em> because it is a statement that has zero chance of being wrong.<a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#fnref18" class="footnote-back">↩︎</a></p></li>
+<ol start="19">
+<li id="fn19"><p>This is another example of the statistical trade-off between confidence and precision.<a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#fnref19" class="footnote-back">↩︎</a></p></li>
+<li id="fn20"><p>This point touches on the idea of confidence in statistics. If you want me to make a statement with 100% confidence, then I’ll simply say <em>anything can happen</em> because it is a statement that has zero chance of being wrong.<a href="two-methods-for-conducting-a-hypothesis-test-when-sigma-is-known.html#fnref20" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

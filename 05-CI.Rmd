@@ -23,8 +23,8 @@ plot(X,Y,type="n",xlab="X values",ylab = "Density",
 xtick<-seq(-2, 2, by=2)
 axis(side=1, at=xtick, labels = FALSE)
 text(x=xtick, par("usr")[3],  
-     labels = c(TeX('$\\mu-2\\sigma$'),TeX('$\\mu$'), 
-                TeX('$\\mu+2\\sigma$')), 
+     labels = c(TeX('$\\mu-1.96\\sigma$'),TeX('$\\mu$'), 
+                TeX('$\\mu+1.96\\sigma$')), 
      pos = 1, xpd = TRUE)
 i <- X >= -2 & X <= 2
 lines(X, Y)
@@ -35,9 +35,9 @@ This picture is the normal probability density of this random variable. It is ve
 
 1. It is centered at the mean. It is a **symmetric** distribution with 50% of the probability being on either side of the mean.
 
-2. Like all probability distributions, it must add up to 1 (or 100%). This is like saying that the probability of reaching into a hat full of numbers and pulling out a number between positive and negative infinity is equal to 100%.
+2. Like all probability distributions, it must add up to 1 (or 100%). This is like saying that the probability of reaching into a hat full of numbers and pulling out any number (between positive and negative infinity) is equal to 100%.
 
-3. A normal distribution has the nice property that approximately 95% of the density area is between two standard deviation above and below the mean. This is the shaded area in the above figure. It roughly states that if you reached into a bowl full of numbers that comprised this distribution, then you have a 95% chance of pulling out a number between $\mu-2\sigma$ and $\mu+2\sigma$. 
+3. A normal distribution has the nice property that approximately 95% of the density area is between $1.96$ standard deviation above and below the mean. This is the shaded area in the above figure. It roughly states that if you reached into a bowl full of numbers that comprised this distribution, then you have a 95% chance of pulling out a number between $\mu-1.96\sigma$ and $\mu+1.96\sigma$. 
 
 This is very useful, but for our purposes we need to take this arbitrary normal distribution and transform it into a **standard normal distribution**. We do this by applying what is known as a Z-transformation:
 
@@ -45,7 +45,7 @@ $$Z=\frac{X-\mu}{\sigma}$$
 
 The figure below illustrates how this transformation changes an otherwise arbitrary normal distribution. The top figure is the arbitrary random variable with a mean of $\mu$ and a standard deviation of $\sigma$ $(X \sim N(\mu,\sigma))$. The second figure shows what happens to the distribution when we subtract the mean from every number in the distribution. This effectively shifts the distribution such that it is now centered around zero, so we now have a normally distributed random variable with a mean of zero and a standard deviation of $\sigma$ $(X-\mu \sim N(0,\sigma))$. The third figure shows what happens when we divide every number in the distribution by $\sigma$. Recall that $\sigma$ is a positive number that can be greater or less than one. If you divide a number by a number less than one then the number gets bigger. If you divide a number by a number greater than one then the number gets smaller. This means that dividing every number by $\sigma$ will either increase or decrease the dispersion of values such that the standard deviation is equal to one. A normally distributed random variable with a mean of zero and a standard deviation is said to be a standard normal random variable $(Z \sim N(0,1))$.
 
-Note that this transformation shifts the distribution, but **does not** change its properties. This was done on purpose to get you to see that a standard normal transformation shifts the mean and alters the dispersion, but does not change the facts that the distribution is still symmetric, still adds to one, and still has the property that 95% of the probability area is between 2 standard deviations to the right and left of the mean.
+Note that this transformation shifts the distribution, but **does not** change its properties. This was done on purpose to get you to see that a standard normal transformation shifts the mean and alters the dispersion, but does not change the facts that the distribution is still symmetric, still adds to one, and still has the property that 95% of the probability area is between 1.96 standard deviations to the right and left of the mean.
 
 ```{r, echo=FALSE, fig.width=6.5,fig.height=9}
 X <- seq(-4,4,0.01)
@@ -57,8 +57,8 @@ plot(X,Y,type="n",xlab="X values",ylab = "Density",
 xtick<-seq(-2, 2, by=2)
 axis(side=1, at=xtick, labels = FALSE)
 text(x=xtick, par("usr")[3],  
-     labels = c(TeX('$\\mu-2\\sigma$'),TeX('$\\mu$'), 
-                TeX('$\\mu+2\\sigma$')), 
+     labels = c(TeX('$\\mu-1.96\\sigma$'),TeX('$\\mu$'), 
+                TeX('$\\mu+1.96\\sigma$')), 
      pos = 1, xpd = TRUE)
 i <- X >= -2 & X <= 2
 lines(X, Y)
@@ -69,8 +69,8 @@ plot(X,Y,type="n",xlab=TeX('$X-\\mu$ values'),ylab = "Density",
 xtick<-seq(-2, 2, by=2)
 axis(side=1, at=xtick, labels = FALSE)
 text(x=xtick, par("usr")[3],  
-     labels = c(TeX('$-2\\sigma$'),0, 
-                TeX('$2\\sigma$')), 
+     labels = c(TeX('$-1.96\\sigma$'),0, 
+                TeX('$1.96\\sigma$')), 
      pos = 1, xpd = TRUE)
 i <- X >= -2 & X <= 2
 lines(X, Y)
@@ -81,7 +81,7 @@ plot(X,Y,type="n",xlab=TeX('$Z=\\frac{X-\\mu}{\\sigma}$ values'),ylab = "Density
 xtick<-seq(-2, 2, by=2)
 axis(side=1, at=xtick, labels = FALSE)
 text(x=xtick, par("usr")[3],  
-     labels = c(-2,0,2), 
+     labels = c(-1.96,0,1.96), 
      pos = 1, xpd = TRUE)
 i <- X >= -2 & X <= 2
 lines(X, Y)
@@ -125,7 +125,7 @@ lines(X, Y)
 polygon(c(-1,X[i],-2/3), c(0,Y[i],0), col="yellow")
 ```
 
-3. Finally, we calculate the probability in R. Now this is where the illustration above will help get us organized, because we can exploit the distributional properties of symmetry and the distribution summing to one. This is important because we can use R to calculate the same number in several different ways. All of these routes to the answer are acceptable, so we will go through them all here.
+3. Finally, we calculate the probability in R. Now this is where the illustration above will help get us organized, because we can exploit the distributional properties of symmetry and the distribution summing to one. This is important because we can use R to calculate the same number in several different ways. All of these routes to the answer are acceptable, so we will go through them all here. In practice - you choose whichever route you find most appealing.
 
 First thing to do is introduce you to the R command "pnorm"
 
@@ -175,7 +175,7 @@ lines(X, Y)
 polygon(c(-1,X[i],-4), c(0,Y[i],0), col="green")
 ```
 
-Now that we know how R likes to calculate probabilities, we can use it to determine $Pr(-1 \leq z \leq -\frac{2}{3})$ which is the shaded slice of the distribution in the previous figure.
+Now that we know how R calculates probabilities, we can use it to determine $Pr(-1 \leq z \leq -\frac{2}{3})$ which is the shaded slice of the distribution in the previous figure.
 
 1. Using the *default* setting: suppose you want to calculate all of the probabilities using the default setting of calculating areas to the left. The shaded slice of the distribution is then the difference between the area to the left of $-\frac{2}{3}$ and the area to the left of -1.
 
@@ -185,7 +185,7 @@ $$Pr\left(-1 \leq z \leq -\frac{2}{3}\right)=Pr\left(z \leq -\frac{2}{3}\right) 
 pnorm(-2/3)-pnorm(-1)
 ```
 
-2. Removing the *default* setting. If you want to calculate probabilities from the right (which might come in handy), then the same slice of the distribution is the difference between the area to the right of $-1$ and the area to the right of $-\frac{2}{3}$.
+2. Removing the *default* setting: If you want to calculate probabilities from the right (which might come in handy), then the same slice of the distribution is the difference between the area to the right of $-1$ and the area to the right of $-\frac{2}{3}$.
 
 $$Pr\left(-1 \leq z \leq -\frac{2}{3}\right)=Pr(z \geq -1) - Pr\left(z \geq -\frac{2}{3}\right)$$
 
@@ -252,7 +252,7 @@ sigma = 2.45
 
 $$Pr(6.52 \leq \bar{X} \leq 7.48) = 0.95$$
 
-This means that with 95% confidence, the single outcome from your *experiment* will be within 6.52 and 7.48 if the die you are rolling are in fact fair.^[Note that the code used a command called *qnorm*. This gets described further below.]
+This means that with 95% confidence, the single outcome from your *experiment* should be within 6.52 and 7.48 if the die you are rolling are in fact fair.^[Note that the code used a command called *qnorm*. This gets described further below.]
 
 As stated earlier, this example is rare because we know the population parameters. When we don't, we reverse engineer the probability statement so we can take what we know (the sample statistics) and use them to say something about what we don't. This is known as a confidence interval.
 
@@ -271,7 +271,7 @@ Suppose we have a sample of size $n$, calculated a sample mean $\bar{X}$, and th
 
 *What can we say about* $\mu$?
 
-* Since our sample has the same characteristics as the population, we would like to say $\mu = \bar{X}$ (i.e., $Z=0$), but this is not likely. Recall the dice example discussed earlier, while 7 (the population mean) is the most likely average of a sample, there is a larger likelihood of a sample average *close* to, but not exactly equal to the population mean.
+* Since our sample has the same characteristics as the population (by design), we would like to say $\mu = \bar{X}$ (i.e., $Z=0$), but this is not likely. Recall the dice example discussed earlier, while 7 (the population mean) is the most likely average of a sample, there is a larger likelihood of a sample average *close* to, but not exactly equal to the population mean.
 
 * Since $\bar{X}$ is a single draw from a normal distribution, we can construct a *probabilistic* range around $\mu$. This range requires an arbitrary level of confidence $(1-\alpha)$ - which provides bounds for the Z distribution (i.e., it gives us the area under the curve).
 
@@ -279,7 +279,7 @@ We therefore start with a probabilistic statement using a standard normal distri
 
 $$Pr\left(-Z \leq \frac{\bar{X}-\mu}{(\sigma/\sqrt{n})} \leq Z\right)=1-\alpha$$
 
-This states (in general terms) that the probability of realizing a value of $\frac{\bar{X}-\mu}{(\sigma/\sqrt{n})}$ drawn from a standard normal distributed random variable to be between the values -Z and Z is equal to $1-\alpha$. To put this into context, suppose I set $\alpha=0.05$ so $1-\alpha=0.95$ implies that I am looking for something that will occur with 95% probability. Recall the normal distribution has the nice property that 95% of the probability space is approximately between two standard deviations above and below the mean. By approximately, I mean it is actually 1.96 and not 2.^[This explains the 1.96 used in the dice application above.]
+This states (in general terms) that the probability of realizing a value of $\frac{\bar{X}-\mu}{(\sigma/\sqrt{n})}$ drawn from a standard normal distributed random variable to be between the values -Z and Z is equal to $1-\alpha$. To put this into context, suppose I set $\alpha=0.05$ so $1-\alpha=0.95$ implies that I am looking for something that will occur with 95% probability. Recall the normal distribution has the nice property that 95% of the probability space is between $1.96$ standard deviations above and below the mean.
 
 Finding these numbers requires another R command: qnorm.
 
@@ -317,13 +317,13 @@ or
 
 $$\bar{X} \pm Z_{\frac{\alpha}{2}}\frac{\sigma}{\sqrt{n}}$$
 
-It explicitly states that given the characteristics of the sample $(\bar{X},n,\sigma)$ and an arbitrary level of confidence that gives us the probability limits from the standard normal distribution $(Z_{\frac{\sigma}{2}})$, then we can build a range of values where we can state with $(1-\alpha) \times 100%$ confidence that the population parameter resides within.
+It explicitly states that given the characteristics of the sample $(\bar{X},n,\sigma)$ and an arbitrary level of confidence that gives us the probability limits from the standard normal distribution $(Z_{\frac{\sigma}{2}})$, we can build a range of values where we can state with $(1-\alpha) \times 100%$ confidence that the population parameter will reside within.
 
 Welcome to statistical inference!
 
 ### Application 3
 
-A paper manufacturer produces paper expected to have a mean length of 11 inches, and a known standard deviation of 0.02 inch. A sample of 100 sheets is selected to determine if the production process is still adhering to this length. If it isn't, then the machine needs to go through the costs of being taken off line and recalibrated. The sample was calculated to have a average value of 10.998 inches.
+A paper manufacturer produces paper expected to have a mean length of 11 inches, and a known standard deviation of 0.02 inch. A sample of 100 sheets is selected to determine if the production process is still adhering to this length. If it isn't, then the machine needs to go through the costs of being taken off line and serviced. The sample of 100 sheets was collected and calculated to have an average value of 10.998 inches.
 
 $$\bar{X} = 10.998, \quad n = 100, \quad \sigma = 0.02$$
 
@@ -337,7 +337,7 @@ plot(X,Y,type="n",xlab="Z values",ylab = "Density",
 xtick<-c(-1.96, 0, 1.96)
 axis(side=1, at=xtick, labels = FALSE)
 text(x=xtick, par("usr")[3],  
-     labels = c("-Z",0,"Z"), 
+     labels = c(-1.96,0,1.96), 
      pos = 1, xpd = TRUE)
 i <- X >= -1.96 & X <= 1.96
 lines(X, Y)
@@ -403,7 +403,7 @@ I am 100% confident that the mean paper length in the population is somewhere be
 
 ## What to do when we do not know $\sigma$
 
-In most instances, if we know nothing about the population parameter $\mu$ then we know nothing about any of the other parameters (like $\sigma$). In this case, we are forced to use our best guess of $\sigma$. Since we are assuming that our sample has the same characteristics of the population, then our best guess for $\sigma$ is the sample standard deviation $S$. 
+In most instances, if we know nothing about the population parameter $\mu$ then we know nothing about any of the other parameters (like $\sigma$). In this case, we are forced to use our best guess of $\sigma$ and proceed. Since we are assuming that our sample has the same characteristics as the population, then our best guess for $\sigma$ is the sample standard deviation $S$. 
 
 Put plainly, we substitute the statistic ($S$) for the population parameter ($\sigma$). Because $S$ is an estimate of $\sigma$, this will slightly change our probability distribution. In particular, If $\bar{X}$ is normally distributed as per the CLT, then a standardization using $S$ instead of $\sigma$ is said to have a Student's t distribution with $n-1$ degrees of freedom.
 
@@ -413,13 +413,13 @@ Note that this looks almost exactly like our Z transformation, only with $S$ rep
 
 $$S = \sqrt{\frac{1}{n-1} \sum_{i=1}^n(X_i-\bar{X})^2}$$
 
-The equation states that the sample mean $(\bar{X})$ is used to calculate the sample standard deviation. Therefore one statistic is used to calculate a subsequent statistic... and that is why we lose one degree of freedom.
+The equation states that the sample mean $(\bar{X})$ (and not the population mean $\mu$) is used to calculate the sample standard deviation. Therefore one statistic is used to calculate a subsequent statistic... and that is why we lose one degree of freedom.
 
 ### Student's t distribution versus Z distribution...
 
 A Student's t distribution (henceforth, t distribution) and Z distribution have very much in common: they are both symmetric, both centered at a mean of 0, and both sum to one (because they are both probability distributions). The main difference is that a t-distribution has *fatter tails* than a Z distribution, and the fatness of the tails depends on the degrees of freedom (which in turn depends on the sample size $n$).^[Next time you raise a pint of Guiness, you can thank William Sealy Gosset for being *Student* and creating the t distribution. You can read more [here](https://en.wikipedia.org/wiki/William_Sealy_Gosset)]
 
-The figure below compares the standard normal (Z) distribution with several t distributions that differ in degrees of freedom. Notice that tail thickness of the t distributions are inversely related to sample size. As the the degrees of freedom get larger (i.e., the larger the sample size), the closer the t distribution gets to the Z distribution. This is because as n gets larger, $S$ becomes a better estimate of $\sigma$.
+The figure below compares the standard normal (Z) distribution with several t distributions that differ in degrees of freedom. Notice that tail thickness of the t distributions are inversely related to sample size. As the the degrees of freedom get larger (i.e., the larger the sample size), the closer the t distribution gets to the Z distribution. This is because as n gets larger, $S$ becomes a better estimate of $\sigma$.^[Note that the best a t distribution can do is mirror a standard normal, because the best $S$ can do is mirror $\sigma$.]
 
 ```{r,echo=FALSE}
 
@@ -535,7 +535,17 @@ You might have noticed that we did something a bit incorrect in the last exercis
 Let's go back one last time to our light bulb example
 
 ```{r}
-load("C:/Data/MBA8350/Lightbulb.Rdata")
+Lifetime=c(858.9164,  797.2652, 1013.5366, 1064.8195,  874.2275,  825.1137,
+           897.0879,  924.0998,  870.0674,  966.2095,  955.1281,  977.2073,
+           888.1690,  826.6483,  776.7479,  877.5691,  998.7101,  892.8178,
+           886.0261,  831.7615, 1082.9650, 1034.9549,  784.5026,  919.2082,
+           1049.1824,  923.5767,  907.7295,  890.3758,  856.4240,  808.8035,
+           1009.7146,  890.3709,  930.9597,  809.9274,  919.9381,  793.7455,
+           919.9824,  948.8593,  810.6887,  846.9573,  955.3873,  833.2762,
+           892.4969,  973.1861,  913.7650,  928.6057,  940.7637,  964.4341,
+           914.2733,  880.3329,  831.5395,  967.2442, 1030.7598,  857.5421,
+           889.3689, 1094.1440,  927.7684,  730.9976,  918.8359,  867.5931)
+
 (n = length(Lifetime))
 (Xbar = mean(Lifetime))
 (S = sd(Lifetime))
@@ -545,7 +555,7 @@ We have the following information from our sample:
 
 $$\bar{X}=907.6, \quad n = 60, \quad S = 78.967$$
 
-Use the above information to calculate a 95% confidence interval around the population average lifespan of the light bulbs you have left to sell. You can put this on information on the box!
+Use the above information to calculate a 95% confidence interval around the population average lifespan of the light bulbs you have left to sell. You can put this information on the box!
 
 ```{r}
 alpha = 0.05

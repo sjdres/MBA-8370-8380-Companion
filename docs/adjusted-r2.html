@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>8.2 Adjusted \(R^2\) | Course Companion for MBA 8370 and MBA 8380</title>
   <meta name="description" content="Course companion" />
-  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="8.2 Adjusted \(R^2\) | Course Companion for MBA 8370 and MBA 8380" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Scott Dressler" />
 
 
-<meta name="date" content="2023-01-08" />
+<meta name="date" content="2024-08-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -56,7 +56,7 @@
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -119,6 +119,10 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -178,7 +182,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3" data-path="R.html"><a href="R.html"><i class="fa fa-check"></i><b>3</b> Getting Started with R</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="the-r-project-for-statistical-computing.html"><a href="the-r-project-for-statistical-computing.html"><i class="fa fa-check"></i><b>3.1</b> The R Project for Statistical Computing</a></li>
-<li class="chapter" data-level="3.2" data-path="before-you-install-rstudio-cloud.html"><a href="before-you-install-rstudio-cloud.html"><i class="fa fa-check"></i><b>3.2</b> Before you Install… RStudio Cloud?</a></li>
+<li class="chapter" data-level="3.2" data-path="before-you-install-posit-rstudio-cloud.html"><a href="before-you-install-posit-rstudio-cloud.html"><i class="fa fa-check"></i><b>3.2</b> Before you Install… Posit (RStudio) Cloud?</a></li>
 <li class="chapter" data-level="3.3" data-path="downloading-and-installing-r.html"><a href="downloading-and-installing-r.html"><i class="fa fa-check"></i><b>3.3</b> Downloading and installing R</a>
 <ul>
 <li class="chapter" data-level="3.3.1" data-path="downloading-and-installing-r.html"><a href="downloading-and-installing-r.html#choosing-a-mirror"><i class="fa fa-check"></i><b>3.3.1</b> Choosing a <em>Mirror</em></a></li>
@@ -191,7 +195,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.5.1" data-path="coding-basics.html"><a href="coding-basics.html#installing-packages"><i class="fa fa-check"></i><b>3.5.1</b> Installing <em>Packages</em></a></li>
 <li class="chapter" data-level="3.5.2" data-path="coding-basics.html"><a href="coding-basics.html#assigning-objects"><i class="fa fa-check"></i><b>3.5.2</b> Assigning Objects</a></li>
 <li class="chapter" data-level="3.5.3" data-path="coding-basics.html"><a href="coding-basics.html#listing-adding-and-removing"><i class="fa fa-check"></i><b>3.5.3</b> Listing, Adding, and Removing</a></li>
-<li class="chapter" data-level="3.5.4" data-path="coding-basics.html"><a href="coding-basics.html#loading-data"><i class="fa fa-check"></i><b>3.5.4</b> Loading Data</a></li>
+<li class="chapter" data-level="3.5.4" data-path="coding-basics.html"><a href="coding-basics.html#importing-data"><i class="fa fa-check"></i><b>3.5.4</b> Importing Data</a></li>
 <li class="chapter" data-level="3.5.5" data-path="coding-basics.html"><a href="coding-basics.html#manipulating-data"><i class="fa fa-check"></i><b>3.5.5</b> Manipulating Data</a></li>
 <li class="chapter" data-level="3.5.6" data-path="coding-basics.html"><a href="coding-basics.html#subsetting-data"><i class="fa fa-check"></i><b>3.5.6</b> Subsetting Data</a></li>
 </ul></li>
@@ -281,13 +285,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.5.3" data-path="assumptions-of-the-linear-regression-model.html"><a href="assumptions-of-the-linear-regression-model.html#equal-variance"><i class="fa fa-check"></i><b>7.5.3</b> Equal Variance</a></li>
 <li class="chapter" data-level="7.5.4" data-path="assumptions-of-the-linear-regression-model.html"><a href="assumptions-of-the-linear-regression-model.html#normality-of-errors"><i class="fa fa-check"></i><b>7.5.4</b> Normality of Errors</a></li>
 </ul></li>
-<li class="chapter" data-level="7.6" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html"><i class="fa fa-check"></i><b>7.6</b> Appendix: Statistical Inference</a>
+<li class="chapter" data-level="7.6" data-path="a-concluding-application.html"><a href="a-concluding-application.html"><i class="fa fa-check"></i><b>7.6</b> A Concluding Application</a></li>
+<li class="chapter" data-level="7.7" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html"><i class="fa fa-check"></i><b>7.7</b> Appendix: Statistical Inference</a>
 <ul>
-<li class="chapter" data-level="7.6.1" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-population-parameters"><i class="fa fa-check"></i><b>7.6.1</b> Confidence Intervals (around population parameters)</a></li>
-<li class="chapter" data-level="7.6.2" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#hypothesis-tests"><i class="fa fa-check"></i><b>7.6.2</b> Hypothesis Tests</a></li>
-<li class="chapter" data-level="7.6.3" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-forecasts"><i class="fa fa-check"></i><b>7.6.3</b> Confidence Intervals (around forecasts)</a></li>
+<li class="chapter" data-level="7.7.1" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-population-parameters"><i class="fa fa-check"></i><b>7.7.1</b> Confidence Intervals (around population parameters)</a></li>
+<li class="chapter" data-level="7.7.2" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#hypothesis-tests"><i class="fa fa-check"></i><b>7.7.2</b> Hypothesis Tests</a></li>
+<li class="chapter" data-level="7.7.3" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-forecasts"><i class="fa fa-check"></i><b>7.7.3</b> Confidence Intervals (around forecasts)</a></li>
 </ul></li>
-<li class="chapter" data-level="7.7" data-path="up-next.html"><a href="up-next.html"><i class="fa fa-check"></i><b>7.7</b> Up Next…</a></li>
+<li class="chapter" data-level="7.8" data-path="up-next.html"><a href="up-next.html"><i class="fa fa-check"></i><b>7.8</b> Up Next…</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="MLR.html"><a href="MLR.html"><i class="fa fa-check"></i><b>8</b> Multiple Linear Regression</a>
 <ul>
@@ -307,6 +312,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.3.3" data-path="statistical-inference.html"><a href="statistical-inference.html#hypothesis-tests-1"><i class="fa fa-check"></i><b>8.3.3</b> Hypothesis Tests</a></li>
 <li class="chapter" data-level="8.3.4" data-path="statistical-inference.html"><a href="statistical-inference.html#confidence-intervals-around-forecasts-1"><i class="fa fa-check"></i><b>8.3.4</b> Confidence Intervals (around forecasts)</a></li>
 </ul></li>
+<li class="chapter" data-level="8.4" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html"><i class="fa fa-check"></i><b>8.4</b> A Concluding Application</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#interpretation"><i class="fa fa-check"></i>Interpretation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#confidence-intervals"><i class="fa fa-check"></i>Confidence Intervals</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#hypothesis-tests-2"><i class="fa fa-check"></i>Hypothesis Tests</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#forecasts"><i class="fa fa-check"></i>Forecasts</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="COL.html"><a href="COL.html"><i class="fa fa-check"></i><b>9</b> Collinearity</a>
 <ul>
@@ -322,17 +334,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="how-do-we-remove-collinearity.html"><a href="how-do-we-remove-collinearity.html#sometimes-removing-collinearity-might-involve-multiple-rounds"><i class="fa fa-check"></i>Sometimes removing collinearity might involve multiple rounds</a></li>
 </ul></li>
+<li class="chapter" data-level="9.5" data-path="a-concluding-application-2.html"><a href="a-concluding-application-2.html"><i class="fa fa-check"></i><b>9.5</b> A Concluding Application</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="DVS.html"><a href="DVS.html"><i class="fa fa-check"></i><b>10</b> Qualitative (Dummy) Variables</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="intercept-dummy-variable.html"><a href="intercept-dummy-variable.html"><i class="fa fa-check"></i><b>10.1</b> Intercept dummy variable</a></li>
 <li class="chapter" data-level="10.2" data-path="slope-dummy-variable.html"><a href="slope-dummy-variable.html"><i class="fa fa-check"></i><b>10.2</b> Slope dummy variable</a></li>
 <li class="chapter" data-level="10.3" data-path="what-if-there-are-more-than-two-categories.html"><a href="what-if-there-are-more-than-two-categories.html"><i class="fa fa-check"></i><b>10.3</b> What if there are more than two categories?</a></li>
-<li class="chapter" data-level="10.4" data-path="a-final-application.html"><a href="a-final-application.html"><i class="fa fa-check"></i><b>10.4</b> A Final Application</a>
+<li class="chapter" data-level="10.4" data-path="a-concluding-application-3.html"><a href="a-concluding-application-3.html"><i class="fa fa-check"></i><b>10.4</b> A Concluding Application</a></li>
+<li class="chapter" data-level="10.5" data-path="another-concluding-application.html"><a href="another-concluding-application.html"><i class="fa fa-check"></i><b>10.5</b> Another Concluding Application</a>
 <ul>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#make-a-nominal-series-a-real-series"><i class="fa fa-check"></i>Make a <em>Nominal</em> Series a <em>Real</em> Series</a></li>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#remove-a-trend"><i class="fa fa-check"></i>Remove a Trend</a></li>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#remove-seasonality"><i class="fa fa-check"></i>Remove Seasonality</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#make-a-nominal-series-a-real-series"><i class="fa fa-check"></i>Make a <em>Nominal</em> Series a <em>Real</em> Series</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#remove-a-trend"><i class="fa fa-check"></i>Remove a Trend</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#remove-seasonality"><i class="fa fa-check"></i>Remove Seasonality</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="FF.html"><a href="FF.html"><i class="fa fa-check"></i><b>11</b> Functional Forms</a>
@@ -354,6 +368,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="the-reciprocal-transformation.html"><a href="the-reciprocal-transformation.html#application-6"><i class="fa fa-check"></i>Application</a></li>
 </ul></li>
 <li class="chapter" data-level="11.6" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>11.6</b> Conclusion</a></li>
+<li class="chapter" data-level="11.7" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html"><i class="fa fa-check"></i><b>11.7</b> A Concluding Application</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#a-residual-analysis"><i class="fa fa-check"></i>A Residual Analysis</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#log-transformation"><i class="fa fa-check"></i>Log Transformation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#quadratic-transformation"><i class="fa fa-check"></i>Quadratic Transformation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#reciprocal-transformation"><i class="fa fa-check"></i>Reciprocal Transformation</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="JHT.html"><a href="JHT.html"><i class="fa fa-check"></i><b>12</b> Joint Hypothesis Tests</a>
 <ul>
@@ -373,6 +394,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="applications.html"><a href="applications.html#application-1-a-wage-application"><i class="fa fa-check"></i>Application 1: A wage application</a></li>
 <li class="chapter" data-level="" data-path="applications.html"><a href="applications.html#application-2-constant-returns-to-scale"><i class="fa fa-check"></i>Application 2: Constant Returns to Scale</a></li>
 </ul></li>
+<li class="chapter" data-level="12.4" data-path="a-concluding-application-5.html"><a href="a-concluding-application-5.html"><i class="fa fa-check"></i><b>12.4</b> A Concluding Application</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -407,25 +429,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="abusing-an-r2" class="section level3 hasAnchor" number="8.2.1">
 <h3><span class="header-section-number">8.2.1</span> Abusing an <span class="math inline">\(R^2\)</span><a href="adjusted-r2.html#abusing-an-r2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>No matter how hard I try to downplay the importance of an <span class="math inline">\(R^2\)</span>, students always have the tendency to shoot for that measure to be as close to 1 as possible. The problem with this goal is that an <span class="math inline">\(R^2\)</span> equal to 1 in not necessarily a good thing. Furthermore, achieving an <span class="math inline">\(R^2\)</span> of one might be <em>impossible</em>.</p>
-<p>An <span class="math inline">\(R^2\)</span> of 1 is sometimes impossible because our PRF actually has a residual term. This means that we understand that there is forecast error in the population. In other words, suppose that we are trying to understand the movements of a rather <em>noisy</em> dependent variable and 20 percent of its variation is entirely random and unpredictable. This would imply that a value of <span class="math inline">\(R^2\)</span> equal to <span class="math inline">\(0.80\)</span> is the <strong>highest</strong> value we can hope to achieve. If we somehow received a value higher than that… our sample regression function is not a valid representation of our population regression function.</p>
+<p>An <span class="math inline">\(R^2\)</span> of 1 is sometimes impossible because our PRF actually has a residual term. This means that we understand that there are forecast errors in the population. In other words, suppose that we are trying to understand the movements of a rather <em>noisy</em> dependent variable and 20 percent of its variation is entirely random and unpredictable. This would imply that a value of <span class="math inline">\(R^2\)</span> equal to <span class="math inline">\(0.80\)</span> is the <strong>highest</strong> value we can hope to achieve. If we somehow received a value higher than that… our sample regression function is not a valid representation of our population regression function.</p>
 <p>Let us illustrate how an <span class="math inline">\(R^2\)</span> value can be misleading by way of an application. Consider a previous regression where we explained house prices with only the number of bedrooms.</p>
-<div class="sourceCode" id="cb233"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb233-1"><a href="adjusted-r2.html#cb233-1" aria-hidden="true" tabindex="-1"></a>REG1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(price <span class="sc">~</span> bdrms, <span class="at">data =</span> hprice1)</span>
-<span id="cb233-2"><a href="adjusted-r2.html#cb233-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(REG1)<span class="sc">$</span>r.squared</span></code></pre></div>
+<div class="sourceCode" id="cb246"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb246-1"><a href="adjusted-r2.html#cb246-1" tabindex="-1"></a>REG1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(price <span class="sc">~</span> bdrms, <span class="at">data =</span> hprice1)</span>
+<span id="cb246-2"><a href="adjusted-r2.html#cb246-2" tabindex="-1"></a><span class="fu">summary</span>(REG1)<span class="sc">$</span>r.squared</span></code></pre></div>
 <pre><code>## [1] 0.2581489</code></pre>
 <p>The coefficient of determination states that the number of bedrooms explains slightly around 0.26 percent of the variation in house prices. If we include the size of the house in the regression,</p>
-<div class="sourceCode" id="cb235"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb235-1"><a href="adjusted-r2.html#cb235-1" aria-hidden="true" tabindex="-1"></a>REG2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(price <span class="sc">~</span> bdrms <span class="sc">+</span> sqrft, <span class="at">data =</span> hprice1)</span>
-<span id="cb235-2"><a href="adjusted-r2.html#cb235-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(REG2)<span class="sc">$</span>r.squared</span></code></pre></div>
+<div class="sourceCode" id="cb248"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb248-1"><a href="adjusted-r2.html#cb248-1" tabindex="-1"></a>REG2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(price <span class="sc">~</span> bdrms <span class="sc">+</span> sqrft, <span class="at">data =</span> hprice1)</span>
+<span id="cb248-2"><a href="adjusted-r2.html#cb248-2" tabindex="-1"></a><span class="fu">summary</span>(REG2)<span class="sc">$</span>r.squared</span></code></pre></div>
 <pre><code>## [1] 0.6319184</code></pre>
 <p>we see that the <span class="math inline">\(R^2\)</span> increases to 0.63 as before. If we include yet another variable such as the size of the property,</p>
-<div class="sourceCode" id="cb237"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb237-1"><a href="adjusted-r2.html#cb237-1" aria-hidden="true" tabindex="-1"></a>REG3 <span class="ot">&lt;-</span> <span class="fu">lm</span>(price <span class="sc">~</span> bdrms <span class="sc">+</span> sqrft <span class="sc">+</span> lotsize, <span class="at">data =</span> hprice1)</span>
-<span id="cb237-2"><a href="adjusted-r2.html#cb237-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(REG3)<span class="sc">$</span>r.squared</span></code></pre></div>
+<div class="sourceCode" id="cb250"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb250-1"><a href="adjusted-r2.html#cb250-1" tabindex="-1"></a>REG3 <span class="ot">&lt;-</span> <span class="fu">lm</span>(price <span class="sc">~</span> bdrms <span class="sc">+</span> sqrft <span class="sc">+</span> lotsize, <span class="at">data =</span> hprice1)</span>
+<span id="cb250-2"><a href="adjusted-r2.html#cb250-2" tabindex="-1"></a><span class="fu">summary</span>(REG3)<span class="sc">$</span>r.squared</span></code></pre></div>
 <pre><code>## [1] 0.6723622</code></pre>
 <p>we see that the regression now explains about 0.67 percent of the variation in house prices.</p>
 <p>What we are seeing is that the more variables you add the higher the <span class="math inline">\(R^2\)</span> is getting. While this might lead you to believe that we are adding <em>important</em> independent variables to the regression, the problem is that the <span class="math inline">\(R^2\)</span> will go up <strong>no matter what variable you add</strong>. The increase might be slight, but the <span class="math inline">\(R^2\)</span> will never go down.</p>
-<div class="sourceCode" id="cb239"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb239-1"><a href="adjusted-r2.html#cb239-1" aria-hidden="true" tabindex="-1"></a>Xcrap <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">88</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb240"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb240-1"><a href="adjusted-r2.html#cb240-1" aria-hidden="true" tabindex="-1"></a>REG4 <span class="ot">&lt;-</span> <span class="fu">lm</span>(price <span class="sc">~</span> bdrms <span class="sc">+</span> sqrft <span class="sc">+</span> lotsize <span class="sc">+</span> Xcrap, <span class="at">data =</span> hprice1)</span>
-<span id="cb240-2"><a href="adjusted-r2.html#cb240-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(REG4)<span class="sc">$</span>r.squared</span></code></pre></div>
-<pre><code>## [1] 0.6727725</code></pre>
+<div class="sourceCode" id="cb252"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb252-1"><a href="adjusted-r2.html#cb252-1" tabindex="-1"></a>Xcrap <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">88</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb253"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb253-1"><a href="adjusted-r2.html#cb253-1" tabindex="-1"></a>REG4 <span class="ot">&lt;-</span> <span class="fu">lm</span>(price <span class="sc">~</span> bdrms <span class="sc">+</span> sqrft <span class="sc">+</span> lotsize <span class="sc">+</span> Xcrap, <span class="at">data =</span> hprice1)</span>
+<span id="cb253-2"><a href="adjusted-r2.html#cb253-2" tabindex="-1"></a><span class="fu">summary</span>(REG4)<span class="sc">$</span>r.squared</span></code></pre></div>
+<pre><code>## [1] 0.6777127</code></pre>
 <p>The exercise above adds a completely random variable as a fourth independent variable. It should have nothing to do with explaining house prices. However, if you generate <em>the correct</em> random variables, then you might get an increase in the <span class="math inline">\(R^2\)</span> by as much as an entire percentage point. Does this say that the random variable actually helps explain variations in house prices? Of course not. What it does show is that sometimes we can abuse the <span class="math inline">\(R^2\)</span>, so we need an additional measure of goodness of fit.</p>
 </div>
 <div id="an-adjusted-r2" class="section level3 hasAnchor" number="8.2.2">

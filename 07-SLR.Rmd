@@ -12,7 +12,7 @@ Saying *bigger homes cost more* is a **qualitative** statement because all we ar
 
 A **Regression** can measure the relationship between the mean value of one variable and corresponding values of other variables. In other words, it is a statistical technique used to explain average movements of one (dependent) variable, as a function of movements in a set of other (independent) variables.
 
-This chapter will discuss the estimation, interpretation, and statistical inference of a *simple* linear regression model, which means that we will attempt to explain the movements in a dependent variable by considering **one** independent variable. This is the simplest regression model we can consider in order to understand what is going on under the hood of a regression. The next chapter will extend this analysis to *multiple* regression models where the only real difference is that the number of independent variables are greater than one.
+This chapter will discuss the estimation, interpretation, and statistical inference of a *simple* linear regression model, which means that we will explain the movements in a dependent variable by considering **one** independent variable. This is the simplest regression model we can consider in order to understand what is going on under the hood of a regression. The next chapter will extend this analysis to *multiple* regression models where the only real difference is that the number of independent variables are greater than one.
 
 ## A Simple Linear Regression Model
 
@@ -36,9 +36,9 @@ $$Y_i=\beta_0+\beta_1X_i$$
 
 When we write down a model like this, we are imposing a huge amount of assumptions on how we believe the world works.
 
-First, there is the **Direction of causality**. A regression implicitly assumes that changes in the independent variable (X) *causes* changes in the dependent variable (Y). This is the ONLY direction of causality we can handle, otherwise our analysis would be confounded (i.e., is don't know *what causes what*) and not useful.
+First, there is the **Direction of causality**. A regression implicitly assumes that changes in the independent variable (X) *cause* changes in the dependent variable (Y). This is the ONLY direction of causality we can handle, otherwise our analysis would be confounded and not useful (i.e., we don't know *what causes what*).
 
-Second, the equation assumes that information on the independent variable (X) is all the information you need to explain the dependent variable (Y). In other words, if we were to look at pairs of observations of X and Y on a plot, then the above equation assumes that all observations (data points) line up exactly on the (straight) regression line.
+Second, the equation assumes that information on the independent variable (X) is all the information needed to explain the dependent variable (Y). In other words, if we were to look at pairs of observations of X and Y on a plot, then the above equation assumes that all observations (data points) line up exactly on the (straight) regression line.
 
 This would be great if the observations look like the figure on the left, but not if they look like the figure on the right. 
 
@@ -57,11 +57,11 @@ It would be extremely rare for the linear model (as detailed above) to account f
 
 1. There might be other independent variables that explain different parts of the dependent variable (i.e., multiple dimensions). *(more on this next chapter)*
 
-2. There might be measurement error in the recording of the variables.
+2. There might be measurement error in the recording of the variables. *(this is a quality of data issue)*
 
-3. There might be an incorrect functional form - meaning that the relationship between the dependent and independent variable might be more sophisticated than a straight line. *(more on this next chapter)*
+3. There might be an incorrect functional form - meaning that the relationship between the dependent and independent variable might be more sophisticated than a straight line. *(more on this in a later chapter)*
 
-4. There might be purely random and therefore totally unpredictable variation in the dependent variable.
+4. There might be purely random and totally unpredictable variation in the dependent variable.
 
 This last item can be easily dealt with!
 
@@ -73,9 +73,9 @@ $$Y_i=\beta_0+\beta_1X_i+\varepsilon_i$$
 
 The Linear Regression Model now explicitly states that the explanation of the dependent variable $(Y_i)$ can be broken down into two components:
 
-* A **Deterministic** Component: $\beta_0+\beta_1X_i$
+* A **Deterministic / Explainable** Component: $\beta_0+\beta_1X_i$
 
-* A **Random / Stochastic / Explainable** Component: $\varepsilon_i$
+* A **Random / Stochastic / Unexplainable** Component: $\varepsilon_i$
 
 Lets address these two components in turn.
 
@@ -83,11 +83,11 @@ Lets address these two components in turn.
 
 $$\hat{Y}_i=\beta_0+\beta_1X_i$$
 
-The deterministic component delivers the expected (or *average*) value of the dependent variable (Y) given a values for the coefficients ($\beta_0$ and $\beta_1$) and a value of the dependent variable (X).
+The deterministic component delivers the expected (or *average*) value of the dependent variable (Y) given values for the coefficients ($\beta_0$ and $\beta_1$) and a value of the dependent variable (X).
 
-Since X is given, it is considered *deterministic* (i.e., non-stochastic)
+Since X is given, it is considered *deterministic* (i.e., non-stochastic).
 
-In other words, the deterministic component determines the mean value of Y associated with a particular value of X. This should make sense, because the average value of Y is the best guess.
+To put plainly, the deterministic component determines the mean value of Y associated with a particular value of X. It is now the *expected value of Y given a value of X*, because the mean value of Y is the best guess.
 
 Technically speaking, the deterministic component delivers the *expected value of Y conditional on a value of X* (i.e., a conditional expectation).
 
@@ -99,15 +99,15 @@ $$\varepsilon_i=Y_i-\hat{Y}_i$$
 
 Once we obtain the coefficients, we can compare the observed values of $Y_i$ with the expected value of $Y_i$ conditional on the values of $X_i$.
 
-The difference between the true value $(Y_i)$ and the expected value $(\hat{Y}_i)$ is by definition... *unexpected!*
+The difference between the observed (true) value $(Y_i)$ and the expected value $(\hat{Y}_i)$ is by definition... *unexpected!*
 
 This unexpected discrepancy is your **prediction error** - and everything your deterministic component cannot explain is deemed *random* and *unexplainable*.
 
-If a portion of the dependent variable is considered random and unexplainable - then it gets thrown away into the *garbage can* ($\varepsilon_i$).
+If a portion of the dependent variable is considered random and unexplainable by deterministic portion of the model - then it gets thrown away into the *garbage can* ($\varepsilon_i$).
 
 This is a subtle but crucial part of regression modeling...
 
-* Your choice of the independent variable(s) dictate what you believe to be important in explaining the dependent variable.
+* Your choice of the independent variable(s) dictates what you believe to be important in explaining the dependent variable.
 
 * The unimportant (or random) changes in the dependent variable that your independent variables cannot explain end up in the garbage can *by design*.
 
@@ -143,7 +143,7 @@ In order to obtain *sample estimates* of our regression model above, we must obt
 
 Hypothetically, we can obtain different estimated coefficients for every different sample... but we will address that later.
 
-To facilitate this application, we will use a data set internal to R, called *hprice1*.
+To facilitate this application, we will use a data set internal to R, called *hprice1*.^[Note that this data is found in a package called wooldridge. You should have installed this package back in Chapter 3. Refer to that chapter if you need to reinstall the package.]
 
 ```{r}
 data(hprice1,package='wooldridge')
@@ -188,27 +188,27 @@ coef(REG)
 
 Our regression estimates are $\hat{\beta}_0=11.2$ and $\hat{\beta}_1=0.14$. This delivers a prediction equation from our SRF as:
 
-$$\hat{price}_i=11.2+0.14 \; sqrft_i$$
+$$\widehat{price}_i=11.2+0.14 \; sqrft_i$$
 
-Where $\hat{Y}_i=\hat{Price}_i$ is the expected house price conditional on a particular size.
+Where $\hat{Y}_i=\widehat{price}_i$ is the expected house price conditional on a particular size.
 
 We can illustrate the results of the regression as follows:
 
 ```{r}
 par(mfrow = c(1,2))
 plot(hprice1$sqrft, hprice1$price,
-     pch = 16, col = "purple",
+     pch = 16, col = "steelblue",
      xlab = "Size (sqrft.)",
      ylab = "Price (1000$)")
 lines(hprice1$sqrft,fitted(REG),col = 'black')
 plot(hprice1$sqrft,residuals(REG),
-     pch = 16, col = "red",
+     pch = 16, col = "darkred",
      xlab = "Size (Sq. Ft.)",
      ylab = "Residuals")
 abline(h = 0,lty = "dashed")
 ```
 
-In the left figure, the *dots* are a scatter-plot of the actual observations of house price (Y) and house size (X) while the blue line is our estimated regression which delivers the expected house price $(\hat{price}_i)$ for each observation of house size. Note that every time an actual house price is different than the expected value from the regression $(price_i - \hat{price}_i)$ - then that difference is considered *unexpected* and ends up in the *garbage can* (residual). The residual values are in the right figure. Note that the residual values are centered around the zero line - this means that the unexpected component of house price is equal to zero *on average*.
+In the left figure, the *dots* are a scatter-plot of the actual observations of house price (Y) and house size (X) while the blue line is our estimated regression delivering the expected house price $(\widehat{price}_i)$ for each observation of house size. Note that every time an actual house price is different than the expected value from the regression $(price_i - \widehat{price}_i)$ - then that difference is considered *unexpected* and ends up in the *garbage can* (residual). The residual values are illustrated in the right figure. Note that the residual values are centered around the zero line - this means that the unexpected component of house price is equal to zero *on average*. This *zero average forecast error* is not by accident, it is how the coefficients are mathematically determined (see the section on Ordinary Least Squares for details).
 
 **Analysis of the SRF**
 
@@ -224,7 +224,7 @@ We can get plenty of mileage out of our estimated SRF.
 
 To illustrate a forecast, suppose you came across a 1,800 square-foot house with a selling price of $250,000. Does this seem like a fair price? In order to answer this question with our estimated results, we simply plug 1800 square-feet as a value for our independent variable and arrive at an expected price conditional on this house size.
 
-$$\hat{price}_i=11.2+0.14(1800)=263.6$$
+$$\widehat{price}_i=11.2+0.14(1800)=263.6$$
 
 ```{r}
 Bhat0 <- summary(REG)$coef[1,1]
@@ -232,11 +232,11 @@ Bhat1 <- summary(REG)$coef[2,1]
 (Yhat = Bhat0 + Bhat1 * 1800)
 ```
 
-Our regression forecast states that an 1,800 square-foot house should have an *average* price of \$263,000. Since this is more than the \$250,000 of the house in question, then the regression model suggests that this price is *below average*, and is a decent price based on the size of the house.
+Our regression forecast states that an 1,800 square-foot house should have an *average* price of \$263,000. Since this is more than the \$250,000 of the house in question, then the regression model suggests that this price is *below average*, and is a decent price based on the size of the house.^[Of course, there might be something wrong with the house that size isn't accounting for.]
 
 **Discussion**
 
-While our model appears useful, we must always be mindful of its limitations. For starters, our regression **assumes** that house size is the **only** thing that matters when predicting house price. Our candidate house is more than $10,000 below the average 1,800 square-foot house price in the sample, but this might be due to very relevant things that our model considers *unpredictable*.
+While our model appears useful, we must always be mindful of its limitations. For starters, our regression **assumes** that house size is the **only** thing that matters when predicting house price. Our candidate house in the exercise above is more than $10,000 below the average 1,800 square-foot house price in the sample, but this might be due to very relevant things that our model considers *unpredictable*.
 
 * Is the house located next to the town dump?
 
@@ -280,7 +280,7 @@ The problem we face now is that error terms can be both positive and negative. T
 $$\sum_{i}e^2_i = \sum_{i}(Y_i - \hat{\beta}_0 - \hat{\beta}_1X_i)^2$$
 
 
-Notice that this function now states that we can calculate the sum of squared errors for any given values of $\hat{\beta}_0$ and $\hat{\beta}_1$. We can therefore find the *best* values of $\hat{\beta}_0$ and $\hat{\beta}_1$ that deliver the *lowest* sum of squared errors. The line that delivers the lowest squared errors is what we mean by the best line.
+Notice that this function now states that we can calculate the sum of squared errors for any given values of $\hat{\beta}_0$ and $\hat{\beta}_1$. We can therefore find the *best* values of $\hat{\beta}_0$ and $\hat{\beta}_1$ that deliver the *lowest* sum of squared errors. The line that delivers the lowest squared errors is what we mean by the best fitting line.
 
 $$min\sum_{i}e^2_i = min_{(\hat{\beta}_0,\hat{\beta}_1)}\sum_{i}(Y_i - \hat{\beta}_0 - \hat{\beta}_1X_i)^2$$
 
@@ -290,7 +290,7 @@ $$\hat{\beta}_1=\frac{\sum_i (X_i-\bar{X})(Y_i-\bar{Y})}{\sum_i(X_i-\bar{X})^2}=
 
 $$\hat{\beta}_0=\bar{Y}-\hat{\beta}_1\bar{X}$$
 
-Where a 'bar' term over a variable represents the mean of that variable (i.e., $\bar{X}=\frac{1}{n}\sum_iX_i$)
+Where a 'bar' over a variable represents the mean of that variable (i.e., $\bar{X}=\frac{1}{n}\sum_iX_i$)
 
 These two equations are important. The first equation states that the slope of the line equation $(\hat{\beta}_1)$ is equal to the ratio between the covariance of Y and X and the variance of X. Remember that a covariance measures how two variables systematically move together. If they tend to go up at the same time, then they have a positive covariance. If they tend to go down - a negative covariance. If they do not tend to move together in any systematic way, then they have zero covariance. This systematic movement is precisely what helps determine the slope term. The second equation states that with $\hat{\beta}_1$ determined, we can determine $\hat{\beta}_0$ such that the regression line goes through the means of the dependent and independent variables.
 
@@ -321,7 +321,7 @@ Notice that these residual values are distributed both above and below the zero 
 
 $$\sum_ie_i=0$$
 
-This mathematical outcome is actually important. First, if the residuals or *forecast errors* sum up to zero, then that means that they have a *mean* that is also 0 $(\bar{e}=0)$. This further means that they are zero *on average*, so the *expected value* is zero!
+This mathematical outcome is actually important. First, if the residuals or *forecast errors* sum up to zero, then that means that they also have a *mean* of 0 $(\bar{e}=0)$. This further implies that the errors are zero *on average*, so the *expected value* is zero!
 
 $$E[e_i]=0$$
 
@@ -345,13 +345,13 @@ Using our regression estimates and sample information, we can construct one of t
 
 First, the **total sum of squares** (or TSS) can be calculated to measure the total variation in the dependent variable:
 
-$$TSS = \sum^{N}_{i=1}(Y_i - \bar{Y})^2$$
+$$TSS = \sum^{n}_{i=1}(Y_i - \bar{Y})^2$$
 
-This expression is similar to a variance equation (without averaging), and since the movements in the dependent variable are ultimately what we are after, this measure delivers *the total variation in the dependent variable that we would like our model to explain*.
+This expression is similar to a variance equation (without averaging), and since the movements in the dependent variable are ultimately what we are after, this measure delivers *the total variation in the dependent variable that we would like to explain*.
 
-Next, we can use our regression estimates to calculate an **estimated sum of squares** (or ESS) which measures the total variation in the dependent variable that our model *actually* explained:
+Next, we can use our regression estimates to calculate an **estimated sum of squares** (or ESS) which measures the total variation in the dependent variable that our model *actually* captures:
 
-$$ESS = \sum^{N}_{i=1}(\hat{Y}_i - \bar{Y})^2$$
+$$ESS = \sum^{n}_{i=1}(\hat{Y}_i - \bar{Y})^2$$
 
 Note that this measure uses our conditional forecasts from our regression model in place of the actual observations of the dependent variable.
 
@@ -359,18 +359,18 @@ $$\hat{Y}_i = \hat{\beta}_0 + \hat{\beta}_1 X_i$$
 
 Finally, we can use our regression estimates to also calculate a **residual sum of squares** (or RSS) which measures the total variation in the dependent variable that our model *cannot* explain:
 
-$$RSS = \sum^{N}_{i=1}(Y_i - \hat{Y}_i)^2 = \sum^{N}_{i=1}e_i^2$$
+$$RSS = \sum^{n}_{i=1}(Y_i - \hat{Y}_i)^2 = \sum^{n}_{i=1}e_i^2$$
 
-Note that this is a measure of the variation in the garbage can, and the garage can is where all of the variation in the dependent variable that your model cannot explain ends up.
+Note that this is a measure of the variation in the garbage can, and the garbage can is where all of the variation in the dependent variable that your model cannot explain ends up.
 
 ### The $R^2$
 
-Our regression breaks the variation in $Y_i$ (the TSS) into what can be explained (the ESS) and what cannot be explained (the RSS). This essentially means $TSS=ESS+RSS$. Furthermore, our OLS estimates attempt to maximize the ESS and minimize the RSS. This delivers our first measure of how well our model explains the movements in the dependent variable or *goodness of fit*
+Our regression breaks the variation in $Y_i$ (the TSS) into what can be explained (the ESS) and what cannot be explained (the RSS). This essentially means $TSS=ESS+RSS$. Furthermore, our OLS estimates attempt to maximize the ESS and minimize the RSS as much as possible. This delivers our first measure of how well our model explains the movements in the dependent variable or *goodness of fit*
 
 $$R^2 = \frac{ESS}{TSS} = 1 - \frac{RSS}{TSS}$$
 
 
-This **coefficient of determination** or $R^2$ should be an intuitive measure. First, it is bounded between 0 and 1. If the measure is 0 then the model explains **NOTHING** and all variation is in the garbage can. If the measure is 1 then the model explains **EVERYTHING** and the garbage can is empty. Any number in between is simply the proportion of the variation in the dependent variable explained by the model.
+This **coefficient of determination** or $R^2$ should be an intuitive measure. First, it is bounded between 0 and 1. If the measure is 0 then the model explains **NOTHING** and all variation is in the garbage can. If the measure is 1 then the model explains **EVERYTHING** and the garbage can is completely empty. Any number in between is simply the proportion of the variation in the dependent variable explained by the model.
 
 ```{r}
 REG3 <- lm(price ~ sqrft, data = hprice1)
@@ -386,7 +386,7 @@ Is explaining 62 percent of the variation in house prices *good*? The answer dep
 
 ### Standard Error of the Estimate
 
-$$S_{YX} = \sqrt{\frac{RSS}{n-2}} = \sqrt{\frac{\sum^{N}_{i=1}e_i^2}{n-2}}$$
+$$S_{YX} = \sqrt{\frac{RSS}{n-2}} = \sqrt{\frac{\sum^{n}_{i=1}e_i^2}{n-2}}$$
 
 The standard error of the estimate is much like a standard deviation equation. However, while the standard deviation measures the variability around a mean, the standard error of the estimate measures the variability around the prediction line.
 
@@ -398,7 +398,7 @@ you will see that we had to estimate **two** line coefficients before we can det
 
 ## Assumptions of the Linear Regression Model
 
-An empirical regression analysis always begins with a statement of the population regression function (PRF). The PRF explicitly states exactly how you (the researcher) believes the independent variable is related to the dependent variable. One thing to be clear about when stating a PRF is that you are imposing a great deal of assumptions on how the world works. If your assumptions are correct, then the PRF is a reasonable depiction of reality and OLS will uncover accurate estimates of the PRF parameters. If your assumptions are incorrect, then the estimates are highly unreliable and might actually be misleading. 
+An empirical regression analysis always begins with a statement of the population regression function (PRF). The PRF explicitly states exactly how you (the researcher) believe the independent variable is related to the dependent variable. One thing to be clear about when stating a PRF is that you are imposing a great deal of assumptions on how the world works. If your assumptions are correct, then the PRF is a reasonable depiction of reality and OLS will uncover accurate estimates of the PRF parameters. If your assumptions are incorrect, then the estimates are highly unreliable and might actually be misleading. 
 
 Verifying the assumptions of a linear regression model is a majority of the work involved with an empirical analysis, and we will be doing this for the rest of the course. Before getting into the details of *how* to verify the assumptions, we first need to know what they are.
 
@@ -486,6 +486,131 @@ Suppose you wanted to estimate how much of an additional dollar of income the po
 
 We know that OLS will produce forecast errors that have a mean of zero as well as a variance that is as low as possible by finding the *best fitting* straight line. The assumption that these are now the two moments that can be used to describe a normal distribution comes directly from the Central Limit Theorem and the concept of a sampling distribution. Recall that the *population* error term is zero on average and has some nonzero variance. A random sample of these error terms should have similar characteristics, as well as comprising a normal distribution.
 
+## A Concluding Application
+
+Our course comes with a series of videos that build upon the analysis of a single question: *What explains the median starting salary of a class of law students?* The code and results will be included at the end of each subsequent chapter in this course companion for comparison purposes.
+
+
+
+We start with a very basic theory stating that the median starting salary of a class of law students can be explained by their median LSAT score. Intuitively, a higher median LSAT score suggests that the class is of a higher quality, and therefore should have a higher median starting salary *on average*. Our Population Regression Function (PRF) is as follows.
+
+$$SALARY_i = \beta_0 + \beta_1 \; LSAT_i + \varepsilon_i$$
+
+```{r, eval = TRUE}
+library(readxl)
+LAW <- read_excel("data/LAW.xlsx")
+
+plot(LAW$LSAT,LAW$SALARY,
+     cex = 1,pch=16,col = "blue",
+     xlab = "Median LSAT (points)", 
+     ylab = "Median Starting Salary (dollars)")
+```
+
+We can use our PRF and the data to arrive at a Sample Regression Function (SRF):
+
+$$SALARY_i = \hat\beta_0 + \hat\beta_1 \; LSAT_i + e_i$$
+
+```{r,eval= TRUE}
+REG <- lm(SALARY~LSAT, data = LAW)
+summary(REG)
+```
+
+```{r,echo = FALSE}
+plot(LAW$LSAT,LAW$SALARY,cex = 1,pch=16,col = "blue",
+     xlab = "Median LSAT (points)", 
+     ylab = "Median Starting Salary (dollars)")
+lines(LAW$LSAT,REG$fitted.values,col="black")
+```
+
+We will hold off on the inferential statistics of this model until next chapter. For now, we can simply interpret the model.
+
+```{r,echo=FALSE}
+B0 <- format(round(summary(REG)$coefficient[1,1],2), scientific = FALSE)
+B1 <- format(round(summary(REG)$coefficient[2,1],2), scientific = FALSE)
+```
+
+#### Intercept term {-}
+
+$$\hat\beta_0 = `r B0`$$
+
+
+\medskip
+
+*The expected value of Y when X = 0*
+
+$$\widehat{SALARY}_i = `r B0` + `r B1` \; (0)$$
+
+As in previous examples, this intercept doesn't make sense because none of the classes in our sample had a median LSAT score of zero.
+
+```{r, echo = FALSE}
+
+Y <- LAW$SALARY
+X <- LAW$LSAT
+mx = max(X)
+my = max(Y)
+REG <- lm(Y~X)
+new.data = data.frame(X = c(0,mx))
+Y2 = predict(REG, newdata = new.data)
+
+
+plot(X,Y, xlim = c(0,mx),
+     ylim = c(summary(REG)$coefficient[1,1],my),
+     cex = 1,pch=16,col = "blue",
+     xlab = "Median LSAT (points)", 
+     ylab = "Median Starting Salary (dollars)")
+lines(c(0,mx),Y2,col = "black", lty = 1)
+abline(h = 0, col = "gray", lty = 2)
+```
+
+#### Slope term {-}
+
+$$\hat\beta_1 = `r B1`$$
+
+\medskip
+
+*The expected change in Y in response to a one-unit change in X*
+
+$$\frac{\Delta\widehat{SALARY}_i}{\Delta LSAT} = \hat\beta_1 = `r B1`$$
+
+We can therefore conclude that an additional point in median LSAT score will result in a `r B1` dollar increase in median starting salary on average.
+
+#### Other Regression Diagnostics {-}
+
+Every part of the dependent variable that the *deterministic* component of our model cannot explain ends up in the **residual** (i.e., garbage can)
+
+$$salary_i = \hat\beta_0 + \hat\beta_1 \; LSAT_i + e_i$$
+
+$$e_i = salary_i - \hat\beta_0 - \hat\beta_1 \; LSAT_i$$
+$$e_i = salary_i - `r B0` - `r B1` \; LSAT_i$$
+
+
+```{r,echo = FALSE}
+plot(LAW$LSAT,REG$residuals,cex = 1,pch=16,col = "red",
+     xlab = "Median LSAT (points)", 
+     ylab = "Median Forecast Errors (Residuals)")
+abline(h = 0, lty = 3, col = "black")
+```
+
+These residuals are essentially our forecast errors. The standard error of our forecast errors (the contents of our Garbage Can) is given by:
+
+$$S_{YX} = \sqrt{ \frac{\sum e^2_i}{n-2}}$$
+
+
+```{r}
+summary(REG)$sigma
+```
+
+The Infamous $R^2$ is nothing more than the percentage of the variation in the dependent variable explained by the model. 
+
+$$R^2 = \frac{ESS}{TSS}$$
+
+
+*no more, no less...*
+
+```{r}
+summary(REG)$r.squared
+```
+
 
 ## Appendix: Statistical Inference
 
@@ -496,7 +621,7 @@ Once the assumptions of the regression model have been verified, we are able to 
 
 ### Confidence Intervals (around population parameters)
 
-Recall our earlier formula for calculating a confidence interval in a single-variable context:
+Recall our earlier formula for calculating a confidence interval in a single-variable context (MBA 8370):
 
 $$Pr\left(\bar{X}-t_{(\frac{\alpha}{2},df=n-1)}\frac{S}{\sqrt{n}} \leq \mu \leq \bar{X}+t_{(\frac{\alpha}{2},df=n-1)}\frac{S}{\sqrt{n}}\right)=1-\alpha$$
 
@@ -531,12 +656,12 @@ The information included in the regression summary is all that is needed for us 
 
 Bhat1 <- summary(REG3)$coef[2,1]
 SBhat1 <- summary(REG3)$coef[2,2]
-N <- length(residuals(REG3))
+n <- length(residuals(REG3))
 
 # Find the critical t-distribution values... same as before
 
 AL <- 0.05
-df <- N-2
+df <- n-2
 tcrit <- qt(AL/2,df,lower.tail = FALSE)
 
 # Use the formula... same as before
@@ -575,7 +700,7 @@ and this test statistic is drawn from a t distribution with $n-2$ degrees of fre
 ```{r}
 B1 = 0
 (tstat <- (Bhat1 - B1)/SBhat1)
-(Pval <- pt(tstat,N-2,lower.tail=FALSE)*2)
+(Pval <- pt(tstat,n-2,lower.tail=FALSE)*2)
 (1-Pval)
 ```
 
@@ -594,7 +719,7 @@ $$H_0:\beta_1=0.150 \quad vs. \quad H_1:\beta_1\neq0.150$$
 ```{r}
 B1 = 0.150
 (tstat <- (Bhat1 - B1)/SBhat1)
-(Pval <- pt(tstat,N-2)*2)
+(Pval <- pt(tstat,n-2)*2)
 (1-Pval)
 ```
 
@@ -607,11 +732,11 @@ $$H_0:\beta_1\leq0.160 \quad vs. \quad H_1:\beta_1>0.160$$
 ```{r}
 B1 = 0.160
 (tstat <- (Bhat1 - B1)/SBhat1)
-(Pval <- pt(tstat,N-2))
+(Pval <- pt(tstat,n-2,lower.tail = FALSE))
 (1-Pval)
 ```
 
-Our test concludes that we can reject the null with at most 95.11% confidence.
+Our test concludes that if we reject the null, there is more than a 95% chance we are going to be wrong. That is why we can reject the null with at most 0.05% confidence. Note here that since this is a *right-tailed* test, the p-value is calculated as the area to the *right* of the test statistic under the null. This is why we have *lower.tail = FALSE* in the code.
 
 ### Confidence Intervals (around forecasts)
 
@@ -641,7 +766,7 @@ Our model predicts that a 1,000 square foot house will sell for \$151,415 on ave
 
 #### The mean response: a confidence interval {-}
 
-Suppose you want to build a confidence interval around the mean price for a 1000 square foot house in the population. This is a conditional mean. In other words, we want the average house price but *only* for homes with a particular size. This conditional mean is generally given by $\mu_{Y|X=X_i}$ and in this case by $\mu_{Y|X=1000}$. Building a confidence interval for the mean response is given by
+Suppose you want to build a confidence interval around the mean price for a 1000 square foot house in the population. This is a conditional mean. In other words, we want the average house price *only* for homes with a particular size. This conditional mean is generally given by $\mu_{Y|X=X_i}$ and in this case by $\mu_{price|sqrft=1000}$. Building a confidence interval for the mean response is given by
 
 $$ \hat{Y}_{X=X_i} \pm t_{(\frac{\alpha}{2},df=n-2)}S_{YX} \sqrt{h_i}$$
 or
@@ -701,7 +826,7 @@ predict(REG3,
 
 $$Pr(22.02\leq Y_{X=1000} \leq 280.81)=0.95$$
 
-We can now state with 95% confidence that *a single draw of a house price* from the population of all 1000 square-foot houses will be somewhere between \$22,020 and \$280,810. Note that the prediction interval is also centered at our conditional expectation $(\hat{Y})$, but now the interval is much wider than in the previous calculation. This should make sense, because when you are selecting a single home then you have a positive probability of selecting either very cheap homes or very expensive homes. A mean would wash these extreme values out.
+We can now state with 95% confidence that *a single draw of a house price* from the population of all 1000 square-foot houses will be somewhere between \$22,020 and \$280,810. Note that the prediction interval is also centered at our conditional expectation $(\hat{Y})$, but now the interval is much wider than in the previous calculation. This should make sense because you are selecting a single home and have a positive probability of selecting either a very cheap home or a very expensive home. A mean would wash these extreme values out.
 
 ## Up Next...
 

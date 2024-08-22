@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>5.2 Deriving a Confidence Interval | Course Companion for MBA 8370 and MBA 8380</title>
   <meta name="description" content="Course companion" />
-  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="5.2 Deriving a Confidence Interval | Course Companion for MBA 8370 and MBA 8380" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Scott Dressler" />
 
 
-<meta name="date" content="2023-01-08" />
+<meta name="date" content="2024-08-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -56,7 +56,7 @@
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -119,6 +119,10 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -178,7 +182,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3" data-path="R.html"><a href="R.html"><i class="fa fa-check"></i><b>3</b> Getting Started with R</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="the-r-project-for-statistical-computing.html"><a href="the-r-project-for-statistical-computing.html"><i class="fa fa-check"></i><b>3.1</b> The R Project for Statistical Computing</a></li>
-<li class="chapter" data-level="3.2" data-path="before-you-install-rstudio-cloud.html"><a href="before-you-install-rstudio-cloud.html"><i class="fa fa-check"></i><b>3.2</b> Before you Install… RStudio Cloud?</a></li>
+<li class="chapter" data-level="3.2" data-path="before-you-install-posit-rstudio-cloud.html"><a href="before-you-install-posit-rstudio-cloud.html"><i class="fa fa-check"></i><b>3.2</b> Before you Install… Posit (RStudio) Cloud?</a></li>
 <li class="chapter" data-level="3.3" data-path="downloading-and-installing-r.html"><a href="downloading-and-installing-r.html"><i class="fa fa-check"></i><b>3.3</b> Downloading and installing R</a>
 <ul>
 <li class="chapter" data-level="3.3.1" data-path="downloading-and-installing-r.html"><a href="downloading-and-installing-r.html#choosing-a-mirror"><i class="fa fa-check"></i><b>3.3.1</b> Choosing a <em>Mirror</em></a></li>
@@ -191,7 +195,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.5.1" data-path="coding-basics.html"><a href="coding-basics.html#installing-packages"><i class="fa fa-check"></i><b>3.5.1</b> Installing <em>Packages</em></a></li>
 <li class="chapter" data-level="3.5.2" data-path="coding-basics.html"><a href="coding-basics.html#assigning-objects"><i class="fa fa-check"></i><b>3.5.2</b> Assigning Objects</a></li>
 <li class="chapter" data-level="3.5.3" data-path="coding-basics.html"><a href="coding-basics.html#listing-adding-and-removing"><i class="fa fa-check"></i><b>3.5.3</b> Listing, Adding, and Removing</a></li>
-<li class="chapter" data-level="3.5.4" data-path="coding-basics.html"><a href="coding-basics.html#loading-data"><i class="fa fa-check"></i><b>3.5.4</b> Loading Data</a></li>
+<li class="chapter" data-level="3.5.4" data-path="coding-basics.html"><a href="coding-basics.html#importing-data"><i class="fa fa-check"></i><b>3.5.4</b> Importing Data</a></li>
 <li class="chapter" data-level="3.5.5" data-path="coding-basics.html"><a href="coding-basics.html#manipulating-data"><i class="fa fa-check"></i><b>3.5.5</b> Manipulating Data</a></li>
 <li class="chapter" data-level="3.5.6" data-path="coding-basics.html"><a href="coding-basics.html#subsetting-data"><i class="fa fa-check"></i><b>3.5.6</b> Subsetting Data</a></li>
 </ul></li>
@@ -281,13 +285,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.5.3" data-path="assumptions-of-the-linear-regression-model.html"><a href="assumptions-of-the-linear-regression-model.html#equal-variance"><i class="fa fa-check"></i><b>7.5.3</b> Equal Variance</a></li>
 <li class="chapter" data-level="7.5.4" data-path="assumptions-of-the-linear-regression-model.html"><a href="assumptions-of-the-linear-regression-model.html#normality-of-errors"><i class="fa fa-check"></i><b>7.5.4</b> Normality of Errors</a></li>
 </ul></li>
-<li class="chapter" data-level="7.6" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html"><i class="fa fa-check"></i><b>7.6</b> Appendix: Statistical Inference</a>
+<li class="chapter" data-level="7.6" data-path="a-concluding-application.html"><a href="a-concluding-application.html"><i class="fa fa-check"></i><b>7.6</b> A Concluding Application</a></li>
+<li class="chapter" data-level="7.7" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html"><i class="fa fa-check"></i><b>7.7</b> Appendix: Statistical Inference</a>
 <ul>
-<li class="chapter" data-level="7.6.1" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-population-parameters"><i class="fa fa-check"></i><b>7.6.1</b> Confidence Intervals (around population parameters)</a></li>
-<li class="chapter" data-level="7.6.2" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#hypothesis-tests"><i class="fa fa-check"></i><b>7.6.2</b> Hypothesis Tests</a></li>
-<li class="chapter" data-level="7.6.3" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-forecasts"><i class="fa fa-check"></i><b>7.6.3</b> Confidence Intervals (around forecasts)</a></li>
+<li class="chapter" data-level="7.7.1" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-population-parameters"><i class="fa fa-check"></i><b>7.7.1</b> Confidence Intervals (around population parameters)</a></li>
+<li class="chapter" data-level="7.7.2" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#hypothesis-tests"><i class="fa fa-check"></i><b>7.7.2</b> Hypothesis Tests</a></li>
+<li class="chapter" data-level="7.7.3" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-forecasts"><i class="fa fa-check"></i><b>7.7.3</b> Confidence Intervals (around forecasts)</a></li>
 </ul></li>
-<li class="chapter" data-level="7.7" data-path="up-next.html"><a href="up-next.html"><i class="fa fa-check"></i><b>7.7</b> Up Next…</a></li>
+<li class="chapter" data-level="7.8" data-path="up-next.html"><a href="up-next.html"><i class="fa fa-check"></i><b>7.8</b> Up Next…</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="MLR.html"><a href="MLR.html"><i class="fa fa-check"></i><b>8</b> Multiple Linear Regression</a>
 <ul>
@@ -307,6 +312,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.3.3" data-path="statistical-inference.html"><a href="statistical-inference.html#hypothesis-tests-1"><i class="fa fa-check"></i><b>8.3.3</b> Hypothesis Tests</a></li>
 <li class="chapter" data-level="8.3.4" data-path="statistical-inference.html"><a href="statistical-inference.html#confidence-intervals-around-forecasts-1"><i class="fa fa-check"></i><b>8.3.4</b> Confidence Intervals (around forecasts)</a></li>
 </ul></li>
+<li class="chapter" data-level="8.4" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html"><i class="fa fa-check"></i><b>8.4</b> A Concluding Application</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#interpretation"><i class="fa fa-check"></i>Interpretation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#confidence-intervals"><i class="fa fa-check"></i>Confidence Intervals</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#hypothesis-tests-2"><i class="fa fa-check"></i>Hypothesis Tests</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#forecasts"><i class="fa fa-check"></i>Forecasts</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="COL.html"><a href="COL.html"><i class="fa fa-check"></i><b>9</b> Collinearity</a>
 <ul>
@@ -322,17 +334,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="how-do-we-remove-collinearity.html"><a href="how-do-we-remove-collinearity.html#sometimes-removing-collinearity-might-involve-multiple-rounds"><i class="fa fa-check"></i>Sometimes removing collinearity might involve multiple rounds</a></li>
 </ul></li>
+<li class="chapter" data-level="9.5" data-path="a-concluding-application-2.html"><a href="a-concluding-application-2.html"><i class="fa fa-check"></i><b>9.5</b> A Concluding Application</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="DVS.html"><a href="DVS.html"><i class="fa fa-check"></i><b>10</b> Qualitative (Dummy) Variables</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="intercept-dummy-variable.html"><a href="intercept-dummy-variable.html"><i class="fa fa-check"></i><b>10.1</b> Intercept dummy variable</a></li>
 <li class="chapter" data-level="10.2" data-path="slope-dummy-variable.html"><a href="slope-dummy-variable.html"><i class="fa fa-check"></i><b>10.2</b> Slope dummy variable</a></li>
 <li class="chapter" data-level="10.3" data-path="what-if-there-are-more-than-two-categories.html"><a href="what-if-there-are-more-than-two-categories.html"><i class="fa fa-check"></i><b>10.3</b> What if there are more than two categories?</a></li>
-<li class="chapter" data-level="10.4" data-path="a-final-application.html"><a href="a-final-application.html"><i class="fa fa-check"></i><b>10.4</b> A Final Application</a>
+<li class="chapter" data-level="10.4" data-path="a-concluding-application-3.html"><a href="a-concluding-application-3.html"><i class="fa fa-check"></i><b>10.4</b> A Concluding Application</a></li>
+<li class="chapter" data-level="10.5" data-path="another-concluding-application.html"><a href="another-concluding-application.html"><i class="fa fa-check"></i><b>10.5</b> Another Concluding Application</a>
 <ul>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#make-a-nominal-series-a-real-series"><i class="fa fa-check"></i>Make a <em>Nominal</em> Series a <em>Real</em> Series</a></li>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#remove-a-trend"><i class="fa fa-check"></i>Remove a Trend</a></li>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#remove-seasonality"><i class="fa fa-check"></i>Remove Seasonality</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#make-a-nominal-series-a-real-series"><i class="fa fa-check"></i>Make a <em>Nominal</em> Series a <em>Real</em> Series</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#remove-a-trend"><i class="fa fa-check"></i>Remove a Trend</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#remove-seasonality"><i class="fa fa-check"></i>Remove Seasonality</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="FF.html"><a href="FF.html"><i class="fa fa-check"></i><b>11</b> Functional Forms</a>
@@ -354,6 +368,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="the-reciprocal-transformation.html"><a href="the-reciprocal-transformation.html#application-6"><i class="fa fa-check"></i>Application</a></li>
 </ul></li>
 <li class="chapter" data-level="11.6" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>11.6</b> Conclusion</a></li>
+<li class="chapter" data-level="11.7" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html"><i class="fa fa-check"></i><b>11.7</b> A Concluding Application</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#a-residual-analysis"><i class="fa fa-check"></i>A Residual Analysis</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#log-transformation"><i class="fa fa-check"></i>Log Transformation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#quadratic-transformation"><i class="fa fa-check"></i>Quadratic Transformation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#reciprocal-transformation"><i class="fa fa-check"></i>Reciprocal Transformation</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="JHT.html"><a href="JHT.html"><i class="fa fa-check"></i><b>12</b> Joint Hypothesis Tests</a>
 <ul>
@@ -373,6 +394,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="applications.html"><a href="applications.html#application-1-a-wage-application"><i class="fa fa-check"></i>Application 1: A wage application</a></li>
 <li class="chapter" data-level="" data-path="applications.html"><a href="applications.html#application-2-constant-returns-to-scale"><i class="fa fa-check"></i>Application 2: Constant Returns to Scale</a></li>
 </ul></li>
+<li class="chapter" data-level="12.4" data-path="a-concluding-application-5.html"><a href="a-concluding-application-5.html"><i class="fa fa-check"></i><b>12.4</b> A Concluding Application</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -403,18 +425,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Suppose we have a sample of size <span class="math inline">\(n\)</span>, calculated a sample mean <span class="math inline">\(\bar{X}\)</span>, and that we <em>know</em> the population standard deviation <span class="math inline">\(\sigma\)</span> (more on this later). If we know these values, then we can use the standard normal distribution as well as the normalization above to draw statistical inference on the population parameter <span class="math inline">\(\mu\)</span>.</p>
 <p><em>What can we say about</em> <span class="math inline">\(\mu\)</span>?</p>
 <ul>
-<li><p>Since our sample has the same characteristics as the population, we would like to say <span class="math inline">\(\mu = \bar{X}\)</span> (i.e., <span class="math inline">\(Z=0\)</span>), but this is not likely. Recall the dice example discussed earlier, while 7 (the population mean) is the most likely average of a sample, there is a larger likelihood of a sample average <em>close</em> to, but not exactly equal to the population mean.</p></li>
+<li><p>Since our sample has the same characteristics as the population (by design), we would like to say <span class="math inline">\(\mu = \bar{X}\)</span> (i.e., <span class="math inline">\(Z=0\)</span>), but this is not likely. Recall the dice example discussed earlier, while 7 (the population mean) is the most likely average of a sample, there is a larger likelihood of a sample average <em>close</em> to, but not exactly equal to the population mean.</p></li>
 <li><p>Since <span class="math inline">\(\bar{X}\)</span> is a single draw from a normal distribution, we can construct a <em>probabilistic</em> range around <span class="math inline">\(\mu\)</span>. This range requires an arbitrary level of confidence <span class="math inline">\((1-\alpha)\)</span> - which provides bounds for the Z distribution (i.e., it gives us the area under the curve).</p></li>
 </ul>
 <p>We therefore start with a probabilistic statement using a standard normal distribution:</p>
 <p><span class="math display">\[Pr\left(-Z \leq \frac{\bar{X}-\mu}{(\sigma/\sqrt{n})} \leq Z\right)=1-\alpha\]</span></p>
-<p>This states (in general terms) that the probability of realizing a value of <span class="math inline">\(\frac{\bar{X}-\mu}{(\sigma/\sqrt{n})}\)</span> drawn from a standard normal distributed random variable to be between the values -Z and Z is equal to <span class="math inline">\(1-\alpha\)</span>. To put this into context, suppose I set <span class="math inline">\(\alpha=0.05\)</span> so <span class="math inline">\(1-\alpha=0.95\)</span> implies that I am looking for something that will occur with 95% probability. Recall the normal distribution has the nice property that 95% of the probability space is approximately between two standard deviations above and below the mean. By approximately, I mean it is actually 1.96 and not 2.<a href="#fn16" class="footnote-ref" id="fnref16"><sup>16</sup></a></p>
+<p>This states (in general terms) that the probability of realizing a value of <span class="math inline">\(\frac{\bar{X}-\mu}{(\sigma/\sqrt{n})}\)</span> drawn from a standard normal distributed random variable to be between the values -Z and Z is equal to <span class="math inline">\(1-\alpha\)</span>. To put this into context, suppose I set <span class="math inline">\(\alpha=0.05\)</span> so <span class="math inline">\(1-\alpha=0.95\)</span> implies that I am looking for something that will occur with 95% probability. Recall the normal distribution has the nice property that 95% of the probability space is between <span class="math inline">\(1.96\)</span> standard deviations above and below the mean.</p>
 <p>Finding these numbers requires another R command: qnorm.</p>
 <pre><code>qnorm(p, mean = 0, sd = 1, lower.tail = TRUE)</code></pre>
 <p>Just like how pnorm takes a quantity and returns a probability, qnorm takes a probability and returns a quantity.</p>
-<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="deriving-a-confidence-interval.html#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="fl">0.025</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb84-1"><a href="deriving-a-confidence-interval.html#cb84-1" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="fl">0.025</span>)</span></code></pre></div>
 <pre><code>## [1] -1.959964</code></pre>
-<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="deriving-a-confidence-interval.html#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="fl">0.975</span>,<span class="at">lower.tail=</span><span class="cn">FALSE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="deriving-a-confidence-interval.html#cb86-1" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="fl">0.975</span>,<span class="at">lower.tail=</span><span class="cn">FALSE</span>)</span></code></pre></div>
 <pre><code>## [1] -1.959964</code></pre>
 <p><span class="math display">\[Pr\left(-1.96 \leq \frac{\bar{X}-\mu}{(\sigma/\sqrt{n})} \leq 1.96\right)=0.95\]</span></p>
 <p>Now back to our statement for a general <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(Z\)</span>:</p>
@@ -428,31 +450,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><span class="math display">\[\bar{X}-Z_{\frac{\alpha}{2}}\frac{\sigma}{\sqrt{n}} \leq \mu \leq \bar{X}+Z_{\frac{\alpha}{2}}\frac{\sigma}{\sqrt{n}}\]</span></p>
 <p>or</p>
 <p><span class="math display">\[\bar{X} \pm Z_{\frac{\alpha}{2}}\frac{\sigma}{\sqrt{n}}\]</span></p>
-<p>It explicitly states that given the characteristics of the sample <span class="math inline">\((\bar{X},n,\sigma)\)</span> and an arbitrary level of confidence that gives us the probability limits from the standard normal distribution <span class="math inline">\((Z_{\frac{\sigma}{2}})\)</span>, then we can build a range of values where we can state with <span class="math inline">\((1-\alpha) \times 100%\)</span> confidence that the population parameter resides within.</p>
+<p>It explicitly states that given the characteristics of the sample <span class="math inline">\((\bar{X},n,\sigma)\)</span> and an arbitrary level of confidence that gives us the probability limits from the standard normal distribution <span class="math inline">\((Z_{\frac{\sigma}{2}})\)</span>, we can build a range of values where we can state with <span class="math inline">\((1-\alpha) \times 100%\)</span> confidence that the population parameter will reside within.</p>
 <p>Welcome to statistical inference!</p>
 <div id="application-3" class="section level3 hasAnchor" number="5.2.1">
 <h3><span class="header-section-number">5.2.1</span> Application 3<a href="deriving-a-confidence-interval.html#application-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>A paper manufacturer produces paper expected to have a mean length of 11 inches, and a known standard deviation of 0.02 inch. A sample of 100 sheets is selected to determine if the production process is still adhering to this length. If it isn’t, then the machine needs to go through the costs of being taken off line and recalibrated. The sample was calculated to have a average value of 10.998 inches.</p>
+<p>A paper manufacturer produces paper expected to have a mean length of 11 inches, and a known standard deviation of 0.02 inch. A sample of 100 sheets is selected to determine if the production process is still adhering to this length. If it isn’t, then the machine needs to go through the costs of being taken off line and serviced. The sample of 100 sheets was collected and calculated to have an average value of 10.998 inches.</p>
 <p><span class="math display">\[\bar{X} = 10.998, \quad n = 100, \quad \sigma = 0.02\]</span></p>
 <p>Construct a 95% confidence interval around the average length of a sheet of paper in the population.</p>
 <ol style="list-style-type: decimal">
 <li>Since we want 95% confidence, we know that <span class="math inline">\(\alpha = 0.05\)</span> and we need the critical values from a standard normal distribution such that 95% of the probability distribution is between them. These critical values were calculated previously to -1.96 and 1.96 and are illustrated below. Note that since the shaded region is 95% of the <em>central</em> area of the distribution, we are chopping of 5% of the <em>total</em> area from both tails combined. That means 2.5% is chopped off of each tail.</li>
 </ol>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-70-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-71-1.png" width="672" style="display: block; margin: auto;" /></p>
 <ol start="2" style="list-style-type: decimal">
 <li>Now using the <em>positive</em> critical Z value in our confidence interval equation, we have:</li>
 </ol>
 <p><span class="math display">\[\bar{X} \pm Z_{\frac{\alpha}{2}}\frac{\sigma}{\sqrt{n}}\]</span></p>
 <p><span class="math display">\[10.998 \pm 1.96\frac{0.02}{\sqrt{100}}\]</span></p>
 <p>Using R for the calculations:</p>
-<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="deriving-a-confidence-interval.html#cb90-1" aria-hidden="true" tabindex="-1"></a>Xbar <span class="ot">=</span> <span class="fl">10.998</span></span>
-<span id="cb90-2"><a href="deriving-a-confidence-interval.html#cb90-2" aria-hidden="true" tabindex="-1"></a>n <span class="ot">=</span> <span class="dv">100</span></span>
-<span id="cb90-3"><a href="deriving-a-confidence-interval.html#cb90-3" aria-hidden="true" tabindex="-1"></a>Sig <span class="ot">=</span> <span class="fl">0.02</span></span>
-<span id="cb90-4"><a href="deriving-a-confidence-interval.html#cb90-4" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">=</span> <span class="fl">0.05</span></span>
-<span id="cb90-5"><a href="deriving-a-confidence-interval.html#cb90-5" aria-hidden="true" tabindex="-1"></a>Z <span class="ot">=</span> <span class="fu">qnorm</span>(alpha<span class="sc">/</span><span class="dv">2</span>,<span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb90-6"><a href="deriving-a-confidence-interval.html#cb90-6" aria-hidden="true" tabindex="-1"></a>(<span class="at">left =</span> Xbar <span class="sc">-</span> Z <span class="sc">*</span> Sig <span class="sc">/</span> <span class="fu">sqrt</span>(n))</span></code></pre></div>
+<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="deriving-a-confidence-interval.html#cb88-1" tabindex="-1"></a>Xbar <span class="ot">=</span> <span class="fl">10.998</span></span>
+<span id="cb88-2"><a href="deriving-a-confidence-interval.html#cb88-2" tabindex="-1"></a>n <span class="ot">=</span> <span class="dv">100</span></span>
+<span id="cb88-3"><a href="deriving-a-confidence-interval.html#cb88-3" tabindex="-1"></a>Sig <span class="ot">=</span> <span class="fl">0.02</span></span>
+<span id="cb88-4"><a href="deriving-a-confidence-interval.html#cb88-4" tabindex="-1"></a>alpha <span class="ot">=</span> <span class="fl">0.05</span></span>
+<span id="cb88-5"><a href="deriving-a-confidence-interval.html#cb88-5" tabindex="-1"></a>Z <span class="ot">=</span> <span class="fu">qnorm</span>(alpha<span class="sc">/</span><span class="dv">2</span>,<span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb88-6"><a href="deriving-a-confidence-interval.html#cb88-6" tabindex="-1"></a>(<span class="at">left =</span> Xbar <span class="sc">-</span> Z <span class="sc">*</span> Sig <span class="sc">/</span> <span class="fu">sqrt</span>(n))</span></code></pre></div>
 <pre><code>## [1] 10.99408</code></pre>
-<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="deriving-a-confidence-interval.html#cb92-1" aria-hidden="true" tabindex="-1"></a>(<span class="at">right =</span> Xbar <span class="sc">+</span> Z <span class="sc">*</span> Sig <span class="sc">/</span> <span class="fu">sqrt</span>(n))</span></code></pre></div>
+<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="deriving-a-confidence-interval.html#cb90-1" tabindex="-1"></a>(<span class="at">right =</span> Xbar <span class="sc">+</span> Z <span class="sc">*</span> Sig <span class="sc">/</span> <span class="fu">sqrt</span>(n))</span></code></pre></div>
 <pre><code>## [1] 11.00192</code></pre>
 <p><span class="math display">\[ 10.99408 \leq \mu \leq 11.00192 \]</span></p>
 <p>Conclusion: I am 95% confident that the mean paper length in the population is somewhere between 10.99408 and 11.00192 inches.</p>
@@ -461,17 +483,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="what-if-we-want-to-change-confidence" class="section level3 hasAnchor" number="5.2.2">
 <h3><span class="header-section-number">5.2.2</span> What if we want to change confidence?<a href="deriving-a-confidence-interval.html#what-if-we-want-to-change-confidence" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>If we want to increase the confidence of our statement to 99% or lower it 90%, then we change <span class="math inline">\(\alpha\)</span> and calculate a new critical Z value. Everything else stays the same.</p>
-<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="deriving-a-confidence-interval.html#cb94-1" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">=</span> <span class="fl">0.01</span> <span class="co"># increase confidence to 99%</span></span>
-<span id="cb94-2"><a href="deriving-a-confidence-interval.html#cb94-2" aria-hidden="true" tabindex="-1"></a>Z <span class="ot">=</span> <span class="fu">qnorm</span>(alpha<span class="sc">/</span><span class="dv">2</span>,<span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb94-3"><a href="deriving-a-confidence-interval.html#cb94-3" aria-hidden="true" tabindex="-1"></a>(<span class="at">left99 =</span> Xbar <span class="sc">-</span> Z <span class="sc">*</span> Sig <span class="sc">/</span> <span class="fu">sqrt</span>(n))</span></code></pre></div>
+<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="deriving-a-confidence-interval.html#cb92-1" tabindex="-1"></a>alpha <span class="ot">=</span> <span class="fl">0.01</span> <span class="co"># increase confidence to 99%</span></span>
+<span id="cb92-2"><a href="deriving-a-confidence-interval.html#cb92-2" tabindex="-1"></a>Z <span class="ot">=</span> <span class="fu">qnorm</span>(alpha<span class="sc">/</span><span class="dv">2</span>,<span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb92-3"><a href="deriving-a-confidence-interval.html#cb92-3" tabindex="-1"></a>(<span class="at">left99 =</span> Xbar <span class="sc">-</span> Z <span class="sc">*</span> Sig <span class="sc">/</span> <span class="fu">sqrt</span>(n))</span></code></pre></div>
 <pre><code>## [1] 10.99285</code></pre>
-<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="deriving-a-confidence-interval.html#cb96-1" aria-hidden="true" tabindex="-1"></a>(<span class="at">right99 =</span> Xbar <span class="sc">+</span> Z <span class="sc">*</span> Sig <span class="sc">/</span> <span class="fu">sqrt</span>(n))</span></code></pre></div>
+<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb94-1"><a href="deriving-a-confidence-interval.html#cb94-1" tabindex="-1"></a>(<span class="at">right99 =</span> Xbar <span class="sc">+</span> Z <span class="sc">*</span> Sig <span class="sc">/</span> <span class="fu">sqrt</span>(n))</span></code></pre></div>
 <pre><code>## [1] 11.00315</code></pre>
-<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="deriving-a-confidence-interval.html#cb98-1" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">=</span> <span class="fl">0.10</span> <span class="co"># decrease confidence to 90%</span></span>
-<span id="cb98-2"><a href="deriving-a-confidence-interval.html#cb98-2" aria-hidden="true" tabindex="-1"></a>Z <span class="ot">=</span> <span class="fu">qnorm</span>(alpha<span class="sc">/</span><span class="dv">2</span>,<span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb98-3"><a href="deriving-a-confidence-interval.html#cb98-3" aria-hidden="true" tabindex="-1"></a>(<span class="at">left90 =</span> Xbar <span class="sc">-</span> Z <span class="sc">*</span> Sig <span class="sc">/</span> <span class="fu">sqrt</span>(n))</span></code></pre></div>
+<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb96-1"><a href="deriving-a-confidence-interval.html#cb96-1" tabindex="-1"></a>alpha <span class="ot">=</span> <span class="fl">0.10</span> <span class="co"># decrease confidence to 90%</span></span>
+<span id="cb96-2"><a href="deriving-a-confidence-interval.html#cb96-2" tabindex="-1"></a>Z <span class="ot">=</span> <span class="fu">qnorm</span>(alpha<span class="sc">/</span><span class="dv">2</span>,<span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb96-3"><a href="deriving-a-confidence-interval.html#cb96-3" tabindex="-1"></a>(<span class="at">left90 =</span> Xbar <span class="sc">-</span> Z <span class="sc">*</span> Sig <span class="sc">/</span> <span class="fu">sqrt</span>(n))</span></code></pre></div>
 <pre><code>## [1] 10.99471</code></pre>
-<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="deriving-a-confidence-interval.html#cb100-1" aria-hidden="true" tabindex="-1"></a>(<span class="at">right90 =</span> Xbar <span class="sc">+</span> Z <span class="sc">*</span> Sig <span class="sc">/</span> <span class="fu">sqrt</span>(n))</span></code></pre></div>
+<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="deriving-a-confidence-interval.html#cb98-1" tabindex="-1"></a>(<span class="at">right90 =</span> Xbar <span class="sc">+</span> Z <span class="sc">*</span> Sig <span class="sc">/</span> <span class="fu">sqrt</span>(n))</span></code></pre></div>
 <pre><code>## [1] 11.00129</code></pre>
 </div>
 <div id="what-happens-to-the-size-of-the-confidence-interval-when-we-increase-our-confidence" class="section level3 hasAnchor" number="5.2.3">
@@ -490,12 +512,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><span class="math display">\[ Pr(-\infty \leq \mu \leq \infty) = 1.00 \]</span></p>
 <p>I am 100% confident that the mean paper length in the population is somewhere between <span class="math inline">\(-\infty\)</span> and <span class="math inline">\(\infty\)</span> inches.</p>
 </div>
-</div>
-<div class="footnotes">
-<hr />
-<ol start="16">
-<li id="fn16"><p>This explains the 1.96 used in the dice application above.<a href="deriving-a-confidence-interval.html#fnref16" class="footnote-back">↩︎</a></p></li>
-</ol>
 </div>
             </section>
 

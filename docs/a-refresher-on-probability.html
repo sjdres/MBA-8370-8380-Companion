@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>5.1 A Refresher on Probability | Course Companion for MBA 8370 and MBA 8380</title>
   <meta name="description" content="Course companion" />
-  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="5.1 A Refresher on Probability | Course Companion for MBA 8370 and MBA 8380" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Scott Dressler" />
 
 
-<meta name="date" content="2023-01-08" />
+<meta name="date" content="2024-08-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -56,7 +56,7 @@
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -119,6 +119,10 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -178,7 +182,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3" data-path="R.html"><a href="R.html"><i class="fa fa-check"></i><b>3</b> Getting Started with R</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="the-r-project-for-statistical-computing.html"><a href="the-r-project-for-statistical-computing.html"><i class="fa fa-check"></i><b>3.1</b> The R Project for Statistical Computing</a></li>
-<li class="chapter" data-level="3.2" data-path="before-you-install-rstudio-cloud.html"><a href="before-you-install-rstudio-cloud.html"><i class="fa fa-check"></i><b>3.2</b> Before you Install… RStudio Cloud?</a></li>
+<li class="chapter" data-level="3.2" data-path="before-you-install-posit-rstudio-cloud.html"><a href="before-you-install-posit-rstudio-cloud.html"><i class="fa fa-check"></i><b>3.2</b> Before you Install… Posit (RStudio) Cloud?</a></li>
 <li class="chapter" data-level="3.3" data-path="downloading-and-installing-r.html"><a href="downloading-and-installing-r.html"><i class="fa fa-check"></i><b>3.3</b> Downloading and installing R</a>
 <ul>
 <li class="chapter" data-level="3.3.1" data-path="downloading-and-installing-r.html"><a href="downloading-and-installing-r.html#choosing-a-mirror"><i class="fa fa-check"></i><b>3.3.1</b> Choosing a <em>Mirror</em></a></li>
@@ -191,7 +195,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.5.1" data-path="coding-basics.html"><a href="coding-basics.html#installing-packages"><i class="fa fa-check"></i><b>3.5.1</b> Installing <em>Packages</em></a></li>
 <li class="chapter" data-level="3.5.2" data-path="coding-basics.html"><a href="coding-basics.html#assigning-objects"><i class="fa fa-check"></i><b>3.5.2</b> Assigning Objects</a></li>
 <li class="chapter" data-level="3.5.3" data-path="coding-basics.html"><a href="coding-basics.html#listing-adding-and-removing"><i class="fa fa-check"></i><b>3.5.3</b> Listing, Adding, and Removing</a></li>
-<li class="chapter" data-level="3.5.4" data-path="coding-basics.html"><a href="coding-basics.html#loading-data"><i class="fa fa-check"></i><b>3.5.4</b> Loading Data</a></li>
+<li class="chapter" data-level="3.5.4" data-path="coding-basics.html"><a href="coding-basics.html#importing-data"><i class="fa fa-check"></i><b>3.5.4</b> Importing Data</a></li>
 <li class="chapter" data-level="3.5.5" data-path="coding-basics.html"><a href="coding-basics.html#manipulating-data"><i class="fa fa-check"></i><b>3.5.5</b> Manipulating Data</a></li>
 <li class="chapter" data-level="3.5.6" data-path="coding-basics.html"><a href="coding-basics.html#subsetting-data"><i class="fa fa-check"></i><b>3.5.6</b> Subsetting Data</a></li>
 </ul></li>
@@ -281,13 +285,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.5.3" data-path="assumptions-of-the-linear-regression-model.html"><a href="assumptions-of-the-linear-regression-model.html#equal-variance"><i class="fa fa-check"></i><b>7.5.3</b> Equal Variance</a></li>
 <li class="chapter" data-level="7.5.4" data-path="assumptions-of-the-linear-regression-model.html"><a href="assumptions-of-the-linear-regression-model.html#normality-of-errors"><i class="fa fa-check"></i><b>7.5.4</b> Normality of Errors</a></li>
 </ul></li>
-<li class="chapter" data-level="7.6" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html"><i class="fa fa-check"></i><b>7.6</b> Appendix: Statistical Inference</a>
+<li class="chapter" data-level="7.6" data-path="a-concluding-application.html"><a href="a-concluding-application.html"><i class="fa fa-check"></i><b>7.6</b> A Concluding Application</a></li>
+<li class="chapter" data-level="7.7" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html"><i class="fa fa-check"></i><b>7.7</b> Appendix: Statistical Inference</a>
 <ul>
-<li class="chapter" data-level="7.6.1" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-population-parameters"><i class="fa fa-check"></i><b>7.6.1</b> Confidence Intervals (around population parameters)</a></li>
-<li class="chapter" data-level="7.6.2" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#hypothesis-tests"><i class="fa fa-check"></i><b>7.6.2</b> Hypothesis Tests</a></li>
-<li class="chapter" data-level="7.6.3" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-forecasts"><i class="fa fa-check"></i><b>7.6.3</b> Confidence Intervals (around forecasts)</a></li>
+<li class="chapter" data-level="7.7.1" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-population-parameters"><i class="fa fa-check"></i><b>7.7.1</b> Confidence Intervals (around population parameters)</a></li>
+<li class="chapter" data-level="7.7.2" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#hypothesis-tests"><i class="fa fa-check"></i><b>7.7.2</b> Hypothesis Tests</a></li>
+<li class="chapter" data-level="7.7.3" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-forecasts"><i class="fa fa-check"></i><b>7.7.3</b> Confidence Intervals (around forecasts)</a></li>
 </ul></li>
-<li class="chapter" data-level="7.7" data-path="up-next.html"><a href="up-next.html"><i class="fa fa-check"></i><b>7.7</b> Up Next…</a></li>
+<li class="chapter" data-level="7.8" data-path="up-next.html"><a href="up-next.html"><i class="fa fa-check"></i><b>7.8</b> Up Next…</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="MLR.html"><a href="MLR.html"><i class="fa fa-check"></i><b>8</b> Multiple Linear Regression</a>
 <ul>
@@ -307,6 +312,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.3.3" data-path="statistical-inference.html"><a href="statistical-inference.html#hypothesis-tests-1"><i class="fa fa-check"></i><b>8.3.3</b> Hypothesis Tests</a></li>
 <li class="chapter" data-level="8.3.4" data-path="statistical-inference.html"><a href="statistical-inference.html#confidence-intervals-around-forecasts-1"><i class="fa fa-check"></i><b>8.3.4</b> Confidence Intervals (around forecasts)</a></li>
 </ul></li>
+<li class="chapter" data-level="8.4" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html"><i class="fa fa-check"></i><b>8.4</b> A Concluding Application</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#interpretation"><i class="fa fa-check"></i>Interpretation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#confidence-intervals"><i class="fa fa-check"></i>Confidence Intervals</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#hypothesis-tests-2"><i class="fa fa-check"></i>Hypothesis Tests</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#forecasts"><i class="fa fa-check"></i>Forecasts</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="COL.html"><a href="COL.html"><i class="fa fa-check"></i><b>9</b> Collinearity</a>
 <ul>
@@ -322,17 +334,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="how-do-we-remove-collinearity.html"><a href="how-do-we-remove-collinearity.html#sometimes-removing-collinearity-might-involve-multiple-rounds"><i class="fa fa-check"></i>Sometimes removing collinearity might involve multiple rounds</a></li>
 </ul></li>
+<li class="chapter" data-level="9.5" data-path="a-concluding-application-2.html"><a href="a-concluding-application-2.html"><i class="fa fa-check"></i><b>9.5</b> A Concluding Application</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="DVS.html"><a href="DVS.html"><i class="fa fa-check"></i><b>10</b> Qualitative (Dummy) Variables</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="intercept-dummy-variable.html"><a href="intercept-dummy-variable.html"><i class="fa fa-check"></i><b>10.1</b> Intercept dummy variable</a></li>
 <li class="chapter" data-level="10.2" data-path="slope-dummy-variable.html"><a href="slope-dummy-variable.html"><i class="fa fa-check"></i><b>10.2</b> Slope dummy variable</a></li>
 <li class="chapter" data-level="10.3" data-path="what-if-there-are-more-than-two-categories.html"><a href="what-if-there-are-more-than-two-categories.html"><i class="fa fa-check"></i><b>10.3</b> What if there are more than two categories?</a></li>
-<li class="chapter" data-level="10.4" data-path="a-final-application.html"><a href="a-final-application.html"><i class="fa fa-check"></i><b>10.4</b> A Final Application</a>
+<li class="chapter" data-level="10.4" data-path="a-concluding-application-3.html"><a href="a-concluding-application-3.html"><i class="fa fa-check"></i><b>10.4</b> A Concluding Application</a></li>
+<li class="chapter" data-level="10.5" data-path="another-concluding-application.html"><a href="another-concluding-application.html"><i class="fa fa-check"></i><b>10.5</b> Another Concluding Application</a>
 <ul>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#make-a-nominal-series-a-real-series"><i class="fa fa-check"></i>Make a <em>Nominal</em> Series a <em>Real</em> Series</a></li>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#remove-a-trend"><i class="fa fa-check"></i>Remove a Trend</a></li>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#remove-seasonality"><i class="fa fa-check"></i>Remove Seasonality</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#make-a-nominal-series-a-real-series"><i class="fa fa-check"></i>Make a <em>Nominal</em> Series a <em>Real</em> Series</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#remove-a-trend"><i class="fa fa-check"></i>Remove a Trend</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#remove-seasonality"><i class="fa fa-check"></i>Remove Seasonality</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="FF.html"><a href="FF.html"><i class="fa fa-check"></i><b>11</b> Functional Forms</a>
@@ -354,6 +368,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="the-reciprocal-transformation.html"><a href="the-reciprocal-transformation.html#application-6"><i class="fa fa-check"></i>Application</a></li>
 </ul></li>
 <li class="chapter" data-level="11.6" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>11.6</b> Conclusion</a></li>
+<li class="chapter" data-level="11.7" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html"><i class="fa fa-check"></i><b>11.7</b> A Concluding Application</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#a-residual-analysis"><i class="fa fa-check"></i>A Residual Analysis</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#log-transformation"><i class="fa fa-check"></i>Log Transformation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#quadratic-transformation"><i class="fa fa-check"></i>Quadratic Transformation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#reciprocal-transformation"><i class="fa fa-check"></i>Reciprocal Transformation</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="JHT.html"><a href="JHT.html"><i class="fa fa-check"></i><b>12</b> Joint Hypothesis Tests</a>
 <ul>
@@ -373,6 +394,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="applications.html"><a href="applications.html#application-1-a-wage-application"><i class="fa fa-check"></i>Application 1: A wage application</a></li>
 <li class="chapter" data-level="" data-path="applications.html"><a href="applications.html#application-2-constant-returns-to-scale"><i class="fa fa-check"></i>Application 2: Constant Returns to Scale</a></li>
 </ul></li>
+<li class="chapter" data-level="12.4" data-path="a-concluding-application-5.html"><a href="a-concluding-application-5.html"><i class="fa fa-check"></i><b>12.4</b> A Concluding Application</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -397,18 +419,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="a-refresher-on-probability" class="section level2 hasAnchor" number="5.1">
 <h2><span class="header-section-number">5.1</span> A Refresher on Probability<a href="a-refresher-on-probability.html#a-refresher-on-probability" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Suppose I give you a random variable <span class="math inline">\((X)\)</span> and tell you that this random variable comprises a normal distribution with an <em>arbitrary</em> mean equal to <span class="math inline">\(\mu\)</span> and an <em>arbitrary</em> standard deviation equal to <span class="math inline">\(\sigma\)</span>. We can denote this generally as <span class="math inline">\(X \sim N(\mu,\sigma)\)</span> and we can draw this generally as</p>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-58-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-59-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>This picture is the normal probability density of this random variable. It is very much like a histogram, only we can consider a continuum of possible numbers (i.e., unlimited number of histogram bins). A normal probability density has several useful properties.</p>
 <ol style="list-style-type: decimal">
 <li><p>It is centered at the mean. It is a <strong>symmetric</strong> distribution with 50% of the probability being on either side of the mean.</p></li>
-<li><p>Like all probability distributions, it must add up to 1 (or 100%). This is like saying that the probability of reaching into a hat full of numbers and pulling out a number between positive and negative infinity is equal to 100%.</p></li>
-<li><p>A normal distribution has the nice property that approximately 95% of the density area is between two standard deviation above and below the mean. This is the shaded area in the above figure. It roughly states that if you reached into a bowl full of numbers that comprised this distribution, then you have a 95% chance of pulling out a number between <span class="math inline">\(\mu-2\sigma\)</span> and <span class="math inline">\(\mu+2\sigma\)</span>.</p></li>
+<li><p>Like all probability distributions, it must add up to 1 (or 100%). This is like saying that the probability of reaching into a hat full of numbers and pulling out any number (between positive and negative infinity) is equal to 100%.</p></li>
+<li><p>A normal distribution has the nice property that approximately 95% of the density area is between <span class="math inline">\(1.96\)</span> standard deviation above and below the mean. This is the shaded area in the above figure. It roughly states that if you reached into a bowl full of numbers that comprised this distribution, then you have a 95% chance of pulling out a number between <span class="math inline">\(\mu-1.96\sigma\)</span> and <span class="math inline">\(\mu+1.96\sigma\)</span>.</p></li>
 </ol>
 <p>This is very useful, but for our purposes we need to take this arbitrary normal distribution and transform it into a <strong>standard normal distribution</strong>. We do this by applying what is known as a Z-transformation:</p>
 <p><span class="math display">\[Z=\frac{X-\mu}{\sigma}\]</span></p>
 <p>The figure below illustrates how this transformation changes an otherwise arbitrary normal distribution. The top figure is the arbitrary random variable with a mean of <span class="math inline">\(\mu\)</span> and a standard deviation of <span class="math inline">\(\sigma\)</span> <span class="math inline">\((X \sim N(\mu,\sigma))\)</span>. The second figure shows what happens to the distribution when we subtract the mean from every number in the distribution. This effectively shifts the distribution such that it is now centered around zero, so we now have a normally distributed random variable with a mean of zero and a standard deviation of <span class="math inline">\(\sigma\)</span> <span class="math inline">\((X-\mu \sim N(0,\sigma))\)</span>. The third figure shows what happens when we divide every number in the distribution by <span class="math inline">\(\sigma\)</span>. Recall that <span class="math inline">\(\sigma\)</span> is a positive number that can be greater or less than one. If you divide a number by a number less than one then the number gets bigger. If you divide a number by a number greater than one then the number gets smaller. This means that dividing every number by <span class="math inline">\(\sigma\)</span> will either increase or decrease the dispersion of values such that the standard deviation is equal to one. A normally distributed random variable with a mean of zero and a standard deviation is said to be a standard normal random variable <span class="math inline">\((Z \sim N(0,1))\)</span>.</p>
-<p>Note that this transformation shifts the distribution, but <strong>does not</strong> change its properties. This was done on purpose to get you to see that a standard normal transformation shifts the mean and alters the dispersion, but does not change the facts that the distribution is still symmetric, still adds to one, and still has the property that 95% of the probability area is between 2 standard deviations to the right and left of the mean.</p>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-59-1.png" width="624" style="display: block; margin: auto;" /></p>
+<p>Note that this transformation shifts the distribution, but <strong>does not</strong> change its properties. This was done on purpose to get you to see that a standard normal transformation shifts the mean and alters the dispersion, but does not change the facts that the distribution is still symmetric, still adds to one, and still has the property that 95% of the probability area is between 1.96 standard deviations to the right and left of the mean.</p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-60-1.png" width="624" style="display: block; margin: auto;" /></p>
 <p><em>What does this transformation do?</em> It takes a normally distributed random variable with arbitrary <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span>, and transforms the distribution into one with mean 0 and standard deviation 1.</p>
 <p><em>Why is this useful?</em> It can easily be used for numerical probability calculations - but this isn’t as useful nowadays since we have computers. However, this transformation will be essential to put the normal distribution on the same level as other distributions we will soon encounter.</p>
 <div id="application-1" class="section level3 hasAnchor" number="5.1.1">
@@ -426,38 +448,38 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ol start="2" style="list-style-type: decimal">
 <li>Next we illustrate exactly what this probability question looks like in our distribution. In other words, indicate what <em>slice</em> of the distribution answers the probability question. This slice is illustrated in the figure below by shading in the probability area of the distribution between -1 and <span class="math inline">\(-\frac{2}{3}\)</span>.</li>
 </ol>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-60-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-61-1.png" width="672" style="display: block; margin: auto;" /></p>
 <ol start="3" style="list-style-type: decimal">
-<li>Finally, we calculate the probability in R. Now this is where the illustration above will help get us organized, because we can exploit the distributional properties of symmetry and the distribution summing to one. This is important because we can use R to calculate the same number in several different ways. All of these routes to the answer are acceptable, so we will go through them all here.</li>
+<li>Finally, we calculate the probability in R. Now this is where the illustration above will help get us organized, because we can exploit the distributional properties of symmetry and the distribution summing to one. This is important because we can use R to calculate the same number in several different ways. All of these routes to the answer are acceptable, so we will go through them all here. In practice - you choose whichever route you find most appealing.</li>
 </ol>
 <p>First thing to do is introduce you to the R command “pnorm”</p>
 <pre><code>pnorm(q, mean = 0, sd = 1, lower.tail = TRUE)</code></pre>
 <p>The command requires a number (<em>quantity</em>) for the variable q. It will then use a normal distribution with a mean of 0 and a standard error of 1 (<em>by default</em>) and calculate the area to the <strong>left of the number q</strong>. Note that this is the default action which is given by “lower.tail = TRUE”. If you want to turn off this default action, then you need to set “lower.tail = FALSE” and the command will calculate the area to the <strong>right of the number q</strong>. For example, we can calculate <span class="math inline">\(Pr(z\leq-1)\)</span> or the area to the left of -1.</p>
-<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="a-refresher-on-probability.html#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pnorm</span>(<span class="sc">-</span><span class="dv">1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="a-refresher-on-probability.html#cb69-1" tabindex="-1"></a><span class="fu">pnorm</span>(<span class="sc">-</span><span class="dv">1</span>)</span></code></pre></div>
 <pre><code>## [1] 0.1586553</code></pre>
 <p>We could also calculate <span class="math inline">\(Pr(z\geq-1)\)</span> or the area to the right of -1.</p>
-<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="a-refresher-on-probability.html#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pnorm</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="a-refresher-on-probability.html#cb71-1" tabindex="-1"></a><span class="fu">pnorm</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
 <pre><code>## [1] 0.8413447</code></pre>
 <p>These two probability areas sum to 1 (as they should), and are illustrated below. The left figure illustrates that 15.9% of the area under the distribution is to the left of -1, so you have a 15.9% chance of picking a number less than or equal to -1. Conversely, the right figure illustrates that 84.1% of the area under the distribution is to the right of -1, so you have a 84.1% chance of picking a number greater than or equal to -1.</p>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-63-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p>Now that we know how R likes to calculate probabilities, we can use it to determine <span class="math inline">\(Pr(-1 \leq z \leq -\frac{2}{3})\)</span> which is the shaded slice of the distribution in the previous figure.</p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-64-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Now that we know how R calculates probabilities, we can use it to determine <span class="math inline">\(Pr(-1 \leq z \leq -\frac{2}{3})\)</span> which is the shaded slice of the distribution in the previous figure.</p>
 <ol style="list-style-type: decimal">
 <li>Using the <em>default</em> setting: suppose you want to calculate all of the probabilities using the default setting of calculating areas to the left. The shaded slice of the distribution is then the difference between the area to the left of <span class="math inline">\(-\frac{2}{3}\)</span> and the area to the left of -1.</li>
 </ol>
 <p><span class="math display">\[Pr\left(-1 \leq z \leq -\frac{2}{3}\right)=Pr\left(z \leq -\frac{2}{3}\right) - Pr\left(z \leq -1\right)\]</span></p>
-<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="a-refresher-on-probability.html#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pnorm</span>(<span class="sc">-</span><span class="dv">2</span><span class="sc">/</span><span class="dv">3</span>)<span class="sc">-</span><span class="fu">pnorm</span>(<span class="sc">-</span><span class="dv">1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="a-refresher-on-probability.html#cb73-1" tabindex="-1"></a><span class="fu">pnorm</span>(<span class="sc">-</span><span class="dv">2</span><span class="sc">/</span><span class="dv">3</span>)<span class="sc">-</span><span class="fu">pnorm</span>(<span class="sc">-</span><span class="dv">1</span>)</span></code></pre></div>
 <pre><code>## [1] 0.09383728</code></pre>
 <ol start="2" style="list-style-type: decimal">
-<li>Removing the <em>default</em> setting. If you want to calculate probabilities from the right (which might come in handy), then the same slice of the distribution is the difference between the area to the right of <span class="math inline">\(-1\)</span> and the area to the right of <span class="math inline">\(-\frac{2}{3}\)</span>.</li>
+<li>Removing the <em>default</em> setting: If you want to calculate probabilities from the right (which might come in handy), then the same slice of the distribution is the difference between the area to the right of <span class="math inline">\(-1\)</span> and the area to the right of <span class="math inline">\(-\frac{2}{3}\)</span>.</li>
 </ol>
 <p><span class="math display">\[Pr\left(-1 \leq z \leq -\frac{2}{3}\right)=Pr(z \geq -1) - Pr\left(z \geq -\frac{2}{3}\right)\]</span></p>
-<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="a-refresher-on-probability.html#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pnorm</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="at">lower.tail =</span> <span class="cn">FALSE</span>)<span class="sc">-</span><span class="fu">pnorm</span>(<span class="sc">-</span><span class="dv">2</span><span class="sc">/</span><span class="dv">3</span>,<span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="a-refresher-on-probability.html#cb75-1" tabindex="-1"></a><span class="fu">pnorm</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="at">lower.tail =</span> <span class="cn">FALSE</span>)<span class="sc">-</span><span class="fu">pnorm</span>(<span class="sc">-</span><span class="dv">2</span><span class="sc">/</span><span class="dv">3</span>,<span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
 <pre><code>## [1] 0.09383728</code></pre>
 <ol start="3" style="list-style-type: decimal">
 <li>Exploiting that the area sums to 1. Yet another way to arrive at the same answer is to calculate the area to the left of <span class="math inline">\(-1\)</span>, the area to the right of <span class="math inline">\(-\frac{2}{3}\)</span>, and arrive at the slice by subtracting these areas from 1.</li>
 </ol>
 <p><span class="math display">\[Pr\left(-1 \leq z \leq -\frac{2}{3}\right)=1 - Pr(z \leq -1) - Pr\left(z \geq -\frac{2}{3}\right)\]</span></p>
-<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="a-refresher-on-probability.html#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">-</span><span class="fu">pnorm</span>(<span class="sc">-</span><span class="dv">1</span>)<span class="sc">-</span><span class="fu">pnorm</span>(<span class="sc">-</span><span class="dv">2</span><span class="sc">/</span><span class="dv">3</span>,<span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb77-1"><a href="a-refresher-on-probability.html#cb77-1" tabindex="-1"></a><span class="dv">1</span><span class="sc">-</span><span class="fu">pnorm</span>(<span class="sc">-</span><span class="dv">1</span>)<span class="sc">-</span><span class="fu">pnorm</span>(<span class="sc">-</span><span class="dv">2</span><span class="sc">/</span><span class="dv">3</span>,<span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span></code></pre></div>
 <pre><code>## [1] 0.09383728</code></pre>
 <p>As you can see, each procedure delivers the same answer - you have a 9.4% chance of picking a number from a standard normal distribution between -1 and <span class="math inline">\(-\frac{2}{3}\)</span>.</p>
 <p>Note that this is the same answer to the original question (before we transformed the distribution). The take away from this exercise is that there are plenty of straightforward ways of calculating probabilities in R, and we will be making a fair amount of use of them.</p>
@@ -469,27 +491,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Recall that the distribution of the population has a mean of 7 and a standard deviation of 2.45. This means that for <span class="math inline">\(n \geq 30\)</span>, the <em>sampling distribution</em> is normal and given by</p>
 <p><span class="math display">\[\bar{X} \sim N \left( 7, \; \frac{2.45}{\sqrt{n}} \right)\]</span></p>
 <p>Recall that in this (rare) example, we <em>know</em> the population parameters. Therefore, we can build a range where we expect sample averages to reside.</p>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-67-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-68-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>So if we collected a sample on <span class="math inline">\(n=100\)</span>, meaning we rolled two dice 100 times, recorded the total each time, and calculated the mean value, then…</p>
 <p><span class="math display">\[Pr\left( 7-1.96 \frac{2.45}{\sqrt{100}} \leq \bar{X} \leq 7+1.96 \frac{2.45}{\sqrt{100}} \right) = 0.95\]</span></p>
-<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="a-refresher-on-probability.html#cb81-1" aria-hidden="true" tabindex="-1"></a>Z <span class="ot">=</span> <span class="fu">qnorm</span>(<span class="fl">0.975</span>,<span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb81-2"><a href="a-refresher-on-probability.html#cb81-2" aria-hidden="true" tabindex="-1"></a>n <span class="ot">=</span> <span class="dv">100</span></span>
-<span id="cb81-3"><a href="a-refresher-on-probability.html#cb81-3" aria-hidden="true" tabindex="-1"></a>mu <span class="ot">=</span> <span class="dv">7</span></span>
-<span id="cb81-4"><a href="a-refresher-on-probability.html#cb81-4" aria-hidden="true" tabindex="-1"></a>sigma <span class="ot">=</span> <span class="fl">2.45</span></span>
-<span id="cb81-5"><a href="a-refresher-on-probability.html#cb81-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb81-6"><a href="a-refresher-on-probability.html#cb81-6" aria-hidden="true" tabindex="-1"></a>(<span class="at">LFT =</span> mu <span class="sc">-</span> Z <span class="sc">*</span> sigma <span class="sc">/</span> <span class="fu">sqrt</span>(n))</span></code></pre></div>
+<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb79-1"><a href="a-refresher-on-probability.html#cb79-1" tabindex="-1"></a>Z <span class="ot">=</span> <span class="fu">qnorm</span>(<span class="fl">0.975</span>,<span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb79-2"><a href="a-refresher-on-probability.html#cb79-2" tabindex="-1"></a>n <span class="ot">=</span> <span class="dv">100</span></span>
+<span id="cb79-3"><a href="a-refresher-on-probability.html#cb79-3" tabindex="-1"></a>mu <span class="ot">=</span> <span class="dv">7</span></span>
+<span id="cb79-4"><a href="a-refresher-on-probability.html#cb79-4" tabindex="-1"></a>sigma <span class="ot">=</span> <span class="fl">2.45</span></span>
+<span id="cb79-5"><a href="a-refresher-on-probability.html#cb79-5" tabindex="-1"></a></span>
+<span id="cb79-6"><a href="a-refresher-on-probability.html#cb79-6" tabindex="-1"></a>(<span class="at">LFT =</span> mu <span class="sc">-</span> Z <span class="sc">*</span> sigma <span class="sc">/</span> <span class="fu">sqrt</span>(n))</span></code></pre></div>
 <pre><code>## [1] 7.480191</code></pre>
-<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb83-1"><a href="a-refresher-on-probability.html#cb83-1" aria-hidden="true" tabindex="-1"></a>(<span class="at">RHT =</span> mu <span class="sc">+</span> Z <span class="sc">*</span> sigma <span class="sc">/</span> <span class="fu">sqrt</span>(n))</span></code></pre></div>
+<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb81-1"><a href="a-refresher-on-probability.html#cb81-1" tabindex="-1"></a>(<span class="at">RHT =</span> mu <span class="sc">+</span> Z <span class="sc">*</span> sigma <span class="sc">/</span> <span class="fu">sqrt</span>(n))</span></code></pre></div>
 <pre><code>## [1] 6.519809</code></pre>
 <p><span class="math display">\[Pr(6.52 \leq \bar{X} \leq 7.48) = 0.95\]</span></p>
-<p>This means that with 95% confidence, the single outcome from your <em>experiment</em> will be within 6.52 and 7.48 if the die you are rolling are in fact fair.<a href="#fn15" class="footnote-ref" id="fnref15"><sup>15</sup></a></p>
+<p>This means that with 95% confidence, the single outcome from your <em>experiment</em> should be within 6.52 and 7.48 if the die you are rolling are in fact fair.<a href="#fn16" class="footnote-ref" id="fnref16"><sup>16</sup></a></p>
 <p>As stated earlier, this example is rare because we know the population parameters. When we don’t, we reverse engineer the probability statement so we can take what we know (the sample statistics) and use them to say something about what we don’t. This is known as a confidence interval.</p>
 </div>
 </div>
 <div class="footnotes">
 <hr />
-<ol start="15">
-<li id="fn15"><p>Note that the code used a command called <em>qnorm</em>. This gets described further below.<a href="a-refresher-on-probability.html#fnref15" class="footnote-back">↩︎</a></p></li>
+<ol start="16">
+<li id="fn16"><p>Note that the code used a command called <em>qnorm</em>. This gets described further below.<a href="a-refresher-on-probability.html#fnref16" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

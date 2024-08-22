@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>5.3 What to do when we do not know \(\sigma\) | Course Companion for MBA 8370 and MBA 8380</title>
   <meta name="description" content="Course companion" />
-  <meta name="generator" content="bookdown 0.31 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
 
   <meta property="og:title" content="5.3 What to do when we do not know \(\sigma\) | Course Companion for MBA 8370 and MBA 8380" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Scott Dressler" />
 
 
-<meta name="date" content="2023-01-08" />
+<meta name="date" content="2024-08-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -56,7 +56,7 @@
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -119,6 +119,10 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -178,7 +182,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3" data-path="R.html"><a href="R.html"><i class="fa fa-check"></i><b>3</b> Getting Started with R</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="the-r-project-for-statistical-computing.html"><a href="the-r-project-for-statistical-computing.html"><i class="fa fa-check"></i><b>3.1</b> The R Project for Statistical Computing</a></li>
-<li class="chapter" data-level="3.2" data-path="before-you-install-rstudio-cloud.html"><a href="before-you-install-rstudio-cloud.html"><i class="fa fa-check"></i><b>3.2</b> Before you Install… RStudio Cloud?</a></li>
+<li class="chapter" data-level="3.2" data-path="before-you-install-posit-rstudio-cloud.html"><a href="before-you-install-posit-rstudio-cloud.html"><i class="fa fa-check"></i><b>3.2</b> Before you Install… Posit (RStudio) Cloud?</a></li>
 <li class="chapter" data-level="3.3" data-path="downloading-and-installing-r.html"><a href="downloading-and-installing-r.html"><i class="fa fa-check"></i><b>3.3</b> Downloading and installing R</a>
 <ul>
 <li class="chapter" data-level="3.3.1" data-path="downloading-and-installing-r.html"><a href="downloading-and-installing-r.html#choosing-a-mirror"><i class="fa fa-check"></i><b>3.3.1</b> Choosing a <em>Mirror</em></a></li>
@@ -191,7 +195,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.5.1" data-path="coding-basics.html"><a href="coding-basics.html#installing-packages"><i class="fa fa-check"></i><b>3.5.1</b> Installing <em>Packages</em></a></li>
 <li class="chapter" data-level="3.5.2" data-path="coding-basics.html"><a href="coding-basics.html#assigning-objects"><i class="fa fa-check"></i><b>3.5.2</b> Assigning Objects</a></li>
 <li class="chapter" data-level="3.5.3" data-path="coding-basics.html"><a href="coding-basics.html#listing-adding-and-removing"><i class="fa fa-check"></i><b>3.5.3</b> Listing, Adding, and Removing</a></li>
-<li class="chapter" data-level="3.5.4" data-path="coding-basics.html"><a href="coding-basics.html#loading-data"><i class="fa fa-check"></i><b>3.5.4</b> Loading Data</a></li>
+<li class="chapter" data-level="3.5.4" data-path="coding-basics.html"><a href="coding-basics.html#importing-data"><i class="fa fa-check"></i><b>3.5.4</b> Importing Data</a></li>
 <li class="chapter" data-level="3.5.5" data-path="coding-basics.html"><a href="coding-basics.html#manipulating-data"><i class="fa fa-check"></i><b>3.5.5</b> Manipulating Data</a></li>
 <li class="chapter" data-level="3.5.6" data-path="coding-basics.html"><a href="coding-basics.html#subsetting-data"><i class="fa fa-check"></i><b>3.5.6</b> Subsetting Data</a></li>
 </ul></li>
@@ -281,13 +285,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.5.3" data-path="assumptions-of-the-linear-regression-model.html"><a href="assumptions-of-the-linear-regression-model.html#equal-variance"><i class="fa fa-check"></i><b>7.5.3</b> Equal Variance</a></li>
 <li class="chapter" data-level="7.5.4" data-path="assumptions-of-the-linear-regression-model.html"><a href="assumptions-of-the-linear-regression-model.html#normality-of-errors"><i class="fa fa-check"></i><b>7.5.4</b> Normality of Errors</a></li>
 </ul></li>
-<li class="chapter" data-level="7.6" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html"><i class="fa fa-check"></i><b>7.6</b> Appendix: Statistical Inference</a>
+<li class="chapter" data-level="7.6" data-path="a-concluding-application.html"><a href="a-concluding-application.html"><i class="fa fa-check"></i><b>7.6</b> A Concluding Application</a></li>
+<li class="chapter" data-level="7.7" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html"><i class="fa fa-check"></i><b>7.7</b> Appendix: Statistical Inference</a>
 <ul>
-<li class="chapter" data-level="7.6.1" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-population-parameters"><i class="fa fa-check"></i><b>7.6.1</b> Confidence Intervals (around population parameters)</a></li>
-<li class="chapter" data-level="7.6.2" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#hypothesis-tests"><i class="fa fa-check"></i><b>7.6.2</b> Hypothesis Tests</a></li>
-<li class="chapter" data-level="7.6.3" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-forecasts"><i class="fa fa-check"></i><b>7.6.3</b> Confidence Intervals (around forecasts)</a></li>
+<li class="chapter" data-level="7.7.1" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-population-parameters"><i class="fa fa-check"></i><b>7.7.1</b> Confidence Intervals (around population parameters)</a></li>
+<li class="chapter" data-level="7.7.2" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#hypothesis-tests"><i class="fa fa-check"></i><b>7.7.2</b> Hypothesis Tests</a></li>
+<li class="chapter" data-level="7.7.3" data-path="appendix-statistical-inference.html"><a href="appendix-statistical-inference.html#confidence-intervals-around-forecasts"><i class="fa fa-check"></i><b>7.7.3</b> Confidence Intervals (around forecasts)</a></li>
 </ul></li>
-<li class="chapter" data-level="7.7" data-path="up-next.html"><a href="up-next.html"><i class="fa fa-check"></i><b>7.7</b> Up Next…</a></li>
+<li class="chapter" data-level="7.8" data-path="up-next.html"><a href="up-next.html"><i class="fa fa-check"></i><b>7.8</b> Up Next…</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="MLR.html"><a href="MLR.html"><i class="fa fa-check"></i><b>8</b> Multiple Linear Regression</a>
 <ul>
@@ -307,6 +312,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="8.3.3" data-path="statistical-inference.html"><a href="statistical-inference.html#hypothesis-tests-1"><i class="fa fa-check"></i><b>8.3.3</b> Hypothesis Tests</a></li>
 <li class="chapter" data-level="8.3.4" data-path="statistical-inference.html"><a href="statistical-inference.html#confidence-intervals-around-forecasts-1"><i class="fa fa-check"></i><b>8.3.4</b> Confidence Intervals (around forecasts)</a></li>
 </ul></li>
+<li class="chapter" data-level="8.4" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html"><i class="fa fa-check"></i><b>8.4</b> A Concluding Application</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#interpretation"><i class="fa fa-check"></i>Interpretation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#confidence-intervals"><i class="fa fa-check"></i>Confidence Intervals</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#hypothesis-tests-2"><i class="fa fa-check"></i>Hypothesis Tests</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-1.html"><a href="a-concluding-application-1.html#forecasts"><i class="fa fa-check"></i>Forecasts</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="COL.html"><a href="COL.html"><i class="fa fa-check"></i><b>9</b> Collinearity</a>
 <ul>
@@ -322,17 +334,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="" data-path="how-do-we-remove-collinearity.html"><a href="how-do-we-remove-collinearity.html#sometimes-removing-collinearity-might-involve-multiple-rounds"><i class="fa fa-check"></i>Sometimes removing collinearity might involve multiple rounds</a></li>
 </ul></li>
+<li class="chapter" data-level="9.5" data-path="a-concluding-application-2.html"><a href="a-concluding-application-2.html"><i class="fa fa-check"></i><b>9.5</b> A Concluding Application</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="DVS.html"><a href="DVS.html"><i class="fa fa-check"></i><b>10</b> Qualitative (Dummy) Variables</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="intercept-dummy-variable.html"><a href="intercept-dummy-variable.html"><i class="fa fa-check"></i><b>10.1</b> Intercept dummy variable</a></li>
 <li class="chapter" data-level="10.2" data-path="slope-dummy-variable.html"><a href="slope-dummy-variable.html"><i class="fa fa-check"></i><b>10.2</b> Slope dummy variable</a></li>
 <li class="chapter" data-level="10.3" data-path="what-if-there-are-more-than-two-categories.html"><a href="what-if-there-are-more-than-two-categories.html"><i class="fa fa-check"></i><b>10.3</b> What if there are more than two categories?</a></li>
-<li class="chapter" data-level="10.4" data-path="a-final-application.html"><a href="a-final-application.html"><i class="fa fa-check"></i><b>10.4</b> A Final Application</a>
+<li class="chapter" data-level="10.4" data-path="a-concluding-application-3.html"><a href="a-concluding-application-3.html"><i class="fa fa-check"></i><b>10.4</b> A Concluding Application</a></li>
+<li class="chapter" data-level="10.5" data-path="another-concluding-application.html"><a href="another-concluding-application.html"><i class="fa fa-check"></i><b>10.5</b> Another Concluding Application</a>
 <ul>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#make-a-nominal-series-a-real-series"><i class="fa fa-check"></i>Make a <em>Nominal</em> Series a <em>Real</em> Series</a></li>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#remove-a-trend"><i class="fa fa-check"></i>Remove a Trend</a></li>
-<li class="chapter" data-level="" data-path="a-final-application.html"><a href="a-final-application.html#remove-seasonality"><i class="fa fa-check"></i>Remove Seasonality</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#make-a-nominal-series-a-real-series"><i class="fa fa-check"></i>Make a <em>Nominal</em> Series a <em>Real</em> Series</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#remove-a-trend"><i class="fa fa-check"></i>Remove a Trend</a></li>
+<li class="chapter" data-level="" data-path="another-concluding-application.html"><a href="another-concluding-application.html#remove-seasonality"><i class="fa fa-check"></i>Remove Seasonality</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="FF.html"><a href="FF.html"><i class="fa fa-check"></i><b>11</b> Functional Forms</a>
@@ -354,6 +368,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="the-reciprocal-transformation.html"><a href="the-reciprocal-transformation.html#application-6"><i class="fa fa-check"></i>Application</a></li>
 </ul></li>
 <li class="chapter" data-level="11.6" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>11.6</b> Conclusion</a></li>
+<li class="chapter" data-level="11.7" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html"><i class="fa fa-check"></i><b>11.7</b> A Concluding Application</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#a-residual-analysis"><i class="fa fa-check"></i>A Residual Analysis</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#log-transformation"><i class="fa fa-check"></i>Log Transformation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#quadratic-transformation"><i class="fa fa-check"></i>Quadratic Transformation</a></li>
+<li class="chapter" data-level="" data-path="a-concluding-application-4.html"><a href="a-concluding-application-4.html#reciprocal-transformation"><i class="fa fa-check"></i>Reciprocal Transformation</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="JHT.html"><a href="JHT.html"><i class="fa fa-check"></i><b>12</b> Joint Hypothesis Tests</a>
 <ul>
@@ -373,6 +394,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="applications.html"><a href="applications.html#application-1-a-wage-application"><i class="fa fa-check"></i>Application 1: A wage application</a></li>
 <li class="chapter" data-level="" data-path="applications.html"><a href="applications.html#application-2-constant-returns-to-scale"><i class="fa fa-check"></i>Application 2: Constant Returns to Scale</a></li>
 </ul></li>
+<li class="chapter" data-level="12.4" data-path="a-concluding-application-5.html"><a href="a-concluding-application-5.html"><i class="fa fa-check"></i><b>12.4</b> A Concluding Application</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -396,17 +418,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="what-to-do-when-we-do-not-know-sigma" class="section level2 hasAnchor" number="5.3">
 <h2><span class="header-section-number">5.3</span> What to do when we do not know <span class="math inline">\(\sigma\)</span><a href="what-to-do-when-we-do-not-know-sigma.html#what-to-do-when-we-do-not-know-sigma" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In most instances, if we know nothing about the population parameter <span class="math inline">\(\mu\)</span> then we know nothing about any of the other parameters (like <span class="math inline">\(\sigma\)</span>). In this case, we are forced to use our best guess of <span class="math inline">\(\sigma\)</span>. Since we are assuming that our sample has the same characteristics of the population, then our best guess for <span class="math inline">\(\sigma\)</span> is the sample standard deviation <span class="math inline">\(S\)</span>.</p>
+<p>In most instances, if we know nothing about the population parameter <span class="math inline">\(\mu\)</span> then we know nothing about any of the other parameters (like <span class="math inline">\(\sigma\)</span>). In this case, we are forced to use our best guess of <span class="math inline">\(\sigma\)</span> and proceed. Since we are assuming that our sample has the same characteristics as the population, then our best guess for <span class="math inline">\(\sigma\)</span> is the sample standard deviation <span class="math inline">\(S\)</span>.</p>
 <p>Put plainly, we substitute the statistic (<span class="math inline">\(S\)</span>) for the population parameter (<span class="math inline">\(\sigma\)</span>). Because <span class="math inline">\(S\)</span> is an estimate of <span class="math inline">\(\sigma\)</span>, this will slightly change our probability distribution. In particular, If <span class="math inline">\(\bar{X}\)</span> is normally distributed as per the CLT, then a standardization using <span class="math inline">\(S\)</span> instead of <span class="math inline">\(\sigma\)</span> is said to have a Student’s t distribution with <span class="math inline">\(n-1\)</span> degrees of freedom.</p>
 <p><span class="math display">\[t=\frac{\bar{X}-\mu}{(S/\sqrt{n})}\]</span></p>
 <p>Note that this looks almost exactly like our Z transformation, only with <span class="math inline">\(S\)</span> replaced for <span class="math inline">\(\sigma\)</span>, and <span class="math inline">\(t\)</span> replaced for <span class="math inline">\(Z\)</span>. However, this statistic is said to be drawn from a distribution with <span class="math inline">\(n-1\)</span> degrees of freedom. We mentioned degrees of freedom before, and we stated that we lose a degree of freedom when we build statistics on top of each other. In other words, we lose a degree of freedom for every statistic we use to calculate another statistic. Consider the standard deviation equation needed to calculate <span class="math inline">\(S\)</span>.</p>
 <p><span class="math display">\[S = \sqrt{\frac{1}{n-1} \sum_{i=1}^n(X_i-\bar{X})^2}\]</span></p>
-<p>The equation states that the sample mean <span class="math inline">\((\bar{X})\)</span> is used to calculate the sample standard deviation. Therefore one statistic is used to calculate a subsequent statistic… and that is why we lose one degree of freedom.</p>
+<p>The equation states that the sample mean <span class="math inline">\((\bar{X})\)</span> (and not the population mean <span class="math inline">\(\mu\)</span>) is used to calculate the sample standard deviation. Therefore one statistic is used to calculate a subsequent statistic… and that is why we lose one degree of freedom.</p>
 <div id="students-t-distribution-versus-z-distribution" class="section level3 hasAnchor" number="5.3.1">
 <h3><span class="header-section-number">5.3.1</span> Student’s t distribution versus Z distribution…<a href="what-to-do-when-we-do-not-know-sigma.html#students-t-distribution-versus-z-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>A Student’s t distribution (henceforth, t distribution) and Z distribution have very much in common: they are both symmetric, both centered at a mean of 0, and both sum to one (because they are both probability distributions). The main difference is that a t-distribution has <em>fatter tails</em> than a Z distribution, and the fatness of the tails depends on the degrees of freedom (which in turn depends on the sample size <span class="math inline">\(n\)</span>).<a href="#fn17" class="footnote-ref" id="fnref17"><sup>17</sup></a></p>
-<p>The figure below compares the standard normal (Z) distribution with several t distributions that differ in degrees of freedom. Notice that tail thickness of the t distributions are inversely related to sample size. As the the degrees of freedom get larger (i.e., the larger the sample size), the closer the t distribution gets to the Z distribution. This is because as n gets larger, <span class="math inline">\(S\)</span> becomes a better estimate of <span class="math inline">\(\sigma\)</span>.</p>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-73-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>The figure below compares the standard normal (Z) distribution with several t distributions that differ in degrees of freedom. Notice that tail thickness of the t distributions are inversely related to sample size. As the the degrees of freedom get larger (i.e., the larger the sample size), the closer the t distribution gets to the Z distribution. This is because as n gets larger, <span class="math inline">\(S\)</span> becomes a better estimate of <span class="math inline">\(\sigma\)</span>.<a href="#fn18" class="footnote-ref" id="fnref18"><sup>18</sup></a></p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-74-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p><span class="math display">\[\bar{X}-Z_{\frac{\alpha}{2}}\frac{\sigma}{\sqrt{n}} \leq \mu \leq \bar{X}+Z_{\frac{\alpha}{2}}\frac{\sigma}{\sqrt{n}}\]</span></p>
 <p><span class="math display">\[\bar{X}-t_{(\frac{\alpha}{2},df=n-1)}\frac{S}{\sqrt{n}} \leq \mu \leq \bar{X}+t_{(\frac{\alpha}{2},df=n-1)}\frac{S}{\sqrt{n}}\]</span></p>
 <p>In a nutshell, the only difference encountered when not knowing <span class="math inline">\(\sigma\)</span> is that we have a slightly different probability distribution (which requires knowing the degrees of freedom and uses a different R command). The new R commands are <code>qt</code> and <code>pt</code> which requires degrees of freedom but otherwise has all of the same properties of <code>qnorm</code> and <code>pnorm</code> discussed above.</p>
@@ -418,29 +440,29 @@ qt(p, df, lower.tail = TRUE)</code></pre>
 <p>Suppose you manage a call center and just received a call from Quality Control asking for the <em>average call length</em> at your facility. They are asking for the average call length in the population, so the best you can do is provide a confidence interval around this population parameter. You select a random sample of 50 calls from your facility and calculate a sample average of 5.8 minutes and a <strong>sample standard deviation</strong> of 2.815 minutes.</p>
 <p><span class="math display">\[\bar{X}=5.8, \quad n=50, \quad S=2.815\]</span></p>
 <p>Calculate a 95% confidence interval around the population average call length.</p>
-<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="what-to-do-when-we-do-not-know-sigma.html#cb103-1" aria-hidden="true" tabindex="-1"></a>Xbar <span class="ot">=</span> <span class="fl">5.8</span></span>
-<span id="cb103-2"><a href="what-to-do-when-we-do-not-know-sigma.html#cb103-2" aria-hidden="true" tabindex="-1"></a>n <span class="ot">=</span> <span class="dv">50</span></span>
-<span id="cb103-3"><a href="what-to-do-when-we-do-not-know-sigma.html#cb103-3" aria-hidden="true" tabindex="-1"></a>df <span class="ot">=</span> n<span class="dv">-1</span></span>
-<span id="cb103-4"><a href="what-to-do-when-we-do-not-know-sigma.html#cb103-4" aria-hidden="true" tabindex="-1"></a>S <span class="ot">=</span> <span class="fl">2.815</span></span>
-<span id="cb103-5"><a href="what-to-do-when-we-do-not-know-sigma.html#cb103-5" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">=</span> <span class="fl">0.05</span></span>
-<span id="cb103-6"><a href="what-to-do-when-we-do-not-know-sigma.html#cb103-6" aria-hidden="true" tabindex="-1"></a>t <span class="ot">=</span> <span class="fu">qt</span>(alpha<span class="sc">/</span><span class="dv">2</span>,df,<span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb103-7"><a href="what-to-do-when-we-do-not-know-sigma.html#cb103-7" aria-hidden="true" tabindex="-1"></a>(<span class="at">left =</span> Xbar <span class="sc">-</span> t <span class="sc">*</span> S <span class="sc">/</span> <span class="fu">sqrt</span>(n))</span></code></pre></div>
+<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="what-to-do-when-we-do-not-know-sigma.html#cb101-1" tabindex="-1"></a>Xbar <span class="ot">=</span> <span class="fl">5.8</span></span>
+<span id="cb101-2"><a href="what-to-do-when-we-do-not-know-sigma.html#cb101-2" tabindex="-1"></a>n <span class="ot">=</span> <span class="dv">50</span></span>
+<span id="cb101-3"><a href="what-to-do-when-we-do-not-know-sigma.html#cb101-3" tabindex="-1"></a>df <span class="ot">=</span> n<span class="dv">-1</span></span>
+<span id="cb101-4"><a href="what-to-do-when-we-do-not-know-sigma.html#cb101-4" tabindex="-1"></a>S <span class="ot">=</span> <span class="fl">2.815</span></span>
+<span id="cb101-5"><a href="what-to-do-when-we-do-not-know-sigma.html#cb101-5" tabindex="-1"></a>alpha <span class="ot">=</span> <span class="fl">0.05</span></span>
+<span id="cb101-6"><a href="what-to-do-when-we-do-not-know-sigma.html#cb101-6" tabindex="-1"></a>t <span class="ot">=</span> <span class="fu">qt</span>(alpha<span class="sc">/</span><span class="dv">2</span>,df,<span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb101-7"><a href="what-to-do-when-we-do-not-know-sigma.html#cb101-7" tabindex="-1"></a>(<span class="at">left =</span> Xbar <span class="sc">-</span> t <span class="sc">*</span> S <span class="sc">/</span> <span class="fu">sqrt</span>(n))</span></code></pre></div>
 <pre><code>## [1] 4.999986</code></pre>
-<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="what-to-do-when-we-do-not-know-sigma.html#cb105-1" aria-hidden="true" tabindex="-1"></a>(<span class="at">right =</span> Xbar <span class="sc">+</span> t <span class="sc">*</span> S <span class="sc">/</span> <span class="fu">sqrt</span>(n))</span></code></pre></div>
+<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="what-to-do-when-we-do-not-know-sigma.html#cb103-1" tabindex="-1"></a>(<span class="at">right =</span> Xbar <span class="sc">+</span> t <span class="sc">*</span> S <span class="sc">/</span> <span class="fu">sqrt</span>(n))</span></code></pre></div>
 <pre><code>## [1] 6.600014</code></pre>
 <p><em>With 95% confidence, the population average call length is between 5 minutes and 6.6 minutes.</em></p>
 <p>As before, if we want to change our level of confidence then we change <span class="math inline">\(\alpha\)</span> and recalculate the t statistic. Notice that the relationship remains that a lower confidence level delivers a narrower confidence interval.</p>
-<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="what-to-do-when-we-do-not-know-sigma.html#cb107-1" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">=</span> <span class="fl">0.01</span> <span class="co"># increase confidence to 99%</span></span>
-<span id="cb107-2"><a href="what-to-do-when-we-do-not-know-sigma.html#cb107-2" aria-hidden="true" tabindex="-1"></a>t <span class="ot">=</span> <span class="fu">qt</span>(alpha<span class="sc">/</span><span class="dv">2</span>,df,<span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb107-3"><a href="what-to-do-when-we-do-not-know-sigma.html#cb107-3" aria-hidden="true" tabindex="-1"></a>(<span class="at">left =</span> Xbar <span class="sc">-</span> t <span class="sc">*</span> S <span class="sc">/</span> <span class="fu">sqrt</span>(n))</span></code></pre></div>
+<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="what-to-do-when-we-do-not-know-sigma.html#cb105-1" tabindex="-1"></a>alpha <span class="ot">=</span> <span class="fl">0.01</span> <span class="co"># increase confidence to 99%</span></span>
+<span id="cb105-2"><a href="what-to-do-when-we-do-not-know-sigma.html#cb105-2" tabindex="-1"></a>t <span class="ot">=</span> <span class="fu">qt</span>(alpha<span class="sc">/</span><span class="dv">2</span>,df,<span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb105-3"><a href="what-to-do-when-we-do-not-know-sigma.html#cb105-3" tabindex="-1"></a>(<span class="at">left =</span> Xbar <span class="sc">-</span> t <span class="sc">*</span> S <span class="sc">/</span> <span class="fu">sqrt</span>(n))</span></code></pre></div>
 <pre><code>## [1] 4.733108</code></pre>
-<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="what-to-do-when-we-do-not-know-sigma.html#cb109-1" aria-hidden="true" tabindex="-1"></a>(<span class="at">right =</span> Xbar <span class="sc">+</span> t <span class="sc">*</span> S <span class="sc">/</span> <span class="fu">sqrt</span>(n))</span></code></pre></div>
+<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="what-to-do-when-we-do-not-know-sigma.html#cb107-1" tabindex="-1"></a>(<span class="at">right =</span> Xbar <span class="sc">+</span> t <span class="sc">*</span> S <span class="sc">/</span> <span class="fu">sqrt</span>(n))</span></code></pre></div>
 <pre><code>## [1] 6.866892</code></pre>
-<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="what-to-do-when-we-do-not-know-sigma.html#cb111-1" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">=</span> <span class="fl">0.10</span> <span class="co"># decrease confidence to 90%</span></span>
-<span id="cb111-2"><a href="what-to-do-when-we-do-not-know-sigma.html#cb111-2" aria-hidden="true" tabindex="-1"></a>t <span class="ot">=</span> <span class="fu">qt</span>(alpha<span class="sc">/</span><span class="dv">2</span>,df,<span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb111-3"><a href="what-to-do-when-we-do-not-know-sigma.html#cb111-3" aria-hidden="true" tabindex="-1"></a>(<span class="at">left =</span> Xbar <span class="sc">-</span> t <span class="sc">*</span> S <span class="sc">/</span> <span class="fu">sqrt</span>(n))</span></code></pre></div>
+<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="what-to-do-when-we-do-not-know-sigma.html#cb109-1" tabindex="-1"></a>alpha <span class="ot">=</span> <span class="fl">0.10</span> <span class="co"># decrease confidence to 90%</span></span>
+<span id="cb109-2"><a href="what-to-do-when-we-do-not-know-sigma.html#cb109-2" tabindex="-1"></a>t <span class="ot">=</span> <span class="fu">qt</span>(alpha<span class="sc">/</span><span class="dv">2</span>,df,<span class="at">lower.tail =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb109-3"><a href="what-to-do-when-we-do-not-know-sigma.html#cb109-3" tabindex="-1"></a>(<span class="at">left =</span> Xbar <span class="sc">-</span> t <span class="sc">*</span> S <span class="sc">/</span> <span class="fu">sqrt</span>(n))</span></code></pre></div>
 <pre><code>## [1] 5.132563</code></pre>
-<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="what-to-do-when-we-do-not-know-sigma.html#cb113-1" aria-hidden="true" tabindex="-1"></a>(<span class="at">right =</span> Xbar <span class="sc">+</span> t <span class="sc">*</span> S <span class="sc">/</span> <span class="fu">sqrt</span>(n))</span></code></pre></div>
+<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="what-to-do-when-we-do-not-know-sigma.html#cb111-1" tabindex="-1"></a>(<span class="at">right =</span> Xbar <span class="sc">+</span> t <span class="sc">*</span> S <span class="sc">/</span> <span class="fu">sqrt</span>(n))</span></code></pre></div>
 <pre><code>## [1] 6.467437</code></pre>
 </div>
 </div>
@@ -448,6 +470,7 @@ qt(p, df, lower.tail = TRUE)</code></pre>
 <hr />
 <ol start="17">
 <li id="fn17"><p>Next time you raise a pint of Guiness, you can thank William Sealy Gosset for being <em>Student</em> and creating the t distribution. You can read more <a href="https://en.wikipedia.org/wiki/William_Sealy_Gosset">here</a><a href="what-to-do-when-we-do-not-know-sigma.html#fnref17" class="footnote-back">↩︎</a></p></li>
+<li id="fn18"><p>Note that the best a t distribution can do is mirror a standard normal, because the best <span class="math inline">\(S\)</span> can do is mirror <span class="math inline">\(\sigma\)</span>.<a href="what-to-do-when-we-do-not-know-sigma.html#fnref18" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

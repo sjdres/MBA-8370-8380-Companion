@@ -11,14 +11,14 @@ library(plot3D)
 
 We showed in the previous chapter that one wants to include correlated variables into the same regression in order for us to *control* for particular sample characteristics. For example, the size of a house and the number of bedrooms in the house are correlated, so including them both in the same regression that focuses on explaining house price was a good thing. 
 
-However, a significant problem in regression analysis arises when two more independent variables are *too* correlated with each other. This is known as collinearity (or multicollinearity). A correlation means that two or more variables systematically move together. In regression analysis, movement is *information* that we use to explain differences or changes in the dependent variable. If independent variables have the exact same movements due to large correlations, then they contain similar (i.e., redundant) information.
+The down side of the previous argument can arise in regression analyses when two or more independent variables are *too* correlated with each other. This is known as collinearity (or multicollinearity). A correlation means that two or more variables systematically move together. In regression analysis, movement is *information* that we use to explain differences or changes in the dependent variable. If independent variables have the exact same movements due to large correlations, then they contain similar (i.e., redundant) information.
 
-Another issue with collinearity is that when two or more variables systematically move together, then it goes against the very interpretation of our estimates: *holding all else constant* If the variables aren't held constant in the data due to collinearity (i.e., they are always moving systematically with each other), then our estimates cannot differentiate the impact of these variables along separate dimensions. Since the information from these independent variables are shared and redundant, then the dimensions from these collinear variables becomes blurred. 
+Another issue with collinearity is that when two or more variables systematically move together, then it goes against the very interpretation of our estimates: *holding all else constant*. If the variables aren't held constant in the data due to collinearity (i.e., they are always moving systematically with each other), then our estimates cannot differentiate the impact of these variables along separate dimensions. Since the information from these independent variables are shared and redundant, then the dimensions from these collinear variables becomes blurred. 
 
 
 ## An Application
 
-Consider an application that compares simulated data where two independent variables have different degrees of correlation. The simulated data was generated from the following model:
+Consider an application using simulated data where two independent variables have different degrees of correlation. The simulated data was generated from the following model:
 
 $$Y_i = 1 + 1 \;X_{1i} + 1\; X_{2i} + \varepsilon_i$$
 
@@ -51,15 +51,15 @@ CREG <- lm(Y4~X41+X42,data=MDAT)
 coeftest(CREG)
 ```
 
-The above application considers four sets of data where the only difference is the degree of collinearity between the two independent variables. The first regression has a degree of correlation between $X_{1i}$ and $X_{2i}$ equal to 0.33, and you will see that the regression does a fairly good job at recovering the regression coefficients. The second regression has a degree of correlation between $X_{1i}$ and $X_{2i}$ equal to 0.94, and you will see that the regression is beginning to suffer a bit where both slope estimates are now off by about 10 percent. The Third regression has a degree of correlation between $X_{1i}$ and $X_{2i}$ equal to just shy of perfect (1), and you will see that the regression is now *way* off from the expected estimates. Finally, the fourth regression has **perfect collinearity** between $X_{1i}$ and $X_{2i}$, and the regression actually chokes by providing an *NA* (meaning, not a number) as an answer for the second coefficient. Mathematically, perfect collinearity asks for a computer to divide a number by zero (which computers don't like to do).
+The above application considers four sets of data where the only difference is the degree of collinearity between the two independent variables. The first regression has a degree of correlation between $X_{1i}$ and $X_{2i}$ equal to 0.33, and you will see that the regression does a fairly good job at recovering the regression coefficients. The second regression has a degree of correlation between $X_{1i}$ and $X_{2i}$ equal to 0.94, and the regression is beginning to suffer a bit because both slope estimates are now off by about 10 percent. The Third regression has a degree of correlation between $X_{1i}$ and $X_{2i}$ equal to just shy of perfect (1), and the regression is now *way* off from the expected estimates. Finally, the fourth regression has **perfect collinearity** between $X_{1i}$ and $X_{2i}$, and the regression actually chokes by providing an *NA* (meaning, not a number) as an answer for the second coefficient. Mathematically, perfect collinearity asks for a computer to divide a number by zero (which computers don't like to do).
 
 ## What does Collinearity do to our regression?
 
-The takeaway from our application is that collinearity can become a significant problem if the degree of correlation among the independent variables is large enough. What the application does not show is that collinearity also results in excessively large standard errors of the coefficient estimates. Intuitively, if the regression doesn't know which variable is providing the (redundant) information, then it shows this by placing little precision on the estimate - meaning an excessively large standard deviation. This standard deviation is *positively biased* - meaning that it is larger due to the presence of collinearity. This artificially large standard error will impact the significance of estimates via confidence intervals and hypothesis tests.
+The takeaway from our application is that collinearity can become a significant problem if the degree of correlation among the independent variables is large enough. What the application does not show is that collinearity also results in excessively large standard errors of the coefficient estimates. Intuitively, if the regression doesn't know which variable is providing the (redundant) information, then it responds by placing little precision on the estimate - meaning excessively large standard deviations. The standard deviations are said to be *positively biased* - meaning that they are larger due to the presence of collinearity. Artificially large standard errors may impact the significance of estimates via confidence intervals and hypothesis tests.
 
 ## How to test for Collinearity?
 
-Note that most variables are correlated to some degree (even if completely at random). Therefore, the question is really how much collinearity exists in our data? Is it not enough so we can disregard (as in the first example in the previous section) or enough to cause issues (as in the third or fourth example)?
+Note that most variables are correlated to some degree (even if completely at random). Therefore, the question is really how much collinearity exists in our data? Is it little so we can disregard (as in the first example in the previous section) or large enough to cause issues (as in the third or fourth example)?
 
 There are two data characteristics that help detect the degree of collinearity in a regression:
 
@@ -77,7 +77,7 @@ $$\rho(X_1,X_2) = \frac{Cov(X_1,X_2)}{S_{X_1}S_{X_2}}$$
 
 If a simple correlation coefficient between any two explanatory variables, $\rho(X_1,X_2)$, is high in absolute value, then collinearity is a potential problem. Like we saw in the application, high is rather arbitrary. Therefore, researchers settle on a threshold of 0.80. In other words, if you have a correlation of 0.80 or higher, then you are running the risk of having your estimates biased by the existence of collinearity.
 
-The problem with looking at simple correlations is that they are only *pairwise* calculations. In other words, you can only look at two variables at a time. What if a collinearity problem is bigger than just two variables? 
+The problem with looking at simple correlations is that they are only *pairwise* calculations. In other words, you can only look at two variables at a time. What if a collinearity problem is spread across more than just two variables? 
 
 ### Variance Inflation Factors (VIFs) {-}
 
@@ -85,9 +85,9 @@ Suppose you want to estimate a regression with three independent variables, but 
 
 $$Y_i = \beta_0 + \beta_1 \; X_{1i} + \beta_2 \; X_{2i} + \beta_3\;  X_{3i} + \varepsilon_i$$
 
-Correlation coefficients, being pairwise, will not be able to uncover a correlation structure that might exist across *all three* independent variables. 
+Correlation coefficients, being pairwise, will not be able to uncover a correlation structure that exists across *all three* independent variables. 
 
-Take for example three independent variables: a pitcher's ERA, the number of earned runs, and the number of innings pitched. For those of you (like me) who are unfamiliar with baseball, a pitcher's ERA is essentially, their earned runs divided by the number of innings pitched. This means that ERA might be positively correlated with earned runs and negatively correlated with innings pitched, but you wouldn't realize that the correlation is *perfect* (meaning, equal to 1) unless you consider both variables *simultaneously* - and correlation coefficients cannot look at this issue simultaneously. A Variance Inflation Factor (or VIF) is a method for examining a complete correlation structure on a list of three or more independent variables.
+Take for example three independent variables: a pitcher's ERA, the number of earned runs, and the number of innings pitched. For those of you (like me) who are unfamiliar with baseball, a pitcher's ERA is essentially their earned runs divided by the number of innings pitched. This means that ERA might be positively correlated with earned runs and negatively correlated with innings pitched, but you wouldn't realize that the correlation is *perfect* (meaning, equal to 1) unless you consider both variables *simultaneously* - and pairwise correlation coefficients cannot uncover this. A Variance Inflation Factor (or VIF) is a method for examining a complete correlation structure on a list of three or more independent variables.
 
 A Variance Inflation Factor (VIF) is calculated in two steps:
 
@@ -97,7 +97,7 @@ $$X_{1i} = a_0 + a_1\;  X_{2i} + a_2 \; X_{3i} + u_i$$
 
 Note that the original dependent variable $(Y_i)$ is NOT in this equation!
 
-The purpose of this auxiliary regression is to see if there is a sophisticated correlation structure between $X_{1i}$ and the right-hand side variables. Conveniently, we already have an $R^2$ which will indicate exactly how much the variation in the left-hand variable is *explained* by the right-hand variables. 
+The purpose of this auxiliary regression is to see if there is a sophisticated correlation structure between $X_{1i}$ and the current right-hand side variables. Conveniently, we already have an $R^2$ which will indicate exactly how much the variation in the left-hand variable is *explained* by the right-hand variables. 
 
 The second step takes the $R^2$ from this regression and calculates the VIF for independent variable $X_{1i}$. Since the VIF impacts the estimated coefficient of $\beta_1$ in the original regression, it is sometimes referred to as $VIF(\hat{\beta}_1)$:
 
@@ -141,9 +141,9 @@ The output above shows a VIF for each of the independent variables. The largest 
 
 There are several ways to remove or reduce the degree of collinearity that vary in degrees of feasibility and effectiveness.
 
-First, is the collinearity problem due to the inherent nature of the variables themselves or is it a coincidence with your current sample? If it is coincidence, then the problem might go away if you collected more observations. Note that this might not always work, and sometimes more data isn't even available. However, it is a easy first pass if feasible.
+First, is the collinearity problem due to the inherent nature of the variables themselves or is it a coincidence with your current sample? If it is coincidence, then the problem might go away if you collected more observations. Note that this might not always work, and sometimes more data isn't even available. However, it is an easy first pass if feasible.
 
-Second, one could always **ignore** collinearity and proceed with the analysis. The reason for this is that while collinearity might bias the standard errors of the estimates, the bias might not be that bad. Think of increasing the value of zero by 100 times. 
+Second, one could always **ignore** collinearity and proceed with the analysis. The reason for this is that while collinearity might bias the standard errors of the estimates, the bias might not be that bad. Think of increasing the value of zero by 100 times... it's still zero. 
 
 For example, lets try the ignorance approach with the baseball application above:
 
@@ -153,7 +153,7 @@ pander(summary(REG))
 
 The results suggest that the population coefficients for the variables League, ERA, Hits Allowed, and Errors are all insignificantly different from zero with 95% confidence. Now if they were all significant, then we could possibly ignore any potential collinearity issues because the bias would not be *enough* for us to see if there was a problem. However, since two of these insignificant variables are ones we already identified as having a collinearity problem, then we are unable to go this route.
 
-The third option for removing collinearity is to remove the correlated independent variables until the correlation structure is removed. The way to proceed down this route is to remove the variables (one-at-a-time) with the highest VIF values first until all remaining values have VIF values below 5. The good side of this analysis is that you can now proceed with the main regression knowing that collinearity is not a problem. The bad side is that you might have had to remove variables that you really wanted to have in the regression.
+The third option for removing collinearity is to remove the correlated independent variables until the correlation structure is removed. The way to proceed down this route is to remove the variables (one-at-a-time) with the highest VIF values first until all remaining VIF values are below 5. The up side of this analysis is that you can now proceed with the main regression knowing that collinearity is no longer a problem. The down side is that you may have had to remove one or more variables that you really wanted to include in the regression.
 
 The VIF values from the baseball analysis suggest that ERA and Hits Allowed are two variables that potentially need to be removed from the analysis due to collinearity. The way to proceed is that if we were to only remove one variable at a time, we will remove the variable with the *highest* VIF because it is the one that has the most redundant information.
 
@@ -165,20 +165,50 @@ vif(REG)
 summary(REG)
 ```
 
-The regression with ERA removed now is free of collinearity. We can confirm this by the fact that all VIF values of the remaining independent variables are well below 5. The regression results suggest that after removing ERA, ERA and Hits Allowed now have population coefficients that were significantly different than zero with 95% confidence. Errors is still an insignificant variable. This suggests that the insignificance wasn't due to collinearity. It's simply the fact that Errors do not significantly help us explain why some teams win more games than others.
+The regression with ERA removed is now free of collinearity. We can confirm this by verifying that all VIF values of the remaining independent variables are well below 5. The regression results suggest that after removing ERA, Hits Allowed now has a population coefficient that is significantly different than zero with 95% confidence. Errors, however, is still an insignificant variable. This suggests that the insignificance in Hits was due to collinearity, while the insignificance in errors wasn't. It's simply the fact that Errors do not significantly help us explain why some teams win more games than others.
 
 ### Sometimes removing collinearity might involve multiple rounds {-}
 
 You will note from the application above that we only needed to remove one independent variable, so only one round of VIF calculations displayed values above 5. It might sometimes be the case that even after you remove an independent variable, the next round of VIF values reports reports one or more with value of 5 or more. If this happens, you simply repeat the process by removing the variable with the highest VIF and check again. In general, a complete removal of multicollinearity involves the following:
 
-1. calculate VIFs for your data set
+1. calculate VIFs for each independent variable in your original model
 
 2. drop the variable with the highest VIF (greater than 5)
 
-3. calculate VIFs on your data again (with the dropped variable no longer in the data set)
+3. calculate VIFs for each independent variable again (with the dropped variable no longer in the model)
 
 4. drop the variable with the highest VIF (greater than 5)
 
 5. this is repeated until all VIFs are less than 5
 
+## A Concluding Application
 
+Let us attempt to expand our analysis on the median starting salaries of graduating law classes by adding a second measure of student quality.
+
+$$SALARY_i = \beta_0 + \beta_1 \; LSAT_i + \beta_2 \; RANK_i + \beta_3 \; GPA_i + \varepsilon_i$$
+
+The regression above is the same regression considered in the previous chapter, only now we include the median GPA score of the graduating class. The first step is to load the data and run the regression.
+
+```{r}
+library(readxl)
+LAW <- read_excel("data/LAW.xlsx")
+
+REG <- lm(SALARY~LSAT+RANK+GPA, data = LAW)
+summary(REG)
+```
+
+The regression results suggest that the population coefficient in front of LSAT is not significantly different from zero - which is contrary to what we have already seen in previous chapters. This suggests a collinearity problem that is rather intuitive - one can suspect students with a high-median LSAT score also have high-median GPAs.
+
+```{r}
+vif(REG)
+```
+
+After using R to quickly calculate all of our VIFs, we can see that there is indeed a collinearity problem in our data. The highest VIF is when GPA is one the left-hand side of the auxilliary regression, so that is the best candidate for removal.
+
+```{r}
+REG <- lm(SALARY~LSAT+RANK, data = LAW)
+vif(REG)
+
+```
+
+As the new regression and VIF measures indicate, dropping GPA from the regression did alleviate the collinearity issue. Note that the remaining VIF measures for LSAT and RANK suggest that there is a degree of correlation between these two independent variables, and that should make sense. After all, better ranked schools attract high quality students. The important thing to note here is that this correlation is not strong enough to significantly bias the estimates or their standard errors. Final conclusion: Adding an additional measure of student quality would have been nice in theory, but the additinal variable simply wasn't bringing anything new to the analysis.

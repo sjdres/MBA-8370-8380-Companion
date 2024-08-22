@@ -12,13 +12,13 @@ $$Y_i = \beta_0 + \beta_1 X_{1i} + \beta_2 X_{2i} + \varepsilon_i$$
 
 The regression model we have studied thus far has two main features. First, the model is linear in the coefficients. This important property allows us to estimate the model using OLS. Second the model is linear in the variables. This property imposes a linear relationship between the dependent and independent variables. In other words, the relationship is a straight line.
 
-A linear relationship between the independent and a dependent variable results in a slope that is *constant*.
+A linear relationship between the dependent and an independent variable results in a slope that is *constant*.
 
 $$\beta_1 = \frac{\Delta Y_i}{\Delta X_{1i}}$$
 
-This means that (holding $X_{2i}$ constant, of course) the expected value of $Y$ will increase by $\beta_1$ units in response to any unit-increase in $X_{1i}$. The same increase occurs on average no matter where in the range of the independent variable you are. Sometimes this assumption is valid if the range of the independent variable is small enough such that a constant slope is appropriate. Sometimes it isn't. If this assumption is not valid, then we are committing a specification error even if we have included all of the necessary independent variables. The specification error involves the assumption of a linear model.
+This means that (holding $X_{2i}$ constant, of course) the expected value of $Y$ will increase by $\beta_1$ units in response to *any* unit-increase in $X_{1i}$. The same increase occurs on average no matter where in the range of the independent variable you are. Sometimes this assumption is valid if the range of the independent variable is small enough such that a constant slope is appropriate. Sometimes it isn't. If this assumption is not valid, then we are committing a specification error even if we have included all of the necessary independent variables. The specification error involves the assumption of a linear model.
 
-The types of models we will consider here will be non-linear in the variables but will still be linear in the coefficients. This means that we can still estimate the models using OLS, but we will be extending the model to uncover some highly non-linear relationships between the dependent and independent variables. We will do this by transforming the variables prior to estimation, and the names of these models are given by the types of transformations we perform. We then run a simple OLS estimation on the transformed variables, and *back-out* the non-linear relationships afterwards. This last bit is what will be new to us, but you will see that it only involves a brief refresher of... calculus.
+The types of models we will consider here are non-linear in the variables but still linear in the coefficients. This means we can estimate the models using OLS, but we will be extending the model to uncover some highly non-linear relationships between the dependent and independent variables. We will do this by transforming the variables prior to estimation, and the names of these models are given by the types of transformations we perform. We then run a traditional OLS estimation on the transformed variables, and *back-out* the non-linear relationships afterwards. This last bit is what will be new to us, but you will see that it only involves a brief refresher of... calculus.
 
 ## Derivatives
 
@@ -34,7 +34,7 @@ $$\frac{\Delta Y_i}{\Delta X_i}=\beta_1$$
 
 ## Why consider non-linear relationships?
 
-The models we will consider below will generally use this extension (and a few other calculus tools) to transform our variables and get at specific non-linear relationships. The reason we do this is to get at the *true* relationship between the dependent and independent variables. If the relationship is in fact linear, then none of these sophisticated models are necessary. If the relationship is not linear, then linear models are by definition incorrect and will deliver misleading results. The models in this section are therefore used only when the data requires them. Nobody wants to make a model more complicated than it needs to be. 
+The models we consider below will generally use this extension (and a few other calculus tools) to transform our variables and get at specific non-linear relationships. The reason we do this is to get at the *true* relationship between the dependent and independent variables. If the relationship is in fact linear, then none of these sophisticated models are necessary. If the relationship is not linear, then linear models are by definition incorrect and will deliver misleading results. The models in this section are therefore used only when the data deems them necessary. Nobody wants to make a model more complicated than it needs to be. 
 
 The sole purpose of introducing a sophisticated functional form into an otherwise straight-forward regression model is because the relationship between a dependent an independent variable is not linear *in the data*. Recall that a linear relationship is one where the slope is constant. If the slope is constant (say, $\beta$), then a one-unit increase in $X$ will deliver a $\beta$ unit increase in $Y$ on average *no matter where in the range of X you are*. There are a lot of instances in the real world where this doesn't make sense. Take for example the impact of apartment rental price on its size. One can imagine that if an apartment is small (e.g. 50 sq ft), then one might be willing to pay a lot more for a slight increase in size. If an apartment is ridiculously huge (e.g. 5000 sq ft), then one might not be willing to pay anything for an increase in size. This means that the relationship between apartment rental price and size is conceptually non-linear - the slope is dependent upon the actual size of the apartment. However, if your data has a small range (e.g., between 300 and 400 sq ft), then you might never need to consider a non-linear relationship because a linear one does a good job of approximating the relationship that you observe. This chapter deals with situations where you observe a non-linear relationship in your actual data, so it needs to be modeled.
 
@@ -50,7 +50,7 @@ This chapter details three types of non-linear transformations each designed to 
 
 ## The Log transformation
 
-The natural log transformation is used when the relationship between a dependent and independent variable is not constant in units but constant in percentage changes (or growth rates). Imagine putting \$100 in a bank at 5 percent interest. If you kept the entire balance in the account, then after one year you will have \$105 (a \$5 increase), after two years you will have \$110.25 (a \$5.25 increase), after three years you will have \$115.76 (a \$5.76 increase), and so on. What is happening is that the account balance is not growing in constant dollar units, but it is growing in constant percentage units. In fact, the balance is said to be growing *exponentially*. Things like a country's output, aggregate prices, population all grow exponentially because they build on each other just like the compound interest story. 
+The natural log transformation is used when the relationship between a dependent and independent variable is not constant in units but constant in percentage changes (or growth rates). Imagine putting \$100 in a bank at 5 percent interest. If you kept the entire balance in the account, then after one year you will have \$105 (a \$5 increase), after two years you will have \$110.25 (a \$5.25 increase), after three years you will have \$115.76 (a \$5.76 increase), and so on. What is happening is that the account balance is not growing in constant dollar units, but it is growing in constant percentage units. In fact, the balance is said to be growing *exponentially*. Things like a country's output, aggregate prices, and population all grow exponentially because they build on each other just like the compound interest story. 
 
 If we kept our \$100 dollars in the bank for a very long time, the balance would evolve according to the figure below on the left. The figure illustrates a non-linear relationship between account balance and time - and the slope is getting steeper as time goes on. While we know that the account balance is increasing by larger and larger dollar increments, we also know that it is growing at a constant five percent. We can uncover this constant percentage change by applying the natural log to the balance - as we did to the right figure. You can see that the natural log function *straightens* the exponential relationship - so the transformed relationship is linear and ready for our regression model.
 
@@ -87,13 +87,13 @@ $$\frac{Y_2 - Y_1}{Y_1} * 100\%$$
 
 Therefore, the only thing missing from the log transformation is the multiplication of $100\%$, which we can do after estimation.
 
-For example, suppose that you didn't know the *average* percentage change (or average growth rate) of your account. If Y was your account balance and X was number of years in the account, then you could estimate what it was. Notice that the *slope* is 0.05. If you multiply that by $100\%$ then you have your 5% interest rate back. 
+For example, suppose that you didn't know the *average* percentage change (or average growth rate) of your account. If Y was your account balance and X was number of years in the account, then you could estimate it. Notice that the *slope* is approximately 0.05. If you multiply that by $100\%$ then you have your average interest rate back. 
 
 ```{r}
 R <- lm(log(Y)~X)
 ```
 ```{r,echo = FALSE}
-pander(coef(R))
+pander(coef(R),2)
 ```
 
 ### Log-log and Semi-log models {-}
@@ -115,7 +115,7 @@ $$ \beta_1 =\frac{\%\Delta Y_i}{\%\Delta X_i}$$
 
 #### Semi-log models {-}
 
-Sometimes it makes no sense to take the log of a variable because the percentage change makes no sense. For example, it wouldn't make sense to take the log of the year in the bank account example above because time is not relative. In other words, a percentage change in time doesn't make sense. In addition, variables that reach values of zero or lower *cannot* be logged because the natural log is only defined on positive values. In either case, it would only make sense to not take the log of some of the variables.
+Sometimes it makes no sense to take the log of a variable because the percentage change makes no sense. For example, it wouldn't make sense to take the log of the year in the bank account example above because time is not relative. In other words, a percentage change in time doesn't make sense. In addition, variables that reach values less than or equal to zero *cannot* be logged because the natural log is only defined on positive values. In either case, it would make sense to not take the log of some variables.
 
 A Log-lin model is a semi-log model where only the dependent variable is logged. This is like the case with the bank account example above.
 
@@ -196,11 +196,11 @@ $$\frac{\Delta Y}{\Delta X} = \beta_1 + 2\beta_2  X$$
 
 A few things to note about this slope equation.
 
-1. It is a function of X - meaning that you need to choose a value of the independent variable to calculate a numerical slope. This means you are calculating the expected change in X from a unit increase in X *from a particular value*.
+1. It is a function of X - meaning that you need to choose a value of the independent variable to calculate a numerical slope. This means you are calculating the expected change in Y from a unit increase in X *starting from a particular value*.
 
-2. The slope is increasing or decreasing depending on the values of the coefficients and the independent value of X. The coefficients $\beta_1$ and $\beta_2$ are usually of opposite sign. Therefore, the slope is negative if $\beta_1<0$ and X is small so $\beta_1 + 2\beta_2  X<0$, or positive if $\beta_1>0$ and X is small so $\beta_1 + 2\beta_2 X>0$.
+2. The slope is increasing or decreasing depending on the values of the coefficients and the independent value of X. The coefficients $\beta_1$ and $\beta_2$ are usually of opposite sign. Therefore, the slope is negative if $\beta_1<0$ and X is small so $\beta_1 + 2\beta_2  X<0$, or positive if $\beta_1>0$ and X is small so $\beta_1 + 2\beta_2 X>0$.^[Note that the coefficients do not *always* need to of opposite sign, because a quadratic is general enough to handle more than a slope that changes direction.]
 
-Note: just as in the log transformation, this quadratic transformation does not need to be done to every independent variable in the regression. Only those that are suspected to have a relationship with the dependent variable that changes direction.^[For example, you will never be able to look at a quadratic transformation for a dummy variable because when the observations are only 0 and 1, then  $X$ and $X^2$ are technically the same variable!]
+Just as in the log transformation, this quadratic transformation does not need to be done to every independent variable in the regression. Only those that are suspected to have a relationship with the dependent variable that changes direction.^[For example, you will never be able to look at a quadratic transformation for a dummy variable because when the observations are only 0 and 1, then  $X$ and $X^2$ are technically the same variable!]
 
 ### Application {-}
 
@@ -236,12 +236,12 @@ plot(X,Y,
 lines(X,fitted(REG),col = "blue")
 ```
 
-The figure shows that the best fitting straight line is *horizontal* - meaning that the slope is zero. This linear model would suggest that there is no relationship between tax revenue and tax rate. It is partly true - there is just no *linear relationship*.
+The figure shows that the best fitting straight line is *horizontal* - meaning that the slope is zero. This linear model would suggest there is no relationship between tax revenue and tax rate. It is partly true - there is just no *linear relationship*.
 
-```{r}
+```{r, warning=FALSE}
 REG <- lm(Revenue ~ Rate + I(Rate^2))
 ```
-```{r,echo = FALSE}
+```{r,echo = FALSE, warning=FALSE}
 pander(summary(REG))
 
 plot(X,Y,
@@ -250,6 +250,22 @@ plot(X,Y,
      ylab = "Tax Revenue")
 lines(X,fitted(REG),col = "blue")
 ```
+
+Note that our model has two *very* statistically significant coefficients and an $R^2$ of 1. Recall that this data was simulated, so this result isn't surprising. However, we can now use our results to interpret a non-linear relationship that changes direction as the value of the independent variable gets larger.
+
+$$\frac{\Delta \widehat{Revenue}}{\Delta Rate} = \hat{\beta}_1 + 2\hat{\beta}_2X$$
+
+$$\frac{\Delta \widehat{Revenue}}{\Delta Rate} = 100 + 2(-1)X = 100 - 2X$$
+
+The derivative *formula* by itself is a bit complicated to interpret on it's own. One could simply replace the numerical results we have stated in other interpretations with the formula above, but it isn't terribly informative. One straightforward way of interpreting a nonlinear relationship is to use several values of X to illustrate how the slope changes. Recall that once you plug in a value of X into the slope formula, you are determining what happens when you go from $X$ to $X+1$. 
+
+$$X = 40 \rightarrow \frac{\Delta \hat{Revenue}}{\Delta Rate} = 20$$
+
+If we plugged in $X=40$ into our slope equation, we are explicitly determining the expected change in average revenue when the tax rate goes from 40 percent to 41 percent. The answer is 20, meaning that increasing the tax rate to 41 percent will result in an increase in revenue.
+
+$$X = 80 \rightarrow \frac{\Delta \hat{Revenue}}{\Delta Rate} = -60$$
+
+If we plugged in $X=80$ into our slope equation, we are explicitly determining the expected change in average revenue when the tax rate goes from 80 percent to 81 percent. The answer is -60, meaning that increasing the tax rate to 81 percent will result in a decrease in revenue.
 
 ## The Reciprocal transformation
 
@@ -337,3 +353,260 @@ plot(X,Y,
 ```
 
 The bottom line is that choosing the wrong non-linear transformation will still lead to some amount of specification bias, but it might not be as much as a linear specification.
+
+## A Concluding Application
+
+We return once again to our analysis on the median starting salaries of graduating law classes.
+
+$$SALARY_i = \beta_0 + \beta_1 \; LSAT_i + \beta_2 \; RANK_i + \varepsilon_i$$
+
+As this chapter now makes clear, we have thus far assumed that the relationship between salary and student quality (i.e., LSAT) as well as the relationship between salary and school quality (i.e., RANK) are both linear (i.e., having constant slopes). If this is in fact true in the data, then our linear model will capture all there is to capture and the residual term will be filled with nothing but random, unpredictable, *garbage*. However, if there is a nonlinear relationship in the data, then our linear model will be unable to capture it. This means that the nonlinear relationship will be deemed *unpredictable* - and it will end up in the residual or *garbage can*. We can therefore see if our linear model is not throwing away any important (nonlinear) information by digging through our trash.
+
+### A Residual Analysis {-}
+
+Verifying that a linear model is indeed adequate amounts to verifying that there is no nonlinear information in our residuals. Consider our first model pertaining to the law student analysis:
+
+```{r,eval = TRUE}
+library(readxl)
+LAW <- read_excel("data/LAW.xlsx")
+REG <- lm(SALARY~LSAT+RANK, data = LAW)
+summary(REG)
+```
+
+A residual analysis amounts to looking at the relationship between the residuals and each independent variable to be sure that there are no nonlinear relationships in the garbage can. If there are none, then our linear model is capturing everything that is going on in the data. If there are, then we need to extend our model to bring the nonlinear information out of the garbage can and into the deterministic component of the model. 
+
+The figure below (as well as the code) illustrates a basic residual analysis. First, there is a scatterplot where the residuals of the linear model are on the vertical axis while each independent variable takes a turn on the horizontal axis. The values of the residuals are zero on average (by design), but what we are concerned with is if the residuals make up some sort of nonlinear pattern. This nonlinear pattern is captured by running a quadratic regression where the residuals are the dependent variable and each independent variable takes a turn at being the sole independent variable in a quadratic way. The red dots in the figure indicate the *average* relationship. If this average relationship appears non-linear then our linear model might not be sophisticated enough.
+
+```{r}
+par(mfrow = c(1,2))
+plot(LAW$LSAT,residuals(REG),
+     cex = 1,pch=20,col = "blue",
+     xlab = "LSAT (points)", 
+     ylab = "Residuals")
+abline(h=0,col = "gray")
+
+# Quadratic wrt LSAT
+RCHK <- lm(residuals(REG)~ LAW$LSAT + 
+             I(LAW$LSAT^2))
+
+points(LAW$LSAT,fitted(RCHK),
+pch = 20, col = "red")
+
+plot(LAW$RANK,residuals(REG),
+     cex = 1,pch=20,col = "green",
+     xlab = "rank (1=best)", 
+     ylab = "Residuals")
+abline(h=0,col = "gray")
+
+# Quadratic wrt RANK
+RCHK <- lm(residuals(REG)~ LAW$RANK + 
+             I(LAW$RANK^2))
+
+points(LAW$RANK,fitted(RCHK),
+pch = 20, col = "red")
+```
+
+The residual analysis above suggests that we might have issues with a linear model (i.e., constant slope) assumption with respect to *both* independent variables. This means that there might be a nonconstant relationship between median starting salary and *both* student and school quality. Note two things about our residual analysis. First, they are informal at best. If you *think* you see a pattern, then that is enough for you to explore further. Only a more sophisticated model will allow you to test for significance. Second, once you decide that you need to make your model more sophisticated and add nonlinear relationships - there is no real direction as to which nonlinear transformation you need to take. The best approach is to use your intuition, and then verify.
+
+### Log Transformation {-}
+
+The issue with our linear model is that we assumed that there is a constant relationship in dollar-units, but it might be the case that there is a constant relationship in percentage units. In other words, maybe an additional LSAT point won't increase starting salary by X dollars on average, but it will increase starting salary by X *percent* on average.
+
+We can examine this model extension by considering a log-lin model.
+
+$$log(SALARY_i) = \beta_0 + \beta_1 \; LSAT_i + \beta_2 \; RANK_i + \varepsilon_i$$
+
+
+```{r,eval = FALSE}
+REG2 <- lm(log(SALARY)~LSAT+RANK, data = LAW)
+summary(REG2)
+```
+
+```{r,echo = FALSE}
+REG2 <- lm(log(SALARY)~LSAT+RANK, data = LAW)
+pander(summary(REG2))
+tB0 <- format(round(summary(REG)$coefficient[1,1],2), scientific = FALSE)
+tB1 <- format(round(summary(REG)$coefficient[2,1],2), scientific = FALSE)
+tB2 <- format(round(summary(REG)$coefficient[3,1],2), scientific = FALSE)
+```
+
+We can interpret our log-lin model accordingly:
+
+$$\frac{\%\Delta \widehat{SALARY}}{\Delta LSAT} = \hat{\beta}_1 \times 100\%= `r round(summary(REG2)$coefficients[2,1]*100,2)`\%$$
+
+Holding rank constant, an additional LSAT point will increase the median starting salary of a graduating class by `r round(summary(REG2)$coefficients[2,1]*100,2)` *percent* on average
+
+$$\frac{\%\Delta \widehat{SALARY}}{\Delta RANK} = \hat{\beta}_2 \times 100\%= `r round(summary(REG2)$coefficients[3,1]*100,2)`\%$$
+
+Holding LSAT constant, an additional increase in rank will decrease the median starting salary of a law class by `r round(summary(REG2)$coefficients[3,1]*100,2)` *percent* on average
+
+However, before we make use of these interpretations, we need to ensure that the log-lin transformation was in fact the one that removed the nonlinear information from our garbage can. We do this with yet another residual analysis.
+
+```{r}
+par(mfrow = c(1,2))
+plot(LAW$LSAT,residuals(REG2),
+     cex = 1,pch=20,col = "blue",
+     xlab = "LSAT (points)", 
+     ylab = "Residuals")
+abline(h=0,col = "gray")
+RCHK <- lm(residuals(REG2)~ LAW$LSAT + 
+             I(LAW$LSAT^2))
+
+points(LAW$LSAT,fitted(RCHK),
+pch = 20, col = "red")
+
+plot(LAW$RANK,residuals(REG2),
+     cex = 1,pch=20,col = "green",
+     xlab = "Rank (1=best)", 
+     ylab = "Residuals")
+abline(h=0,col = "gray")
+RCHK <- lm(residuals(REG2)~ LAW$RANK + 
+             I(LAW$RANK^2))
+
+points(LAW$RANK,fitted(RCHK),
+pch = 20, col = "red")
+```
+
+The residual analysis indicates that there wasn't much of an improvement. This means that while a log transformation is useful in many applications, it isn't doing the job here.
+
+### Quadratic Transformation {-}
+
+Let us now pivot away from logs and consider a quadratic transformation for each of our two independent variables.
+
+$$SALARY_i = \beta_0 + \beta_1 \; LSAT_i + \beta_2 \; LSAT_i^2 + \beta_3 \; RANK_i + \beta_4 \; RANK_i^2 + \varepsilon_i$$
+
+```{r,eval = FALSE}
+REG2 <- lm(SALARY~LSAT+I(LSAT^2)+RANK+I(RANK^2),
+           data = LAW)
+summary(REG2)
+```
+
+```{r,echo = FALSE}
+REG2 <- lm(SALARY~LSAT+I(LSAT^2)+RANK+I(RANK^2),
+           data = LAW)
+pander(summary(REG2))
+tB1 <- format(round(summary(REG2)$coefficient[2,1],2), scientific = FALSE)
+tB2 <- format(round(summary(REG2)$coefficient[3,1],2), scientific = FALSE)
+tB3 <- format(round(summary(REG2)$coefficient[4,1],2), scientific = FALSE)
+tB4 <- format(round(summary(REG2)$coefficient[5,1],2), scientific = FALSE)
+```
+
+An interpretation of a quadratic model is a bit more complicated in words because we need to consider an *unit-increase in X* relative from a starting value of X. For example, the equations for the interpretations are as follows.
+
+$$\frac{\Delta \widehat{SALARY}}{\Delta LSAT} = \beta_1 + 2 \beta_2 \times LSAT = `r tB1` + 2 \times `r tB2` \times LSAT$$
+
+$$\frac{\Delta \widehat{SALARY}}{\Delta RANK} = \beta_3 + 2 \beta_4 \times RANK = `r tB3` + 2 \times `r tB4` \times RANK$$
+
+Note how these two equations require values for either students' median LSAT score of a school's rank in order for you to calculate the average change in starting salary if we increased that independent variable by one (holding the other constant). 
+
+For example, we can now evaluate the expected increase in median starting salary due to an additional increase in rank (holding LSAT constant) at a particular school rank!
+
+```{r, echo = FALSE}
+T1 = round(summary(REG2)$coefficients[4,1] + 2 * summary(REG2)$coefficients[5,1], 2)
+T2 = round(summary(REG2)$coefficients[4,1] + 2 * 100 * summary(REG2)$coefficients[5,1], 2)
+```
+
+
+If we started at the top school ($RANK = 1$), then we can determine the average change in starting salary (holding LSAT constant) if we were to go one-school down in the ranking (to the 2nd best):
+
+$$\frac{\Delta \widehat{SALARY}}{\Delta RANK} = `r tB3` + 2 \times `r tB4` \times 1 = `r T1`$$
+
+If we started at the 100th school ($RANK = 100$), then we can determine the average change in starting salary (holding LSAT constant) if we were to go one-school down in the ranking (to the 101st best):
+
+$$\frac{\Delta \widehat{SALARY}}{\Delta RANK} = `r tB3` + 2 \times `r tB4` \times 100 = `r T2`$$
+
+Yet again, we need to verify that this model removes the nonlinear information out of our garbage can before we make use of these interpretations.
+
+```{r}
+par(mfrow = c(1,2))
+plot(LAW$LSAT,residuals(REG2),
+     cex = 1,pch=20,col = "blue",
+     xlab = "LSAT (points)", 
+     ylab = "Residuals")
+abline(h=0,col = "gray")
+RCHK <- lm(residuals(REG2)~ LAW$LSAT + 
+             I(LAW$LSAT^2))
+
+points(LAW$LSAT,fitted(RCHK),
+pch = 20, col = "red")
+
+plot(LAW$RANK,residuals(REG2),
+     cex = 1,pch=20,col = "green",
+     xlab = "Rank (1=best)", 
+     ylab = "Residuals")
+abline(h=0,col = "gray")
+RCHK <- lm(residuals(REG2)~ LAW$RANK + 
+             I(LAW$RANK^2))
+
+points(LAW$RANK,fitted(RCHK),
+pch = 20, col = "red")
+```
+
+The new residual analysis indicates that there is no longer any nonlinear information in our garbage can - because it is now captured by our model!!!
+
+Now that we have confirmed that the quadratic transformation of our model sufficiently captures the nonlinear relationships in the data, the last step is to ensure that the relationships are in fact significant in the population. If you examine the p-values for the coefficients in the quadratic model, you should quickly see that both coefficients for the LSAT variable are not significantly different than zero in the population. This suggests that we really do not need to consider a quadratic along this dimension - just along the RANK dimension.
+
+The final regression below estimates a linear relationship with respect to LSAT and a quadratic relationship with respect to RANK. The residual analysis still suggests a potential nonlinear relationship between salary and LSAT, but we extended the model to formally show that this nonlinear relationship is not statistically significant.
+
+```{r,eval = FALSE}
+REG2 <- lm(SALARY~LSAT+RANK+I(RANK^2),
+           data = LAW)
+summary(REG2)
+```
+
+```{r,echo = FALSE}
+REG2 <- lm(SALARY~LSAT+RANK+I(RANK^2),
+           data = LAW)
+pander(summary(REG2))
+```
+
+```{r}
+par(mfrow = c(1,2))
+plot(LAW$LSAT,residuals(REG2),
+     cex = 1,pch=20,col = "blue",
+     xlab = "LSAT (points)", 
+     ylab = "Residuals")
+abline(h=0,col = "gray")
+RCHK <- lm(residuals(REG2)~ LAW$LSAT + 
+             I(LAW$LSAT^2))
+
+points(LAW$LSAT,fitted(RCHK),
+pch = 20, col = "red")
+
+plot(LAW$RANK,residuals(REG2),
+     cex = 1,pch=20,col = "green",
+     xlab = "Rank (1=best)", 
+     ylab = "Residuals")
+abline(h=0,col = "gray")
+RCHK <- lm(residuals(REG2)~ LAW$RANK + 
+             I(LAW$RANK^2))
+
+points(LAW$RANK,fitted(RCHK),
+pch = 20, col = "red")
+```
+
+### Reciprocal Transformation {-}
+
+Although we just learned that a quadratic does the trick, it might be more appropriate to consider a relationship that dies out rather than reverses direction. For example, the difference between the first and second school might be big, but the difference between the 90th and 91st school might be zero. This gives rise to the following reciprocal model.
+
+$$SALARY_i = \beta_0 + \beta_1 \; LSAT_i + \beta_2 \; \frac{1}{RANK_i} + \varepsilon_i$$
+
+```{r}
+REG3 <- lm(SALARY~LSAT+I(1/RANK),
+           data = LAW)
+summary(REG3)
+```
+
+The coefficient with respect to RANK is significantly different from zero and uses the following interpretation formula.
+
+$$\frac{\Delta \widehat{SALARY}}{\Delta RANK} = -\beta_2 RANK_i^{-2}=\frac{-31844.6} {RANK_i^{2}}$$
+
+When $RANK = 1$, we can state that the expected decrease in salary when going to a 2nd ranked school (holding LSAT constant) is $31,844.60.
+
+$$\frac{\Delta \widehat{SALARY}}{\Delta RANK} = -31844.6$$
+
+When $RANK = 100$, we can state that the expected decrease in salary when going to a 101st ranked school (holding LSAT constant) is $3.18. This is clearly much less than the drop from first to second, indicating that the impact of going down in the ranking is diminishing.
+
+$$\frac{\Delta \widehat{SALARY}}{\Delta RANK} =\frac{-31844.6} {100^{2}}=\frac{-31844.6} {10000} = -3.18$$
+
+While one might prefer the intuition of the reciprocal model over the quadratic, one should note that the quadratic model has a higher $R^2$ and therefore explains more of the variation in the salary variable than our reciprocal model. This is more of a result of the generality of the quadratic (and why you will see it more frequently in empirical work). 
